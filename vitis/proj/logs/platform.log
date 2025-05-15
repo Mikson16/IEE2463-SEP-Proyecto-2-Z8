@@ -1,0 +1,116 @@
+TRACE::2025-05-12.09:01:08::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-Z8/Proyecto_2/vitis/proj/hw/design_1_wrapper.xsa
+TRACE::2025-05-12.09:01:08::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-Z8/Proyecto_2/vitis/proj/hw/design_1_wrapper.xsa
+TRACE::2025-05-12.09:01:08::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-Z8/Proyecto_2/vitis/proj/hw/design_1_wrapper.xsa
+TRACE::2025-05-12.09:01:12::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-Z8/Proyecto_2/vitis/proj/hw
+TRACE::2025-05-12.09:01:12::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-Z8/Proyecto_2/vitis/proj/hw/design_1_wrapper.xsa
+TRACE::2025-05-12.09:01:12::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-12.09:01:12::SCWPlatform::Do not have an existing db opened. 
+TRACE::2025-05-12.09:01:13::SCWPlatform::Opened new HwDB with name design_1_wrapper_0
+TRACE::2025-05-12.09:01:13::SCWWriter::formatted JSON is {
+	"platformName":	"proj",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"proj",
+	"platHandOff":	"C:/Users/andre/Projects/IEE2463-SEP-Proyecto-Z8/Proyecto_2/project_1/design_1_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_1_wrapper.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	""
+}
+TRACE::2025-05-12.09:01:13::SCWWriter::formatted JSON is {
+	"platformName":	"proj",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"proj",
+	"platHandOff":	"C:/Users/andre/Projects/IEE2463-SEP-Proyecto-Z8/Proyecto_2/project_1/design_1_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_1_wrapper.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"proj",
+	"systems":	[{
+			"systemName":	"proj",
+			"systemDesc":	"proj",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"proj"
+		}]
+}
+TRACE::2025-05-12.09:01:13::SCWPlatform::Boot application domains not present, creating them
+TRACE::2025-05-12.09:01:13::SCWPlatform::Pure FPGA device, no boot application will be created.
+TRACE::2025-05-12.09:01:13::SCWWriter::formatted JSON is {
+	"platformName":	"proj",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"proj",
+	"platHandOff":	"C:/Users/andre/Projects/IEE2463-SEP-Proyecto-Z8/Proyecto_2/project_1/design_1_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_1_wrapper.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"proj",
+	"systems":	[{
+			"systemName":	"proj",
+			"systemDesc":	"proj",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"proj"
+		}]
+}
+TRACE::2025-05-12.09:01:13::SCWWriter::formatted JSON is {
+	"platformName":	"proj",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"proj",
+	"platHandOff":	"C:/Users/andre/Projects/IEE2463-SEP-Proyecto-Z8/Proyecto_2/project_1/design_1_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_1_wrapper.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"proj",
+	"systems":	[{
+			"systemName":	"proj",
+			"systemDesc":	"proj",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"proj"
+		}]
+}
+TRACE::2025-05-12.09:01:14::SCWPlatform::Clearing the existing platform
+TRACE::2025-05-12.09:01:14::SCWSystem::Clearing the existing sysconfig
+TRACE::2025-05-12.09:01:14::SCWSystem::Clearing the domains completed.
+TRACE::2025-05-12.09:01:14::SCWPlatform::Clearing the opened hw db.
+TRACE::2025-05-12.09:01:14::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-Z8/Proyecto_2/vitis/proj/hw/design_1_wrapper.xsa
+TRACE::2025-05-12.09:01:14::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-Z8/Proyecto_2/vitis/proj/hw/design_1_wrapper.xsa
+TRACE::2025-05-12.09:01:14::SCWPlatform:: Platform location is C:/Users/andre/Projects/IEE2463-SEP-Proyecto-Z8/Proyecto_2/vitis/proj/hw
+TRACE::2025-05-12.09:01:14::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-Z8/Proyecto_2/vitis/proj/hw/design_1_wrapper.xsa
+TRACE::2025-05-12.09:01:14::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-12.09:01:14::SCWPlatform::Removing the HwDB with name C:/Users/andre/Projects/IEE2463-SEP-Proyecto-Z8/Proyecto_2/vitis/proj/hw/design_1_wrapper.xsa
+TRACE::2025-05-12.09:01:14::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-Z8/Proyecto_2/vitis/proj/hw/design_1_wrapper.xsa
+TRACE::2025-05-12.09:01:14::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-Z8/Proyecto_2/vitis/proj/hw/design_1_wrapper.xsa
+TRACE::2025-05-12.09:01:14::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-Z8/Proyecto_2/vitis/proj/hw/design_1_wrapper.xsa
+TRACE::2025-05-12.09:01:14::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-Z8/Proyecto_2/vitis/proj/hw
+TRACE::2025-05-12.09:01:14::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-Z8/Proyecto_2/vitis/proj/hw/design_1_wrapper.xsa
+TRACE::2025-05-12.09:01:14::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-12.09:01:14::SCWPlatform::Do not have an existing db opened. 
+TRACE::2025-05-12.09:01:14::SCWPlatform::Opened new HwDB with name design_1_wrapper_1
+TRACE::2025-05-12.09:01:14::SCWReader::Active system found as  proj
+TRACE::2025-05-12.09:01:14::SCWReader::Handling sysconfig proj
+TRACE::2025-05-12.09:01:14::SCWReader::No domains present  

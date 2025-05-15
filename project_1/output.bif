@@ -1,0 +1,5 @@
+//arch = zynq; split = false; format = BIN
+the_ROM_image:
+{
+	[bootloader]C:\Users\andre\Projects\IEE2463-SEP-Proyecto-Z8\Proyecto_2\project_1\design_1_wrapper.bit
+}

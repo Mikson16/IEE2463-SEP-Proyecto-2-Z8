@@ -1,0 +1,460 @@
+!SESSION 2025-05-12 09:00:07.532 -----------------------------------------------
+eclipse.buildId=2020.1
+java.version=9.0.4
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_CL
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Users\andre\Projects\IEE2463-SEP-Proyecto-Z8\Proyecto_2\vitis
+
+!ENTRY org.eclipse.ui 4 4 2025-05-12 09:00:13.389
+!MESSAGE Referenced part does not exist yet: org.eclipse.ui.views.TaskList.
+
+!ENTRY org.eclipse.ui 4 4 2025-05-12 09:00:14.272
+!MESSAGE Plug-in 'org.eclipse.ui.editors' contributed an invalid Menu Extension (Path: 'navigate' is invalid): org.eclipse.ui.edit.text.gotoLastEditPosition
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-05-12 09:00:24.613
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-4: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-05-12 09:00:24.615
+!MESSAGE XSCT Command: [plnx-install-path  ; ::scw::scw_mode gui], Thread: Thread-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-05-12 09:00:24.625
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-17
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-05-12 09:00:24.994
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-4: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-05-12 09:00:24.995
+!MESSAGE XSCT command with result: [plnx-install-path  ; ::scw::scw_mode gui], Result: [null, ]. Thread: Thread-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-05-12 09:00:24.996
+!MESSAGE XSCT Command: [set query_var1 $::env(RDI_DATADIR)], Thread: Worker-4: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-05-12 09:00:24.997
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-17
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-05-12 09:00:25.020
+!MESSAGE XSCT Command: [setws C:/Users/andre/Projects/IEE2463-SEP-Proyecto-Z8/Proyecto_2/vitis], Thread: Thread-17
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-05-12 09:00:25.021
+!MESSAGE XSCT command with result: [set query_var1 $::env(RDI_DATADIR)], Result: [null, C:/Xilinx/Vitis/2020.1/data]. Thread: Worker-4: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-05-12 09:00:25.031
+!MESSAGE XSCT command with result: [setws C:/Users/andre/Projects/IEE2463-SEP-Proyecto-Z8/Proyecto_2/vitis], Result: [null, ]. Thread: Thread-17
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-05-12 09:00:37.105
+!MESSAGE Opening file dialog using preferences. Current path: C:\Xilinx\Vitis\2020.1\data\embeddedsw\lib\fixed_hwplatforms, Local preference: scw_hwspec, Group preference: null
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-05-12 09:00:59.921
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/Users/andre/Projects/IEE2463-SEP-Proyecto-Z8/Proyecto_2/project_1/design_1_wrapper.xsa], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-05-12 09:01:00.513
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/Users/andre/Projects/IEE2463-SEP-Proyecto-Z8/Proyecto_2/project_1/design_1_wrapper.xsa], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-05-12 09:01:00.554
+!MESSAGE XSCT Command: [::hsi::utils::get_all_periphs -json C:/Users/andre/Projects/IEE2463-SEP-Proyecto-Z8/Proyecto_2/project_1/design_1_wrapper.xsa], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-05-12 09:01:00.563
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_periphs -json C:/Users/andre/Projects/IEE2463-SEP-Proyecto-Z8/Proyecto_2/project_1/design_1_wrapper.xsa], Result: [null, {"audio_reader_0": {"hier_name": "audio_reader_0",
+"type": "audio_reader",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"blk_mem_gen_0": {"hier_name": "blk_mem_gen_0",
+"type": "blk_mem_gen",
+"version": "8.4",
+"ip_type": "MEMORY",
+},
+"clk_wiz_0": {"hier_name": "clk_wiz_0",
+"type": "clk_wiz",
+"version": "6.0",
+"ip_type": "PERIPHERAL",
+},
+"ila_0": {"hier_name": "ila_0",
+"type": "ila",
+"version": "6.2",
+"ip_type": "PERIPHERAL",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-05-12 09:01:08.414
+!MESSAGE XSCT Command: [platform create -name {proj} -hw {C:\Users\andre\Projects\IEE2463-SEP-Proyecto-Z8\Proyecto_2\project_1\design_1_wrapper.xsa} -out {C:/Users/andre/Projects/IEE2463-SEP-Proyecto-Z8/Proyecto_2/vitis};platform write], Thread: ModalContext
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-05-12 09:01:08.579
+!MESSAGE Indexed 'proj' (0 sources, 0 headers) in 0,004 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-05-12 09:01:13.279
+!MESSAGE XSCT command with result: [platform create -name {proj} -hw {C:\Users\andre\Projects\IEE2463-SEP-Proyecto-Z8\Proyecto_2\project_1\design_1_wrapper.xsa} -out {C:/Users/andre/Projects/IEE2463-SEP-Proyecto-Z8/Proyecto_2/vitis};platform write], Result: [null, Successfully saved  the platform at "C:/Users/andre/Projects/IEE2463-SEP-Proyecto-Z8/Proyecto_2/vitis/proj/platform.spr"]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-05-12 09:01:14.031
+!MESSAGE XSCT Command: [platform read {C:\Users\andre\Projects\IEE2463-SEP-Proyecto-Z8\Proyecto_2\vitis\proj\platform.spr}], Thread: Worker-4: Initializing the platform to enable editing
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-05-12 09:01:14.053
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/Users/andre/Projects/IEE2463-SEP-Proyecto-Z8/Proyecto_2/vitis/proj/hw/design_1_wrapper.xsa], Thread: Worker-3: Initializing hardware specification UI...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-05-12 09:01:14.873
+!MESSAGE XSCT command with result: [platform read {C:\Users\andre\Projects\IEE2463-SEP-Proyecto-Z8\Proyecto_2\vitis\proj\platform.spr}], Result: [null, ]. Thread: Worker-4: Initializing the platform to enable editing
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-05-12 09:01:14.875
+!MESSAGE XSCT Command: [platform active {proj}], Thread: Worker-4: Initializing the platform to enable editing
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-05-12 09:01:14.892
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/Users/andre/Projects/IEE2463-SEP-Proyecto-Z8/Proyecto_2/vitis/proj/hw/design_1_wrapper.xsa], Result: [null, ]. Thread: Worker-3: Initializing hardware specification UI...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-05-12 09:01:14.894
+!MESSAGE XSCT command with result: [platform active {proj}], Result: [null, ]. Thread: Worker-4: Initializing the platform to enable editing
+
+!ENTRY org.eclipse.launchbar.core 2 0 2025-05-12 09:01:36.603
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2025-05-12 09:01:36.605
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2025-05-12 09:01:36.605
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-05-12 09:02:09.059
+!MESSAGE Opening file dialog using preferences. Current path: null, Local preference: bootgen_files_selection, Group preference: null
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-05-12 09:02:09.073
+!MESSAGE Preference loaded using local preference: null
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-05-12 09:02:09.073
+!MESSAGE Workspace path used is: C:\Users\andre\Projects\IEE2463-SEP-Proyecto-Z8\Proyecto_2\vitis
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-05-12 09:02:18.008
+!MESSAGE Opening file dialog using preferences. Current path: null, Local preference: bootgen_files_selection, Group preference: null
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-05-12 09:02:18.008
+!MESSAGE Preference loaded using local preference: null
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-05-12 09:02:18.008
+!MESSAGE Workspace path used is: C:\Users\andre\Projects\IEE2463-SEP-Proyecto-Z8\Proyecto_2\vitis
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-05-12 09:03:20.074
+!MESSAGE Opening file dialog using preferences. Current path: null, Local preference: bootgen_files_selection, Group preference: null
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-05-12 09:03:20.074
+!MESSAGE Preference loaded using local preference: null
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-05-12 09:03:20.078
+!MESSAGE Workspace path used is: C:\Users\andre\Projects\IEE2463-SEP-Proyecto-Z8\Proyecto_2\vitis
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-05-12 09:03:35.265
+!MESSAGE Opening file dialog using preferences. Current path: null, Local preference: bootgen_files_selection, Group preference: null
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-05-12 09:03:35.265
+!MESSAGE Preference loaded using local preference: C:\Users\andre\Projects\IEE2463-SEP-Proyecto-Z8\Proyecto_2\vitis\output.bif
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-05-12 09:03:35.265
+!MESSAGE Workspace path used is: C:\Users\andre\Projects\IEE2463-SEP-Proyecto-Z8\Proyecto_2\vitis
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-05-12 09:06:21.462
+!MESSAGE Opening file dialog using preferences. Current path: null, Local preference: bootgen_files_selection, Group preference: null
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-05-12 09:06:21.462
+!MESSAGE Preference loaded using local preference: C:\Users\andre\Projects\IEE2463-SEP-Proyecto-Z8\Proyecto_2\project_1
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-05-12 09:06:33.136
+!MESSAGE Opening file dialog using preferences. Current path: null, Local preference: bootgen_files_selection, Group preference: null
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-05-12 09:06:33.136
+!MESSAGE Preference loaded using local preference: C:\Users\andre\Projects\IEE2463-SEP-Proyecto-Z8\Proyecto_2\project_1
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-05-12 09:07:04.486
+!MESSAGE Opening file dialog using preferences. Current path: null, Local preference: bootgen_files_selection, Group preference: null
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-05-12 09:07:04.486
+!MESSAGE Preference loaded using local preference: C:\Users\andre\Projects\IEE2463-SEP-Proyecto-Z8\Proyecto_2\project_1\output.bif
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-05-12 09:07:04.486
+!MESSAGE Workspace path used is: C:\Users\andre\Projects\IEE2463-SEP-Proyecto-Z8\Proyecto_2\vitis
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-05-12 09:07:09.705
+!MESSAGE Opening file dialog using preferences. Current path: null, Local preference: bootgen_files_selection, Group preference: null
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-05-12 09:07:09.705
+!MESSAGE Preference loaded using local preference: C:\Users\andre\Projects\IEE2463-SEP-Proyecto-Z8\Proyecto_2\vitis
+
+!ENTRY org.eclipse.jface 4 2 2025-05-12 09:08:51.317
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jface".
+!STACK 0
+java.lang.NullPointerException
+	at com.xilinx.sdx.sdsoc.debug.ui.ISdxTcfLaunchFilesHelper.resolveHwFilesPath(ISdxTcfLaunchFilesHelper.java:134)
+	at com.xilinx.sdx.sdsoc.debug.ui.ISdxTcfLaunchFilesHelper.getResolvedPath(ISdxTcfLaunchFilesHelper.java:125)
+	at com.xilinx.sdx.sdsoc.debug.ui.ISdxTcfLaunchFilesHelper.getHwPlatform(ISdxTcfLaunchFilesHelper.java:226)
+	at com.xilinx.sdx.system.debug.tools.SDXProgramFlashDialog.getSelectedHwPlatform(SDXProgramFlashDialog.java:1120)
+	at com.xilinx.sdx.system.debug.tools.SDXProgramFlashDialog.projectModified(SDXProgramFlashDialog.java:1186)
+	at com.xilinx.sdx.system.debug.tools.SDXProgramFlashDialog.lambda$1(SDXProgramFlashDialog.java:342)
+	at com.xilinx.sdk.utils.ui.fields.ComboViewerField$1.selectionChanged(ComboViewerField.java:64)
+	at org.eclipse.jface.viewers.Viewer$1.run(Viewer.java:155)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil.lambda$0(JFaceUtil.java:44)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:173)
+	at org.eclipse.jface.viewers.Viewer.fireSelectionChanged(Viewer.java:152)
+	at org.eclipse.jface.viewers.StructuredViewer.updateSelection(StructuredViewer.java:2179)
+	at org.eclipse.jface.viewers.StructuredViewer.setSelection(StructuredViewer.java:1716)
+	at org.eclipse.jface.viewers.Viewer.setSelection(Viewer.java:380)
+	at com.xilinx.sdk.utils.ui.fields.ComboViewerField.setValue(ComboViewerField.java:103)
+	at com.xilinx.sdk.utils.ui.fields.ComboViewerField.setInput(ComboViewerField.java:84)
+	at com.xilinx.sdx.system.debug.tools.SDXProgramFlashDialog.refreshProjectCombo(SDXProgramFlashDialog.java:596)
+	at com.xilinx.sdx.system.debug.tools.SDXProgramFlashDialog.lambda$0(SDXProgramFlashDialog.java:335)
+	at com.xilinx.sdk.utils.ui.fields.RadioField$1.widgetSelected(RadioField.java:124)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:249)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4118)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1052)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3931)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3534)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:818)
+	at org.eclipse.jface.window.Window.open(Window.java:794)
+	at com.xilinx.sdx.system.debug.tools.SDXProgramFlashHandler.execute(SDXProgramFlashHandler.java:38)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:291)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:93)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:318)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:252)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:161)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:152)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:494)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:487)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:204)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.executeItem(HandledContributionItem.java:433)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem.handleWidgetSelection(AbstractContributionItem.java:446)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem.lambda$2(AbstractContributionItem.java:472)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4118)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1052)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3931)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3534)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1170)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1059)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:667)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:597)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at com.xilinx.ide.application.ui.Application.start(Application.java:78)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:656)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:592)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1498)
+
+!ENTRY org.eclipse.jface 4 2 2025-05-12 09:08:52.335
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jface".
+!STACK 0
+java.lang.NullPointerException
+	at com.xilinx.sdx.sdsoc.debug.ui.ISdxTcfLaunchFilesHelper.resolveHwFilesPath(ISdxTcfLaunchFilesHelper.java:134)
+	at com.xilinx.sdx.sdsoc.debug.ui.ISdxTcfLaunchFilesHelper.getResolvedPath(ISdxTcfLaunchFilesHelper.java:125)
+	at com.xilinx.sdx.sdsoc.debug.ui.ISdxTcfLaunchFilesHelper.getHwPlatform(ISdxTcfLaunchFilesHelper.java:226)
+	at com.xilinx.sdx.system.debug.tools.SDXProgramFlashDialog.getSelectedHwPlatform(SDXProgramFlashDialog.java:1120)
+	at com.xilinx.sdx.system.debug.tools.SDXProgramFlashDialog.projectModified(SDXProgramFlashDialog.java:1186)
+	at com.xilinx.sdx.system.debug.tools.SDXProgramFlashDialog.lambda$1(SDXProgramFlashDialog.java:342)
+	at com.xilinx.sdk.utils.ui.fields.ComboViewerField$1.selectionChanged(ComboViewerField.java:64)
+	at org.eclipse.jface.viewers.Viewer$1.run(Viewer.java:155)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil.lambda$0(JFaceUtil.java:44)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:173)
+	at org.eclipse.jface.viewers.Viewer.fireSelectionChanged(Viewer.java:152)
+	at org.eclipse.jface.viewers.StructuredViewer.updateSelection(StructuredViewer.java:2179)
+	at org.eclipse.jface.viewers.StructuredViewer.setSelection(StructuredViewer.java:1716)
+	at org.eclipse.jface.viewers.Viewer.setSelection(Viewer.java:380)
+	at com.xilinx.sdk.utils.ui.fields.ComboViewerField.setValue(ComboViewerField.java:103)
+	at com.xilinx.sdk.utils.ui.fields.ComboViewerField.setInput(ComboViewerField.java:84)
+	at com.xilinx.sdx.system.debug.tools.SDXProgramFlashDialog.refreshProjectCombo(SDXProgramFlashDialog.java:596)
+	at com.xilinx.sdx.system.debug.tools.SDXProgramFlashDialog.lambda$0(SDXProgramFlashDialog.java:335)
+	at com.xilinx.sdk.utils.ui.fields.RadioField$1.widgetSelected(RadioField.java:124)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:249)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4118)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1052)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3931)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3534)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:818)
+	at org.eclipse.jface.window.Window.open(Window.java:794)
+	at com.xilinx.sdx.system.debug.tools.SDXProgramFlashHandler.execute(SDXProgramFlashHandler.java:38)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:291)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:93)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:318)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:252)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:161)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:152)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:494)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:487)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:204)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.executeItem(HandledContributionItem.java:433)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem.handleWidgetSelection(AbstractContributionItem.java:446)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem.lambda$2(AbstractContributionItem.java:472)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4118)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1052)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3931)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3534)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1170)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1059)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:667)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:597)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at com.xilinx.ide.application.ui.Application.start(Application.java:78)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:656)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:592)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1498)
+
+!ENTRY org.eclipse.jface 4 2 2025-05-12 09:09:48.523
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jface".
+!STACK 0
+java.lang.NullPointerException
+	at com.xilinx.sdx.sdsoc.debug.ui.ISdxTcfLaunchFilesHelper.resolveHwFilesPath(ISdxTcfLaunchFilesHelper.java:134)
+	at com.xilinx.sdx.sdsoc.debug.ui.ISdxTcfLaunchFilesHelper.getResolvedPath(ISdxTcfLaunchFilesHelper.java:125)
+	at com.xilinx.sdx.sdsoc.debug.ui.ISdxTcfLaunchFilesHelper.getHwPlatform(ISdxTcfLaunchFilesHelper.java:226)
+	at com.xilinx.sdx.system.debug.tools.SDXProgramFlashDialog.getSelectedHwPlatform(SDXProgramFlashDialog.java:1120)
+	at com.xilinx.sdx.system.debug.tools.SDXProgramFlashDialog.projectModified(SDXProgramFlashDialog.java:1186)
+	at com.xilinx.sdx.system.debug.tools.SDXProgramFlashDialog.lambda$1(SDXProgramFlashDialog.java:342)
+	at com.xilinx.sdk.utils.ui.fields.ComboViewerField$1.selectionChanged(ComboViewerField.java:64)
+	at org.eclipse.jface.viewers.Viewer$1.run(Viewer.java:155)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil.lambda$0(JFaceUtil.java:44)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:173)
+	at org.eclipse.jface.viewers.Viewer.fireSelectionChanged(Viewer.java:152)
+	at org.eclipse.jface.viewers.StructuredViewer.updateSelection(StructuredViewer.java:2179)
+	at org.eclipse.jface.viewers.StructuredViewer.setSelection(StructuredViewer.java:1716)
+	at org.eclipse.jface.viewers.Viewer.setSelection(Viewer.java:380)
+	at com.xilinx.sdk.utils.ui.fields.ComboViewerField.setValue(ComboViewerField.java:103)
+	at com.xilinx.sdk.utils.ui.fields.ComboViewerField.setInput(ComboViewerField.java:84)
+	at com.xilinx.sdx.system.debug.tools.SDXProgramFlashDialog.refreshProjectCombo(SDXProgramFlashDialog.java:596)
+	at com.xilinx.sdx.system.debug.tools.SDXProgramFlashDialog.lambda$0(SDXProgramFlashDialog.java:335)
+	at com.xilinx.sdk.utils.ui.fields.RadioField$1.widgetSelected(RadioField.java:124)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:249)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4118)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1052)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3931)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3534)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:818)
+	at org.eclipse.jface.window.Window.open(Window.java:794)
+	at com.xilinx.sdx.system.debug.tools.SDXProgramFlashHandler.execute(SDXProgramFlashHandler.java:38)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:291)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:93)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:318)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:252)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:161)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:152)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:494)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:487)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:204)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.executeItem(HandledContributionItem.java:433)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem.handleWidgetSelection(AbstractContributionItem.java:446)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem.lambda$2(AbstractContributionItem.java:472)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4118)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1052)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3931)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3534)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1170)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1059)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:667)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:597)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at com.xilinx.ide.application.ui.Application.start(Application.java:78)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:656)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:592)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1498)
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-05-12 09:09:58.488
+!MESSAGE Opening file dialog using preferences. Current path: null, Local preference: zynq_flash_files_selection, Group preference: null
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-05-12 09:09:58.488
+!MESSAGE Preference loaded using local preference: null
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-05-12 09:09:58.494
+!MESSAGE Workspace path used is: C:\Users\andre\Projects\IEE2463-SEP-Proyecto-Z8\Proyecto_2\vitis
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-05-12 09:10:47.033
+!MESSAGE Opening file dialog using preferences. Current path: C:\Xilinx\Vitis\2020.1\data\embeddedsw\lib\fixed_hwplatforms, Local preference: scw_hwspec, Group preference: null
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-05-12 09:11:39.573
+!MESSAGE Opening file dialog using preferences. Current path: C:\Xilinx\Vitis\2020.1\data\embeddedsw\lib\fixed_hwplatforms, Local preference: scw_hwspec, Group preference: null
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-05-12 09:11:58.915
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/Users/andre/AppData/Local/Temp/hwspec_design_1_wrapper2175145913425061329/design_1_wrapper.xsa], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-05-12 09:11:59.484
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/Users/andre/AppData/Local/Temp/hwspec_design_1_wrapper2175145913425061329/design_1_wrapper.xsa], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-05-12 09:11:59.590
+!MESSAGE XSCT Command: [::hsi::utils::get_all_periphs -json C:/Users/andre/AppData/Local/Temp/hwspec_design_1_wrapper2175145913425061329/design_1_wrapper.xsa], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-05-12 09:11:59.599
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_periphs -json C:/Users/andre/AppData/Local/Temp/hwspec_design_1_wrapper2175145913425061329/design_1_wrapper.xsa], Result: [null, {"audio_reader_0": {"hier_name": "audio_reader_0",
+"type": "audio_reader",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"blk_mem_gen_0": {"hier_name": "blk_mem_gen_0",
+"type": "blk_mem_gen",
+"version": "8.4",
+"ip_type": "MEMORY",
+},
+"clk_wiz_0": {"hier_name": "clk_wiz_0",
+"type": "clk_wiz",
+"version": "6.0",
+"ip_type": "PERIPHERAL",
+},
+"ila_0": {"hier_name": "ila_0",
+"type": "ila",
+"version": "6.2",
+"ip_type": "PERIPHERAL",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-05-12 09:12:39.189
+!MESSAGE XSCT Command: [::hsi::utils::closehw C:/Users/andre/AppData/Local/Temp/hwspec_design_1_wrapper2175145913425061329/design_1_wrapper.xsa], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-05-12 09:12:39.206
+!MESSAGE XSCT command with result: [::hsi::utils::closehw C:/Users/andre/AppData/Local/Temp/hwspec_design_1_wrapper2175145913425061329/design_1_wrapper.xsa], Result: [null, ]. Thread: main

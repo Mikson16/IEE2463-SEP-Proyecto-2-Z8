@@ -1,0 +1,42 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.933333",
+   "Default View_TopLeft":"-180,-93",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -lvl 5 -x 1050 -y -40 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 5 -x 1050 -y -10 -defaultsOSRD
+preplace port clk -pg 1 -lvl 0 -x -100 -y 280 -defaultsOSRD
+preplace port reset -pg 1 -lvl 0 -x -100 -y 250 -defaultsOSRD
+preplace port finished -pg 1 -lvl 5 -x 1050 -y 220 -defaultsOSRD
+preplace port playing -pg 1 -lvl 5 -x 1050 -y 190 -defaultsOSRD
+preplace port buzzer -pg 1 -lvl 5 -x 1050 -y 160 -defaultsOSRD
+preplace port play -pg 1 -lvl 0 -x -100 -y 170 -defaultsOSRD
+preplace port stop -pg 1 -lvl 0 -x -100 -y 200 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 4 -x 930 -y 90 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 2 -x 410 -y 270 -defaultsOSRD
+preplace inst ila_0 -pg 1 -lvl 4 -x 930 -y 330 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -x 110 -y 70 -defaultsOSRD
+preplace inst audio_reader_0 -pg 1 -lvl 3 -x 650 -y 190 -defaultsOSRD
+preplace netloc sys_clock_1 1 0 2 NJ 280 N
+preplace netloc reset_rtl_1 1 0 2 NJ 250 310
+preplace netloc clk_wiz_0_clk_out1 1 2 2 500 100 810
+preplace netloc audio_reader_0_address 1 3 1 780 80n
+preplace netloc blk_mem_gen_0_douta 1 2 2 510 280 800
+preplace netloc audio_reader_0_finished 1 3 2 770 220 NJ
+preplace netloc audio_reader_0_playing 1 3 2 820 190 NJ
+preplace netloc play_0_1 1 0 3 -80J 180 N 180 NJ
+preplace netloc stop_0_1 1 0 3 NJ 200 N 200 NJ
+preplace netloc audio_reader_0_buzzer 1 3 2 790 0 1030J
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 2 -80 -40 300
+preplace netloc processing_system7_0_FIXED_IO 1 1 4 320J -10 NJ -10 NJ -10 NJ
+preplace netloc processing_system7_0_DDR 1 1 4 310J -40 NJ -40 NJ -40 NJ
+levelinfo -pg 1 -100 110 410 650 930 1050
+pagesize -pg 1 -db -bbox -sgen -180 -100 1160 440
+"
+}
+{
+   "da_board_cnt":"2",
+   "da_ps7_cnt":"1"
+}
