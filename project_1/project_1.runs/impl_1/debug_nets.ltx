@@ -36,7 +36,7 @@
                                 "portIndex": 0,
                                 "nets": [
                                     {
-                                        "name": "design_1_i/audio_reader_0_playing",
+                                        "name": "design_1_i/audio_reader_0_playing_1",
                                         "isBus": false
                                     }
                                 ]
@@ -52,7 +52,7 @@
                                 "portIndex": 1,
                                 "nets": [
                                     {
-                                        "name": "design_1_i/audio_reader_0_finished",
+                                        "name": "design_1_i/audio_reader_0_finished_1",
                                         "isBus": false
                                     }
                                 ]
@@ -68,7 +68,7 @@
                                 "portIndex": 2,
                                 "nets": [
                                     {
-                                        "name": "design_1_i/audio_reader_0_buzzer",
+                                        "name": "design_1_i/audio_reader_0_buzzer_1",
                                         "isBus": false
                                     }
                                 ]
@@ -77,6 +77,152 @@
                                 "name": "probe3",
                                 "id": 3,
                                 "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 7,
+                                "portIndex": 3,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/blk_mem_gen_0_douta_1",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "design_1_i/blk_mem_gen_0_douta_1[7]"
+                                            },
+                                            {
+                                                "name": "design_1_i/blk_mem_gen_0_douta_1[6]"
+                                            },
+                                            {
+                                                "name": "design_1_i/blk_mem_gen_0_douta_1[5]"
+                                            },
+                                            {
+                                                "name": "design_1_i/blk_mem_gen_0_douta_1[4]"
+                                            },
+                                            {
+                                                "name": "design_1_i/blk_mem_gen_0_douta_1[3]"
+                                            },
+                                            {
+                                                "name": "design_1_i/blk_mem_gen_0_douta_1[2]"
+                                            },
+                                            {
+                                                "name": "design_1_i/blk_mem_gen_0_douta_1[1]"
+                                            },
+                                            {
+                                                "name": "design_1_i/blk_mem_gen_0_douta_1[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe4",
+                                "id": 4,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 7,
+                                "portIndex": 4,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/audio_reader_0_address_1",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "design_1_i/audio_reader_0_address_1[7]"
+                                            },
+                                            {
+                                                "name": "design_1_i/audio_reader_0_address_1[6]"
+                                            },
+                                            {
+                                                "name": "design_1_i/audio_reader_0_address_1[5]"
+                                            },
+                                            {
+                                                "name": "design_1_i/audio_reader_0_address_1[4]"
+                                            },
+                                            {
+                                                "name": "design_1_i/audio_reader_0_address_1[3]"
+                                            },
+                                            {
+                                                "name": "design_1_i/audio_reader_0_address_1[2]"
+                                            },
+                                            {
+                                                "name": "design_1_i/audio_reader_0_address_1[1]"
+                                            },
+                                            {
+                                                "name": "design_1_i/audio_reader_0_address_1[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "VIO_V2",
+                        "name": "design_1_i/vio_0",
+                        "spec": "labtools_vio_v3",
+                        "ipName": "vio",
+                        "core_location": {
+                            "user_chain": 1,
+                            "slave_index": 1,
+                            "bscan_switch_index": 0
+                        },
+                        "uuid": "01A4B5947C445FA6BD66F70F5F031273",
+                        "pins": [
+                            {
+                                "name": "probe_in0",
+                                "id": 5,
+                                "type": "DATA",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 0,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/audio_reader_0_playing",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe_in1",
+                                "id": 6,
+                                "type": "DATA",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 1,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/audio_reader_0_finished",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe_in2",
+                                "id": 7,
+                                "type": "DATA",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 2,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/audio_reader_0_buzzer",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe_in3",
+                                "id": 8,
+                                "type": "DATA",
                                 "direction": "IN",
                                 "isVector": true,
                                 "leftIndex": 0,
@@ -116,9 +262,9 @@
                                 ]
                             },
                             {
-                                "name": "probe4",
-                                "id": 4,
-                                "type": "DATA_TRIGGER",
+                                "name": "probe_in4",
+                                "id": 9,
+                                "type": "DATA",
                                 "direction": "IN",
                                 "isVector": true,
                                 "leftIndex": 0,
@@ -152,6 +298,33 @@
                                             },
                                             {
                                                 "name": "design_1_i/audio_reader_0_address[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe_out0",
+                                "id": 10,
+                                "type": "DATA",
+                                "direction": "OUT",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 2,
+                                "portIndex": 0,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/vio_0_probe_out0",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "design_1_i/vio_0_probe_out0[2]"
+                                            },
+                                            {
+                                                "name": "design_1_i/vio_0_probe_out0[1]"
+                                            },
+                                            {
+                                                "name": "design_1_i/vio_0_probe_out0[0]"
                                             }
                                         ]
                                     }

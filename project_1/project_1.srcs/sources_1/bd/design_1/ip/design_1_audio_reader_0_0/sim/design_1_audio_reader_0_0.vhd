@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:user:audio_reader:1.0
--- IP Revision: 5
+-- IP Revision: 7
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -58,6 +58,7 @@ ENTITY design_1_audio_reader_0_0 IS
     clk : IN STD_LOGIC;
     play : IN STD_LOGIC;
     stop : IN STD_LOGIC;
+    vio : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
     audio_ram : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     address : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
     buzzer : OUT STD_LOGIC;
@@ -74,6 +75,7 @@ ARCHITECTURE design_1_audio_reader_0_0_arch OF design_1_audio_reader_0_0 IS
       clk : IN STD_LOGIC;
       play : IN STD_LOGIC;
       stop : IN STD_LOGIC;
+      vio : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
       audio_ram : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
       address : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
       buzzer : OUT STD_LOGIC;
@@ -93,6 +95,7 @@ BEGIN
       clk => clk,
       play => play,
       stop => stop,
+      vio => vio,
       audio_ram => audio_ram,
       address => address,
       buzzer => buzzer,

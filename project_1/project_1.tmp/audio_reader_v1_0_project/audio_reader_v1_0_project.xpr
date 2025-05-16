@@ -3,10 +3,10 @@
 <!--                                                         -->
 <!-- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="49" Path="c:/users/andre/projects/iee2463-sep-proyecto-z8/proyecto_2/project_1/project_1.tmp/audio_reader_v1_0_project/audio_reader_v1_0_project.xpr">
+<Project Version="7" Minor="49" Path="c:/users/andre/projects/iee2463-sep-proyecto-2-z8/project_1/project_1.tmp/audio_reader_v1_0_project/audio_reader_v1_0_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="83c1225e197d4d9f87ad81bd943eb528"/>
+    <Option Name="Id" Val="ee3c9acbecdd412e99e4b8bf1706c444"/>
     <Option Name="Part" Val="xc7z010clg400-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -29,7 +29,7 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../../Users/andre/Projects/IEE2463-SEP-Proyecto-Z8/Proyecto_2/project_1"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/project_1"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPDefaultOutputPath" Val="$PSRCDIR/sources_1"/>
     <Option Name="IPCachePermission" Val="read"/>
@@ -69,27 +69,27 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PPRDIR/../../../../../../../../Users/andre/Projects/IEE2463-SEP-Proyecto-Z8/Proyecto_2/project_1/project_1.srcs/sources_1/new/pwm.vhd">
+      <File Path="$PPRDIR/../../../../../../../Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/project_1/project_1.srcs/sources_1/new/pwm.vhd">
         <FileInfo>
           <Attr Name="Library" Val=""/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../../../../../Users/andre/Projects/IEE2463-SEP-Proyecto-Z8/Proyecto_2/project_1/project_1.srcs/sources_1/new/audio_reader.vhd">
+      <File Path="$PPRDIR/../../../../../../../Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/project_1/project_1.srcs/sources_1/new/audio_reader.vhd">
         <FileInfo>
           <Attr Name="Library" Val=""/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../../../../../Users/andre/Projects/IEE2463-SEP-Proyecto-Z8/Proyecto_2/project_1/component.xml">
+      <File Path="$PPRDIR/../../../../../../../Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/project_1/component.xml">
         <FileInfo SFType="IPXACT"/>
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="audio_reader"/>
-        <Option Name="TopRTLFile" Val="$PPRDIR/../../../../../../../../Users/andre/Projects/IEE2463-SEP-Proyecto-Z8/Proyecto_2/project_1/project_1.srcs/sources_1/new/audio_reader.vhd"/>
+        <Option Name="TopRTLFile" Val="$PPRDIR/../../../../../../../Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/project_1/project_1.srcs/sources_1/new/audio_reader.vhd"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

@@ -1,0 +1,45 @@
+$date
+        2025-May-15 17:27:03
+$end
+$version
+        Vivado v2020.1 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 1 " design_1_i/audio_reader_0_playing $end
+$var reg 1 # design_1_i/audio_reader_0_finished $end
+$var reg 1 $ design_1_i/audio_reader_0_buzzer $end
+$var reg 8 % design_1_i/blk_mem_gen_0_douta [7:0] $end
+$var reg 8 - design_1_i/audio_reader_0_address [7:0] $end
+$var reg 1 5 _TRIGGER $end
+$var reg 1 6 _WINDOW $end
+$var reg 1 7 _GAP $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1"
+0#
+1$
+b10110010 %
+b1101101 -
+05
+16
+07
+$end
+#113
+0$
+#263
+1$
+#480
+b1101110 -
+#482
+b10101111 %
+#512
+15
+#619
+0$
+#775
+1$
