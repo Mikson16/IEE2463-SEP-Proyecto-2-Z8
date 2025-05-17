@@ -1,5 +1,5 @@
-set_property SRC_FILE_INFO {cfile:c:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_in_context.xdc rfile:../../../project_1.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_in_context.xdc id:1 order:EARLY scoped_inst:design_1_i/clk_wiz_0} [current_design]
-set_property SRC_FILE_INFO {cfile:C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/project_1/project_1.srcs/constrs_1/new/constraints.xdc rfile:../../../project_1.srcs/constrs_1/new/constraints.xdc id:2} [current_design]
+set_property SRC_FILE_INFO {cfile:d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_in_context.xdc rfile:../../../project_1.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_in_context.xdc id:1 order:EARLY scoped_inst:design_1_i/clk_wiz_0} [current_design]
+set_property SRC_FILE_INFO {cfile:D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/project_1/project_1.srcs/constrs_1/new/constraints.xdc rfile:../../../project_1.srcs/constrs_1/new/constraints.xdc id:2} [current_design]
 current_instance design_1_i/clk_wiz_0
 set_property src_info {type:SCOPED_XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
 create_clock -period 8.000 [get_ports -no_traverse {}]
@@ -8,6 +8,14 @@ create_generated_clock -source [get_ports clk_in1] -edges {1 2 3} -edge_shift {0
 current_instance
 set_property src_info {type:XDC file:2 line:8 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN K17   IOSTANDARD LVCMOS33 } [get_ports { clk }]; #IO_L12P_T1_MRCC_35 Sch=sysclk
+set_property src_info {type:XDC file:2 line:13 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN G15   IOSTANDARD LVCMOS33 } [get_ports { sw[0] }]; #IO_L19N_T3_VREF_35 Sch=sw[0]
+set_property src_info {type:XDC file:2 line:14 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN P15   IOSTANDARD LVCMOS33 } [get_ports { sw[1] }]; #IO_L24P_T3_34 Sch=sw[1]
+set_property src_info {type:XDC file:2 line:15 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN W13   IOSTANDARD LVCMOS33 } [get_ports { sw[2] }]; #IO_L4N_T0_34 Sch=sw[2]
+set_property src_info {type:XDC file:2 line:16 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN T16   IOSTANDARD LVCMOS33 } [get_ports { mode }]; #IO_L9P_T1_DQS_34 Sch=sw[3]
 set_property src_info {type:XDC file:2 line:20 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN K18   IOSTANDARD LVCMOS33 } [get_ports { play }]; #IO_L12N_T1_MRCC_35 Sch=btn[0]
 set_property src_info {type:XDC file:2 line:21 export:INPUT save:INPUT read:READ} [current_design]

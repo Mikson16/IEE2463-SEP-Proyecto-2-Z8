@@ -58,7 +58,7 @@ probe_in1 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
 probe_in2 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
 probe_in3 : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
 probe_in4 : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-probe_out0 : OUT STD_LOGIC_VECTOR(2 DOWNTO 0) := "000"
+probe_out0 : OUT STD_LOGIC_VECTOR(9 DOWNTO 0) := "0100001010"
 );
 END design_1_vio_0_0;
 ARCHITECTURE design_1_vio_0_0_arch OF design_1_vio_0_0 IS

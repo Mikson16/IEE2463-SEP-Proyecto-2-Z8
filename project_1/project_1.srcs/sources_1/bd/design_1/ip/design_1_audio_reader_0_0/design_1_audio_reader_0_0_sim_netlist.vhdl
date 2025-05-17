@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
--- Date        : Fri May 16 08:59:28 2025
--- Host        : AndresP running 64-bit major release  (build 9200)
+-- Date        : Sat May 17 18:45:33 2025
+-- Host        : Ro running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               c:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_audio_reader_0_0/design_1_audio_reader_0_0_sim_netlist.vhdl
+--               d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_audio_reader_0_0/design_1_audio_reader_0_0_sim_netlist.vhdl
 -- Design      : design_1_audio_reader_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -249,7 +249,7 @@ pwm_reg: unisim.vcomponents.FDRE
     );
 \saw[6]_i_1\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"6"
+      INIT => X"9"
     )
         port map (
       I0 => \saw[7]_i_2_n_0\,
@@ -258,17 +258,17 @@ pwm_reg: unisim.vcomponents.FDRE
     );
 \saw[7]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"78"
+      INIT => X"D2"
     )
         port map (
-      I0 => \saw[7]_i_2_n_0\,
-      I1 => saw_reg(6),
+      I0 => saw_reg(6),
+      I1 => \saw[7]_i_2_n_0\,
       I2 => saw_reg(7),
       O => plusOp(7)
     );
 \saw[7]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"8000000000000000"
+      INIT => X"7FFFFFFFFFFFFFFF"
     )
         port map (
       I0 => saw_reg(5),
@@ -358,7 +358,9 @@ entity design_1_audio_reader_0_0_audio_reader is
     audio_ram : in STD_LOGIC_VECTOR ( 7 downto 0 );
     play : in STD_LOGIC;
     stop : in STD_LOGIC;
-    vio : in STD_LOGIC_VECTOR ( 2 downto 0 )
+    sw : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    mode : in STD_LOGIC;
+    vio : in STD_LOGIC_VECTOR ( 9 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of design_1_audio_reader_0_0_audio_reader : entity is "audio_reader";
@@ -464,6 +466,9 @@ architecture STRUCTURE of design_1_audio_reader_0_0_audio_reader is
   signal \geqOp_carry__1_i_6_n_0\ : STD_LOGIC;
   signal \geqOp_carry__1_n_2\ : STD_LOGIC;
   signal \geqOp_carry__1_n_3\ : STD_LOGIC;
+  signal geqOp_carry_i_16_n_0 : STD_LOGIC;
+  signal geqOp_carry_i_17_n_0 : STD_LOGIC;
+  signal geqOp_carry_i_18_n_0 : STD_LOGIC;
   signal geqOp_carry_i_1_n_0 : STD_LOGIC;
   signal geqOp_carry_i_2_n_0 : STD_LOGIC;
   signal geqOp_carry_i_3_n_0 : STD_LOGIC;
@@ -476,12 +481,13 @@ architecture STRUCTURE of design_1_audio_reader_0_0_audio_reader is
   signal geqOp_carry_n_1 : STD_LOGIC;
   signal geqOp_carry_n_2 : STD_LOGIC;
   signal geqOp_carry_n_3 : STD_LOGIC;
+  signal max_counter : STD_LOGIC_VECTOR ( 8 downto 0 );
   signal p_0_in_0 : STD_LOGIC;
   signal \p_0_in__0\ : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \^playing\ : STD_LOGIC;
   signal playing_i_1_n_0 : STD_LOGIC;
   signal r_address : STD_LOGIC;
-  signal \r_address[5]_i_2_n_0\ : STD_LOGIC;
+  signal \r_address[6]_i_2_n_0\ : STD_LOGIC;
   signal \r_address[7]_i_3_n_0\ : STD_LOGIC;
   signal \r_address[7]_i_4_n_0\ : STD_LOGIC;
   signal \r_address[7]_i_5_n_0\ : STD_LOGIC;
@@ -497,8 +503,9 @@ architecture STRUCTURE of design_1_audio_reader_0_0_audio_reader is
   signal \NLW_geqOp_carry__1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
   signal \NLW_geqOp_carry__1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \FSM_onehot_state[3]_i_2\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \FSM_onehot_state[3]_i_4\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \FSM_onehot_state[3]_i_2\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \FSM_onehot_state[3]_i_3\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \FSM_onehot_state[3]_i_4\ : label is "soft_lutpair8";
   attribute FSM_ENCODED_STATES : string;
   attribute FSM_ENCODED_STATES of \FSM_onehot_state_reg[0]\ : label is "s_begin:0010,s_play:0100,s_idle:0001,s_stop:1000";
   attribute FSM_ENCODED_STATES of \FSM_onehot_state_reg[1]\ : label is "s_begin:0010,s_play:0100,s_idle:0001,s_stop:1000";
@@ -511,20 +518,21 @@ architecture STRUCTURE of design_1_audio_reader_0_0_audio_reader is
   attribute ADDER_THRESHOLD of \counter_reg[20]_i_1\ : label is 11;
   attribute ADDER_THRESHOLD of \counter_reg[4]_i_1\ : label is 11;
   attribute ADDER_THRESHOLD of \counter_reg[8]_i_1\ : label is 11;
-  attribute SOFT_HLUTNM of finished_i_1 : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of finished_i_1 : label is "soft_lutpair9";
   attribute COMPARATOR_THRESHOLD : integer;
   attribute COMPARATOR_THRESHOLD of geqOp_carry : label is 11;
   attribute COMPARATOR_THRESHOLD of \geqOp_carry__0\ : label is 11;
   attribute COMPARATOR_THRESHOLD of \geqOp_carry__1\ : label is 11;
-  attribute SOFT_HLUTNM of playing_i_1 : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \r_address[0]_i_1\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \r_address[1]_i_1\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of geqOp_carry_i_13 : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of geqOp_carry_i_17 : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of playing_i_1 : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \r_address[0]_i_1\ : label is "soft_lutpair7";
   attribute SOFT_HLUTNM of \r_address[2]_i_1\ : label is "soft_lutpair3";
   attribute SOFT_HLUTNM of \r_address[3]_i_1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \r_address[5]_i_2\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \r_address[6]_i_1\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \r_address[7]_i_2\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \r_address[7]_i_7\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \r_address[6]_i_2\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \r_address[7]_i_2\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \r_address[7]_i_3\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \r_address[7]_i_7\ : label is "soft_lutpair4";
 begin
   address(7 downto 0) <= \^address\(7 downto 0);
   finished <= \^finished\;
@@ -561,17 +569,15 @@ begin
       I1 => \FSM_onehot_state_reg_n_0_[2]\,
       O => \FSM_onehot_state[3]_i_2_n_0\
     );
-\FSM_onehot_state[3]_i_3\: unisim.vcomponents.LUT6
+\FSM_onehot_state[3]_i_3\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"0000000080000000"
+      INIT => X"8000"
     )
         port map (
-      I0 => \r_address[7]_i_7_n_0\,
-      I1 => \^address\(7),
-      I2 => \^address\(6),
-      I3 => \^address\(5),
-      I4 => \^address\(4),
-      I5 => play,
+      I0 => \r_address[7]_i_6_n_0\,
+      I1 => \^address\(2),
+      I2 => \^address\(0),
+      I3 => \^address\(1),
       O => p_0_in_0
     );
 \FSM_onehot_state[3]_i_4\: unisim.vcomponents.LUT4
@@ -1264,28 +1270,29 @@ geqOp_carry: unisim.vcomponents.CARRY4
       I1 => counter_reg(13),
       O => \geqOp_carry__0_i_2_n_0\
     );
-\geqOp_carry__0_i_3\: unisim.vcomponents.LUT5
+\geqOp_carry__0_i_3\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFEA8A8"
+      INIT => X"FFFFFFFEFFFE0000"
     )
         port map (
-      I0 => counter_reg(10),
-      I1 => vio(1),
-      I2 => vio(2),
-      I3 => vio(0),
-      I4 => counter_reg(11),
+      I0 => sw(1),
+      I1 => sw(0),
+      I2 => sw(2),
+      I3 => mode,
+      I4 => counter_reg(10),
+      I5 => counter_reg(11),
       O => \geqOp_carry__0_i_3_n_0\
     );
 \geqOp_carry__0_i_4\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FFFFFB00"
+      INIT => X"40F4F4F4"
     )
         port map (
-      I0 => vio(2),
-      I1 => vio(1),
-      I2 => vio(0),
-      I3 => counter_reg(8),
-      I4 => counter_reg(9),
+      I0 => max_counter(8),
+      I1 => counter_reg(8),
+      I2 => counter_reg(9),
+      I3 => vio(9),
+      I4 => mode,
       O => \geqOp_carry__0_i_4_n_0\
     );
 \geqOp_carry__0_i_5\: unisim.vcomponents.LUT2
@@ -1306,29 +1313,42 @@ geqOp_carry: unisim.vcomponents.CARRY4
       I1 => counter_reg(12),
       O => \geqOp_carry__0_i_6_n_0\
     );
-\geqOp_carry__0_i_7\: unisim.vcomponents.LUT5
+\geqOp_carry__0_i_7\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"000201FC"
+      INIT => X"000000010000FFFE"
     )
         port map (
-      I0 => vio(0),
-      I1 => vio(2),
-      I2 => vio(1),
-      I3 => counter_reg(11),
+      I0 => sw(1),
+      I1 => sw(0),
+      I2 => sw(2),
+      I3 => mode,
       I4 => counter_reg(10),
+      I5 => counter_reg(11),
       O => \geqOp_carry__0_i_7_n_0\
     );
 \geqOp_carry__0_i_8\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"000004FB"
+      INIT => X"82224111"
     )
         port map (
-      I0 => vio(2),
-      I1 => vio(1),
-      I2 => vio(0),
-      I3 => counter_reg(8),
-      I4 => counter_reg(9),
+      I0 => max_counter(8),
+      I1 => counter_reg(9),
+      I2 => vio(9),
+      I3 => mode,
+      I4 => counter_reg(8),
       O => \geqOp_carry__0_i_8_n_0\
+    );
+\geqOp_carry__0_i_9\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"AA00AA30"
+    )
+        port map (
+      I0 => vio(8),
+      I1 => sw(1),
+      I2 => sw(0),
+      I3 => mode,
+      I4 => sw(2),
+      O => max_counter(8)
     );
 \geqOp_carry__1\: unisim.vcomponents.CARRY4
      port map (
@@ -1402,101 +1422,214 @@ geqOp_carry: unisim.vcomponents.CARRY4
       I1 => counter_reg(16),
       O => \geqOp_carry__1_i_6_n_0\
     );
-geqOp_carry_i_1: unisim.vcomponents.LUT5
+geqOp_carry_i_1: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FBFCA2A0"
+      INIT => X"2F02"
     )
         port map (
       I0 => counter_reg(6),
-      I1 => vio(0),
-      I2 => vio(2),
-      I3 => vio(1),
-      I4 => counter_reg(7),
+      I1 => max_counter(6),
+      I2 => max_counter(7),
+      I3 => counter_reg(7),
       O => geqOp_carry_i_1_n_0
     );
-geqOp_carry_i_2: unisim.vcomponents.LUT5
+geqOp_carry_i_10: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FFFB0A00"
+      INIT => X"8B888B8B"
     )
         port map (
-      I0 => counter_reg(4),
-      I1 => vio(0),
-      I2 => vio(2),
-      I3 => vio(1),
-      I4 => counter_reg(5),
-      O => geqOp_carry_i_2_n_0
+      I0 => vio(7),
+      I1 => mode,
+      I2 => sw(2),
+      I3 => sw(1),
+      I4 => sw(0),
+      O => max_counter(7)
     );
-geqOp_carry_i_3: unisim.vcomponents.LUT5
+geqOp_carry_i_11: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"AACA0000"
+      INIT => X"FD0D"
     )
         port map (
-      I0 => counter_reg(2),
-      I1 => vio(1),
-      I2 => vio(0),
-      I3 => vio(2),
-      I4 => counter_reg(3),
-      O => geqOp_carry_i_3_n_0
+      I0 => sw(0),
+      I1 => sw(2),
+      I2 => mode,
+      I3 => vio(4),
+      O => max_counter(4)
     );
-geqOp_carry_i_4: unisim.vcomponents.LUT5
+geqOp_carry_i_12: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"AFA80000"
+      INIT => X"8B888888"
     )
         port map (
-      I0 => counter_reg(0),
-      I1 => vio(1),
-      I2 => vio(2),
-      I3 => vio(0),
-      I4 => counter_reg(1),
-      O => geqOp_carry_i_4_n_0
+      I0 => vio(2),
+      I1 => mode,
+      I2 => sw(2),
+      I3 => sw(0),
+      I4 => sw(1),
+      O => max_counter(2)
     );
-geqOp_carry_i_5: unisim.vcomponents.LUT5
+geqOp_carry_i_13: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"011020CE"
+      INIT => X"FD0D"
+    )
+        port map (
+      I0 => sw(1),
+      I1 => sw(2),
+      I2 => mode,
+      I3 => vio(3),
+      O => max_counter(3)
+    );
+geqOp_carry_i_14: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FF090009"
+    )
+        port map (
+      I0 => sw(1),
+      I1 => sw(0),
+      I2 => sw(2),
+      I3 => mode,
+      I4 => vio(0),
+      O => max_counter(0)
+    );
+geqOp_carry_i_15: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"ACAFACA3"
     )
         port map (
       I0 => vio(1),
-      I1 => vio(2),
-      I2 => vio(0),
-      I3 => counter_reg(7),
-      I4 => counter_reg(6),
+      I1 => sw(2),
+      I2 => mode,
+      I3 => sw(1),
+      I4 => sw(0),
+      O => max_counter(1)
+    );
+geqOp_carry_i_16: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FF0D000D00F2FFF2"
+    )
+        port map (
+      I0 => sw(0),
+      I1 => sw(1),
+      I2 => sw(2),
+      I3 => mode,
+      I4 => vio(7),
+      I5 => counter_reg(7),
+      O => geqOp_carry_i_16_n_0
+    );
+geqOp_carry_i_17: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"B8BB4744"
+    )
+        port map (
+      I0 => vio(3),
+      I1 => mode,
+      I2 => sw(2),
+      I3 => sw(1),
+      I4 => counter_reg(3),
+      O => geqOp_carry_i_17_n_0
+    );
+geqOp_carry_i_18: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FEF30E03010CF1FC"
+    )
+        port map (
+      I0 => sw(0),
+      I1 => sw(1),
+      I2 => mode,
+      I3 => sw(2),
+      I4 => vio(1),
+      I5 => counter_reg(1),
+      O => geqOp_carry_i_18_n_0
+    );
+geqOp_carry_i_2: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"40F4F4F4"
+    )
+        port map (
+      I0 => max_counter(4),
+      I1 => counter_reg(4),
+      I2 => counter_reg(5),
+      I3 => vio(5),
+      I4 => mode,
+      O => geqOp_carry_i_2_n_0
+    );
+geqOp_carry_i_3: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"4F04"
+    )
+        port map (
+      I0 => max_counter(2),
+      I1 => counter_reg(2),
+      I2 => max_counter(3),
+      I3 => counter_reg(3),
+      O => geqOp_carry_i_3_n_0
+    );
+geqOp_carry_i_4: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"4F04"
+    )
+        port map (
+      I0 => max_counter(0),
+      I1 => counter_reg(0),
+      I2 => max_counter(1),
+      I3 => counter_reg(1),
+      O => geqOp_carry_i_4_n_0
+    );
+geqOp_carry_i_5: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AA02000200A8AAA8"
+    )
+        port map (
+      I0 => geqOp_carry_i_16_n_0,
+      I1 => sw(1),
+      I2 => sw(0),
+      I3 => mode,
+      I4 => vio(6),
+      I5 => counter_reg(6),
       O => geqOp_carry_i_5_n_0
     );
 geqOp_carry_i_6: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"00CD1022"
+      INIT => X"82224111"
     )
         port map (
-      I0 => vio(1),
-      I1 => vio(2),
-      I2 => vio(0),
-      I3 => counter_reg(5),
+      I0 => max_counter(4),
+      I1 => counter_reg(5),
+      I2 => vio(5),
+      I3 => mode,
       I4 => counter_reg(4),
       O => geqOp_carry_i_6_n_0
     );
-geqOp_carry_i_7: unisim.vcomponents.LUT5
+geqOp_carry_i_7: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"0440BB00"
+      INIT => X"84"
     )
         port map (
-      I0 => vio(2),
-      I1 => vio(0),
-      I2 => vio(1),
-      I3 => counter_reg(3),
-      I4 => counter_reg(2),
+      I0 => max_counter(2),
+      I1 => geqOp_carry_i_17_n_0,
+      I2 => counter_reg(2),
       O => geqOp_carry_i_7_n_0
     );
-geqOp_carry_i_8: unisim.vcomponents.LUT5
+geqOp_carry_i_8: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"0406A2A0"
+      INIT => X"84"
     )
         port map (
-      I0 => counter_reg(1),
-      I1 => vio(0),
-      I2 => vio(2),
-      I3 => vio(1),
-      I4 => counter_reg(0),
+      I0 => max_counter(0),
+      I1 => geqOp_carry_i_18_n_0,
+      I2 => counter_reg(0),
       O => geqOp_carry_i_8_n_0
+    );
+geqOp_carry_i_9: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"888B"
+    )
+        port map (
+      I0 => vio(6),
+      I1 => mode,
+      I2 => sw(0),
+      I3 => sw(1),
+      O => max_counter(6)
     );
 playing_i_1: unisim.vcomponents.LUT3
     generic map(
@@ -1558,9 +1691,9 @@ pwm: entity work.design_1_audio_reader_0_0_proportional_pwm
     )
         port map (
       I0 => \r_address[7]_i_5_n_0\,
-      I1 => \^address\(0),
-      I2 => \^address\(1),
-      I3 => \^address\(2),
+      I1 => \^address\(2),
+      I2 => \^address\(0),
+      I3 => \^address\(1),
       I4 => \^address\(3),
       O => \p_0_in__0\(3)
     );
@@ -1569,45 +1702,48 @@ pwm: entity work.design_1_audio_reader_0_0_proportional_pwm
       INIT => X"7FFF000080000000"
     )
         port map (
-      I0 => \^address\(3),
+      I0 => \^address\(2),
       I1 => \^address\(0),
       I2 => \^address\(1),
-      I3 => \^address\(2),
+      I3 => \^address\(3),
       I4 => \r_address[7]_i_5_n_0\,
       I5 => \^address\(4),
       O => \p_0_in__0\(4)
     );
-\r_address[5]_i_1\: unisim.vcomponents.LUT6
+\r_address[5]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"7FFF000080000000"
+      INIT => X"F7000800"
     )
         port map (
       I0 => \^address\(4),
-      I1 => \^address\(2),
-      I2 => \r_address[5]_i_2_n_0\,
-      I3 => \^address\(3),
-      I4 => \r_address[7]_i_5_n_0\,
-      I5 => \^address\(5),
+      I1 => \^address\(3),
+      I2 => \r_address[6]_i_2_n_0\,
+      I3 => \r_address[7]_i_5_n_0\,
+      I4 => \^address\(5),
       O => \p_0_in__0\(5)
     );
-\r_address[5]_i_2\: unisim.vcomponents.LUT2
+\r_address[6]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"8"
+      INIT => X"BFFF000040000000"
     )
         port map (
-      I0 => \^address\(0),
-      I1 => \^address\(1),
-      O => \r_address[5]_i_2_n_0\
-    );
-\r_address[6]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"48"
-    )
-        port map (
-      I0 => \r_address[7]_i_4_n_0\,
-      I1 => \r_address[7]_i_5_n_0\,
-      I2 => \^address\(6),
+      I0 => \r_address[6]_i_2_n_0\,
+      I1 => \^address\(3),
+      I2 => \^address\(4),
+      I3 => \^address\(5),
+      I4 => \r_address[7]_i_5_n_0\,
+      I5 => \^address\(6),
       O => \p_0_in__0\(6)
+    );
+\r_address[6]_i_2\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"7F"
+    )
+        port map (
+      I0 => \^address\(1),
+      I1 => \^address\(0),
+      I2 => \^address\(2),
+      O => \r_address[6]_i_2_n_0\
     );
 \r_address[7]_i_1\: unisim.vcomponents.LUT3
     generic map(
@@ -1621,74 +1757,75 @@ pwm: entity work.design_1_audio_reader_0_0_proportional_pwm
     );
 \r_address[7]_i_2\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"7080"
+      INIT => X"B040"
     )
         port map (
-      I0 => \^address\(6),
-      I1 => \r_address[7]_i_4_n_0\,
+      I0 => \r_address[7]_i_4_n_0\,
+      I1 => \^address\(6),
       I2 => \r_address[7]_i_5_n_0\,
       I3 => \^address\(7),
       O => \p_0_in__0\(7)
     );
-\r_address[7]_i_3\: unisim.vcomponents.LUT6
+\r_address[7]_i_3\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FFFFFFFF40000000"
-    )
-        port map (
-      I0 => play,
-      I1 => \r_address[7]_i_6_n_0\,
-      I2 => \^address\(2),
-      I3 => \^address\(3),
-      I4 => \r_address[5]_i_2_n_0\,
-      I5 => stop,
-      O => \r_address[7]_i_3_n_0\
-    );
-\r_address[7]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"8000000000000000"
-    )
-        port map (
-      I0 => \^address\(5),
-      I1 => \^address\(3),
-      I2 => \^address\(0),
-      I3 => \^address\(1),
-      I4 => \^address\(2),
-      I5 => \^address\(4),
-      O => \r_address[7]_i_4_n_0\
-    );
-\r_address[7]_i_5\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"7FFFFFFFFFFFFFFF"
-    )
-        port map (
-      I0 => \r_address[7]_i_7_n_0\,
-      I1 => \^address\(7),
-      I2 => \^address\(6),
-      I3 => \^address\(5),
-      I4 => \^address\(4),
-      I5 => play,
-      O => \r_address[7]_i_5_n_0\
-    );
-\r_address[7]_i_6\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"8000"
-    )
-        port map (
-      I0 => \^address\(7),
-      I1 => \^address\(6),
-      I2 => \^address\(5),
-      I3 => \^address\(4),
-      O => \r_address[7]_i_6_n_0\
-    );
-\r_address[7]_i_7\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"8000"
+      INIT => X"FFFF8000"
     )
         port map (
       I0 => \^address\(1),
       I1 => \^address\(0),
+      I2 => \^address\(2),
+      I3 => \r_address[7]_i_6_n_0\,
+      I4 => stop,
+      O => \r_address[7]_i_3_n_0\
+    );
+\r_address[7]_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"7FFFFFFFFFFFFFFF"
+    )
+        port map (
+      I0 => \^address\(2),
+      I1 => \^address\(0),
+      I2 => \^address\(1),
+      I3 => \^address\(3),
+      I4 => \^address\(4),
+      I5 => \^address\(5),
+      O => \r_address[7]_i_4_n_0\
+    );
+\r_address[7]_i_5\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFFF7FFF"
+    )
+        port map (
+      I0 => \^address\(7),
+      I1 => \^address\(6),
+      I2 => play,
+      I3 => \^address\(3),
+      I4 => \r_address[7]_i_7_n_0\,
+      O => \r_address[7]_i_5_n_0\
+    );
+\r_address[7]_i_6\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000800000000000"
+    )
+        port map (
+      I0 => \^address\(5),
+      I1 => \^address\(6),
       I2 => \^address\(3),
-      I3 => \^address\(2),
+      I3 => \^address\(4),
+      I4 => play,
+      I5 => \^address\(7),
+      O => \r_address[7]_i_6_n_0\
+    );
+\r_address[7]_i_7\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"7FFFFFFF"
+    )
+        port map (
+      I0 => \^address\(5),
+      I1 => \^address\(4),
+      I2 => \^address\(2),
+      I3 => \^address\(0),
+      I4 => \^address\(1),
       O => \r_address[7]_i_7_n_0\
     );
 \r_address_reg[0]\: unisim.vcomponents.FDRE
@@ -1863,7 +2000,9 @@ entity design_1_audio_reader_0_0 is
     clk : in STD_LOGIC;
     play : in STD_LOGIC;
     stop : in STD_LOGIC;
-    vio : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    mode : in STD_LOGIC;
+    sw : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    vio : in STD_LOGIC_VECTOR ( 9 downto 0 );
     audio_ram : in STD_LOGIC_VECTOR ( 7 downto 0 );
     address : out STD_LOGIC_VECTOR ( 7 downto 0 );
     buzzer : out STD_LOGIC;
@@ -1895,9 +2034,11 @@ U0: entity work.design_1_audio_reader_0_0_audio_reader
       buzzer => buzzer,
       clk => clk,
       finished => finished,
+      mode => mode,
       play => play,
       playing => playing,
       stop => stop,
-      vio(2 downto 0) => vio(2 downto 0)
+      sw(2 downto 0) => sw(2 downto 0),
+      vio(9 downto 0) => vio(9 downto 0)
     );
 end STRUCTURE;

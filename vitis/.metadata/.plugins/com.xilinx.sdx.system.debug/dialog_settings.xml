@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item value="" key="&lt;None&gt;-offSet"/>
-	<item value="&lt;None&gt;" key="programflash.hwplatform"/>
-	<item value="C:\Users\andre\Projects\IEE2463-SEP-Proyecto-Z8\Proyecto_2\vitis\BOOT.bin" key="&lt;None&gt;-imgFile"/>
+	<item value="bootersw" key="programflash.hwplatform"/>
+	<item value="" key="bootersw-offSet"/>
+	<item value="false" key="bootersw-verifyFlash"/>
 	<item value="Auto Detect" key="&lt;None&gt;-device"/>
+	<item value="qspi-x4-single" key="bootersw-flashType"/>
+	<item value="" key="&lt;None&gt;-offSet"/>
+	<item value="D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/export/booter/sw/booter/boot/fsbl.elf" key="bootersw-fsblFile"/>
+	<item value="D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\vitis\BOOT.bin" key="&lt;None&gt;-imgFile"/>
+	<item value="Auto Detect" key="bootersw-device"/>
 	<item value="" key="&lt;None&gt;-fsblFile"/>
 	<item value="false" key="&lt;None&gt;-blankCheck"/>
 	<item value="Local" key="&lt;None&gt;-target"/>
+	<item value="D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\vitis\BOOT.bin" key="bootersw-imgFile"/>
+	<item value="false" key="bootersw-blankCheck"/>
+	<item value="Local" key="bootersw-target"/>
 	<item value="false" key="&lt;None&gt;-verifyFlash"/>
 </section>

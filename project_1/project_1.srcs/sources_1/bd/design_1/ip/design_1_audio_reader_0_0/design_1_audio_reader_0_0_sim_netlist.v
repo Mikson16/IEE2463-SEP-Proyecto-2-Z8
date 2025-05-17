@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Fri May 16 08:59:28 2025
-// Host        : AndresP running 64-bit major release  (build 9200)
+// Date        : Sat May 17 18:45:33 2025
+// Host        : Ro running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               c:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_audio_reader_0_0/design_1_audio_reader_0_0_sim_netlist.v
+//               d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_audio_reader_0_0/design_1_audio_reader_0_0_sim_netlist.v
 // Design      : design_1_audio_reader_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -19,6 +19,8 @@ module design_1_audio_reader_0_0
    (clk,
     play,
     stop,
+    mode,
+    sw,
     vio,
     audio_ram,
     address,
@@ -28,7 +30,9 @@ module design_1_audio_reader_0_0
   (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, INSERT_VIP 0" *) input clk;
   input play;
   input stop;
-  input [2:0]vio;
+  input mode;
+  input [2:0]sw;
+  input [9:0]vio;
   input [7:0]audio_ram;
   output [7:0]address;
   output buzzer;
@@ -40,10 +44,12 @@ module design_1_audio_reader_0_0
   wire buzzer;
   wire clk;
   wire finished;
+  wire mode;
   wire play;
   wire playing;
   wire stop;
-  wire [2:0]vio;
+  wire [2:0]sw;
+  wire [9:0]vio;
 
   design_1_audio_reader_0_0_audio_reader U0
        (.address(address),
@@ -51,9 +57,11 @@ module design_1_audio_reader_0_0
         .buzzer(buzzer),
         .clk(clk),
         .finished(finished),
+        .mode(mode),
         .play(play),
         .playing(playing),
         .stop(stop),
+        .sw(sw),
         .vio(vio));
 endmodule
 
@@ -67,6 +75,8 @@ module design_1_audio_reader_0_0_audio_reader
     audio_ram,
     play,
     stop,
+    sw,
+    mode,
     vio);
   output buzzer;
   output [7:0]address;
@@ -76,7 +86,9 @@ module design_1_audio_reader_0_0_audio_reader
   input [7:0]audio_ram;
   input play;
   input stop;
-  input [2:0]vio;
+  input [2:0]sw;
+  input mode;
+  input [9:0]vio;
 
   wire \FSM_onehot_state[0]_i_1_n_0 ;
   wire \FSM_onehot_state[3]_i_1_n_0 ;
@@ -180,6 +192,9 @@ module design_1_audio_reader_0_0_audio_reader
   wire geqOp_carry__1_i_6_n_0;
   wire geqOp_carry__1_n_2;
   wire geqOp_carry__1_n_3;
+  wire geqOp_carry_i_16_n_0;
+  wire geqOp_carry_i_17_n_0;
+  wire geqOp_carry_i_18_n_0;
   wire geqOp_carry_i_1_n_0;
   wire geqOp_carry_i_2_n_0;
   wire geqOp_carry_i_3_n_0;
@@ -192,20 +207,23 @@ module design_1_audio_reader_0_0_audio_reader
   wire geqOp_carry_n_1;
   wire geqOp_carry_n_2;
   wire geqOp_carry_n_3;
+  wire [8:0]max_counter;
+  wire mode;
   wire p_0_in_0;
   wire [7:0]p_0_in__0;
   wire play;
   wire playing;
   wire playing_i_1_n_0;
   wire r_address;
-  wire \r_address[5]_i_2_n_0 ;
+  wire \r_address[6]_i_2_n_0 ;
   wire \r_address[7]_i_3_n_0 ;
   wire \r_address[7]_i_4_n_0 ;
   wire \r_address[7]_i_5_n_0 ;
   wire \r_address[7]_i_6_n_0 ;
   wire \r_address[7]_i_7_n_0 ;
   wire stop;
-  wire [2:0]vio;
+  wire [2:0]sw;
+  wire [9:0]vio;
   wire [7:0]wave;
   wire wave0;
   wire wave_2;
@@ -233,24 +251,23 @@ module design_1_audio_reader_0_0_audio_reader
         .I4(counter0),
         .I5(\FSM_onehot_state[3]_i_4_n_0 ),
         .O(\FSM_onehot_state[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \FSM_onehot_state[3]_i_2 
        (.I0(\r_address[7]_i_3_n_0 ),
         .I1(\FSM_onehot_state_reg_n_0_[2] ),
         .O(\FSM_onehot_state[3]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000000080000000)) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  LUT4 #(
+    .INIT(16'h8000)) 
     \FSM_onehot_state[3]_i_3 
-       (.I0(\r_address[7]_i_7_n_0 ),
-        .I1(address[7]),
-        .I2(address[6]),
-        .I3(address[5]),
-        .I4(address[4]),
-        .I5(play),
+       (.I0(\r_address[7]_i_6_n_0 ),
+        .I1(address[2]),
+        .I2(address[0]),
+        .I3(address[1]),
         .O(p_0_in_0));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT4 #(
     .INIT(16'hF888)) 
     \FSM_onehot_state[3]_i_4 
@@ -663,7 +680,7 @@ module design_1_audio_reader_0_0_audio_reader
         .D(\counter_reg[8]_i_1_n_6 ),
         .Q(counter_reg[9]),
         .R(counter0));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT3 #(
     .INIT(8'hDC)) 
     finished_i_1
@@ -705,23 +722,24 @@ module design_1_audio_reader_0_0_audio_reader
        (.I0(counter_reg[12]),
         .I1(counter_reg[13]),
         .O(geqOp_carry__0_i_2_n_0));
-  LUT5 #(
-    .INIT(32'hFFFEA8A8)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFEFFFE0000)) 
     geqOp_carry__0_i_3
-       (.I0(counter_reg[10]),
-        .I1(vio[1]),
-        .I2(vio[2]),
-        .I3(vio[0]),
-        .I4(counter_reg[11]),
+       (.I0(sw[1]),
+        .I1(sw[0]),
+        .I2(sw[2]),
+        .I3(mode),
+        .I4(counter_reg[10]),
+        .I5(counter_reg[11]),
         .O(geqOp_carry__0_i_3_n_0));
   LUT5 #(
-    .INIT(32'hFFFFFB00)) 
+    .INIT(32'h40F4F4F4)) 
     geqOp_carry__0_i_4
-       (.I0(vio[2]),
-        .I1(vio[1]),
-        .I2(vio[0]),
-        .I3(counter_reg[8]),
-        .I4(counter_reg[9]),
+       (.I0(max_counter[8]),
+        .I1(counter_reg[8]),
+        .I2(counter_reg[9]),
+        .I3(vio[9]),
+        .I4(mode),
         .O(geqOp_carry__0_i_4_n_0));
   LUT2 #(
     .INIT(4'h1)) 
@@ -735,24 +753,34 @@ module design_1_audio_reader_0_0_audio_reader
        (.I0(counter_reg[13]),
         .I1(counter_reg[12]),
         .O(geqOp_carry__0_i_6_n_0));
-  LUT5 #(
-    .INIT(32'h000201FC)) 
+  LUT6 #(
+    .INIT(64'h000000010000FFFE)) 
     geqOp_carry__0_i_7
-       (.I0(vio[0]),
-        .I1(vio[2]),
-        .I2(vio[1]),
-        .I3(counter_reg[11]),
+       (.I0(sw[1]),
+        .I1(sw[0]),
+        .I2(sw[2]),
+        .I3(mode),
         .I4(counter_reg[10]),
+        .I5(counter_reg[11]),
         .O(geqOp_carry__0_i_7_n_0));
   LUT5 #(
-    .INIT(32'h000004FB)) 
+    .INIT(32'h82224111)) 
     geqOp_carry__0_i_8
-       (.I0(vio[2]),
-        .I1(vio[1]),
-        .I2(vio[0]),
-        .I3(counter_reg[8]),
-        .I4(counter_reg[9]),
+       (.I0(max_counter[8]),
+        .I1(counter_reg[9]),
+        .I2(vio[9]),
+        .I3(mode),
+        .I4(counter_reg[8]),
         .O(geqOp_carry__0_i_8_n_0));
+  LUT5 #(
+    .INIT(32'hAA00AA30)) 
+    geqOp_carry__0_i_9
+       (.I0(vio[8]),
+        .I1(sw[1]),
+        .I2(sw[0]),
+        .I3(mode),
+        .I4(sw[2]),
+        .O(max_counter[8]));
   (* COMPARATOR_THRESHOLD = "11" *) 
   CARRY4 geqOp_carry__1
        (.CI(geqOp_carry__0_n_0),
@@ -797,79 +825,164 @@ module design_1_audio_reader_0_0_audio_reader
        (.I0(counter_reg[17]),
         .I1(counter_reg[16]),
         .O(geqOp_carry__1_i_6_n_0));
-  LUT5 #(
-    .INIT(32'hFBFCA2A0)) 
+  LUT4 #(
+    .INIT(16'h2F02)) 
     geqOp_carry_i_1
        (.I0(counter_reg[6]),
-        .I1(vio[0]),
-        .I2(vio[2]),
-        .I3(vio[1]),
-        .I4(counter_reg[7]),
+        .I1(max_counter[6]),
+        .I2(max_counter[7]),
+        .I3(counter_reg[7]),
         .O(geqOp_carry_i_1_n_0));
   LUT5 #(
-    .INIT(32'hFFFB0A00)) 
-    geqOp_carry_i_2
-       (.I0(counter_reg[4]),
-        .I1(vio[0]),
-        .I2(vio[2]),
-        .I3(vio[1]),
-        .I4(counter_reg[5]),
-        .O(geqOp_carry_i_2_n_0));
+    .INIT(32'h8B888B8B)) 
+    geqOp_carry_i_10
+       (.I0(vio[7]),
+        .I1(mode),
+        .I2(sw[2]),
+        .I3(sw[1]),
+        .I4(sw[0]),
+        .O(max_counter[7]));
+  LUT4 #(
+    .INIT(16'hFD0D)) 
+    geqOp_carry_i_11
+       (.I0(sw[0]),
+        .I1(sw[2]),
+        .I2(mode),
+        .I3(vio[4]),
+        .O(max_counter[4]));
   LUT5 #(
-    .INIT(32'hAACA0000)) 
-    geqOp_carry_i_3
-       (.I0(counter_reg[2]),
-        .I1(vio[1]),
-        .I2(vio[0]),
-        .I3(vio[2]),
-        .I4(counter_reg[3]),
-        .O(geqOp_carry_i_3_n_0));
+    .INIT(32'h8B888888)) 
+    geqOp_carry_i_12
+       (.I0(vio[2]),
+        .I1(mode),
+        .I2(sw[2]),
+        .I3(sw[0]),
+        .I4(sw[1]),
+        .O(max_counter[2]));
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  LUT4 #(
+    .INIT(16'hFD0D)) 
+    geqOp_carry_i_13
+       (.I0(sw[1]),
+        .I1(sw[2]),
+        .I2(mode),
+        .I3(vio[3]),
+        .O(max_counter[3]));
   LUT5 #(
-    .INIT(32'hAFA80000)) 
-    geqOp_carry_i_4
-       (.I0(counter_reg[0]),
-        .I1(vio[1]),
-        .I2(vio[2]),
-        .I3(vio[0]),
-        .I4(counter_reg[1]),
-        .O(geqOp_carry_i_4_n_0));
+    .INIT(32'hFF090009)) 
+    geqOp_carry_i_14
+       (.I0(sw[1]),
+        .I1(sw[0]),
+        .I2(sw[2]),
+        .I3(mode),
+        .I4(vio[0]),
+        .O(max_counter[0]));
   LUT5 #(
-    .INIT(32'h011020CE)) 
-    geqOp_carry_i_5
+    .INIT(32'hACAFACA3)) 
+    geqOp_carry_i_15
        (.I0(vio[1]),
-        .I1(vio[2]),
-        .I2(vio[0]),
-        .I3(counter_reg[7]),
-        .I4(counter_reg[6]),
+        .I1(sw[2]),
+        .I2(mode),
+        .I3(sw[1]),
+        .I4(sw[0]),
+        .O(max_counter[1]));
+  LUT6 #(
+    .INIT(64'hFF0D000D00F2FFF2)) 
+    geqOp_carry_i_16
+       (.I0(sw[0]),
+        .I1(sw[1]),
+        .I2(sw[2]),
+        .I3(mode),
+        .I4(vio[7]),
+        .I5(counter_reg[7]),
+        .O(geqOp_carry_i_16_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  LUT5 #(
+    .INIT(32'hB8BB4744)) 
+    geqOp_carry_i_17
+       (.I0(vio[3]),
+        .I1(mode),
+        .I2(sw[2]),
+        .I3(sw[1]),
+        .I4(counter_reg[3]),
+        .O(geqOp_carry_i_17_n_0));
+  LUT6 #(
+    .INIT(64'hFEF30E03010CF1FC)) 
+    geqOp_carry_i_18
+       (.I0(sw[0]),
+        .I1(sw[1]),
+        .I2(mode),
+        .I3(sw[2]),
+        .I4(vio[1]),
+        .I5(counter_reg[1]),
+        .O(geqOp_carry_i_18_n_0));
+  LUT5 #(
+    .INIT(32'h40F4F4F4)) 
+    geqOp_carry_i_2
+       (.I0(max_counter[4]),
+        .I1(counter_reg[4]),
+        .I2(counter_reg[5]),
+        .I3(vio[5]),
+        .I4(mode),
+        .O(geqOp_carry_i_2_n_0));
+  LUT4 #(
+    .INIT(16'h4F04)) 
+    geqOp_carry_i_3
+       (.I0(max_counter[2]),
+        .I1(counter_reg[2]),
+        .I2(max_counter[3]),
+        .I3(counter_reg[3]),
+        .O(geqOp_carry_i_3_n_0));
+  LUT4 #(
+    .INIT(16'h4F04)) 
+    geqOp_carry_i_4
+       (.I0(max_counter[0]),
+        .I1(counter_reg[0]),
+        .I2(max_counter[1]),
+        .I3(counter_reg[1]),
+        .O(geqOp_carry_i_4_n_0));
+  LUT6 #(
+    .INIT(64'hAA02000200A8AAA8)) 
+    geqOp_carry_i_5
+       (.I0(geqOp_carry_i_16_n_0),
+        .I1(sw[1]),
+        .I2(sw[0]),
+        .I3(mode),
+        .I4(vio[6]),
+        .I5(counter_reg[6]),
         .O(geqOp_carry_i_5_n_0));
   LUT5 #(
-    .INIT(32'h00CD1022)) 
+    .INIT(32'h82224111)) 
     geqOp_carry_i_6
-       (.I0(vio[1]),
-        .I1(vio[2]),
-        .I2(vio[0]),
-        .I3(counter_reg[5]),
+       (.I0(max_counter[4]),
+        .I1(counter_reg[5]),
+        .I2(vio[5]),
+        .I3(mode),
         .I4(counter_reg[4]),
         .O(geqOp_carry_i_6_n_0));
-  LUT5 #(
-    .INIT(32'h0440BB00)) 
+  LUT3 #(
+    .INIT(8'h84)) 
     geqOp_carry_i_7
-       (.I0(vio[2]),
-        .I1(vio[0]),
-        .I2(vio[1]),
-        .I3(counter_reg[3]),
-        .I4(counter_reg[2]),
+       (.I0(max_counter[2]),
+        .I1(geqOp_carry_i_17_n_0),
+        .I2(counter_reg[2]),
         .O(geqOp_carry_i_7_n_0));
-  LUT5 #(
-    .INIT(32'h0406A2A0)) 
+  LUT3 #(
+    .INIT(8'h84)) 
     geqOp_carry_i_8
-       (.I0(counter_reg[1]),
-        .I1(vio[0]),
-        .I2(vio[2]),
-        .I3(vio[1]),
-        .I4(counter_reg[0]),
+       (.I0(max_counter[0]),
+        .I1(geqOp_carry_i_18_n_0),
+        .I2(counter_reg[0]),
         .O(geqOp_carry_i_8_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  LUT4 #(
+    .INIT(16'h888B)) 
+    geqOp_carry_i_9
+       (.I0(vio[6]),
+        .I1(mode),
+        .I2(sw[0]),
+        .I3(sw[1]),
+        .O(max_counter[6]));
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT3 #(
     .INIT(8'hDC)) 
     playing_i_1
@@ -887,14 +1000,13 @@ module design_1_audio_reader_0_0_audio_reader
        (.Q(wave),
         .buzzer(buzzer),
         .clk(clk));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \r_address[0]_i_1 
        (.I0(\r_address[7]_i_5_n_0 ),
         .I1(address[0]),
         .O(p_0_in__0[0]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT3 #(
     .INIT(8'h28)) 
     \r_address[1]_i_1 
@@ -916,46 +1028,48 @@ module design_1_audio_reader_0_0_audio_reader
     .INIT(32'h2AAA8000)) 
     \r_address[3]_i_1 
        (.I0(\r_address[7]_i_5_n_0 ),
-        .I1(address[0]),
-        .I2(address[1]),
-        .I3(address[2]),
+        .I1(address[2]),
+        .I2(address[0]),
+        .I3(address[1]),
         .I4(address[3]),
         .O(p_0_in__0[3]));
   LUT6 #(
     .INIT(64'h7FFF000080000000)) 
     \r_address[4]_i_1 
-       (.I0(address[3]),
+       (.I0(address[2]),
         .I1(address[0]),
         .I2(address[1]),
-        .I3(address[2]),
+        .I3(address[3]),
         .I4(\r_address[7]_i_5_n_0 ),
         .I5(address[4]),
         .O(p_0_in__0[4]));
-  LUT6 #(
-    .INIT(64'h7FFF000080000000)) 
+  LUT5 #(
+    .INIT(32'hF7000800)) 
     \r_address[5]_i_1 
        (.I0(address[4]),
-        .I1(address[2]),
-        .I2(\r_address[5]_i_2_n_0 ),
-        .I3(address[3]),
-        .I4(\r_address[7]_i_5_n_0 ),
-        .I5(address[5]),
+        .I1(address[3]),
+        .I2(\r_address[6]_i_2_n_0 ),
+        .I3(\r_address[7]_i_5_n_0 ),
+        .I4(address[5]),
         .O(p_0_in__0[5]));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \r_address[5]_i_2 
-       (.I0(address[0]),
-        .I1(address[1]),
-        .O(\r_address[5]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'hBFFF000040000000)) 
+    \r_address[6]_i_1 
+       (.I0(\r_address[6]_i_2_n_0 ),
+        .I1(address[3]),
+        .I2(address[4]),
+        .I3(address[5]),
+        .I4(\r_address[7]_i_5_n_0 ),
+        .I5(address[6]),
+        .O(p_0_in__0[6]));
   (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT3 #(
-    .INIT(8'h48)) 
-    \r_address[6]_i_1 
-       (.I0(\r_address[7]_i_4_n_0 ),
-        .I1(\r_address[7]_i_5_n_0 ),
-        .I2(address[6]),
-        .O(p_0_in__0[6]));
+    .INIT(8'h7F)) 
+    \r_address[6]_i_2 
+       (.I0(address[1]),
+        .I1(address[0]),
+        .I2(address[2]),
+        .O(\r_address[6]_i_2_n_0 ));
   LUT3 #(
     .INIT(8'h08)) 
     \r_address[7]_i_1 
@@ -963,61 +1077,63 @@ module design_1_audio_reader_0_0_audio_reader
         .I1(\FSM_onehot_state_reg_n_0_[2] ),
         .I2(\r_address[7]_i_3_n_0 ),
         .O(r_address));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT4 #(
-    .INIT(16'h7080)) 
+    .INIT(16'hB040)) 
     \r_address[7]_i_2 
-       (.I0(address[6]),
-        .I1(\r_address[7]_i_4_n_0 ),
+       (.I0(\r_address[7]_i_4_n_0 ),
+        .I1(address[6]),
         .I2(\r_address[7]_i_5_n_0 ),
         .I3(address[7]),
         .O(p_0_in__0[7]));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF40000000)) 
-    \r_address[7]_i_3 
-       (.I0(play),
-        .I1(\r_address[7]_i_6_n_0 ),
-        .I2(address[2]),
-        .I3(address[3]),
-        .I4(\r_address[5]_i_2_n_0 ),
-        .I5(stop),
-        .O(\r_address[7]_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'h8000000000000000)) 
-    \r_address[7]_i_4 
-       (.I0(address[5]),
-        .I1(address[3]),
-        .I2(address[0]),
-        .I3(address[1]),
-        .I4(address[2]),
-        .I5(address[4]),
-        .O(\r_address[7]_i_4_n_0 ));
-  LUT6 #(
-    .INIT(64'h7FFFFFFFFFFFFFFF)) 
-    \r_address[7]_i_5 
-       (.I0(\r_address[7]_i_7_n_0 ),
-        .I1(address[7]),
-        .I2(address[6]),
-        .I3(address[5]),
-        .I4(address[4]),
-        .I5(play),
-        .O(\r_address[7]_i_5_n_0 ));
-  LUT4 #(
-    .INIT(16'h8000)) 
-    \r_address[7]_i_6 
-       (.I0(address[7]),
-        .I1(address[6]),
-        .I2(address[5]),
-        .I3(address[4]),
-        .O(\r_address[7]_i_6_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair5" *) 
-  LUT4 #(
-    .INIT(16'h8000)) 
-    \r_address[7]_i_7 
+  LUT5 #(
+    .INIT(32'hFFFF8000)) 
+    \r_address[7]_i_3 
        (.I0(address[1]),
         .I1(address[0]),
+        .I2(address[2]),
+        .I3(\r_address[7]_i_6_n_0 ),
+        .I4(stop),
+        .O(\r_address[7]_i_3_n_0 ));
+  LUT6 #(
+    .INIT(64'h7FFFFFFFFFFFFFFF)) 
+    \r_address[7]_i_4 
+       (.I0(address[2]),
+        .I1(address[0]),
+        .I2(address[1]),
+        .I3(address[3]),
+        .I4(address[4]),
+        .I5(address[5]),
+        .O(\r_address[7]_i_4_n_0 ));
+  LUT5 #(
+    .INIT(32'hFFFF7FFF)) 
+    \r_address[7]_i_5 
+       (.I0(address[7]),
+        .I1(address[6]),
+        .I2(play),
+        .I3(address[3]),
+        .I4(\r_address[7]_i_7_n_0 ),
+        .O(\r_address[7]_i_5_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000800000000000)) 
+    \r_address[7]_i_6 
+       (.I0(address[5]),
+        .I1(address[6]),
         .I2(address[3]),
-        .I3(address[2]),
+        .I3(address[4]),
+        .I4(play),
+        .I5(address[7]),
+        .O(\r_address[7]_i_6_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  LUT5 #(
+    .INIT(32'h7FFFFFFF)) 
+    \r_address[7]_i_7 
+       (.I0(address[5]),
+        .I1(address[4]),
+        .I2(address[2]),
+        .I3(address[0]),
+        .I4(address[1]),
         .O(\r_address[7]_i_7_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
@@ -1312,21 +1428,21 @@ module design_1_audio_reader_0_0_proportional_pwm
         .O(plusOp[5]));
   (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT2 #(
-    .INIT(4'h6)) 
+    .INIT(4'h9)) 
     \saw[6]_i_1 
        (.I0(\saw[7]_i_2_n_0 ),
         .I1(saw_reg[6]),
         .O(plusOp[6]));
   (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT3 #(
-    .INIT(8'h78)) 
+    .INIT(8'hD2)) 
     \saw[7]_i_1 
-       (.I0(\saw[7]_i_2_n_0 ),
-        .I1(saw_reg[6]),
+       (.I0(saw_reg[6]),
+        .I1(\saw[7]_i_2_n_0 ),
         .I2(saw_reg[7]),
         .O(plusOp[7]));
   LUT6 #(
-    .INIT(64'h8000000000000000)) 
+    .INIT(64'h7FFFFFFFFFFFFFFF)) 
     \saw[7]_i_2 
        (.I0(saw_reg[5]),
         .I1(saw_reg[3]),

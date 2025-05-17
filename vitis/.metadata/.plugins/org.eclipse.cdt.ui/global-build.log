@@ -1,0 +1,13 @@
+Nothing to build in platform 'booter'
+
+
+**** Build of configuration Debug for project bootersw ****
+
+Nothing to build for project bootersw
+18:27:25 **** Build of configuration Debug for project bootersw_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 50680 D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/export/booter/booter.xpfm standalone_domain D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/bootersw_system/Debug/system.bif
+sdcard_gen --xpfm D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/export/booter/booter.xpfm --sys_config booter --bif D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/bootersw_system/Debug/system.bif --bitstream D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/bootersw/_ide/bitstream/design_1_wrapper.bit --elf D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/bootersw/Debug/bootersw.elf,ps7_cortexa9_0
+ELF does not exist: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/bootersw/Debug/bootersw.elf
+make: *** [makefile:39: package] Error 1

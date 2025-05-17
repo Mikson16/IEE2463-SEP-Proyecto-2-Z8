@@ -1,0 +1,2262 @@
+TRACE::2025-05-17.18:23:07::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:07::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:07::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:08::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:08::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:08::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:08::SCWPlatform::Do not have an existing db opened. 
+TRACE::2025-05-17.18:23:10::SCWPlatform::Opened new HwDB with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:10::SCWWriter::formatted JSON is {
+	"platformName":	"booter",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"booter",
+	"platHandOff":	"D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/project_1/design_1_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_1_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	""
+}
+TRACE::2025-05-17.18:23:10::SCWWriter::formatted JSON is {
+	"platformName":	"booter",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"booter",
+	"platHandOff":	"D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/project_1/design_1_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_1_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"booter",
+	"systems":	[{
+			"systemName":	"booter",
+			"systemDesc":	"booter",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"booter"
+		}]
+}
+TRACE::2025-05-17.18:23:10::SCWPlatform::Boot application domains not present, creating them
+TRACE::2025-05-17.18:23:10::SCWDomain::checking for install qemu data   : 
+TRACE::2025-05-17.18:23:10::SCWDomain:: Using the QEMU Data from install at  : D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/
+TRACE::2025-05-17.18:23:10::SCWDomain:: Using the QEMU args  from install at  : D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2025-05-17.18:23:10::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:10::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:10::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:10::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:10::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:10::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:10::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:10::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:10::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:10::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:10::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:10::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:10::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:10::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:10::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:10::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:10::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:10::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:10::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:10::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:10::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:10::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:10::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:10::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:10::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:10::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:10::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:10::SCWPlatform::Boot application domain added for zynq_fsbl
+TRACE::2025-05-17.18:23:10::SCWPlatform::Generating the sources  .
+TRACE::2025-05-17.18:23:10::SCWBDomain::Generating boot domain sources.
+TRACE::2025-05-17.18:23:10::SCWBDomain:: Generating the zynq_fsbl Application.
+TRACE::2025-05-17.18:23:10::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:10::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:10::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:10::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:10::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:10::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:10::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:10::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:10::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:10::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:10::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2025-05-17.18:23:10::SCWMssOS::No sw design opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:10::SCWMssOS::mss does not exists at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:10::SCWMssOS::Creating sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:10::SCWMssOS::Adding the swdes entry, created swdb D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:10::SCWMssOS::updating the scw layer changes to swdes at   D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:10::SCWMssOS::Writing mss at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:10::SCWMssOS::Completed writing the mss file at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp
+TRACE::2025-05-17.18:23:10::SCWMssOS::Picking up changes from newly written mss file into SCW Layer. 
+TRACE::2025-05-17.18:23:10::SCWMssOS::Updated the changes from newly written mss file into SCW Layer. 
+TRACE::2025-05-17.18:23:10::SCWBDomain::Completed writing the mss file at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp
+TRACE::2025-05-17.18:23:17::SCWPlatform::Generating sources Done.
+TRACE::2025-05-17.18:23:17::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:17::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:17::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:17::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:17::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:17::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:17::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:17::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:17::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:17::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:17::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss||
+
+KEYINFO::2025-05-17.18:23:17::SCWMssOS::Could not open the swdb for D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+KEYINFO::2025-05-17.18:23:17::SCWMssOS::Could not open the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+ERROR: [Hsi 55-1558] Software Design D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss is not found
+
+TRACE::2025-05-17.18:23:17::SCWMssOS::Cleared the swdb table entry
+TRACE::2025-05-17.18:23:17::SCWMssOS::No sw design opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:17::SCWMssOS::mss exists loading the mss file  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:17::SCWMssOS::Opened the sw design from mss  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:17::SCWMssOS::Adding the swdes entry D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2025-05-17.18:23:17::SCWMssOS::updating the scw layer about changes
+TRACE::2025-05-17.18:23:17::SCWMssOS::Opened the sw design.  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:17::SCWMssOS::Saving the mss changes D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:17::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-05-17.18:23:17::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-05-17.18:23:17::SCWMssOS::Commit changes completed.
+TRACE::2025-05-17.18:23:17::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:17::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:17::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:17::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:17::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:17::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:17::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:17::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:17::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:17::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:17::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:17::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:17::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:17::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:17::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:17::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:17::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:17::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:17::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:17::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:17::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:17::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:17::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:17::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:17::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:17::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:17::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:17::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:17::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:17::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:17::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:17::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:17::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:17::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:17::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:17::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:17::SCWWriter::formatted JSON is {
+	"platformName":	"booter",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"booter",
+	"platHandOff":	"D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/project_1/design_1_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_1_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"platFsblTarget":	"ps7_cortexa9_0",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"booter",
+	"systems":	[{
+			"systemName":	"booter",
+			"systemDesc":	"booter",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"booter",
+			"sysActiveDom":	"zynq_fsbl",
+			"sysDefaultDom":	"",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"d64a81374f4dd989af67b502a6a982ab",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+TRACE::2025-05-17.18:23:17::SCWDomain::checking for install qemu data   : 
+TRACE::2025-05-17.18:23:17::SCWDomain:: Using the QEMU Data from install at  : D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/
+TRACE::2025-05-17.18:23:17::SCWDomain:: Using the QEMU args  from install at  : D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2025-05-17.18:23:17::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:17::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:17::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:17::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:17::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:17::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:17::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:17::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:17::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:17::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:17::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:17::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:17::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:17::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:17::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:17::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:17::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:17::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:17::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:17::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:17::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:17::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:17::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:17::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:17::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:17::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:17::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:17::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:17::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:17::SCWMssOS::No sw design opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:17::SCWMssOS::mss does not exists at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:17::SCWMssOS::Creating sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:17::SCWMssOS::Adding the swdes entry, created swdb D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:17::SCWMssOS::updating the scw layer changes to swdes at   D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:17::SCWMssOS::Writing mss at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:17::SCWMssOS::Completed writing the mss file at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp
+TRACE::2025-05-17.18:23:17::SCWMssOS::Picking up changes from newly written mss file into SCW Layer. 
+TRACE::2025-05-17.18:23:17::SCWMssOS::Updated the changes from newly written mss file into SCW Layer. 
+TRACE::2025-05-17.18:23:17::SCWMssOS::Completed writing the mss file at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp
+TRACE::2025-05-17.18:23:17::SCWMssOS::Forcing BSP Sources regeneration.
+TRACE::2025-05-17.18:23:18::SCWMssOS::Saving the mss changes D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-05-17.18:23:18::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-05-17.18:23:18::SCWMssOS::Commit changes completed.
+TRACE::2025-05-17.18:23:18::SCWMssOS::Saving the mss changes D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-05-17.18:23:18::SCWMssOS::Running validate of swdbs.
+KEYINFO::2025-05-17.18:23:18::SCWMssOS::Could not open the swdb for D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+KEYINFO::2025-05-17.18:23:18::SCWMssOS::Could not open the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+ERROR: [Hsi 55-1558] Software Design D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss is not found
+
+TRACE::2025-05-17.18:23:18::SCWMssOS::Cleared the swdb table entry
+TRACE::2025-05-17.18:23:18::SCWMssOS::Adding the swdes entry, mss present, able to open swdb D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_0
+TRACE::2025-05-17.18:23:18::SCWMssOS::Writing the mss file completed D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWMssOS::Commit changes completed.
+TRACE::2025-05-17.18:23:18::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:18::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:18::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:18::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:18::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:18::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:18::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:18::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:18::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:18::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:18::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:18::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:18::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:18::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:18::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:18::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:18::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:18::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:18::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWWriter::formatted JSON is {
+	"platformName":	"booter",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"booter",
+	"platHandOff":	"D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/project_1/design_1_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_1_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"platFsblTarget":	"ps7_cortexa9_0",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"booter",
+	"systems":	[{
+			"systemName":	"booter",
+			"systemDesc":	"booter",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"booter",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"d64a81374f4dd989af67b502a6a982ab",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone_domain",
+					"domainDesc":	"standalone_domain",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"2075e38a584ff2ab29fb0b301e9fd52d",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+LOG::2025-05-17.18:23:18::SCWPlatform::Started generating the artifacts platform booter
+TRACE::2025-05-17.18:23:18::SCWPlatform::Sanity checking of platform is completed
+LOG::2025-05-17.18:23:18::SCWPlatform::Started generating the artifacts for system configuration booter
+LOG::2025-05-17.18:23:18::SCWSystem::Checking the domain zynq_fsbl
+LOG::2025-05-17.18:23:18::SCWSystem::Doing application build for :  zynq_fsbl
+TRACE::2025-05-17.18:23:18::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2025-05-17.18:23:18::SCWDomain::Skipping the build for domain :  zynq_fsbl
+LOG::2025-05-17.18:23:18::SCWSystem::Checking the domain standalone_domain
+LOG::2025-05-17.18:23:18::SCWSystem::Not a boot domain 
+LOG::2025-05-17.18:23:18::SCWSystem::Started Processing the domain standalone_domain
+TRACE::2025-05-17.18:23:18::SCWDomain::Generating domain artifcats
+TRACE::2025-05-17.18:23:18::SCWMssOS::Generating standalone artifcats
+TRACE::2025-05-17.18:23:18::SCWMssOS::Copying the qemu file from  D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt To D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/export/booter/sw/booter/qemu/
+TRACE::2025-05-17.18:23:18::SCWMssOS::Copying the qemu file from  D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt To D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/export/booter/sw/booter/standalone_domain/qemu/
+TRACE::2025-05-17.18:23:18::SCWMssOS:: Copying the user libraries. 
+TRACE::2025-05-17.18:23:18::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:18::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:18::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:18::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWMssOS::Completed writing the mss file at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp
+TRACE::2025-05-17.18:23:18::SCWMssOS::Mss edits present, copying mssfile into export location D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2025-05-17.18:23:18::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2025-05-17.18:23:18::SCWDomain::Skipping the build for domain :  standalone_domain
+TRACE::2025-05-17.18:23:18::SCWMssOS::skipping the bsp build ... 
+TRACE::2025-05-17.18:23:18::SCWMssOS::Copying to export directory.
+TRACE::2025-05-17.18:23:18::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2025-05-17.18:23:18::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+TRACE::2025-05-17.18:23:18::SCWMssOS:: Completed Standalone Artifacts creation 
+LOG::2025-05-17.18:23:18::SCWSystem::Completed Processing the domain standalone_domain
+LOG::2025-05-17.18:23:18::SCWSystem::Completed Processing the sysconfig booter
+LOG::2025-05-17.18:23:18::SCWPlatform::Completed generating the artifacts for system configuration booter
+TRACE::2025-05-17.18:23:18::SCWPlatform::Started preparing the platform 
+TRACE::2025-05-17.18:23:18::SCWSystem::Writing the bif file for system config booter
+TRACE::2025-05-17.18:23:18::SCWSystem::dir created 
+TRACE::2025-05-17.18:23:18::SCWSystem::Writing the bif 
+TRACE::2025-05-17.18:23:18::SCWPlatform::Started writing the spfm file 
+TRACE::2025-05-17.18:23:18::SCWPlatform::Started writing the xpfm file 
+TRACE::2025-05-17.18:23:18::SCWPlatform::Completed generating the platform
+TRACE::2025-05-17.18:23:18::SCWMssOS::Saving the mss changes D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-05-17.18:23:18::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-05-17.18:23:18::SCWMssOS::Commit changes completed.
+TRACE::2025-05-17.18:23:18::SCWMssOS::Saving the mss changes D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-05-17.18:23:18::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-05-17.18:23:18::SCWMssOS::Commit changes completed.
+TRACE::2025-05-17.18:23:18::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:18::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:18::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:18::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:18::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:18::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:18::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:18::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:18::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:18::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:18::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:18::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:18::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:18::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:18::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:18::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:18::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:18::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:18::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWWriter::formatted JSON is {
+	"platformName":	"booter",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"booter",
+	"platHandOff":	"D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/project_1/design_1_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_1_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"platFsblTarget":	"ps7_cortexa9_0",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"booter",
+	"systems":	[{
+			"systemName":	"booter",
+			"systemDesc":	"booter",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"booter",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"d64a81374f4dd989af67b502a6a982ab",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone_domain",
+					"domainDesc":	"standalone_domain",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"2075e38a584ff2ab29fb0b301e9fd52d",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2025-05-17.18:23:18::SCWPlatform::updated the xpfm file.
+TRACE::2025-05-17.18:23:18::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:18::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:18::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:18::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWMssOS::Saving the mss changes D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-05-17.18:23:18::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-05-17.18:23:18::SCWMssOS::Commit changes completed.
+TRACE::2025-05-17.18:23:18::SCWMssOS::Saving the mss changes D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-05-17.18:23:18::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-05-17.18:23:18::SCWMssOS::Commit changes completed.
+TRACE::2025-05-17.18:23:18::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:18::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:18::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:18::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:18::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:18::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:18::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:18::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:18::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:18::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:18::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:18::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:18::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:18::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:18::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:18::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:18::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:18::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:18::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:18::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:18::SCWWriter::formatted JSON is {
+	"platformName":	"booter",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"booter",
+	"platHandOff":	"D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/project_1/design_1_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_1_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"platFsblTarget":	"ps7_cortexa9_0",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"booter",
+	"systems":	[{
+			"systemName":	"booter",
+			"systemDesc":	"booter",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"booter",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"d64a81374f4dd989af67b502a6a982ab",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone_domain",
+					"domainDesc":	"standalone_domain",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"2075e38a584ff2ab29fb0b301e9fd52d",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+TRACE::2025-05-17.18:23:18::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:18::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:19::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:19::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:19::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:19::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:19::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:19::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:19::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:19::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:19::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:19::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:19::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:19::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:19::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:19::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:19::SCWMssOS::Saving the mss changes D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:19::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-05-17.18:23:19::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-05-17.18:23:19::SCWMssOS::Commit changes completed.
+TRACE::2025-05-17.18:23:19::SCWMssOS::Saving the mss changes D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:19::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-05-17.18:23:19::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-05-17.18:23:19::SCWMssOS::Commit changes completed.
+TRACE::2025-05-17.18:23:19::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:19::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:19::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:19::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:19::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:19::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:19::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:19::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:19::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:19::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:19::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:19::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:19::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:19::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:19::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:19::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:19::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:19::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:19::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:19::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:19::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:19::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:19::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:19::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:19::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:19::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:19::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:19::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:19::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:19::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:19::SCWWriter::formatted JSON is {
+	"platformName":	"booter",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"booter",
+	"platHandOff":	"D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/project_1/design_1_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_1_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"platFsblTarget":	"ps7_cortexa9_0",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"booter",
+	"systems":	[{
+			"systemName":	"booter",
+			"systemDesc":	"booter",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"booter",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"d64a81374f4dd989af67b502a6a982ab",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on ps7_cortexa9_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"2075e38a584ff2ab29fb0b301e9fd52d",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+TRACE::2025-05-17.18:23:19::SCWMssOS::Saving the mss changes D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:19::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-05-17.18:23:19::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-05-17.18:23:19::SCWMssOS::Commit changes completed.
+TRACE::2025-05-17.18:23:19::SCWMssOS::Saving the mss changes D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:19::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-05-17.18:23:19::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-05-17.18:23:19::SCWMssOS::Commit changes completed.
+TRACE::2025-05-17.18:23:19::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:19::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:19::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:19::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:19::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:19::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:19::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:19::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:19::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:19::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:19::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:19::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:19::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:19::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:19::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:19::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:19::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:19::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:19::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:19::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:19::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:19::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:19::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:19::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:19::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:19::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:19::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:19::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:19::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:19::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:19::SCWWriter::formatted JSON is {
+	"platformName":	"booter",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"booter",
+	"platHandOff":	"D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/project_1/design_1_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_1_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"platFsblTarget":	"ps7_cortexa9_0",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"booter",
+	"systems":	[{
+			"systemName":	"booter",
+			"systemDesc":	"booter",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"booter",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"d64a81374f4dd989af67b502a6a982ab",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on ps7_cortexa9_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"2075e38a584ff2ab29fb0b301e9fd52d",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+TRACE::2025-05-17.18:23:19::SCWPlatform::Clearing the existing platform
+TRACE::2025-05-17.18:23:19::SCWSystem::Clearing the existing sysconfig
+TRACE::2025-05-17.18:23:19::SCWBDomain::clearing the fsbl build
+TRACE::2025-05-17.18:23:19::SCWMssOS::Removing the swdes entry for  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:19::SCWMssOS::Removing the swdes entry for  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:19::SCWSystem::Clearing the domains completed.
+TRACE::2025-05-17.18:23:19::SCWPlatform::Clearing the opened hw db.
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform:: Platform location is D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:19::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Removing the HwDB with name D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:19::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:19::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:19::SCWPlatform::Do not have an existing db opened. 
+TRACE::2025-05-17.18:23:22::SCWPlatform::Opened new HwDB with name design_1_wrapper_1
+TRACE::2025-05-17.18:23:22::SCWReader::Active system found as  booter
+TRACE::2025-05-17.18:23:22::SCWReader::Handling sysconfig booter
+TRACE::2025-05-17.18:23:22::SCWDomain::checking for install qemu data   : 
+TRACE::2025-05-17.18:23:22::SCWDomain:: Using the QEMU Data from install at  : D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/
+TRACE::2025-05-17.18:23:22::SCWDomain:: Using the QEMU args  from install at  : D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2025-05-17.18:23:22::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:22::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:22::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:22::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:22::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:22::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:22::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-17.18:23:22::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-17.18:23:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:22::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:22::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:22::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:22::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:22::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:22::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:22::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-17.18:23:22::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-17.18:23:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:22::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:22::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:22::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:22::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:22::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:22::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:22::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-17.18:23:22::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-17.18:23:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:22::SCWReader::Boot application domain added for zynq_fsbl
+TRACE::2025-05-17.18:23:22::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:22::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:22::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:22::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:22::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:22::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:22::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-17.18:23:22::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-17.18:23:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:22::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:22::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2025-05-17.18:23:22::SCWMssOS::No sw design opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:22::SCWMssOS::mss exists loading the mss file  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:22::SCWMssOS::Opened the sw design from mss  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:22::SCWMssOS::Adding the swdes entry D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2025-05-17.18:23:22::SCWMssOS::updating the scw layer about changes
+TRACE::2025-05-17.18:23:22::SCWMssOS::Opened the sw design.  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:22::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:22::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:22::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:22::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:22::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:22::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:22::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-17.18:23:22::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-17.18:23:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:22::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:22::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:22::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:22::SCWMssOS:: library already available in sw design:  xilffs:4.3
+TRACE::2025-05-17.18:23:22::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:22::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:22::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:22::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:22::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:22::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:22::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-17.18:23:22::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-17.18:23:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:22::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:22::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:22::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:22::SCWMssOS:: library already available in sw design:  xilrsa:1.6
+TRACE::2025-05-17.18:23:22::SCWMssOS::Saving the mss changes D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:22::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-05-17.18:23:22::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-05-17.18:23:22::SCWMssOS::Commit changes completed.
+TRACE::2025-05-17.18:23:22::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2025-05-17.18:23:22::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2025-05-17.18:23:22::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:22::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:22::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:22::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:22::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:22::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:22::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-17.18:23:22::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-17.18:23:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:22::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:22::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:22::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:22::SCWReader::No isolation master present  
+TRACE::2025-05-17.18:23:22::SCWDomain::checking for install qemu data   : 
+TRACE::2025-05-17.18:23:22::SCWDomain:: Using the QEMU Data from install at  : D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/
+TRACE::2025-05-17.18:23:22::SCWDomain:: Using the QEMU args  from install at  : D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2025-05-17.18:23:22::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:22::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:22::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:22::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:22::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:22::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:22::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-17.18:23:22::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-17.18:23:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:22::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:22::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:22::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:22::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:22::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:22::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:22::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-17.18:23:22::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-17.18:23:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:22::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:22::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:22::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:22::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:22::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:22::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:22::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-17.18:23:22::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-17.18:23:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:22::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:22::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:22::SCWMssOS::No sw design opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:22::SCWMssOS::mss exists loading the mss file  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:22::SCWMssOS::Opened the sw design from mss  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:22::SCWMssOS::Adding the swdes entry D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_0
+TRACE::2025-05-17.18:23:22::SCWMssOS::updating the scw layer about changes
+TRACE::2025-05-17.18:23:22::SCWMssOS::Opened the sw design.  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:22::SCWMssOS::Saving the mss changes D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:22::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-05-17.18:23:22::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-05-17.18:23:22::SCWMssOS::Commit changes completed.
+TRACE::2025-05-17.18:23:22::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2025-05-17.18:23:22::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2025-05-17.18:23:22::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:22::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:22::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:22::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:22::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:22::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:22::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-17.18:23:22::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-17.18:23:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:22::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:22::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:22::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:22::SCWReader::No isolation master present  
+LOG::2025-05-17.18:23:33::SCWPlatform::Started generating the artifacts platform booter
+TRACE::2025-05-17.18:23:33::SCWPlatform::Sanity checking of platform is completed
+LOG::2025-05-17.18:23:33::SCWPlatform::Started generating the artifacts for system configuration booter
+LOG::2025-05-17.18:23:33::SCWSystem::Checking the domain zynq_fsbl
+LOG::2025-05-17.18:23:33::SCWSystem::Doing application build for :  zynq_fsbl
+TRACE::2025-05-17.18:23:33::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2025-05-17.18:23:33::SCWDomain::Building the domain as part of full build :  zynq_fsbl
+TRACE::2025-05-17.18:23:33::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:33::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:33::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:33::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:33::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:33::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:33::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-17.18:23:33::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-17.18:23:33::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:33::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:33::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:33::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:33::SCWBDomain::Completed writing the mss file at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp
+TRACE::2025-05-17.18:23:33::SCWBDomain::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2025-05-17.18:23:33::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2025-05-17.18:23:33::SCWBDomain::System Command Ran  D:&  cd  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl & make 
+TRACE::2025-05-17.18:23:33::SCWBDomain::make -C zynq_fsbl_bsp
+
+TRACE::2025-05-17.18:23:33::SCWBDomain::make[1]: Entering directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp'
+
+TRACE::2025-05-17.18:23:33::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_7/src"
+
+TRACE::2025-05-17.18:23:33::SCWBDomain::make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none
+TRACE::2025-05-17.18:23:33::SCWBDomain::-eabi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=h
+TRACE::2025-05-17.18:23:33::SCWBDomain::ard -nostartfiles -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:33::SCWBDomain::make[2]: Entering directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libs
+TRACE::2025-05-17.18:23:33::SCWBDomain::rc/coresightps_dcc_v1_7/src'
+
+TRACE::2025-05-17.18:23:33::SCWBDomain::make[2]: Leaving directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsr
+TRACE::2025-05-17.18:23:33::SCWBDomain::c/coresightps_dcc_v1_7/src'
+
+TRACE::2025-05-17.18:23:33::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_9/src"
+
+TRACE::2025-05-17.18:23:33::SCWBDomain::make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-ea
+TRACE::2025-05-17.18:23:33::SCWBDomain::bi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard
+TRACE::2025-05-17.18:23:33::SCWBDomain:: -nostartfiles -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:33::SCWBDomain::make[2]: Entering directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libs
+TRACE::2025-05-17.18:23:33::SCWBDomain::rc/cpu_cortexa9_v2_9/src'
+
+TRACE::2025-05-17.18:23:33::SCWBDomain::make[2]: Leaving directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsr
+TRACE::2025-05-17.18:23:33::SCWBDomain::c/cpu_cortexa9_v2_9/src'
+
+TRACE::2025-05-17.18:23:33::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_1/src"
+
+TRACE::2025-05-17.18:23:33::SCWBDomain::make -C ps7_cortexa9_0/libsrc/ddrps_v1_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2025-05-17.18:23:33::SCWBDomain::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2025-05-17.18:23:33::SCWBDomain::rtfiles -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:33::SCWBDomain::make[2]: Entering directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libs
+TRACE::2025-05-17.18:23:33::SCWBDomain::rc/ddrps_v1_1/src'
+
+TRACE::2025-05-17.18:23:33::SCWBDomain::make[2]: Leaving directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsr
+TRACE::2025-05-17.18:23:33::SCWBDomain::c/ddrps_v1_1/src'
+
+TRACE::2025-05-17.18:23:33::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_6/src"
+
+TRACE::2025-05-17.18:23:33::SCWBDomain::make -C ps7_cortexa9_0/libsrc/devcfg_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-05-17.18:23:33::SCWBDomain:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-05-17.18:23:33::SCWBDomain::artfiles -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:33::SCWBDomain::make[2]: Entering directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libs
+TRACE::2025-05-17.18:23:33::SCWBDomain::rc/devcfg_v3_6/src'
+
+TRACE::2025-05-17.18:23:33::SCWBDomain::make[2]: Leaving directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsr
+TRACE::2025-05-17.18:23:33::SCWBDomain::c/devcfg_v3_6/src'
+
+TRACE::2025-05-17.18:23:33::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_6/src"
+
+TRACE::2025-05-17.18:23:33::SCWBDomain::make -C ps7_cortexa9_0/libsrc/dmaps_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2025-05-17.18:23:33::SCWBDomain::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2025-05-17.18:23:33::SCWBDomain::rtfiles -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:33::SCWBDomain::make[2]: Entering directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libs
+TRACE::2025-05-17.18:23:33::SCWBDomain::rc/dmaps_v2_6/src'
+
+TRACE::2025-05-17.18:23:33::SCWBDomain::make[2]: Leaving directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsr
+TRACE::2025-05-17.18:23:33::SCWBDomain::c/dmaps_v2_6/src'
+
+TRACE::2025-05-17.18:23:34::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_11/src"
+
+TRACE::2025-05-17.18:23:34::SCWBDomain::make -C ps7_cortexa9_0/libsrc/emacps_v3_11/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+TRACE::2025-05-17.18:23:34::SCWBDomain::" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+TRACE::2025-05-17.18:23:34::SCWBDomain::tartfiles -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:34::SCWBDomain::make[2]: Entering directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libs
+TRACE::2025-05-17.18:23:34::SCWBDomain::rc/emacps_v3_11/src'
+
+TRACE::2025-05-17.18:23:34::SCWBDomain::make[2]: Leaving directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsr
+TRACE::2025-05-17.18:23:34::SCWBDomain::c/emacps_v3_11/src'
+
+TRACE::2025-05-17.18:23:34::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_7/src"
+
+TRACE::2025-05-17.18:23:34::SCWBDomain::make -C ps7_cortexa9_0/libsrc/qspips_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-05-17.18:23:34::SCWBDomain:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-05-17.18:23:34::SCWBDomain::artfiles -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:34::SCWBDomain::make[2]: Entering directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libs
+TRACE::2025-05-17.18:23:34::SCWBDomain::rc/qspips_v3_7/src'
+
+TRACE::2025-05-17.18:23:34::SCWBDomain::make[2]: Leaving directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsr
+TRACE::2025-05-17.18:23:34::SCWBDomain::c/qspips_v3_7/src'
+
+TRACE::2025-05-17.18:23:34::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/scugic_v4_2/src"
+
+TRACE::2025-05-17.18:23:34::SCWBDomain::make -C ps7_cortexa9_0/libsrc/scugic_v4_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-05-17.18:23:34::SCWBDomain:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-05-17.18:23:34::SCWBDomain::artfiles -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:34::SCWBDomain::make[2]: Entering directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libs
+TRACE::2025-05-17.18:23:34::SCWBDomain::rc/scugic_v4_2/src'
+
+TRACE::2025-05-17.18:23:34::SCWBDomain::make[2]: Leaving directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsr
+TRACE::2025-05-17.18:23:34::SCWBDomain::c/scugic_v4_2/src'
+
+TRACE::2025-05-17.18:23:34::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_2/src"
+
+TRACE::2025-05-17.18:23:34::SCWBDomain::make -C ps7_cortexa9_0/libsrc/scutimer_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-a
+TRACE::2025-05-17.18:23:34::SCWBDomain::s" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -no
+TRACE::2025-05-17.18:23:34::SCWBDomain::startfiles -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:34::SCWBDomain::make[2]: Entering directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libs
+TRACE::2025-05-17.18:23:34::SCWBDomain::rc/scutimer_v2_2/src'
+
+TRACE::2025-05-17.18:23:34::SCWBDomain::make[2]: Leaving directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsr
+TRACE::2025-05-17.18:23:34::SCWBDomain::c/scutimer_v2_2/src'
+
+TRACE::2025-05-17.18:23:34::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_2/src"
+
+TRACE::2025-05-17.18:23:34::SCWBDomain::make -C ps7_cortexa9_0/libsrc/scuwdt_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-05-17.18:23:34::SCWBDomain:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-05-17.18:23:34::SCWBDomain::artfiles -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:34::SCWBDomain::make[2]: Entering directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libs
+TRACE::2025-05-17.18:23:34::SCWBDomain::rc/scuwdt_v2_2/src'
+
+TRACE::2025-05-17.18:23:34::SCWBDomain::make[2]: Leaving directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsr
+TRACE::2025-05-17.18:23:34::SCWBDomain::c/scuwdt_v2_2/src'
+
+TRACE::2025-05-17.18:23:34::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/standalone_v7_2/src"
+
+TRACE::2025-05-17.18:23:34::SCWBDomain::make -C ps7_cortexa9_0/libsrc/standalone_v7_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi
+TRACE::2025-05-17.18:23:34::SCWBDomain::-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -
+TRACE::2025-05-17.18:23:34::SCWBDomain::nostartfiles -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:34::SCWBDomain::make[2]: Entering directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libs
+TRACE::2025-05-17.18:23:34::SCWBDomain::rc/standalone_v7_2/src'
+
+TRACE::2025-05-17.18:23:34::SCWBDomain::make[3]: Entering directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libs
+TRACE::2025-05-17.18:23:34::SCWBDomain::rc/standalone_v7_2/src/profile'
+
+TRACE::2025-05-17.18:23:34::SCWBDomain::make[3]: Leaving directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsr
+TRACE::2025-05-17.18:23:34::SCWBDomain::c/standalone_v7_2/src/profile'
+
+TRACE::2025-05-17.18:23:34::SCWBDomain::make[2]: Leaving directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsr
+TRACE::2025-05-17.18:23:34::SCWBDomain::c/standalone_v7_2/src'
+
+TRACE::2025-05-17.18:23:34::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_4/src"
+
+TRACE::2025-05-17.18:23:34::SCWBDomain::make -C ps7_cortexa9_0/libsrc/xadcps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-05-17.18:23:34::SCWBDomain:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-05-17.18:23:34::SCWBDomain::artfiles -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:34::SCWBDomain::make[2]: Entering directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libs
+TRACE::2025-05-17.18:23:34::SCWBDomain::rc/xadcps_v2_4/src'
+
+TRACE::2025-05-17.18:23:34::SCWBDomain::make[2]: Leaving directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsr
+TRACE::2025-05-17.18:23:34::SCWBDomain::c/xadcps_v2_4/src'
+
+TRACE::2025-05-17.18:23:34::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/xilffs_v4_3/src"
+
+TRACE::2025-05-17.18:23:34::SCWBDomain::make -C ps7_cortexa9_0/libsrc/xilffs_v4_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-05-17.18:23:34::SCWBDomain:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-05-17.18:23:34::SCWBDomain::artfiles -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:34::SCWBDomain::make[2]: Entering directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libs
+TRACE::2025-05-17.18:23:34::SCWBDomain::rc/xilffs_v4_3/src'
+
+TRACE::2025-05-17.18:23:35::SCWBDomain::make[2]: Leaving directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsr
+TRACE::2025-05-17.18:23:35::SCWBDomain::c/xilffs_v4_3/src'
+
+TRACE::2025-05-17.18:23:35::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/xilrsa_v1_6/src"
+
+TRACE::2025-05-17.18:23:35::SCWBDomain::make -C ps7_cortexa9_0/libsrc/xilrsa_v1_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-05-17.18:23:35::SCWBDomain:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-05-17.18:23:35::SCWBDomain::artfiles -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:35::SCWBDomain::make[2]: Entering directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libs
+TRACE::2025-05-17.18:23:35::SCWBDomain::rc/xilrsa_v1_6/src'
+
+TRACE::2025-05-17.18:23:35::SCWBDomain::make[2]: Leaving directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsr
+TRACE::2025-05-17.18:23:35::SCWBDomain::c/xilrsa_v1_6/src'
+
+TRACE::2025-05-17.18:23:35::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_7/src"
+
+TRACE::2025-05-17.18:23:35::SCWBDomain::make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-ea
+TRACE::2025-05-17.18:23:35::SCWBDomain::bi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard
+TRACE::2025-05-17.18:23:35::SCWBDomain:: -nostartfiles -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:35::SCWBDomain::make[2]: Entering directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libs
+TRACE::2025-05-17.18:23:35::SCWBDomain::rc/coresightps_dcc_v1_7/src'
+
+TRACE::2025-05-17.18:23:35::SCWBDomain::"Compiling coresightps_dcc"
+
+TRACE::2025-05-17.18:23:35::SCWBDomain::make[2]: Leaving directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsr
+TRACE::2025-05-17.18:23:35::SCWBDomain::c/coresightps_dcc_v1_7/src'
+
+TRACE::2025-05-17.18:23:35::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_9/src"
+
+TRACE::2025-05-17.18:23:35::SCWBDomain::make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-
+TRACE::2025-05-17.18:23:35::SCWBDomain::as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -n
+TRACE::2025-05-17.18:23:35::SCWBDomain::ostartfiles -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:35::SCWBDomain::make[2]: Entering directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libs
+TRACE::2025-05-17.18:23:35::SCWBDomain::rc/cpu_cortexa9_v2_9/src'
+
+TRACE::2025-05-17.18:23:35::SCWBDomain::"Compiling cpu_cortexa9"
+
+TRACE::2025-05-17.18:23:35::SCWBDomain::make[2]: Leaving directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsr
+TRACE::2025-05-17.18:23:35::SCWBDomain::c/cpu_cortexa9_v2_9/src'
+
+TRACE::2025-05-17.18:23:35::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_1/src"
+
+TRACE::2025-05-17.18:23:35::SCWBDomain::make -C ps7_cortexa9_0/libsrc/ddrps_v1_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2025-05-17.18:23:35::SCWBDomain::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2025-05-17.18:23:35::SCWBDomain::iles -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:35::SCWBDomain::make[2]: Entering directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libs
+TRACE::2025-05-17.18:23:35::SCWBDomain::rc/ddrps_v1_1/src'
+
+TRACE::2025-05-17.18:23:35::SCWBDomain::"Compiling ddrps"
+
+TRACE::2025-05-17.18:23:35::SCWBDomain::make[2]: Leaving directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsr
+TRACE::2025-05-17.18:23:35::SCWBDomain::c/ddrps_v1_1/src'
+
+TRACE::2025-05-17.18:23:35::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_6/src"
+
+TRACE::2025-05-17.18:23:35::SCWBDomain::make -C ps7_cortexa9_0/libsrc/devcfg_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-05-17.18:23:35::SCWBDomain::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-05-17.18:23:35::SCWBDomain::files -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:35::SCWBDomain::make[2]: Entering directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libs
+TRACE::2025-05-17.18:23:35::SCWBDomain::rc/devcfg_v3_6/src'
+
+TRACE::2025-05-17.18:23:35::SCWBDomain::"Compiling devcfg"
+
+TRACE::2025-05-17.18:23:36::SCWBDomain::make[2]: Leaving directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsr
+TRACE::2025-05-17.18:23:36::SCWBDomain::c/devcfg_v3_6/src'
+
+TRACE::2025-05-17.18:23:36::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_6/src"
+
+TRACE::2025-05-17.18:23:36::SCWBDomain::make -C ps7_cortexa9_0/libsrc/dmaps_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2025-05-17.18:23:36::SCWBDomain::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2025-05-17.18:23:36::SCWBDomain::iles -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:36::SCWBDomain::make[2]: Entering directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libs
+TRACE::2025-05-17.18:23:36::SCWBDomain::rc/dmaps_v2_6/src'
+
+TRACE::2025-05-17.18:23:36::SCWBDomain::"Compiling dmaps"
+
+TRACE::2025-05-17.18:23:36::SCWBDomain::make[2]: Leaving directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsr
+TRACE::2025-05-17.18:23:36::SCWBDomain::c/dmaps_v2_6/src'
+
+TRACE::2025-05-17.18:23:36::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_11/src"
+
+TRACE::2025-05-17.18:23:36::SCWBDomain::make -C ps7_cortexa9_0/libsrc/emacps_v3_11/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+TRACE::2025-05-17.18:23:36::SCWBDomain::ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+TRACE::2025-05-17.18:23:36::SCWBDomain::tfiles -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:36::SCWBDomain::make[2]: Entering directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libs
+TRACE::2025-05-17.18:23:36::SCWBDomain::rc/emacps_v3_11/src'
+
+TRACE::2025-05-17.18:23:36::SCWBDomain::"Compiling emacps"
+
+TRACE::2025-05-17.18:23:37::SCWBDomain::make[2]: Leaving directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsr
+TRACE::2025-05-17.18:23:37::SCWBDomain::c/emacps_v3_11/src'
+
+TRACE::2025-05-17.18:23:37::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_7/src"
+
+TRACE::2025-05-17.18:23:37::SCWBDomain::make -C ps7_cortexa9_0/libsrc/qspips_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-05-17.18:23:37::SCWBDomain::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-05-17.18:23:37::SCWBDomain::files -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:37::SCWBDomain::make[2]: Entering directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libs
+TRACE::2025-05-17.18:23:37::SCWBDomain::rc/qspips_v3_7/src'
+
+TRACE::2025-05-17.18:23:37::SCWBDomain::"Compiling qspips"
+
+TRACE::2025-05-17.18:23:38::SCWBDomain::make[2]: Leaving directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsr
+TRACE::2025-05-17.18:23:38::SCWBDomain::c/qspips_v3_7/src'
+
+TRACE::2025-05-17.18:23:38::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v4_2/src"
+
+TRACE::2025-05-17.18:23:38::SCWBDomain::make -C ps7_cortexa9_0/libsrc/scugic_v4_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-05-17.18:23:38::SCWBDomain::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-05-17.18:23:38::SCWBDomain::files -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:38::SCWBDomain::make[2]: Entering directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libs
+TRACE::2025-05-17.18:23:38::SCWBDomain::rc/scugic_v4_2/src'
+
+TRACE::2025-05-17.18:23:38::SCWBDomain::"Compiling scugic"
+
+TRACE::2025-05-17.18:23:39::SCWBDomain::make[2]: Leaving directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsr
+TRACE::2025-05-17.18:23:39::SCWBDomain::c/scugic_v4_2/src'
+
+TRACE::2025-05-17.18:23:39::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_2/src"
+
+TRACE::2025-05-17.18:23:39::SCWBDomain::make -C ps7_cortexa9_0/libsrc/scutimer_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2025-05-17.18:23:39::SCWBDomain::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2025-05-17.18:23:39::SCWBDomain::rtfiles -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:39::SCWBDomain::make[2]: Entering directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libs
+TRACE::2025-05-17.18:23:39::SCWBDomain::rc/scutimer_v2_2/src'
+
+TRACE::2025-05-17.18:23:39::SCWBDomain::"Compiling scutimer"
+
+TRACE::2025-05-17.18:23:39::SCWBDomain::make[2]: Leaving directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsr
+TRACE::2025-05-17.18:23:39::SCWBDomain::c/scutimer_v2_2/src'
+
+TRACE::2025-05-17.18:23:39::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_2/src"
+
+TRACE::2025-05-17.18:23:39::SCWBDomain::make -C ps7_cortexa9_0/libsrc/scuwdt_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-05-17.18:23:39::SCWBDomain::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-05-17.18:23:39::SCWBDomain::files -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:39::SCWBDomain::make[2]: Entering directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libs
+TRACE::2025-05-17.18:23:39::SCWBDomain::rc/scuwdt_v2_2/src'
+
+TRACE::2025-05-17.18:23:39::SCWBDomain::"Compiling scuwdt"
+
+TRACE::2025-05-17.18:23:40::SCWBDomain::make[2]: Leaving directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsr
+TRACE::2025-05-17.18:23:40::SCWBDomain::c/scuwdt_v2_2/src'
+
+TRACE::2025-05-17.18:23:40::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v7_2/src"
+
+TRACE::2025-05-17.18:23:40::SCWBDomain::make -C ps7_cortexa9_0/libsrc/standalone_v7_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+TRACE::2025-05-17.18:23:40::SCWBDomain::" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+TRACE::2025-05-17.18:23:40::SCWBDomain::tartfiles -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:40::SCWBDomain::make[2]: Entering directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libs
+TRACE::2025-05-17.18:23:40::SCWBDomain::rc/standalone_v7_2/src'
+
+TRACE::2025-05-17.18:23:40::SCWBDomain::"Compiling standalone"
+
+TRACE::2025-05-17.18:23:42::SCWBDomain::make[3]: Entering directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libs
+TRACE::2025-05-17.18:23:42::SCWBDomain::rc/standalone_v7_2/src/profile'
+
+TRACE::2025-05-17.18:23:42::SCWBDomain::make[3]: Leaving directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsr
+TRACE::2025-05-17.18:23:42::SCWBDomain::c/standalone_v7_2/src/profile'
+
+TRACE::2025-05-17.18:23:42::SCWBDomain::make[2]: Leaving directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsr
+TRACE::2025-05-17.18:23:42::SCWBDomain::c/standalone_v7_2/src'
+
+TRACE::2025-05-17.18:23:42::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_4/src"
+
+TRACE::2025-05-17.18:23:42::SCWBDomain::make -C ps7_cortexa9_0/libsrc/xadcps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-05-17.18:23:42::SCWBDomain::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-05-17.18:23:42::SCWBDomain::files -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:42::SCWBDomain::make[2]: Entering directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libs
+TRACE::2025-05-17.18:23:42::SCWBDomain::rc/xadcps_v2_4/src'
+
+TRACE::2025-05-17.18:23:42::SCWBDomain::"Compiling xadcps"
+
+TRACE::2025-05-17.18:23:43::SCWBDomain::make[2]: Leaving directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsr
+TRACE::2025-05-17.18:23:43::SCWBDomain::c/xadcps_v2_4/src'
+
+TRACE::2025-05-17.18:23:43::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/xilffs_v4_3/src"
+
+TRACE::2025-05-17.18:23:43::SCWBDomain::make -C ps7_cortexa9_0/libsrc/xilffs_v4_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-05-17.18:23:43::SCWBDomain::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-05-17.18:23:43::SCWBDomain::files -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:43::SCWBDomain::make[2]: Entering directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libs
+TRACE::2025-05-17.18:23:43::SCWBDomain::rc/xilffs_v4_3/src'
+
+TRACE::2025-05-17.18:23:43::SCWBDomain::"Compiling XilFFs Library"
+
+TRACE::2025-05-17.18:23:44::SCWBDomain::make[2]: Leaving directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsr
+TRACE::2025-05-17.18:23:44::SCWBDomain::c/xilffs_v4_3/src'
+
+TRACE::2025-05-17.18:23:44::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/xilrsa_v1_6/src"
+
+TRACE::2025-05-17.18:23:44::SCWBDomain::make -C ps7_cortexa9_0/libsrc/xilrsa_v1_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-05-17.18:23:44::SCWBDomain::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-05-17.18:23:44::SCWBDomain::files -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:44::SCWBDomain::make[2]: Entering directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libs
+TRACE::2025-05-17.18:23:44::SCWBDomain::rc/xilrsa_v1_6/src'
+
+TRACE::2025-05-17.18:23:44::SCWBDomain::make[2]: Leaving directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsr
+TRACE::2025-05-17.18:23:44::SCWBDomain::c/xilrsa_v1_6/src'
+
+TRACE::2025-05-17.18:23:44::SCWBDomain::'Finished building libraries'
+
+TRACE::2025-05-17.18:23:44::SCWBDomain::make[1]: Leaving directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp'
+
+TRACE::2025-05-17.18:23:44::SCWBDomain::arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -O2 -c -c sd.c -o sd.o -Izynq_fsbl_bsp/ps7_cort
+TRACE::2025-05-17.18:23:44::SCWBDomain::exa9_0/include -I.
+
+TRACE::2025-05-17.18:23:44::SCWBDomain::arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -O2 -c -c nand.c -o nand.o -Izynq_fsbl_bsp/ps7_
+TRACE::2025-05-17.18:23:44::SCWBDomain::cortexa9_0/include -I.
+
+TRACE::2025-05-17.18:23:44::SCWBDomain::arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -O2 -c -c nor.c -o nor.o -Izynq_fsbl_bsp/ps7_co
+TRACE::2025-05-17.18:23:44::SCWBDomain::rtexa9_0/include -I.
+
+TRACE::2025-05-17.18:23:44::SCWBDomain::arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -O2 -c -c image_mover.c -o image_mover.o -Izynq
+TRACE::2025-05-17.18:23:44::SCWBDomain::_fsbl_bsp/ps7_cortexa9_0/include -I.
+
+TRACE::2025-05-17.18:23:44::SCWBDomain::arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -O2 -c -c md5.c -o md5.o -Izynq_fsbl_bsp/ps7_co
+TRACE::2025-05-17.18:23:44::SCWBDomain::rtexa9_0/include -I.
+
+TRACE::2025-05-17.18:23:44::SCWBDomain::arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -O2 -c -c fsbl_hooks.c -o fsbl_hooks.o -Izynq_f
+TRACE::2025-05-17.18:23:44::SCWBDomain::sbl_bsp/ps7_cortexa9_0/include -I.
+
+TRACE::2025-05-17.18:23:44::SCWBDomain::arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -O2 -c -c main.c -o main.o -Izynq_fsbl_bsp/ps7_
+TRACE::2025-05-17.18:23:44::SCWBDomain::cortexa9_0/include -I.
+
+TRACE::2025-05-17.18:23:44::SCWBDomain::arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -O2 -c -c rsa.c -o rsa.o -Izynq_fsbl_bsp/ps7_co
+TRACE::2025-05-17.18:23:44::SCWBDomain::rtexa9_0/include -I.
+
+TRACE::2025-05-17.18:23:44::SCWBDomain::arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -O2 -c -c qspi.c -o qspi.o -Izynq_fsbl_bsp/ps7_
+TRACE::2025-05-17.18:23:44::SCWBDomain::cortexa9_0/include -I.
+
+TRACE::2025-05-17.18:23:45::SCWBDomain::arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -O2 -c -c ps7_init.c -o ps7_init.o -Izynq_fsbl_
+TRACE::2025-05-17.18:23:45::SCWBDomain::bsp/ps7_cortexa9_0/include -I.
+
+TRACE::2025-05-17.18:23:45::SCWBDomain::arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -O2 -c -c pcap.c -o pcap.o -Izynq_fsbl_bsp/ps7_
+TRACE::2025-05-17.18:23:45::SCWBDomain::cortexa9_0/include -I.
+
+TRACE::2025-05-17.18:23:45::SCWBDomain::arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -O2 -c -c fsbl_handoff.S -o fsbl_handoff.o -Izy
+TRACE::2025-05-17.18:23:45::SCWBDomain::nq_fsbl_bsp/ps7_cortexa9_0/include -I.
+
+TRACE::2025-05-17.18:23:45::SCWBDomain::arm-none-eabi-gcc -o executable.elf  sd.o  nand.o  nor.o  image_mover.o  md5.o  fsbl_hooks.o  main.o  rsa.o  qspi.o  ps7_init.o
+TRACE::2025-05-17.18:23:45::SCWBDomain::  pcap.o  fsbl_handoff.o -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=
+TRACE::2025-05-17.18:23:45::SCWBDomain::hard -Wl,-build-id=none -specs=Xilinx.spec  -lrsa -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxi
+TRACE::2025-05-17.18:23:45::SCWBDomain::l,-lgcc,-lc,--end-group -Wl,--start-group,-lrsa,-lxil,-lgcc,-lc,--end-group                               -Wl,--gc-sections -Lz
+TRACE::2025-05-17.18:23:45::SCWBDomain::ynq_fsbl_bsp/ps7_cortexa9_0/lib -L./ -Tlscript.ld
+
+LOG::2025-05-17.18:23:45::SCWSystem::Checking the domain standalone_domain
+LOG::2025-05-17.18:23:45::SCWSystem::Not a boot domain 
+LOG::2025-05-17.18:23:45::SCWSystem::Started Processing the domain standalone_domain
+TRACE::2025-05-17.18:23:45::SCWDomain::Generating domain artifcats
+TRACE::2025-05-17.18:23:45::SCWMssOS::Generating standalone artifcats
+TRACE::2025-05-17.18:23:45::SCWMssOS::Copying the qemu file from  D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt To D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/export/booter/sw/booter/qemu/
+TRACE::2025-05-17.18:23:45::SCWMssOS::Copying the qemu file from  D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt To D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/export/booter/sw/booter/standalone_domain/qemu/
+TRACE::2025-05-17.18:23:45::SCWMssOS:: Copying the user libraries. 
+TRACE::2025-05-17.18:23:45::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:45::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:45::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:45::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:45::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:45::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:45::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-17.18:23:45::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-17.18:23:45::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:45::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:45::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:45::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:45::SCWMssOS::Completed writing the mss file at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp
+TRACE::2025-05-17.18:23:45::SCWMssOS::Mss edits present, copying mssfile into export location D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:45::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2025-05-17.18:23:45::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2025-05-17.18:23:45::SCWDomain::Building the domain as part of full build :  standalone_domain
+TRACE::2025-05-17.18:23:45::SCWMssOS::doing bsp build ... 
+TRACE::2025-05-17.18:23:45::SCWMssOS::System Command Ran  D: & cd  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp & make 
+TRACE::2025-05-17.18:23:45::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_7/src"
+
+TRACE::2025-05-17.18:23:45::SCWMssOS::make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none
+TRACE::2025-05-17.18:23:45::SCWMssOS::-eabi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=h
+TRACE::2025-05-17.18:23:45::SCWMssOS::ard -nostartfiles -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:45::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_9/src"
+
+TRACE::2025-05-17.18:23:45::SCWMssOS::make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-ea
+TRACE::2025-05-17.18:23:45::SCWMssOS::bi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard
+TRACE::2025-05-17.18:23:45::SCWMssOS:: -nostartfiles -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:45::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_1/src"
+
+TRACE::2025-05-17.18:23:45::SCWMssOS::make -C ps7_cortexa9_0/libsrc/ddrps_v1_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2025-05-17.18:23:45::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2025-05-17.18:23:45::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:45::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_6/src"
+
+TRACE::2025-05-17.18:23:45::SCWMssOS::make -C ps7_cortexa9_0/libsrc/devcfg_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-05-17.18:23:45::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-05-17.18:23:45::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:45::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_6/src"
+
+TRACE::2025-05-17.18:23:45::SCWMssOS::make -C ps7_cortexa9_0/libsrc/dmaps_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2025-05-17.18:23:45::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2025-05-17.18:23:45::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:45::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_11/src"
+
+TRACE::2025-05-17.18:23:45::SCWMssOS::make -C ps7_cortexa9_0/libsrc/emacps_v3_11/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+TRACE::2025-05-17.18:23:45::SCWMssOS::" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+TRACE::2025-05-17.18:23:45::SCWMssOS::tartfiles -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:45::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_7/src"
+
+TRACE::2025-05-17.18:23:45::SCWMssOS::make -C ps7_cortexa9_0/libsrc/qspips_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-05-17.18:23:45::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-05-17.18:23:45::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:46::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/scugic_v4_2/src"
+
+TRACE::2025-05-17.18:23:46::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scugic_v4_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-05-17.18:23:46::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-05-17.18:23:46::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:46::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_2/src"
+
+TRACE::2025-05-17.18:23:46::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scutimer_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-a
+TRACE::2025-05-17.18:23:46::SCWMssOS::s" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -no
+TRACE::2025-05-17.18:23:46::SCWMssOS::startfiles -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:46::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_2/src"
+
+TRACE::2025-05-17.18:23:46::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scuwdt_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-05-17.18:23:46::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-05-17.18:23:46::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:46::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/standalone_v7_2/src"
+
+TRACE::2025-05-17.18:23:46::SCWMssOS::make -C ps7_cortexa9_0/libsrc/standalone_v7_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi
+TRACE::2025-05-17.18:23:46::SCWMssOS::-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -
+TRACE::2025-05-17.18:23:46::SCWMssOS::nostartfiles -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:46::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_4/src"
+
+TRACE::2025-05-17.18:23:46::SCWMssOS::make -C ps7_cortexa9_0/libsrc/xadcps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-05-17.18:23:46::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-05-17.18:23:46::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:46::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_7/src"
+
+TRACE::2025-05-17.18:23:46::SCWMssOS::make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-ea
+TRACE::2025-05-17.18:23:46::SCWMssOS::bi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard
+TRACE::2025-05-17.18:23:46::SCWMssOS:: -nostartfiles -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:46::SCWMssOS::"Compiling coresightps_dcc"
+
+TRACE::2025-05-17.18:23:46::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_9/src"
+
+TRACE::2025-05-17.18:23:46::SCWMssOS::make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-
+TRACE::2025-05-17.18:23:46::SCWMssOS::as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -n
+TRACE::2025-05-17.18:23:46::SCWMssOS::ostartfiles -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:46::SCWMssOS::"Compiling cpu_cortexa9"
+
+TRACE::2025-05-17.18:23:46::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_1/src"
+
+TRACE::2025-05-17.18:23:46::SCWMssOS::make -C ps7_cortexa9_0/libsrc/ddrps_v1_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2025-05-17.18:23:46::SCWMssOS::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2025-05-17.18:23:46::SCWMssOS::iles -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:46::SCWMssOS::"Compiling ddrps"
+
+TRACE::2025-05-17.18:23:47::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_6/src"
+
+TRACE::2025-05-17.18:23:47::SCWMssOS::make -C ps7_cortexa9_0/libsrc/devcfg_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-05-17.18:23:47::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-05-17.18:23:47::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:47::SCWMssOS::"Compiling devcfg"
+
+TRACE::2025-05-17.18:23:47::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_6/src"
+
+TRACE::2025-05-17.18:23:47::SCWMssOS::make -C ps7_cortexa9_0/libsrc/dmaps_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2025-05-17.18:23:47::SCWMssOS::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2025-05-17.18:23:47::SCWMssOS::iles -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:47::SCWMssOS::"Compiling dmaps"
+
+TRACE::2025-05-17.18:23:48::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_11/src"
+
+TRACE::2025-05-17.18:23:48::SCWMssOS::make -C ps7_cortexa9_0/libsrc/emacps_v3_11/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+TRACE::2025-05-17.18:23:48::SCWMssOS::ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+TRACE::2025-05-17.18:23:48::SCWMssOS::tfiles -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:48::SCWMssOS::"Compiling emacps"
+
+TRACE::2025-05-17.18:23:49::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_7/src"
+
+TRACE::2025-05-17.18:23:49::SCWMssOS::make -C ps7_cortexa9_0/libsrc/qspips_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-05-17.18:23:49::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-05-17.18:23:49::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:49::SCWMssOS::"Compiling qspips"
+
+TRACE::2025-05-17.18:23:50::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v4_2/src"
+
+TRACE::2025-05-17.18:23:50::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scugic_v4_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-05-17.18:23:50::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-05-17.18:23:50::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:50::SCWMssOS::"Compiling scugic"
+
+TRACE::2025-05-17.18:23:50::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_2/src"
+
+TRACE::2025-05-17.18:23:50::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scutimer_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2025-05-17.18:23:50::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2025-05-17.18:23:50::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:50::SCWMssOS::"Compiling scutimer"
+
+TRACE::2025-05-17.18:23:51::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_2/src"
+
+TRACE::2025-05-17.18:23:51::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scuwdt_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-05-17.18:23:51::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-05-17.18:23:51::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:51::SCWMssOS::"Compiling scuwdt"
+
+TRACE::2025-05-17.18:23:51::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v7_2/src"
+
+TRACE::2025-05-17.18:23:51::SCWMssOS::make -C ps7_cortexa9_0/libsrc/standalone_v7_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+TRACE::2025-05-17.18:23:51::SCWMssOS::" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+TRACE::2025-05-17.18:23:51::SCWMssOS::tartfiles -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:51::SCWMssOS::"Compiling standalone"
+
+TRACE::2025-05-17.18:23:54::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_4/src"
+
+TRACE::2025-05-17.18:23:54::SCWMssOS::make -C ps7_cortexa9_0/libsrc/xadcps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-05-17.18:23:54::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-05-17.18:23:54::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2025-05-17.18:23:54::SCWMssOS::"Compiling xadcps"
+
+TRACE::2025-05-17.18:23:55::SCWMssOS::'Finished building libraries'
+
+TRACE::2025-05-17.18:23:55::SCWMssOS::Copying to export directory.
+TRACE::2025-05-17.18:23:55::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2025-05-17.18:23:55::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+LOG::2025-05-17.18:23:55::SCWSystem::Completed Processing the domain standalone_domain
+LOG::2025-05-17.18:23:55::SCWSystem::Completed Processing the sysconfig booter
+LOG::2025-05-17.18:23:55::SCWPlatform::Completed generating the artifacts for system configuration booter
+TRACE::2025-05-17.18:23:55::SCWPlatform::Started preparing the platform 
+TRACE::2025-05-17.18:23:55::SCWSystem::Writing the bif file for system config booter
+TRACE::2025-05-17.18:23:55::SCWSystem::dir created 
+TRACE::2025-05-17.18:23:55::SCWSystem::Writing the bif 
+TRACE::2025-05-17.18:23:55::SCWPlatform::Started writing the spfm file 
+TRACE::2025-05-17.18:23:55::SCWPlatform::Started writing the xpfm file 
+TRACE::2025-05-17.18:23:55::SCWPlatform::Completed generating the platform
+TRACE::2025-05-17.18:23:55::SCWMssOS::Saving the mss changes D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:55::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-05-17.18:23:55::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-05-17.18:23:55::SCWMssOS::Commit changes completed.
+TRACE::2025-05-17.18:23:55::SCWMssOS::Saving the mss changes D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:55::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-05-17.18:23:55::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-05-17.18:23:55::SCWMssOS::Commit changes completed.
+TRACE::2025-05-17.18:23:55::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:55::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:55::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:55::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:55::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:55::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:55::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-17.18:23:55::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-17.18:23:55::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:55::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:55::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:55::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-17.18:23:55::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:55::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:55::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:55::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:55::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:55::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:55::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-17.18:23:55::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-17.18:23:55::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:55::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:55::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:55::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:55::SCWWriter::formatted JSON is {
+	"platformName":	"booter",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"booter",
+	"platHandOff":	"D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/project_1/design_1_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_1_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"booter",
+	"systems":	[{
+			"systemName":	"booter",
+			"systemDesc":	"booter",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"booter",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"d64a81374f4dd989af67b502a6a982ab",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on ps7_cortexa9_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"2075e38a584ff2ab29fb0b301e9fd52d",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2025-05-17.18:23:55::SCWPlatform::updated the xpfm file.
+TRACE::2025-05-17.18:23:55::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:55::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:55::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:55::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw
+TRACE::2025-05-17.18:23:55::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/hw/design_1_wrapper.xsa
+TRACE::2025-05-17.18:23:55::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-17.18:23:55::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-17.18:23:55::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-17.18:23:55::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-17.18:23:55::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-17.18:23:55::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-17.18:23:55::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/ps7_cortexa9_0/standalone_domain/bsp/system.mss

@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
 -- Date        : Sun May 11 22:45:06 2025
 -- Host        : Ro running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               d:/proyectosep2/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_0/design_1_blk_mem_gen_0_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top design_1_blk_mem_gen_0_0 -prefix
+--               design_1_blk_mem_gen_0_0_ design_1_blk_mem_gen_0_0_stub.vhdl
 -- Design      : design_1_blk_mem_gen_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z010clg400-1

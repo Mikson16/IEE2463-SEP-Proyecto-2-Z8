@@ -1,19 +1,28 @@
-09:00:20 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\andre\Projects\IEE2463-SEP-Proyecto-Z8\Proyecto_2\vitis\temp_xsdb_launch_script.tcl
-09:00:20 INFO  : Registering command handlers for Vitis TCF services
-09:00:24 INFO  : Platform repository initialization has completed.
-09:00:24 INFO  : XSCT server has started successfully.
-09:00:24 INFO  : plnx-install-location is set to ''
-09:00:24 INFO  : Successfully done setting XSCT server connection channel  
-09:00:25 INFO  : Successfully done query RDI_DATADIR 
-09:00:25 INFO  : Successfully done setting workspace for the tool. 
-09:05:14 INFO  : Invoking Bootgen: bootgen -image output.bif -arch zynq -o C:/Users/andre/Projects/IEE2463-SEP-Proyecto-Z8/Proyecto_2/vitis/BOOT.bin
-09:05:14 INFO  : Creating new bif file C:\Users\andre\Projects\IEE2463-SEP-Proyecto-Z8\Proyecto_2\vitis\output.bif
-09:05:16 INFO  : Bootgen command execution is done.
-09:06:48 INFO  : Invoking Bootgen: bootgen -image output.bif -arch zynq -o C:/Users/andre/Projects/IEE2463-SEP-Proyecto-Z8/Proyecto_2/project_1/BOOT.bin
-09:06:48 INFO  : Creating new bif file C:\Users\andre\Projects\IEE2463-SEP-Proyecto-Z8\Proyecto_2\project_1\output.bif
-09:06:50 INFO  : Bootgen command execution is done.
-09:07:41 INFO  : Invoking Bootgen: bootgen -image output.bif -arch zynq -o C:/Users/andre/Projects/IEE2463-SEP-Proyecto-Z8/Proyecto_2/vitis/BOOT.bin -w on
-09:07:41 INFO  : Overwriting existing bif file C:\Users\andre\Projects\IEE2463-SEP-Proyecto-Z8\Proyecto_2\vitis\output.bif
-09:07:43 INFO  : Bootgen command execution is done.
-09:08:39 ERROR : Could not get the saved dialog settings. null
-09:09:04 ERROR : Could not get the saved dialog settings. null
+18:21:19 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\vitis\temp_xsdb_launch_script.tcl
+18:21:19 INFO  : Registering command handlers for Vitis TCF services
+18:21:21 INFO  : Platform repository initialization has completed.
+18:21:21 INFO  : XSCT server has started successfully.
+18:21:21 INFO  : plnx-install-location is set to ''
+18:21:21 INFO  : Successfully done setting XSCT server connection channel  
+18:21:21 INFO  : Successfully done setting workspace for the tool. 
+18:21:21 INFO  : Successfully done query RDI_DATADIR 
+18:23:18 INFO  : Result from executing command 'getProjects': booter
+18:23:18 INFO  : Result from executing command 'getPlatforms': 
+18:23:55 INFO  : Result from executing command 'getProjects': booter
+18:23:55 INFO  : Result from executing command 'getPlatforms': booter|D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/export/booter/booter.xpfm
+18:26:17 INFO  : Invoking Bootgen: bootgen -image output.bif -arch zynq -o D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/BOOT.bin
+18:26:17 INFO  : Creating new bif file D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\vitis\output.bif
+18:26:18 INFO  : Bootgen command execution is done.
+18:26:45 ERROR : Could not get the saved dialog settings. null
+18:27:25 INFO  : Checking for BSP changes to sync application flags for project 'bootersw'...
+18:48:57 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\vitis\temp_xsdb_launch_script.tcl
+18:48:59 INFO  : XSCT server has started successfully.
+18:48:59 INFO  : Successfully done setting XSCT server connection channel  
+18:48:59 INFO  : plnx-install-location is set to ''
+18:48:59 INFO  : Successfully done setting workspace for the tool. 
+18:48:59 INFO  : Platform repository initialization has completed.
+18:49:00 INFO  : Registering command handlers for Vitis TCF services
+18:49:00 INFO  : Successfully done query RDI_DATADIR 
+18:51:03 INFO  : Invoking Bootgen: bootgen -image output.bif -arch zynq -o D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/BOOT.bin -w on
+18:51:03 INFO  : Overwriting existing bif file D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\vitis\output.bif
+18:51:04 INFO  : Bootgen command execution is done.
