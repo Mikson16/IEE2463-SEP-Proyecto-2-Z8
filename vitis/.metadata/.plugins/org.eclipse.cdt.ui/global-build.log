@@ -1,13 +1,31 @@
-Nothing to build in platform 'booter'
+Nothing to build in platform 'ps_2'
 
-
-**** Build of configuration Debug for project bootersw ****
-
-Nothing to build for project bootersw
-18:27:25 **** Build of configuration Debug for project bootersw_system ****
+23:35:24 **** Incremental Build of configuration Debug for project ps_sw ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/menus_logica.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/menus_logica.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/vitis/ps_2/export/ps_2/sw/ps_2/standalone_domain/bspinclude/include -MMD -MP -MF"src/menus_logica.d" -MT"src/menus_logica.o" -o "src/menus_logica.o" "../src/menus_logica.c"
+'Finished building: ../src/menus_logica.c'
+' '
+'Building target: ps_sw.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/vitis/ps_2/export/ps_2/sw/ps_2/standalone_domain/bsplib/lib -o "ps_sw.elf"  ./src/main.o ./src/menus_logica.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ps_sw.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size ps_sw.elf  |tee "ps_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22200	   1160	  22584	  45944	   b378	ps_sw.elf
+'Finished building: ps_sw.elf.size'
+' '
+23:35:28 **** Incremental Build of configuration Debug for project ps_sw_system ****
 make all 
 Generating bif file for the system project
-generate_system_bif.bat 50680 D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/export/booter/booter.xpfm standalone_domain D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/bootersw_system/Debug/system.bif
-sdcard_gen --xpfm D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/booter/export/booter/booter.xpfm --sys_config booter --bif D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/bootersw_system/Debug/system.bif --bitstream D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/bootersw/_ide/bitstream/design_1_wrapper.bit --elf D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/bootersw/Debug/bootersw.elf,ps7_cortexa9_0
-ELF does not exist: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/vitis/bootersw/Debug/bootersw.elf
-make: *** [makefile:39: package] Error 1
+generate_system_bif.bat 58065 C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/vitis/ps_2/export/ps_2/ps_2.xpfm standalone_domain C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/vitis/ps_sw_system/Debug/system.bif
+sdcard_gen --xpfm C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/vitis/ps_2/export/ps_2/ps_2.xpfm --sys_config ps_2 --bif C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/vitis/ps_sw_system/Debug/system.bif --bitstream C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/vitis/ps_sw/_ide/bitstream/design_1_wrapper.bit --elf C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/vitis/ps_sw/Debug/ps_sw.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/vitis/ps_sw/_ide/bitstream/design_1_wrapper.bit
+Running C:/Xilinx/Vitis/2020.1/bin/bootgen  -image C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/vitis/ps_sw_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
