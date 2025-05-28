@@ -641,3 +641,35 @@ con
 20:34:08 INFO  : Platform repository initialization has completed.
 20:34:08 INFO  : Registering command handlers for Vitis TCF services
 20:34:24 INFO  : Successfully done query RDI_DATADIR 
+08:49:53 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\andre\Projects\IEE2463-SEP-Proyecto-2-Z8\music_player\vitis\temp_xsdb_launch_script.tcl
+08:49:56 INFO  : XSCT server has started successfully.
+08:49:56 INFO  : plnx-install-location is set to ''
+08:49:56 INFO  : Successfully done setting XSCT server connection channel  
+08:49:56 INFO  : Successfully done setting workspace for the tool. 
+08:50:03 INFO  : Registering command handlers for Vitis TCF services
+08:50:03 ERROR : Error encountered while initializing user repository paths
+Reason: No Platforms Found.
+
+
+08:50:03 INFO  : Platform repository initialization has completed.
+08:50:03 INFO  : Successfully done query RDI_DATADIR 
+09:11:39 INFO  : Result from executing command 'getProjects': music_player
+09:11:39 INFO  : Result from executing command 'getPlatforms': 
+09:11:40 INFO  : Checking for BSP changes to sync application flags for project 'music_player_sw'...
+09:14:16 INFO  : Successfully done sdx_reload_mss "C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+09:14:18 INFO  : Successfully done sdx_reload_mss "C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+09:14:59 INFO  : (SwPlatform)  Successfully done add_library 
+09:15:02 INFO  : (SwPlatform) Successfully done update_mss 
+09:15:02 INFO  : Successfully done sdx_reload_mss "C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+09:15:59 INFO  : Result from executing command 'getProjects': music_player
+09:15:59 INFO  : Result from executing command 'getPlatforms': music_player|C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/export/music_player/music_player.xpfm
+09:16:05 INFO  : Checking for BSP changes to sync application flags for project 'music_player_sw'...
+09:16:05 INFO  : Updating application flags with new BSP settings...
+09:16:06 INFO  : Successfully updated application flags for project music_player_sw.
+09:17:45 INFO  : Checking for BSP changes to sync application flags for project 'music_player_sw'...
+09:20:47 INFO  : Checking for BSP changes to sync application flags for project 'music_player_sw'...
+09:21:29 INFO  : Checking for BSP changes to sync application flags for project 'music_player_sw'...
+09:22:14 INFO  : Checking for BSP changes to sync application flags for project 'music_player_sw'...
+09:24:14 INFO  : Checking for BSP changes to sync application flags for project 'music_player_sw'...
+09:24:47 INFO  : Checking for BSP changes to sync application flags for project 'music_player_sw'...
+09:27:46 INFO  : Checking for BSP changes to sync application flags for project 'music_player_sw'...

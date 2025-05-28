@@ -36,3 +36,26 @@ timestamp=[2025-05-27 01:00:49], mode=BUILD, duration=0:00:04.157, duration_ms=4
 timestamp=[2025-05-27 20:34:05], mode=WORKBENCH_START, duration=0:00:23.485, duration_ms=23485, data={}
 timestamp=[2025-05-27 20:34:08], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:01.579, duration_ms=1579, data={}
 timestamp=[2025-05-27 20:34:08], mode=WORKBENCH_UI_INIT, duration=0:00:02.782, duration_ms=2782, data={editors_count=12, platform_editors_count=7, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,music_player,music_player_sw,music_player_sw_system}
+timestamp=[2025-05-28 08:50:01], mode=WORKBENCH_START, duration=0:00:15.490, duration_ms=15490, data={}
+timestamp=[2025-05-28 08:50:02], mode=WORKBENCH_UI_INIT, duration=0:00:01.547, duration_ms=1547, data={editors_count=13, platform_editors_count=8, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,music_player,music_player_sw,music_player_sw_system}
+timestamp=[2025-05-28 08:50:03], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.073, duration_ms=73, data={}
+timestamp=[2025-05-28 09:11:40], mode=PLATFORM_GENERATION, duration=0:00:58.494, duration_ms=58494, data={name=music_player}
+timestamp=[2025-05-28 09:11:47], mode=BUILD, duration=0:00:02.429, duration_ms=2429, data={name=music_player_sw, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 09:11:50], mode=BUILD, duration=0:00:02.412, duration_ms=2412, data={name=music_player_sw_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 09:15:59], mode=PLATFORM_GENERATION, duration=0:00:35.169, duration_ms=35169, data={name=music_player}
+timestamp=[2025-05-28 09:16:07], mode=BUILD, duration=0:00:01.854, duration_ms=1854, data={name=music_player_sw, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 09:16:12], mode=BUILD, duration=0:00:03.989, duration_ms=3989, data={name=music_player_sw_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 09:17:48], mode=BUILD, duration=0:00:02.418, duration_ms=2418, data={name=music_player_sw, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 09:17:58], mode=BUILD, duration=0:00:09.939, duration_ms=9939, data={name=music_player_sw_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 09:20:48], mode=BUILD, duration=0:00:01.597, duration_ms=1597, data={name=music_player_sw, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 09:20:57], mode=BUILD, duration=0:00:08.542, duration_ms=8542, data={name=music_player_sw_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 09:21:31], mode=BUILD, duration=0:00:01.542, duration_ms=1542, data={name=music_player_sw, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 09:21:40], mode=BUILD, duration=0:00:08.817, duration_ms=8817, data={name=music_player_sw_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 09:22:14], mode=BUILD, duration=0:00:00.854, duration_ms=854, data={name=music_player_sw, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 09:22:24], mode=BUILD, duration=0:00:09.007, duration_ms=9007, data={name=music_player_sw_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 09:24:15], mode=BUILD, duration=0:00:00.804, duration_ms=804, data={name=music_player_sw, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 09:24:24], mode=BUILD, duration=0:00:08.752, duration_ms=8752, data={name=music_player_sw_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 09:24:49], mode=BUILD, duration=0:00:01.614, duration_ms=1614, data={name=music_player_sw, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 09:24:59], mode=BUILD, duration=0:00:08.972, duration_ms=8972, data={name=music_player_sw_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 09:27:49], mode=BUILD, duration=0:00:02.733, duration_ms=2733, data={name=music_player_sw, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 09:28:02], mode=BUILD, duration=0:00:12.202, duration_ms=12202, data={name=music_player_sw_system, configuration=Debug, clean_build=false}

@@ -52,6 +52,9 @@ int main(void){
 				      TMRCTR_DEVICE_ID,
 				      TMRCTR_INTERRUPT_ID,
 				      TIMER_CNTR_0);
+	SdReaderSetup();
+	SdPlayer(1);
+
 }
 
 /***************** Function Definition ********************/
@@ -158,10 +161,13 @@ void SdPlayer(u8 SONG_ID)
     FIL Rfp;
     u8 ReadBuffer[2];
     UINT *br;
+    TCHAR song_path;
+    UINT byteread;
+    br = &byteread;
 
 
     if(SONG_ID == 1){
-    	TCHAR song_path = "0:/battle_music.bin";
+    	song_path = "0:/battle_music.bin";
     }
     else{
     	return;
@@ -183,7 +189,7 @@ void SdPlayer(u8 SONG_ID)
 			        return XST_FAILURE;
 			    }
 
-	rc = f_read (&Rfp, &ReadBuffer, 2, &br);
+	rc = f_read (&Rfp, &ReadBuffer, (UINT)2, &br);
 
 	if(rc != FR_OK)
 				    {

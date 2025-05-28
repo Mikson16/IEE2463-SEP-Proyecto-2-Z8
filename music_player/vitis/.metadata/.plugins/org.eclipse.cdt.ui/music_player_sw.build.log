@@ -1,10 +1,121 @@
-01:00:44 **** Incremental Build of configuration Debug for project music_player_sw ****
+09:27:46 **** Incremental Build of configuration Debug for project music_player_sw ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-make[1]: Nothing to be done for 'main-build'.
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/export/music_player/sw/music_player/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:56:2: warning: implicit declaration of function 'SdPlayer'; did you mean 'SdPlaySong'? [-Wimplicit-function-declaration]
+   56 |  SdPlayer(1);
+      |  ^~~~~~~~
+      |  SdPlaySong
+../src/main.c: In function 'TmrCtrSetupIntrSystem':
+../src/main.c:111:13: warning: 'return' with a value, in function returning void [-Wreturn-type]
+  111 |      return -1;
+      |             ^
+../src/main.c:96:6: note: declared here
+   96 | void TmrCtrSetupIntrSystem(XTmrCtr *TmrCtrInstancePtr,
+      |      ^~~~~~~~~~~~~~~~~~~~~
+../src/main.c:128:14: warning: 'return' with a value, in function returning void [-Wreturn-type]
+  128 |       return -1;
+      |              ^
+../src/main.c:96:6: note: declared here
+   96 | void TmrCtrSetupIntrSystem(XTmrCtr *TmrCtrInstancePtr,
+      |      ^~~~~~~~~~~~~~~~~~~~~
+In file included from C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/export/music_player/sw/music_player/standalone_domain/bspinclude/include/xtmrctr.h:157,
+                 from ../src/main.c:3:
+../src/main.c: In function 'SdReaderSetup':
+C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/export/music_player/sw/music_player/standalone_domain/bspinclude/include/xstatus.h:39:41: warning: 'return' with a value, in function returning void [-Wreturn-type]
+   39 | #define XST_FAILURE                     1L
+      |                                         ^~
+../src/main.c:153:17: note: in expansion of macro 'XST_FAILURE'
+  153 |          return XST_FAILURE;
+      |                 ^~~~~~~~~~~
+../src/main.c:146:6: note: declared here
+  146 | void SdReaderSetup()
+      |      ^~~~~~~~~~~~~
+../src/main.c: At top level:
+../src/main.c:159:6: warning: conflicting types for 'SdPlayer'
+  159 | void SdPlayer(u8 SONG_ID)
+      |      ^~~~~~~~
+../src/main.c:56:2: note: previous implicit declaration of 'SdPlayer' was here
+   56 |  SdPlayer(1);
+      |  ^~~~~~~~
+../src/main.c: In function 'SdPlayer':
+../src/main.c:170:16: warning: assignment to 'TCHAR' {aka 'char'} from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+  170 |      song_path = "0:/battle_music.bin";
+      |                ^
+../src/main.c:176:21: warning: passing argument 2 of 'f_open' makes pointer from integer without a cast [-Wint-conversion]
+  176 |  rc = f_open (&Rfp, song_path, 1);
+      |                     ^~~~~~~~~
+      |                     |
+      |                     TCHAR {aka char}
+In file included from ../src/main.c:8:
+C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/export/music_player/sw/music_player/standalone_domain/bspinclude/include/ff.h:273:39: note: expected 'const TCHAR *' {aka 'const char *'} but argument is of type 'TCHAR' {aka 'char'}
+  273 | FRESULT f_open (FIL* fp, const TCHAR* path, BYTE mode);    /* Open or create a file */
+      |                          ~~~~~~~~~~~~~^~~~
+In file included from C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/export/music_player/sw/music_player/standalone_domain/bspinclude/include/xtmrctr.h:157,
+                 from ../src/main.c:3:
+C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/export/music_player/sw/music_player/standalone_domain/bspinclude/include/xstatus.h:39:41: warning: 'return' with a value, in function returning void [-Wreturn-type]
+   39 | #define XST_FAILURE                     1L
+      |                                         ^~
+../src/main.c:181:18: note: in expansion of macro 'XST_FAILURE'
+  181 |           return XST_FAILURE;
+      |                  ^~~~~~~~~~~
+../src/main.c:159:6: note: declared here
+  159 | void SdPlayer(u8 SONG_ID)
+      |      ^~~~~~~~
+In file included from C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/export/music_player/sw/music_player/standalone_domain/bspinclude/include/xtmrctr.h:157,
+                 from ../src/main.c:3:
+C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/export/music_player/sw/music_player/standalone_domain/bspinclude/include/xstatus.h:39:41: warning: 'return' with a value, in function returning void [-Wreturn-type]
+   39 | #define XST_FAILURE                     1L
+      |                                         ^~
+../src/main.c:189:19: note: in expansion of macro 'XST_FAILURE'
+  189 |            return XST_FAILURE;
+      |                   ^~~~~~~~~~~
+../src/main.c:159:6: note: declared here
+  159 | void SdPlayer(u8 SONG_ID)
+      |      ^~~~~~~~
+../src/main.c:192:43: warning: passing argument 4 of 'f_read' from incompatible pointer type [-Wincompatible-pointer-types]
+  192 |  rc = f_read (&Rfp, &ReadBuffer, (UINT)2, &br);
+      |                                           ^~~
+      |                                           |
+      |                                           UINT ** {aka unsigned int **}
+In file included from ../src/main.c:8:
+C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/export/music_player/sw/music_player/standalone_domain/bspinclude/include/ff.h:275:54: note: expected 'UINT *' {aka 'unsigned int *'} but argument is of type 'UINT **' {aka 'unsigned int **'}
+  275 | FRESULT f_read (FIL* fp, void* buff, UINT btr, UINT* br);   /* Read data from the file */
+      |                                                ~~~~~~^~
+In file included from C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/export/music_player/sw/music_player/standalone_domain/bspinclude/include/xtmrctr.h:157,
+                 from ../src/main.c:3:
+C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/export/music_player/sw/music_player/standalone_domain/bspinclude/include/xstatus.h:39:41: warning: 'return' with a value, in function returning void [-Wreturn-type]
+   39 | #define XST_FAILURE                     1L
+      |                                         ^~
+../src/main.c:197:20: note: in expansion of macro 'XST_FAILURE'
+  197 |             return XST_FAILURE;
+      |                    ^~~~~~~~~~~
+../src/main.c:159:6: note: declared here
+  159 | void SdPlayer(u8 SONG_ID)
+      |      ^~~~~~~~
+At top level:
+../src/main.c:158:17: warning: 'main_song_sample' defined but not used [-Wunused-variable]
+  158 | static unsigned main_song_sample;
+      |                 ^~~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: music_player_sw.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/export/music_player/sw/music_player/standalone_domain/bsplib/lib -o "music_player_sw.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: music_player_sw.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size music_player_sw.elf  |tee "music_player_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  60324	   1992	  25632	  87948	  1578c	music_player_sw.elf
+'Finished building: music_player_sw.elf.size'
+' '
 
-01:00:44 Build Finished (took 219ms)
+09:27:49 Build Finished (took 2s.716ms)
 

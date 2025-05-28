@@ -62,3 +62,11 @@ Reason: No Platforms Found.
 23:35:24 INFO  : Checking for BSP changes to sync application flags for project 'ps_sw'...
 23:35:30 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/vitis/ps_2/export/ps_2/hw/design_1_wrapper.xsa is already opened
 
+08:48:10 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\andre\Projects\IEE2463-SEP-Proyecto-2-Z8\vitis\temp_xsdb_launch_script.tcl
+08:48:15 INFO  : XSCT server has started successfully.
+08:48:15 INFO  : plnx-install-location is set to ''
+08:48:15 INFO  : Successfully done setting XSCT server connection channel  
+08:48:15 INFO  : Successfully done setting workspace for the tool. 
+08:48:23 INFO  : Registering command handlers for Vitis TCF services
+08:48:23 INFO  : Platform repository initialization has completed.
+08:48:34 INFO  : Successfully done query RDI_DATADIR 

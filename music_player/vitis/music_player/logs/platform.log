@@ -2642,3 +2642,1662 @@ TRACE::2025-05-26.22:14:21::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE246
 
 TRACE::2025-05-26.22:14:21::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
 TRACE::2025-05-26.22:14:21::SCWMssOS::Removing the swdes entry for  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:10:44::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:44::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:44::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:47::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:10:47::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:47::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:10:47::SCWPlatform::Do not have an existing db opened. 
+TRACE::2025-05-28.09:10:51::SCWPlatform::Opened new HwDB with name design_1_wrapper
+TRACE::2025-05-28.09:10:51::SCWReader::Active system found as  music_player
+TRACE::2025-05-28.09:10:51::SCWReader::Handling sysconfig music_player
+TRACE::2025-05-28.09:10:51::SCWDomain::checking for install qemu data   : 
+TRACE::2025-05-28.09:10:51::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/
+TRACE::2025-05-28.09:10:51::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2025-05-28.09:10:51::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:51::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:51::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:51::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:10:51::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:51::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:10:51::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2025-05-28.09:10:51::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2025-05-28.09:10:51::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:10:51::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:51::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:51::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:51::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:10:51::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:51::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:10:51::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2025-05-28.09:10:51::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2025-05-28.09:10:51::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:10:51::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:51::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:51::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:51::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:10:51::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:51::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:10:51::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2025-05-28.09:10:51::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2025-05-28.09:10:51::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:10:51::SCWReader::Boot application domain added for zynq_fsbl
+TRACE::2025-05-28.09:10:51::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:51::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:51::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:51::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:10:51::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:51::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:10:51::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2025-05-28.09:10:51::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2025-05-28.09:10:51::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:10:51::SCWMssOS::Checking the sw design at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:10:51::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2025-05-28.09:10:51::SCWMssOS::No sw design opened at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:10:51::SCWMssOS::mss exists loading the mss file  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:10:51::SCWMssOS::Opened the sw design from mss  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:10:51::SCWMssOS::Adding the swdes entry C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2025-05-28.09:10:51::SCWMssOS::updating the scw layer about changes
+TRACE::2025-05-28.09:10:51::SCWMssOS::Opened the sw design.  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:10:51::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:51::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:51::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:51::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:10:51::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:51::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:10:51::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2025-05-28.09:10:51::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2025-05-28.09:10:51::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:10:51::SCWMssOS::Checking the sw design at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:10:51::SCWMssOS::DEBUG:  swdes dump  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-28.09:10:51::SCWMssOS::Sw design exists and opened at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:10:51::SCWMssOS:: library already available in sw design:  xilffs:4.3
+TRACE::2025-05-28.09:10:51::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:51::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:51::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:51::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:10:51::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:51::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:10:51::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2025-05-28.09:10:51::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2025-05-28.09:10:51::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:10:51::SCWMssOS::Checking the sw design at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:10:51::SCWMssOS::DEBUG:  swdes dump  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-28.09:10:51::SCWMssOS::Sw design exists and opened at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:10:51::SCWMssOS:: library already available in sw design:  xilrsa:1.6
+TRACE::2025-05-28.09:10:51::SCWMssOS::Saving the mss changes C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:10:51::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-05-28.09:10:51::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-05-28.09:10:51::SCWMssOS::Commit changes completed.
+TRACE::2025-05-28.09:10:51::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2025-05-28.09:10:51::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2025-05-28.09:10:51::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:51::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:51::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:51::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:10:51::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:51::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:10:51::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2025-05-28.09:10:51::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2025-05-28.09:10:51::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:10:51::SCWMssOS::Checking the sw design at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:10:51::SCWMssOS::DEBUG:  swdes dump  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-28.09:10:51::SCWMssOS::Sw design exists and opened at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:10:51::SCWReader::No isolation master present  
+TRACE::2025-05-28.09:10:51::SCWDomain::checking for install qemu data   : 
+TRACE::2025-05-28.09:10:51::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/
+TRACE::2025-05-28.09:10:51::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2025-05-28.09:10:51::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:51::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:51::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:51::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:10:51::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:51::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:10:51::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2025-05-28.09:10:51::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2025-05-28.09:10:51::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:10:51::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:51::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:51::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:51::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:10:51::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:51::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:10:51::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2025-05-28.09:10:51::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2025-05-28.09:10:51::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:10:51::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:51::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:51::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:51::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:10:51::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:51::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:10:51::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2025-05-28.09:10:51::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2025-05-28.09:10:51::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:10:51::SCWMssOS::Checking the sw design at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:10:51::SCWMssOS::DEBUG:  swdes dump  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-28.09:10:51::SCWMssOS::No sw design opened at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:10:51::SCWMssOS::mss exists loading the mss file  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:10:51::SCWMssOS::Opened the sw design from mss  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:10:51::SCWMssOS::Adding the swdes entry C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_0
+TRACE::2025-05-28.09:10:51::SCWMssOS::updating the scw layer about changes
+TRACE::2025-05-28.09:10:52::SCWMssOS::Opened the sw design.  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:10:52::SCWMssOS::Saving the mss changes C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:10:52::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-05-28.09:10:52::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-05-28.09:10:52::SCWMssOS::Commit changes completed.
+TRACE::2025-05-28.09:10:52::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2025-05-28.09:10:52::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2025-05-28.09:10:52::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:52::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:52::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:52::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:10:52::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:52::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:10:52::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2025-05-28.09:10:52::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2025-05-28.09:10:52::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:10:52::SCWMssOS::Checking the sw design at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:10:52::SCWMssOS::DEBUG:  swdes dump  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-28.09:10:52::SCWMssOS::Sw design exists and opened at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:10:52::SCWReader::No isolation master present  
+LOG::2025-05-28.09:10:52::SCWPlatform::Started generating the artifacts platform music_player
+TRACE::2025-05-28.09:10:52::SCWPlatform::Sanity checking of platform is completed
+LOG::2025-05-28.09:10:52::SCWPlatform::Started generating the artifacts for system configuration music_player
+LOG::2025-05-28.09:10:52::SCWSystem::Checking the domain zynq_fsbl
+LOG::2025-05-28.09:10:52::SCWSystem::Doing application build for :  zynq_fsbl
+TRACE::2025-05-28.09:10:52::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2025-05-28.09:10:52::SCWDomain::Building the domain as part of full build :  zynq_fsbl
+TRACE::2025-05-28.09:10:52::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:52::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:52::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:52::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:10:52::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:52::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:10:52::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2025-05-28.09:10:52::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2025-05-28.09:10:52::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:10:52::SCWMssOS::Checking the sw design at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:10:52::SCWMssOS::DEBUG:  swdes dump  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-28.09:10:52::SCWMssOS::Sw design exists and opened at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:10:52::SCWBDomain::Completed writing the mss file at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp
+TRACE::2025-05-28.09:10:52::SCWBDomain::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2025-05-28.09:10:52::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2025-05-28.09:10:52::SCWBDomain::System Command Ran  C:&  cd  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl & make 
+TRACE::2025-05-28.09:10:53::SCWBDomain::make: Nothing to be done for 'all'.
+
+LOG::2025-05-28.09:10:53::SCWSystem::Checking the domain standalone_domain
+LOG::2025-05-28.09:10:53::SCWSystem::Not a boot domain 
+LOG::2025-05-28.09:10:53::SCWSystem::Started Processing the domain standalone_domain
+TRACE::2025-05-28.09:10:53::SCWDomain::Generating domain artifcats
+TRACE::2025-05-28.09:10:53::SCWMssOS::Generating standalone artifcats
+TRACE::2025-05-28.09:10:53::SCWMssOS::Copying the qemu file from  D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt To C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/export/music_player/sw/music_player/qemu/
+TRACE::2025-05-28.09:10:53::SCWMssOS::Copying the qemu file from  D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt To C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/export/music_player/sw/music_player/standalone_domain/qemu/
+TRACE::2025-05-28.09:10:53::SCWMssOS:: Copying the user libraries. 
+TRACE::2025-05-28.09:10:53::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:53::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:53::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:53::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:10:53::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:10:53::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:10:53::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2025-05-28.09:10:53::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2025-05-28.09:10:53::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:10:53::SCWMssOS::Checking the sw design at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:10:53::SCWMssOS::DEBUG:  swdes dump  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-28.09:10:53::SCWMssOS::Sw design exists and opened at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:10:53::SCWMssOS::Completed writing the mss file at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp
+TRACE::2025-05-28.09:10:53::SCWMssOS::Mss edits present, copying mssfile into export location C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:10:53::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2025-05-28.09:10:53::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2025-05-28.09:10:53::SCWDomain::Building the domain as part of full build :  standalone_domain
+TRACE::2025-05-28.09:10:53::SCWMssOS::doing bsp build ... 
+TRACE::2025-05-28.09:10:53::SCWMssOS::System Command Ran  C: & cd  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp & make 
+TRACE::2025-05-28.09:10:53::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_7/src"
+
+TRACE::2025-05-28.09:10:53::SCWMssOS::make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none
+TRACE::2025-05-28.09:10:53::SCWMssOS::-eabi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=h
+TRACE::2025-05-28.09:10:53::SCWMssOS::ard -nostartfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:10:53::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_9/src"
+
+TRACE::2025-05-28.09:10:53::SCWMssOS::make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-ea
+TRACE::2025-05-28.09:10:53::SCWMssOS::bi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard
+TRACE::2025-05-28.09:10:53::SCWMssOS:: -nostartfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:10:53::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_1/src"
+
+TRACE::2025-05-28.09:10:53::SCWMssOS::make -C ps7_cortexa9_0/libsrc/ddrps_v1_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2025-05-28.09:10:53::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2025-05-28.09:10:53::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:10:54::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_6/src"
+
+TRACE::2025-05-28.09:10:54::SCWMssOS::make -C ps7_cortexa9_0/libsrc/devcfg_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-05-28.09:10:54::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-05-28.09:10:54::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:10:54::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_6/src"
+
+TRACE::2025-05-28.09:10:54::SCWMssOS::make -C ps7_cortexa9_0/libsrc/dmaps_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2025-05-28.09:10:54::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2025-05-28.09:10:54::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:10:55::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_11/src"
+
+TRACE::2025-05-28.09:10:55::SCWMssOS::make -C ps7_cortexa9_0/libsrc/emacps_v3_11/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+TRACE::2025-05-28.09:10:55::SCWMssOS::" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+TRACE::2025-05-28.09:10:55::SCWMssOS::tartfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:10:55::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_7/src"
+
+TRACE::2025-05-28.09:10:55::SCWMssOS::make -C ps7_cortexa9_0/libsrc/gpiops_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-05-28.09:10:55::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-05-28.09:10:55::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:10:55::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_6/src"
+
+TRACE::2025-05-28.09:10:55::SCWMssOS::make -C ps7_cortexa9_0/libsrc/gpio_v4_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+TRACE::2025-05-28.09:10:55::SCWMssOS::ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+TRACE::2025-05-28.09:10:55::SCWMssOS::tfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:10:56::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_7/src"
+
+TRACE::2025-05-28.09:10:56::SCWMssOS::make -C ps7_cortexa9_0/libsrc/qspips_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-05-28.09:10:56::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-05-28.09:10:56::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:10:56::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/scugic_v4_2/src"
+
+TRACE::2025-05-28.09:10:56::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scugic_v4_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-05-28.09:10:56::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-05-28.09:10:56::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:10:57::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_2/src"
+
+TRACE::2025-05-28.09:10:57::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scutimer_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-a
+TRACE::2025-05-28.09:10:57::SCWMssOS::s" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -no
+TRACE::2025-05-28.09:10:57::SCWMssOS::startfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:10:57::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_2/src"
+
+TRACE::2025-05-28.09:10:57::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scuwdt_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-05-28.09:10:57::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-05-28.09:10:57::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:10:57::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_9/src"
+
+TRACE::2025-05-28.09:10:57::SCWMssOS::make -C ps7_cortexa9_0/libsrc/sdps_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+TRACE::2025-05-28.09:10:57::SCWMssOS::ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+TRACE::2025-05-28.09:10:57::SCWMssOS::tfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:10:58::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/standalone_v7_2/src"
+
+TRACE::2025-05-28.09:10:58::SCWMssOS::make -C ps7_cortexa9_0/libsrc/standalone_v7_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi
+TRACE::2025-05-28.09:10:58::SCWMssOS::-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -
+TRACE::2025-05-28.09:10:58::SCWMssOS::nostartfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:11:00::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/tmrctr_v4_6/src"
+
+TRACE::2025-05-28.09:11:00::SCWMssOS::make -C ps7_cortexa9_0/libsrc/tmrctr_v4_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-05-28.09:11:00::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-05-28.09:11:00::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:11:00::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_9/src"
+
+TRACE::2025-05-28.09:11:00::SCWMssOS::make -C ps7_cortexa9_0/libsrc/uartps_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-05-28.09:11:00::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-05-28.09:11:00::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:11:00::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_5/src"
+
+TRACE::2025-05-28.09:11:00::SCWMssOS::make -C ps7_cortexa9_0/libsrc/usbps_v2_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2025-05-28.09:11:00::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2025-05-28.09:11:00::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:11:01::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_4/src"
+
+TRACE::2025-05-28.09:11:01::SCWMssOS::make -C ps7_cortexa9_0/libsrc/xadcps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-05-28.09:11:01::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-05-28.09:11:01::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:11:01::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_7/src"
+
+TRACE::2025-05-28.09:11:01::SCWMssOS::make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-ea
+TRACE::2025-05-28.09:11:01::SCWMssOS::bi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard
+TRACE::2025-05-28.09:11:01::SCWMssOS:: -nostartfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:11:01::SCWMssOS::"Compiling coresightps_dcc"
+
+TRACE::2025-05-28.09:11:04::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_9/src"
+
+TRACE::2025-05-28.09:11:04::SCWMssOS::make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-
+TRACE::2025-05-28.09:11:04::SCWMssOS::as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -n
+TRACE::2025-05-28.09:11:04::SCWMssOS::ostartfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:11:04::SCWMssOS::"Compiling cpu_cortexa9"
+
+TRACE::2025-05-28.09:11:05::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_1/src"
+
+TRACE::2025-05-28.09:11:05::SCWMssOS::make -C ps7_cortexa9_0/libsrc/ddrps_v1_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2025-05-28.09:11:05::SCWMssOS::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2025-05-28.09:11:05::SCWMssOS::iles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:11:05::SCWMssOS::"Compiling ddrps"
+
+TRACE::2025-05-28.09:11:05::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_6/src"
+
+TRACE::2025-05-28.09:11:05::SCWMssOS::make -C ps7_cortexa9_0/libsrc/devcfg_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-05-28.09:11:05::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-05-28.09:11:05::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:11:05::SCWMssOS::"Compiling devcfg"
+
+TRACE::2025-05-28.09:11:07::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_6/src"
+
+TRACE::2025-05-28.09:11:07::SCWMssOS::make -C ps7_cortexa9_0/libsrc/dmaps_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2025-05-28.09:11:07::SCWMssOS::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2025-05-28.09:11:07::SCWMssOS::iles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:11:07::SCWMssOS::"Compiling dmaps"
+
+TRACE::2025-05-28.09:11:09::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_11/src"
+
+TRACE::2025-05-28.09:11:09::SCWMssOS::make -C ps7_cortexa9_0/libsrc/emacps_v3_11/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+TRACE::2025-05-28.09:11:09::SCWMssOS::ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+TRACE::2025-05-28.09:11:09::SCWMssOS::tfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:11:09::SCWMssOS::"Compiling emacps"
+
+TRACE::2025-05-28.09:11:11::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_7/src"
+
+TRACE::2025-05-28.09:11:11::SCWMssOS::make -C ps7_cortexa9_0/libsrc/gpiops_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-05-28.09:11:11::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-05-28.09:11:11::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:11:11::SCWMssOS::"Compiling gpiops"
+
+TRACE::2025-05-28.09:11:13::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_6/src"
+
+TRACE::2025-05-28.09:11:13::SCWMssOS::make -C ps7_cortexa9_0/libsrc/gpio_v4_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "ARC
+TRACE::2025-05-28.09:11:13::SCWMssOS::HIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfi
+TRACE::2025-05-28.09:11:13::SCWMssOS::les -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:11:13::SCWMssOS::"Compiling gpio"
+
+TRACE::2025-05-28.09:11:15::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_7/src"
+
+TRACE::2025-05-28.09:11:15::SCWMssOS::make -C ps7_cortexa9_0/libsrc/qspips_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-05-28.09:11:15::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-05-28.09:11:15::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:11:15::SCWMssOS::"Compiling qspips"
+
+TRACE::2025-05-28.09:11:17::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v4_2/src"
+
+TRACE::2025-05-28.09:11:17::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scugic_v4_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-05-28.09:11:17::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-05-28.09:11:17::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:11:17::SCWMssOS::"Compiling scugic"
+
+TRACE::2025-05-28.09:11:19::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_2/src"
+
+TRACE::2025-05-28.09:11:19::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scutimer_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2025-05-28.09:11:19::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2025-05-28.09:11:19::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:11:19::SCWMssOS::"Compiling scutimer"
+
+TRACE::2025-05-28.09:11:20::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_2/src"
+
+TRACE::2025-05-28.09:11:20::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scuwdt_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-05-28.09:11:20::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-05-28.09:11:20::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:11:20::SCWMssOS::"Compiling scuwdt"
+
+TRACE::2025-05-28.09:11:21::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_9/src"
+
+TRACE::2025-05-28.09:11:21::SCWMssOS::make -C ps7_cortexa9_0/libsrc/sdps_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "ARC
+TRACE::2025-05-28.09:11:21::SCWMssOS::HIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfi
+TRACE::2025-05-28.09:11:21::SCWMssOS::les -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:11:21::SCWMssOS::"Compiling sdps"
+
+TRACE::2025-05-28.09:11:23::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v7_2/src"
+
+TRACE::2025-05-28.09:11:23::SCWMssOS::make -C ps7_cortexa9_0/libsrc/standalone_v7_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+TRACE::2025-05-28.09:11:23::SCWMssOS::" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+TRACE::2025-05-28.09:11:23::SCWMssOS::tartfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:11:24::SCWMssOS::"Compiling standalone"
+
+TRACE::2025-05-28.09:11:31::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/tmrctr_v4_6/src"
+
+TRACE::2025-05-28.09:11:31::SCWMssOS::make -C ps7_cortexa9_0/libsrc/tmrctr_v4_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-05-28.09:11:31::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-05-28.09:11:31::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:11:31::SCWMssOS::"Compiling tmrctr"
+
+TRACE::2025-05-28.09:11:33::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_9/src"
+
+TRACE::2025-05-28.09:11:33::SCWMssOS::make -C ps7_cortexa9_0/libsrc/uartps_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-05-28.09:11:33::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-05-28.09:11:33::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:11:33::SCWMssOS::"Compiling uartps"
+
+TRACE::2025-05-28.09:11:35::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_5/src"
+
+TRACE::2025-05-28.09:11:35::SCWMssOS::make -C ps7_cortexa9_0/libsrc/usbps_v2_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2025-05-28.09:11:35::SCWMssOS::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2025-05-28.09:11:35::SCWMssOS::iles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:11:35::SCWMssOS::"Compiling usbps"
+
+TRACE::2025-05-28.09:11:37::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_4/src"
+
+TRACE::2025-05-28.09:11:37::SCWMssOS::make -C ps7_cortexa9_0/libsrc/xadcps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-05-28.09:11:37::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-05-28.09:11:37::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:11:37::SCWMssOS::"Compiling xadcps"
+
+TRACE::2025-05-28.09:11:39::SCWMssOS::'Finished building libraries'
+
+TRACE::2025-05-28.09:11:39::SCWMssOS::Copying to export directory.
+TRACE::2025-05-28.09:11:39::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2025-05-28.09:11:39::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+LOG::2025-05-28.09:11:39::SCWSystem::Completed Processing the domain standalone_domain
+LOG::2025-05-28.09:11:39::SCWSystem::Completed Processing the sysconfig music_player
+LOG::2025-05-28.09:11:39::SCWPlatform::Completed generating the artifacts for system configuration music_player
+TRACE::2025-05-28.09:11:39::SCWPlatform::Started preparing the platform 
+TRACE::2025-05-28.09:11:39::SCWSystem::Writing the bif file for system config music_player
+TRACE::2025-05-28.09:11:39::SCWSystem::dir created 
+TRACE::2025-05-28.09:11:39::SCWSystem::Writing the bif 
+TRACE::2025-05-28.09:11:39::SCWPlatform::Started writing the spfm file 
+TRACE::2025-05-28.09:11:39::SCWPlatform::Started writing the xpfm file 
+TRACE::2025-05-28.09:11:39::SCWPlatform::Completed generating the platform
+TRACE::2025-05-28.09:11:39::SCWMssOS::Saving the mss changes C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:11:39::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-05-28.09:11:39::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-05-28.09:11:39::SCWMssOS::Commit changes completed.
+TRACE::2025-05-28.09:11:39::SCWMssOS::Saving the mss changes C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:11:39::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-05-28.09:11:39::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-05-28.09:11:39::SCWMssOS::Commit changes completed.
+TRACE::2025-05-28.09:11:39::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:11:39::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:11:39::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:11:39::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:11:39::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:11:39::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:11:39::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2025-05-28.09:11:39::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2025-05-28.09:11:39::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:11:39::SCWMssOS::Checking the sw design at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:11:39::SCWMssOS::DEBUG:  swdes dump  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-28.09:11:39::SCWMssOS::Sw design exists and opened at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:11:39::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:11:39::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:11:39::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:11:39::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:11:39::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:11:39::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:11:39::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2025-05-28.09:11:39::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2025-05-28.09:11:39::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:11:39::SCWMssOS::Checking the sw design at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:11:39::SCWMssOS::DEBUG:  swdes dump  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-28.09:11:39::SCWMssOS::Sw design exists and opened at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:11:39::SCWWriter::formatted JSON is {
+	"platformName":	"music_player",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"music_player",
+	"platHandOff":	"D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/design_1_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_1_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"music_player",
+	"systems":	[{
+			"systemName":	"music_player",
+			"systemDesc":	"music_player",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"music_player",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"f649a90a47f54d59c50c6b3f6748da03",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on ps7_cortexa9_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"a37611641fc7b448a0fdfdb6f26dda28",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2025-05-28.09:11:39::SCWPlatform::updated the xpfm file.
+TRACE::2025-05-28.09:11:39::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:11:39::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:11:39::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:11:39::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:11:39::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:11:39::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:11:39::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2025-05-28.09:11:39::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2025-05-28.09:11:39::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:11:39::SCWMssOS::Checking the sw design at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:11:39::SCWMssOS::DEBUG:  swdes dump  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-28.09:11:39::SCWMssOS::Sw design exists and opened at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:14:10::SCWPlatform::Clearing the existing platform
+TRACE::2025-05-28.09:14:10::SCWSystem::Clearing the existing sysconfig
+TRACE::2025-05-28.09:14:10::SCWBDomain::clearing the fsbl build
+TRACE::2025-05-28.09:14:10::SCWMssOS::Removing the swdes entry for  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:14:10::SCWMssOS::Removing the swdes entry for  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:14:10::SCWSystem::Clearing the domains completed.
+TRACE::2025-05-28.09:14:10::SCWPlatform::Clearing the opened hw db.
+TRACE::2025-05-28.09:14:10::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:10::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:10::SCWPlatform:: Platform location is C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:14:10::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:10::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:14:10::SCWPlatform::Removing the HwDB with name C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:10::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:10::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:10::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:10::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:14:10::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:10::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:14:10::SCWPlatform::Do not have an existing db opened. 
+TRACE::2025-05-28.09:14:13::SCWPlatform::Opened new HwDB with name design_1_wrapper_1
+TRACE::2025-05-28.09:14:13::SCWReader::Active system found as  music_player
+TRACE::2025-05-28.09:14:13::SCWReader::Handling sysconfig music_player
+TRACE::2025-05-28.09:14:13::SCWDomain::checking for install qemu data   : 
+TRACE::2025-05-28.09:14:13::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/
+TRACE::2025-05-28.09:14:13::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2025-05-28.09:14:13::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:13::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:13::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:13::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:14:13::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:13::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:14:13::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-28.09:14:13::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-28.09:14:13::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:14:13::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:13::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:13::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:13::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:14:13::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:13::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:14:13::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-28.09:14:13::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-28.09:14:13::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:14:13::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:13::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:13::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:13::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:14:13::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:13::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:14:13::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-28.09:14:13::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-28.09:14:13::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:14:13::SCWReader::Boot application domain added for zynq_fsbl
+TRACE::2025-05-28.09:14:13::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:13::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:13::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:13::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:14:13::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:13::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:14:13::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-28.09:14:13::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-28.09:14:13::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:14:13::SCWMssOS::Checking the sw design at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:14:13::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2025-05-28.09:14:13::SCWMssOS::No sw design opened at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:14:13::SCWMssOS::mss exists loading the mss file  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:14:13::SCWMssOS::Opened the sw design from mss  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:14:13::SCWMssOS::Adding the swdes entry C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2025-05-28.09:14:13::SCWMssOS::updating the scw layer about changes
+TRACE::2025-05-28.09:14:13::SCWMssOS::Opened the sw design.  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:14:13::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:13::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:13::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:13::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:14:13::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:13::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:14:13::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-28.09:14:13::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-28.09:14:13::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:14:13::SCWMssOS::Checking the sw design at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:14:13::SCWMssOS::DEBUG:  swdes dump  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-28.09:14:13::SCWMssOS::Sw design exists and opened at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:14:13::SCWMssOS:: library already available in sw design:  xilffs:4.3
+TRACE::2025-05-28.09:14:13::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:13::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:13::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:13::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:14:13::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:13::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:14:13::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-28.09:14:13::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-28.09:14:13::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:14:13::SCWMssOS::Checking the sw design at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:14:13::SCWMssOS::DEBUG:  swdes dump  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-28.09:14:13::SCWMssOS::Sw design exists and opened at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:14:13::SCWMssOS:: library already available in sw design:  xilrsa:1.6
+TRACE::2025-05-28.09:14:13::SCWMssOS::Saving the mss changes C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:14:13::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-05-28.09:14:13::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-05-28.09:14:13::SCWMssOS::Commit changes completed.
+TRACE::2025-05-28.09:14:13::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2025-05-28.09:14:13::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2025-05-28.09:14:13::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:13::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:13::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:13::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:14:13::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:13::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:14:13::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-28.09:14:13::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-28.09:14:13::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:14:13::SCWMssOS::Checking the sw design at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:14:13::SCWMssOS::DEBUG:  swdes dump  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-28.09:14:13::SCWMssOS::Sw design exists and opened at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:14:13::SCWReader::No isolation master present  
+TRACE::2025-05-28.09:14:13::SCWDomain::checking for install qemu data   : 
+TRACE::2025-05-28.09:14:13::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/
+TRACE::2025-05-28.09:14:13::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2025-05-28.09:14:13::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:13::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:13::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:13::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:14:13::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:13::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:14:13::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-28.09:14:13::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-28.09:14:13::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:14:13::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:13::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:13::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:13::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:14:13::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:13::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:14:13::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-28.09:14:13::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-28.09:14:13::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:14:13::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:13::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:13::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:13::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:14:13::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:13::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:14:13::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-28.09:14:13::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-28.09:14:13::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:14:13::SCWMssOS::Checking the sw design at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:14:13::SCWMssOS::DEBUG:  swdes dump  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-28.09:14:13::SCWMssOS::No sw design opened at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:14:13::SCWMssOS::mss exists loading the mss file  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:14:13::SCWMssOS::Opened the sw design from mss  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:14:13::SCWMssOS::Adding the swdes entry C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_0
+TRACE::2025-05-28.09:14:13::SCWMssOS::updating the scw layer about changes
+TRACE::2025-05-28.09:14:13::SCWMssOS::Opened the sw design.  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:14:13::SCWMssOS::Saving the mss changes C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:14:13::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-05-28.09:14:13::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-05-28.09:14:13::SCWMssOS::Commit changes completed.
+TRACE::2025-05-28.09:14:13::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2025-05-28.09:14:13::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2025-05-28.09:14:13::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:13::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:13::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:13::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:14:13::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:13::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:14:13::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-28.09:14:13::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-28.09:14:13::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:14:13::SCWMssOS::Checking the sw design at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:14:13::SCWMssOS::DEBUG:  swdes dump  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-28.09:14:13::SCWMssOS::Sw design exists and opened at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:14:13::SCWReader::No isolation master present  
+TRACE::2025-05-28.09:14:15::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:15::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:15::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:15::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:14:15::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:15::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:14:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-28.09:14:15::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-28.09:14:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:14:15::SCWMssOS::Checking the sw design at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:14:15::SCWMssOS::DEBUG:  swdes dump  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-28.09:14:15::SCWMssOS::Sw design exists and opened at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:14:16::SCWMssOS::In reload Mss file.
+TRACE::2025-05-28.09:14:16::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:16::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:16::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:16::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:14:16::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:16::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:14:16::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-28.09:14:16::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-28.09:14:16::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:14:16::SCWMssOS::Checking the sw design at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:14:16::SCWMssOS::DEBUG:  swdes dump  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+KEYINFO::2025-05-28.09:14:16::SCWMssOS::Could not open the swdb for system_0
+KEYINFO::2025-05-28.09:14:16::SCWMssOS::Could not open the sw design at  system_0
+ERROR: [Hsi 55-1558] Software Design system_0 is not found
+
+TRACE::2025-05-28.09:14:16::SCWMssOS::Cleared the swdb table entry
+TRACE::2025-05-28.09:14:16::SCWMssOS::No sw design opened at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:14:16::SCWMssOS::mss exists loading the mss file  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:14:16::SCWMssOS::Opened the sw design from mss  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:14:16::SCWMssOS::Adding the swdes entry C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_0
+TRACE::2025-05-28.09:14:16::SCWMssOS::updating the scw layer about changes
+TRACE::2025-05-28.09:14:16::SCWMssOS::Opened the sw design.  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:14:16::SCWMssOS::Saving the mss changes C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:14:16::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-05-28.09:14:16::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-05-28.09:14:16::SCWMssOS::Commit changes completed.
+TRACE::2025-05-28.09:14:16::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:16::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:16::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:16::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:14:16::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:16::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:14:16::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-28.09:14:16::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-28.09:14:16::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:14:16::SCWMssOS::Checking the sw design at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:14:16::SCWMssOS::DEBUG:  swdes dump  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-28.09:14:16::SCWMssOS::Sw design exists and opened at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:14:16::SCWMssOS::Removing the swdes entry for  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:14:18::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:18::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:18::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:18::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:14:18::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:18::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:14:18::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-28.09:14:18::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-28.09:14:18::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:14:18::SCWMssOS::Checking the sw design at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:14:18::SCWMssOS::DEBUG:  swdes dump  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-28.09:14:18::SCWMssOS::Sw design exists and opened at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:14:18::SCWMssOS::In reload Mss file.
+TRACE::2025-05-28.09:14:18::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:18::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:18::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:18::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:14:18::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:18::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:14:18::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-28.09:14:18::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-28.09:14:18::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:14:18::SCWMssOS::Checking the sw design at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:14:18::SCWMssOS::DEBUG:  swdes dump  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+KEYINFO::2025-05-28.09:14:18::SCWMssOS::Could not open the swdb for system
+KEYINFO::2025-05-28.09:14:18::SCWMssOS::Could not open the sw design at  system
+ERROR: [Hsi 55-1558] Software Design system is not found
+
+TRACE::2025-05-28.09:14:18::SCWMssOS::Cleared the swdb table entry
+TRACE::2025-05-28.09:14:18::SCWMssOS::No sw design opened at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:14:18::SCWMssOS::mss exists loading the mss file  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:14:18::SCWMssOS::Opened the sw design from mss  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:14:18::SCWMssOS::Adding the swdes entry C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2025-05-28.09:14:18::SCWMssOS::updating the scw layer about changes
+TRACE::2025-05-28.09:14:18::SCWMssOS::Opened the sw design.  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:14:18::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:18::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:18::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:18::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:14:18::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:18::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:14:18::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-28.09:14:18::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-28.09:14:18::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:14:18::SCWMssOS::Checking the sw design at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:14:18::SCWMssOS::DEBUG:  swdes dump  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-28.09:14:18::SCWMssOS::Sw design exists and opened at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:14:18::SCWMssOS:: library already available in sw design:  xilffs:4.3
+TRACE::2025-05-28.09:14:18::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:18::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:18::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:18::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:14:18::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:18::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:14:18::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-28.09:14:18::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-28.09:14:18::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:14:18::SCWMssOS::Checking the sw design at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:14:18::SCWMssOS::DEBUG:  swdes dump  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-28.09:14:18::SCWMssOS::Sw design exists and opened at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:14:18::SCWMssOS:: library already available in sw design:  xilrsa:1.6
+TRACE::2025-05-28.09:14:18::SCWMssOS::Saving the mss changes C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:14:18::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-05-28.09:14:18::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-05-28.09:14:18::SCWMssOS::Commit changes completed.
+TRACE::2025-05-28.09:14:18::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:18::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:18::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:18::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:14:18::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:18::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:14:18::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-28.09:14:18::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-28.09:14:18::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:14:18::SCWMssOS::Checking the sw design at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:14:18::SCWMssOS::DEBUG:  swdes dump  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-05-28.09:14:18::SCWMssOS::Sw design exists and opened at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:14:18::SCWMssOS::Removing the swdes entry for  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:14:54::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:54::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:54::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:54::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:14:54::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:54::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:14:54::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-28.09:14:54::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-28.09:14:54::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:14:54::SCWMssOS::Checking the sw design at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:14:54::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2025-05-28.09:14:54::SCWMssOS::No sw design opened at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:14:54::SCWMssOS::mss exists loading the mss file  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:14:54::SCWMssOS::Opened the sw design from mss  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:14:54::SCWMssOS::Adding the swdes entry C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system
+TRACE::2025-05-28.09:14:54::SCWMssOS::updating the scw layer about changes
+TRACE::2025-05-28.09:14:54::SCWMssOS::Opened the sw design.  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:14:59::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:59::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:59::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:59::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:14:59::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:14:59::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:14:59::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-28.09:14:59::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-28.09:14:59::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:14:59::SCWMssOS::Checking the sw design at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:14:59::SCWMssOS::DEBUG:  swdes dump  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system||
+
+TRACE::2025-05-28.09:14:59::SCWMssOS::Sw design exists and opened at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:14:59::SCWMssOS::Adding Library:  xilffs:4.3
+TRACE::2025-05-28.09:14:59::SCWMssOS::Added Library:  xilffs
+TRACE::2025-05-28.09:15:02::SCWMssOS::Saving the mss changes C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:15:02::SCWMssOS::Adding the swdes entry, mss present, able to open swdb C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system_0
+TRACE::2025-05-28.09:15:02::SCWMssOS::Writing the mss file completed C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:15:02::SCWMssOS::Commit changes completed.
+TRACE::2025-05-28.09:15:02::SCWMssOS::Saving the mss changes C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:15:02::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-05-28.09:15:02::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-05-28.09:15:02::SCWMssOS::Commit changes completed.
+TRACE::2025-05-28.09:15:02::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:15:02::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:15:02::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:15:02::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:15:02::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:15:02::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:15:02::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-28.09:15:02::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-28.09:15:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:15:02::SCWMssOS::Checking the sw design at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:15:02::SCWMssOS::DEBUG:  swdes dump  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system||
+C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_0||
+
+TRACE::2025-05-28.09:15:02::SCWMssOS::Sw design exists and opened at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:15:02::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:15:02::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:15:02::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:15:02::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:15:02::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:15:02::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:15:02::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-28.09:15:02::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-28.09:15:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:15:02::SCWMssOS::Checking the sw design at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:15:02::SCWMssOS::DEBUG:  swdes dump  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system||
+C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_0||
+
+TRACE::2025-05-28.09:15:02::SCWMssOS::Sw design exists and opened at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:15:02::SCWWriter::formatted JSON is {
+	"platformName":	"music_player",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"music_player",
+	"platHandOff":	"D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/design_1_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_1_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"music_player",
+	"systems":	[{
+			"systemName":	"music_player",
+			"systemDesc":	"music_player",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"music_player",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"f649a90a47f54d59c50c6b3f6748da03",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on ps7_cortexa9_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"a37611641fc7b448a0fdfdb6f26dda28",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+TRACE::2025-05-28.09:15:02::SCWMssOS::Saving the mss changes C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:15:02::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-05-28.09:15:02::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-05-28.09:15:02::SCWMssOS::Commit changes completed.
+TRACE::2025-05-28.09:15:02::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:15:02::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:15:02::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:15:02::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:15:02::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:15:02::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:15:02::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-28.09:15:02::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-28.09:15:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:15:02::SCWMssOS::Checking the sw design at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:15:02::SCWMssOS::DEBUG:  swdes dump  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system||
+C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_0||
+
+TRACE::2025-05-28.09:15:02::SCWMssOS::Sw design exists and opened at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:15:02::SCWMssOS::Removing the swdes entry for  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:15:02::SCWMssOS::In reload Mss file.
+TRACE::2025-05-28.09:15:02::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:15:02::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:15:02::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:15:02::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:15:02::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:15:02::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:15:02::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-28.09:15:02::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-28.09:15:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:15:02::SCWMssOS::Checking the sw design at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:15:02::SCWMssOS::DEBUG:  swdes dump  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_0||
+
+TRACE::2025-05-28.09:15:02::SCWMssOS::No sw design opened at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:15:02::SCWMssOS::mss exists loading the mss file  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:15:02::SCWMssOS::Opened the sw design from mss  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:15:02::SCWMssOS::Adding the swdes entry C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system
+TRACE::2025-05-28.09:15:02::SCWMssOS::updating the scw layer about changes
+TRACE::2025-05-28.09:15:02::SCWMssOS::Opened the sw design.  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:15:02::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:15:02::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:15:02::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:15:02::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:15:02::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:15:02::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:15:02::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-28.09:15:02::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-28.09:15:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:15:02::SCWMssOS::Checking the sw design at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:15:02::SCWMssOS::DEBUG:  swdes dump  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system||
+C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_0||
+
+TRACE::2025-05-28.09:15:02::SCWMssOS::Sw design exists and opened at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:15:02::SCWMssOS:: library already available in sw design:  xilffs:4.3
+TRACE::2025-05-28.09:15:02::SCWMssOS::Saving the mss changes C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:15:02::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-05-28.09:15:02::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-05-28.09:15:02::SCWMssOS::Commit changes completed.
+TRACE::2025-05-28.09:15:02::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:15:02::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:15:02::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:15:02::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:15:02::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:15:02::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:15:02::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-28.09:15:02::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-28.09:15:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:15:02::SCWMssOS::Checking the sw design at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:15:02::SCWMssOS::DEBUG:  swdes dump  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system||
+C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_0||
+
+TRACE::2025-05-28.09:15:02::SCWMssOS::Sw design exists and opened at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:15:02::SCWMssOS::Removing the swdes entry for  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:15:02::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:15:02::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:15:02::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:15:02::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:15:02::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:15:02::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:15:02::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-28.09:15:02::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-28.09:15:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:15:02::SCWMssOS::Checking the sw design at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:15:02::SCWMssOS::DEBUG:  swdes dump  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_0||
+
+TRACE::2025-05-28.09:15:02::SCWMssOS::No sw design opened at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:15:02::SCWMssOS::mss exists loading the mss file  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:15:02::SCWMssOS::Opened the sw design from mss  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:15:02::SCWMssOS::Adding the swdes entry C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system
+TRACE::2025-05-28.09:15:02::SCWMssOS::updating the scw layer about changes
+TRACE::2025-05-28.09:15:02::SCWMssOS::Opened the sw design.  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:15:02::SCWMssOS::Completed writing the mss file at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp
+TRACE::2025-05-28.09:15:02::SCWMssOS::Forcing BSP Sources regeneration.
+LOG::2025-05-28.09:15:26::SCWPlatform::Started generating the artifacts platform music_player
+TRACE::2025-05-28.09:15:26::SCWPlatform::Sanity checking of platform is completed
+LOG::2025-05-28.09:15:26::SCWPlatform::Started generating the artifacts for system configuration music_player
+LOG::2025-05-28.09:15:26::SCWSystem::Checking the domain zynq_fsbl
+LOG::2025-05-28.09:15:26::SCWSystem::Doing application build for :  zynq_fsbl
+TRACE::2025-05-28.09:15:26::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2025-05-28.09:15:26::SCWDomain::Skipping the build for domain :  zynq_fsbl
+LOG::2025-05-28.09:15:26::SCWSystem::Checking the domain standalone_domain
+LOG::2025-05-28.09:15:26::SCWSystem::Not a boot domain 
+LOG::2025-05-28.09:15:26::SCWSystem::Started Processing the domain standalone_domain
+TRACE::2025-05-28.09:15:26::SCWDomain::Generating domain artifcats
+TRACE::2025-05-28.09:15:26::SCWMssOS::Generating standalone artifcats
+TRACE::2025-05-28.09:15:26::SCWMssOS::Copying the qemu file from  D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt To C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/export/music_player/sw/music_player/qemu/
+TRACE::2025-05-28.09:15:26::SCWMssOS::Copying the qemu file from  D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt To C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/export/music_player/sw/music_player/standalone_domain/qemu/
+TRACE::2025-05-28.09:15:26::SCWMssOS:: Copying the user libraries. 
+TRACE::2025-05-28.09:15:26::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:15:26::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:15:26::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:15:26::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:15:26::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:15:26::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:15:26::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-28.09:15:26::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-28.09:15:26::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:15:26::SCWMssOS::Checking the sw design at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:15:26::SCWMssOS::DEBUG:  swdes dump  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system||
+C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_0||
+
+KEYINFO::2025-05-28.09:15:26::SCWMssOS::Could not open the swdb for system
+KEYINFO::2025-05-28.09:15:26::SCWMssOS::Could not open the sw design at  system
+ERROR: [Hsi 55-1558] Software Design system is not found
+
+TRACE::2025-05-28.09:15:26::SCWMssOS::Cleared the swdb table entry
+TRACE::2025-05-28.09:15:26::SCWMssOS::No sw design opened at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:15:26::SCWMssOS::mss exists loading the mss file  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:15:26::SCWMssOS::Opened the sw design from mss  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:15:26::SCWMssOS::Adding the swdes entry C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system
+TRACE::2025-05-28.09:15:26::SCWMssOS::updating the scw layer about changes
+TRACE::2025-05-28.09:15:26::SCWMssOS::Opened the sw design.  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:15:26::SCWMssOS::Completed writing the mss file at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp
+TRACE::2025-05-28.09:15:26::SCWMssOS::Mss edits present, copying mssfile into export location C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:15:26::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2025-05-28.09:15:26::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2025-05-28.09:15:26::SCWDomain::Building the domain :  standalone_domain
+TRACE::2025-05-28.09:15:26::SCWMssOS::doing bsp build ... 
+TRACE::2025-05-28.09:15:26::SCWMssOS::System Command Ran  C: & cd  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp & make 
+TRACE::2025-05-28.09:15:26::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_7/src"
+
+TRACE::2025-05-28.09:15:26::SCWMssOS::make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none
+TRACE::2025-05-28.09:15:26::SCWMssOS::-eabi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=h
+TRACE::2025-05-28.09:15:26::SCWMssOS::ard -nostartfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:15:26::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_9/src"
+
+TRACE::2025-05-28.09:15:26::SCWMssOS::make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-ea
+TRACE::2025-05-28.09:15:26::SCWMssOS::bi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard
+TRACE::2025-05-28.09:15:26::SCWMssOS:: -nostartfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:15:27::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_1/src"
+
+TRACE::2025-05-28.09:15:27::SCWMssOS::make -C ps7_cortexa9_0/libsrc/ddrps_v1_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2025-05-28.09:15:27::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2025-05-28.09:15:27::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:15:27::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_6/src"
+
+TRACE::2025-05-28.09:15:27::SCWMssOS::make -C ps7_cortexa9_0/libsrc/devcfg_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-05-28.09:15:27::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-05-28.09:15:27::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:15:27::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_6/src"
+
+TRACE::2025-05-28.09:15:27::SCWMssOS::make -C ps7_cortexa9_0/libsrc/dmaps_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2025-05-28.09:15:27::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2025-05-28.09:15:27::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:15:27::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_11/src"
+
+TRACE::2025-05-28.09:15:27::SCWMssOS::make -C ps7_cortexa9_0/libsrc/emacps_v3_11/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+TRACE::2025-05-28.09:15:27::SCWMssOS::" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+TRACE::2025-05-28.09:15:27::SCWMssOS::tartfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:15:27::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_7/src"
+
+TRACE::2025-05-28.09:15:27::SCWMssOS::make -C ps7_cortexa9_0/libsrc/gpiops_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-05-28.09:15:27::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-05-28.09:15:27::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:15:27::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_6/src"
+
+TRACE::2025-05-28.09:15:27::SCWMssOS::make -C ps7_cortexa9_0/libsrc/gpio_v4_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+TRACE::2025-05-28.09:15:27::SCWMssOS::ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+TRACE::2025-05-28.09:15:27::SCWMssOS::tfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:15:27::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_7/src"
+
+TRACE::2025-05-28.09:15:27::SCWMssOS::make -C ps7_cortexa9_0/libsrc/qspips_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-05-28.09:15:27::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-05-28.09:15:27::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:15:28::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/scugic_v4_2/src"
+
+TRACE::2025-05-28.09:15:28::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scugic_v4_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-05-28.09:15:28::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-05-28.09:15:28::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:15:28::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_2/src"
+
+TRACE::2025-05-28.09:15:28::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scutimer_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-a
+TRACE::2025-05-28.09:15:28::SCWMssOS::s" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -no
+TRACE::2025-05-28.09:15:28::SCWMssOS::startfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:15:28::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_2/src"
+
+TRACE::2025-05-28.09:15:28::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scuwdt_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-05-28.09:15:28::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-05-28.09:15:28::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:15:28::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_9/src"
+
+TRACE::2025-05-28.09:15:28::SCWMssOS::make -C ps7_cortexa9_0/libsrc/sdps_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+TRACE::2025-05-28.09:15:28::SCWMssOS::ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+TRACE::2025-05-28.09:15:28::SCWMssOS::tfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:15:28::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/standalone_v7_2/src"
+
+TRACE::2025-05-28.09:15:28::SCWMssOS::make -C ps7_cortexa9_0/libsrc/standalone_v7_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi
+TRACE::2025-05-28.09:15:28::SCWMssOS::-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -
+TRACE::2025-05-28.09:15:28::SCWMssOS::nostartfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:15:29::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/tmrctr_v4_6/src"
+
+TRACE::2025-05-28.09:15:29::SCWMssOS::make -C ps7_cortexa9_0/libsrc/tmrctr_v4_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-05-28.09:15:29::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-05-28.09:15:29::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:15:29::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_9/src"
+
+TRACE::2025-05-28.09:15:29::SCWMssOS::make -C ps7_cortexa9_0/libsrc/uartps_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-05-28.09:15:29::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-05-28.09:15:29::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:15:29::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_5/src"
+
+TRACE::2025-05-28.09:15:29::SCWMssOS::make -C ps7_cortexa9_0/libsrc/usbps_v2_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2025-05-28.09:15:29::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2025-05-28.09:15:29::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:15:29::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_4/src"
+
+TRACE::2025-05-28.09:15:29::SCWMssOS::make -C ps7_cortexa9_0/libsrc/xadcps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-05-28.09:15:29::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-05-28.09:15:29::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:15:30::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/xilffs_v4_3/src"
+
+TRACE::2025-05-28.09:15:30::SCWMssOS::make -C ps7_cortexa9_0/libsrc/xilffs_v4_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-05-28.09:15:30::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-05-28.09:15:30::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:15:30::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_7/src"
+
+TRACE::2025-05-28.09:15:30::SCWMssOS::make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-ea
+TRACE::2025-05-28.09:15:30::SCWMssOS::bi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard
+TRACE::2025-05-28.09:15:30::SCWMssOS:: -nostartfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:15:30::SCWMssOS::"Compiling coresightps_dcc"
+
+TRACE::2025-05-28.09:15:30::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_9/src"
+
+TRACE::2025-05-28.09:15:30::SCWMssOS::make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-
+TRACE::2025-05-28.09:15:30::SCWMssOS::as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -n
+TRACE::2025-05-28.09:15:30::SCWMssOS::ostartfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:15:30::SCWMssOS::"Compiling cpu_cortexa9"
+
+TRACE::2025-05-28.09:15:31::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_1/src"
+
+TRACE::2025-05-28.09:15:31::SCWMssOS::make -C ps7_cortexa9_0/libsrc/ddrps_v1_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2025-05-28.09:15:31::SCWMssOS::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2025-05-28.09:15:31::SCWMssOS::iles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:15:31::SCWMssOS::"Compiling ddrps"
+
+TRACE::2025-05-28.09:15:31::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_6/src"
+
+TRACE::2025-05-28.09:15:31::SCWMssOS::make -C ps7_cortexa9_0/libsrc/devcfg_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-05-28.09:15:31::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-05-28.09:15:31::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:15:31::SCWMssOS::"Compiling devcfg"
+
+TRACE::2025-05-28.09:15:32::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_6/src"
+
+TRACE::2025-05-28.09:15:32::SCWMssOS::make -C ps7_cortexa9_0/libsrc/dmaps_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2025-05-28.09:15:32::SCWMssOS::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2025-05-28.09:15:32::SCWMssOS::iles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:15:32::SCWMssOS::"Compiling dmaps"
+
+TRACE::2025-05-28.09:15:33::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_11/src"
+
+TRACE::2025-05-28.09:15:33::SCWMssOS::make -C ps7_cortexa9_0/libsrc/emacps_v3_11/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+TRACE::2025-05-28.09:15:33::SCWMssOS::ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+TRACE::2025-05-28.09:15:33::SCWMssOS::tfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:15:34::SCWMssOS::"Compiling emacps"
+
+TRACE::2025-05-28.09:15:35::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_7/src"
+
+TRACE::2025-05-28.09:15:35::SCWMssOS::make -C ps7_cortexa9_0/libsrc/gpiops_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-05-28.09:15:35::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-05-28.09:15:35::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:15:35::SCWMssOS::"Compiling gpiops"
+
+TRACE::2025-05-28.09:15:37::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_6/src"
+
+TRACE::2025-05-28.09:15:37::SCWMssOS::make -C ps7_cortexa9_0/libsrc/gpio_v4_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "ARC
+TRACE::2025-05-28.09:15:37::SCWMssOS::HIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfi
+TRACE::2025-05-28.09:15:37::SCWMssOS::les -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:15:37::SCWMssOS::"Compiling gpio"
+
+TRACE::2025-05-28.09:15:38::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_7/src"
+
+TRACE::2025-05-28.09:15:38::SCWMssOS::make -C ps7_cortexa9_0/libsrc/qspips_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-05-28.09:15:38::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-05-28.09:15:38::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:15:38::SCWMssOS::"Compiling qspips"
+
+TRACE::2025-05-28.09:15:39::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v4_2/src"
+
+TRACE::2025-05-28.09:15:39::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scugic_v4_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-05-28.09:15:39::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-05-28.09:15:39::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:15:39::SCWMssOS::"Compiling scugic"
+
+TRACE::2025-05-28.09:15:41::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_2/src"
+
+TRACE::2025-05-28.09:15:41::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scutimer_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2025-05-28.09:15:41::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2025-05-28.09:15:41::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:15:41::SCWMssOS::"Compiling scutimer"
+
+TRACE::2025-05-28.09:15:42::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_2/src"
+
+TRACE::2025-05-28.09:15:42::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scuwdt_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-05-28.09:15:42::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-05-28.09:15:42::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:15:42::SCWMssOS::"Compiling scuwdt"
+
+TRACE::2025-05-28.09:15:42::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_9/src"
+
+TRACE::2025-05-28.09:15:42::SCWMssOS::make -C ps7_cortexa9_0/libsrc/sdps_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "ARC
+TRACE::2025-05-28.09:15:42::SCWMssOS::HIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfi
+TRACE::2025-05-28.09:15:42::SCWMssOS::les -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:15:43::SCWMssOS::"Compiling sdps"
+
+TRACE::2025-05-28.09:15:44::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v7_2/src"
+
+TRACE::2025-05-28.09:15:44::SCWMssOS::make -C ps7_cortexa9_0/libsrc/standalone_v7_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+TRACE::2025-05-28.09:15:44::SCWMssOS::" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+TRACE::2025-05-28.09:15:44::SCWMssOS::tartfiles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:15:44::SCWMssOS::"Compiling standalone"
+
+TRACE::2025-05-28.09:15:50::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/tmrctr_v4_6/src"
+
+TRACE::2025-05-28.09:15:50::SCWMssOS::make -C ps7_cortexa9_0/libsrc/tmrctr_v4_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-05-28.09:15:50::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-05-28.09:15:50::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:15:50::SCWMssOS::"Compiling tmrctr"
+
+TRACE::2025-05-28.09:15:52::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_9/src"
+
+TRACE::2025-05-28.09:15:52::SCWMssOS::make -C ps7_cortexa9_0/libsrc/uartps_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-05-28.09:15:52::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-05-28.09:15:52::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:15:52::SCWMssOS::"Compiling uartps"
+
+TRACE::2025-05-28.09:15:53::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_5/src"
+
+TRACE::2025-05-28.09:15:53::SCWMssOS::make -C ps7_cortexa9_0/libsrc/usbps_v2_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2025-05-28.09:15:53::SCWMssOS::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2025-05-28.09:15:53::SCWMssOS::iles -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:15:53::SCWMssOS::"Compiling usbps"
+
+TRACE::2025-05-28.09:15:55::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_4/src"
+
+TRACE::2025-05-28.09:15:55::SCWMssOS::make -C ps7_cortexa9_0/libsrc/xadcps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-05-28.09:15:55::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-05-28.09:15:55::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:15:55::SCWMssOS::"Compiling xadcps"
+
+TRACE::2025-05-28.09:15:57::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/xilffs_v4_3/src"
+
+TRACE::2025-05-28.09:15:57::SCWMssOS::make -C ps7_cortexa9_0/libsrc/xilffs_v4_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-05-28.09:15:57::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-05-28.09:15:57::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2025-05-28.09:15:57::SCWMssOS::"Compiling XilFFs Library"
+
+TRACE::2025-05-28.09:15:59::SCWMssOS::'Finished building libraries'
+
+TRACE::2025-05-28.09:15:59::SCWMssOS::Copying to export directory.
+TRACE::2025-05-28.09:15:59::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2025-05-28.09:15:59::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+LOG::2025-05-28.09:15:59::SCWSystem::Completed Processing the domain standalone_domain
+LOG::2025-05-28.09:15:59::SCWSystem::Completed Processing the sysconfig music_player
+LOG::2025-05-28.09:15:59::SCWPlatform::Completed generating the artifacts for system configuration music_player
+TRACE::2025-05-28.09:15:59::SCWPlatform::Started preparing the platform 
+TRACE::2025-05-28.09:15:59::SCWSystem::Writing the bif file for system config music_player
+TRACE::2025-05-28.09:15:59::SCWSystem::dir created 
+TRACE::2025-05-28.09:15:59::SCWSystem::Writing the bif 
+TRACE::2025-05-28.09:15:59::SCWPlatform::Started writing the spfm file 
+TRACE::2025-05-28.09:15:59::SCWPlatform::Started writing the xpfm file 
+TRACE::2025-05-28.09:15:59::SCWPlatform::Completed generating the platform
+TRACE::2025-05-28.09:15:59::SCWMssOS::Saving the mss changes C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:15:59::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-05-28.09:15:59::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-05-28.09:15:59::SCWMssOS::Commit changes completed.
+TRACE::2025-05-28.09:15:59::SCWMssOS::Saving the mss changes C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:15:59::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-05-28.09:15:59::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-05-28.09:15:59::SCWMssOS::Commit changes completed.
+TRACE::2025-05-28.09:15:59::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:15:59::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:15:59::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:15:59::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:15:59::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:15:59::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:15:59::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-28.09:15:59::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-28.09:15:59::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:15:59::SCWMssOS::Checking the sw design at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:15:59::SCWMssOS::DEBUG:  swdes dump  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system||
+C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_0||
+
+TRACE::2025-05-28.09:15:59::SCWMssOS::Sw design exists and opened at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-05-28.09:15:59::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:15:59::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:15:59::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:15:59::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:15:59::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:15:59::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:15:59::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-28.09:15:59::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-28.09:15:59::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:15:59::SCWMssOS::Checking the sw design at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:15:59::SCWMssOS::DEBUG:  swdes dump  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system||
+C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_0||
+
+TRACE::2025-05-28.09:15:59::SCWMssOS::Sw design exists and opened at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:15:59::SCWWriter::formatted JSON is {
+	"platformName":	"music_player",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"music_player",
+	"platHandOff":	"D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/design_1_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_1_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"music_player",
+	"systems":	[{
+			"systemName":	"music_player",
+			"systemDesc":	"music_player",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"music_player",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"f649a90a47f54d59c50c6b3f6748da03",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on ps7_cortexa9_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"3e802d368d5e2da2ccb2e7f79ebc2b09",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2025-05-28.09:15:59::SCWPlatform::updated the xpfm file.
+TRACE::2025-05-28.09:15:59::SCWPlatform::Trying to open the hw design at C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:15:59::SCWPlatform::DSA given C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:15:59::SCWPlatform::DSA absoulate path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:15:59::SCWPlatform::DSA directory C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw
+TRACE::2025-05-28.09:15:59::SCWPlatform:: Platform Path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/hw/design_1_wrapper.xsa
+TRACE::2025-05-28.09:15:59::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-05-28.09:15:59::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2025-05-28.09:15:59::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2025-05-28.09:15:59::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-05-28.09:15:59::SCWMssOS::Checking the sw design at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-05-28.09:15:59::SCWMssOS::DEBUG:  swdes dump  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system||
+C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_0||
+
+TRACE::2025-05-28.09:15:59::SCWMssOS::Sw design exists and opened at  C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/ps7_cortexa9_0/standalone_domain/bsp/system.mss
