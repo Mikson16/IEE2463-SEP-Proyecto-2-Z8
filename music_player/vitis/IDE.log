@@ -633,3 +633,11 @@ con
 
 01:00:56 INFO  : Launch script is exported to file 'D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\music_player\vitis\.sdk\launch_scripts\single_application_debug\systemdebugger_music_player_sw_system_standalone.tcl'
 01:24:55 INFO  : Disconnected from the channel tcfchan#26.
+20:33:53 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\music_player\vitis\temp_xsdb_launch_script.tcl
+20:33:57 INFO  : XSCT server has started successfully.
+20:33:57 INFO  : Successfully done setting XSCT server connection channel  
+20:33:57 INFO  : plnx-install-location is set to ''
+20:33:57 INFO  : Successfully done setting workspace for the tool. 
+20:34:08 INFO  : Platform repository initialization has completed.
+20:34:08 INFO  : Registering command handlers for Vitis TCF services
+20:34:24 INFO  : Successfully done query RDI_DATADIR 

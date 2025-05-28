@@ -5,6 +5,8 @@
 #include <stdio.h>
 #include "xgpio.h"
 #include "xscugic.h"
+#include "ff.h"
+#include "xdevcfg.h"
 
 /***************** Macros ********************************/
 #define TMRCTR_DEVICE_ID	XPAR_TMRCTR_0_DEVICE_ID
@@ -30,10 +32,16 @@ void TmrCtrSetupIntrSystem(XTmrCtr *InstancePtr,
 
 void TimerCounterHandler(void *CallBackRef, u8 TmrCtrNumber);
 
+void SdReaderSetup();
+
+void SdPlaySong(u8 SONG_ID);
+
 /***************** IPs Instantiation **********************/
 XScuGic  IntcInstance;
 XTmrCtr  TimerCounterInst;
 XGpio    GPIO;
+
+FATFS fs;
 unsigned leds = 0b0000;
 /***************** Main ***********************************/
 int main(void){
@@ -130,3 +138,57 @@ void TmrCtrSetupIntrSystem(XTmrCtr *TmrCtrInstancePtr,
 	Xil_ExceptionEnable();
 } // enables exception management
 
+/***********************************************************/
+TCHAR *path = "0:/";
+void SdReaderSetup()
+{
+	FRESULT rc;
+	rc = f_mount (&fs, path, 1);
+	if(rc != FR_OK)
+	    {
+	        xil_printf("ERROR : f_mount returned %d\r\n",rc);
+	        return XST_FAILURE;
+	    }
+}
+
+/***********************************************************/
+static unsigned main_song_sample;
+void SdPlayer(u8 SONG_ID)
+{   FRESULT rc;
+    FIL Rfp;
+    u8 ReadBuffer[2];
+    UINT *br;
+
+
+    if(SONG_ID == 1){
+    	TCHAR song_path = "0:/battle_music.bin";
+    }
+    else{
+    	return;
+    }
+
+	rc = f_open (&Rfp, song_path, 1);
+
+	if(rc != FR_OK)
+		    {
+		        xil_printf("ERROR : f_mount returned %d\r\n",rc);
+		        return XST_FAILURE;
+		    }
+
+	rc = f_lseek (&Rfp, 0);
+
+	if(rc != FR_OK)
+			    {
+			        xil_printf("ERROR : f_mount returned %d\r\n",rc);
+			        return XST_FAILURE;
+			    }
+
+	rc = f_read (&Rfp, &ReadBuffer, 2, &br);
+
+	if(rc != FR_OK)
+				    {
+				        xil_printf("ERROR : f_mount returned %d\r\n",rc);
+				        return XST_FAILURE;
+				    }
+	xil_printf("%c %c", ReadBuffer[0], ReadBuffer[1]);
+}

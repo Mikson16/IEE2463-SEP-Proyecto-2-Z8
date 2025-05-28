@@ -33,3 +33,6 @@ timestamp=[2025-05-27 01:00:28], mode=BUILD, duration=0:00:00.740, duration_ms=7
 timestamp=[2025-05-27 01:00:33], mode=BUILD, duration=0:00:04.194, duration_ms=4194, data={name=music_player_sw_system, configuration=Debug, clean_build=false}
 timestamp=[2025-05-27 01:00:44], mode=BUILD, duration=0:00:00.224, duration_ms=224, data={name=music_player_sw, configuration=Debug, clean_build=false}
 timestamp=[2025-05-27 01:00:49], mode=BUILD, duration=0:00:04.157, duration_ms=4157, data={name=music_player_sw_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-27 20:34:05], mode=WORKBENCH_START, duration=0:00:23.485, duration_ms=23485, data={}
+timestamp=[2025-05-27 20:34:08], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:01.579, duration_ms=1579, data={}
+timestamp=[2025-05-27 20:34:08], mode=WORKBENCH_UI_INIT, duration=0:00:02.782, duration_ms=2782, data={editors_count=12, platform_editors_count=7, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,music_player,music_player_sw,music_player_sw_system}
