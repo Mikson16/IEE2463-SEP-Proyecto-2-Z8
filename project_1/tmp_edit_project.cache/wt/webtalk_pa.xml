@@ -3,7 +3,11 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
+<<<<<<< HEAD
 <application name="pa" timeStamp="Mon May 19 09:51:57 2025">
+=======
+<application name="pa" timeStamp="Mon May 26 00:24:42 2025">
+>>>>>>> fc1f3e6806ee130741fbb56c8077ebac14a5a455
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="bfeda499d9ad40f281a204779552f012" type="ProjectID"/>
 <property name="ProjectIteration" value="1" type="ProjectIteration"/>
@@ -17,10 +21,14 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ImplStrategy" value="Vivado Implementation Defaults" type="ImplStrategy"/>
 </item>
 <item name="Java Command Handlers">
+<<<<<<< HEAD
 <property name="AutoConnectTarget" value="5" type="JavaHandler"/>
 <property name="CloseProject" value="1" type="JavaHandler"/>
 <property name="CustomizeRSBBlock" value="1" type="JavaHandler"/>
 <property name="FileExit" value="6" type="JavaHandler"/>
+=======
+<property name="FileExit" value="7" type="JavaHandler"/>
+>>>>>>> fc1f3e6806ee130741fbb56c8077ebac14a5a455
 <property name="IPPackagerHandler" value="5" type="JavaHandler"/>
 <property name="OpenBlockDesign" value="1" type="JavaHandler"/>
 <property name="OpenHardwareManager" value="2" type="JavaHandler"/>
@@ -36,6 +44,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ClkConfigTreeTablePanel_CLK_CONFIG_TREE_TABLE" value="5" type="GuiHandlerData"/>
 <property name="CmdMsgDialog_OK" value="4" type="GuiHandlerData"/>
 <property name="CodeView_TOGGLE_COLUMN_SELECTION_MODE" value="2" type="GuiHandlerData"/>
+<<<<<<< HEAD
 <property name="DDRConfigTreeTablePanel_DDR_CONFIG_TREE_TABLE" value="6" type="GuiHandlerData"/>
 <property name="FileSetPanel_FILE_SET_PANEL_TREE" value="40" type="GuiHandlerData"/>
 <property name="FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE" value="4" type="GuiHandlerData"/>
@@ -52,6 +61,9 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="MainMenuMgr_FILE" value="6" type="GuiHandlerData"/>
 <property name="MainMenuMgr_PROJECT" value="3" type="GuiHandlerData"/>
 <property name="MainMenuMgr_WINDOW" value="2" type="GuiHandlerData"/>
+=======
+<property name="FileSetPanel_FILE_SET_PANEL_TREE" value="37" type="GuiHandlerData"/>
+>>>>>>> fc1f3e6806ee130741fbb56c8077ebac14a5a455
 <property name="MessageBanner_CHANGES_DETECTED_IN_VIVADO_PROJECT_THAT" value="6" type="GuiHandlerData"/>
 <property name="PACommandNames_AUTO_CONNECT_TARGET" value="5" type="GuiHandlerData"/>
 <property name="PACommandNames_OPEN_PROJECT" value="1" type="GuiHandlerData"/>
@@ -73,9 +85,15 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="WaveformNameTree_WAVEFORM_NAME_TREE" value="4" type="GuiHandlerData"/>
 </item>
 <item name="Other">
+<<<<<<< HEAD
 <property name="GuiMode" value="33" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
 <property name="TclMode" value="24" type="TclMode"/>
+=======
+<property name="GuiMode" value="126" type="GuiMode"/>
+<property name="BatchMode" value="0" type="BatchMode"/>
+<property name="TclMode" value="89" type="TclMode"/>
+>>>>>>> fc1f3e6806ee130741fbb56c8077ebac14a5a455
 </item>
 </section>
 </application>

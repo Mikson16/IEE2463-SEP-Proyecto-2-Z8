@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="{&quot;cables&quot;:[{&quot;name&quot;:&quot;Digilent Zybo Z7 210351B3FC8DA&quot;,&quot;indexContextMap&quot;:{&quot;2&quot;:&quot;jsn-Zybo Z7-210351B3FC8DA-4ba00477-0&quot;,&quot;3&quot;:&quot;jsn-Zybo Z7-210351B3FC8DA-13722093-0&quot;}}]}" key="devices_info_Local"/>
+	<item value="false" key="music_player_sw-skip_rev_check"/>
+	<item value="" key="music_player_sw-bmmFile"/>
+	<item value="music_player_sw" key="programfpga.sdxproject"/>
+	<item value="_ide/bitstream/design_1_wrapper.bit" key="music_player_sw-bitFile"/>
+	<item value="false" key="music_player_sw-partial_bit"/>
+	<item value="Local" key="music_player_sw-target"/>
+	<item value="Auto Detect" key="music_player_sw-device"/>
+</section>
