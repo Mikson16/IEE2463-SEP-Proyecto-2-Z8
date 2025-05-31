@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Sun May 25 23:03:24 2025
-# Process ID: 9732
+# Start of session at: Sat May 31 03:23:44 2025
+# Process ID: 11972
 # Current directory: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.runs/synth_1
 # Command line: vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
 # Log file: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.runs/synth_1/design_1_wrapper.vds
@@ -13,6 +13,7 @@ source design_1_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2020.1/data/ip'.
+add_files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1079.285 ; gain = 0.000
 Command: synth_design -top design_1_wrapper -part xc7z010clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
@@ -20,50 +21,55 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 4372
+INFO: [Synth 8-7075] Helper process launched with PID 3120
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1087.379 ; gain = 6.633
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1112.723 ; gain = 33.438
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:42]
-INFO: [Synth 8-3491] module 'design_1' declared at 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/synth/design_1.vhd:1077' bound to instance 'design_1_i' of component 'design_1' [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:71]
-INFO: [Synth 8-638] synthesizing module 'design_1' [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/synth/design_1.vhd:1109]
-INFO: [Synth 8-3491] module 'design_1_axi_gpio_0_0' declared at 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.runs/synth_1/.Xil/Vivado-9732-Ro/realtime/design_1_axi_gpio_0_0_stub.vhdl:5' bound to instance 'axi_gpio_0' of component 'design_1_axi_gpio_0_0' [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/synth/design_1.vhd:1397]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_0_0' [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.runs/synth_1/.Xil/Vivado-9732-Ro/realtime/design_1_axi_gpio_0_0_stub.vhdl:34]
-INFO: [Synth 8-3491] module 'design_1_axi_timer_0_0' declared at 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.runs/synth_1/.Xil/Vivado-9732-Ro/realtime/design_1_axi_timer_0_0_stub.vhdl:5' bound to instance 'axi_timer_0' of component 'design_1_axi_timer_0_0' [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/synth/design_1.vhd:1423]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_timer_0_0' [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.runs/synth_1/.Xil/Vivado-9732-Ro/realtime/design_1_axi_timer_0_0_stub.vhdl:37]
-INFO: [Synth 8-3491] module 'design_1_processing_system7_0_0' declared at 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.runs/synth_1/.Xil/Vivado-9732-Ro/realtime/design_1_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'design_1_processing_system7_0_0' [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/synth/design_1.vhd:1452]
-INFO: [Synth 8-638] synthesizing module 'design_1_processing_system7_0_0' [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.runs/synth_1/.Xil/Vivado-9732-Ro/realtime/design_1_processing_system7_0_0_stub.vhdl:77]
-INFO: [Synth 8-3491] module 'design_1_proportional_pwm_0_0' declared at 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.runs/synth_1/.Xil/Vivado-9732-Ro/realtime/design_1_proportional_pwm_0_0_stub.vhdl:5' bound to instance 'proportional_pwm_0' of component 'design_1_proportional_pwm_0_0' [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/synth/design_1.vhd:1521]
-INFO: [Synth 8-638] synthesizing module 'design_1_proportional_pwm_0_0' [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.runs/synth_1/.Xil/Vivado-9732-Ro/realtime/design_1_proportional_pwm_0_0_stub.vhdl:14]
-INFO: [Synth 8-638] synthesizing module 'design_1_ps7_0_axi_periph_0' [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/synth/design_1.vhd:617]
+INFO: [Synth 8-3491] module 'design_1' declared at 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/synth/design_1.vhd:1101' bound to instance 'design_1_i' of component 'design_1' [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:71]
+INFO: [Synth 8-638] synthesizing module 'design_1' [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/synth/design_1.vhd:1133]
+INFO: [Synth 8-3491] module 'design_1_axi_gpio_0_0' declared at 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.runs/synth_1/.Xil/Vivado-11972-Ro/realtime/design_1_axi_gpio_0_0_stub.vhdl:5' bound to instance 'axi_gpio_0' of component 'design_1_axi_gpio_0_0' [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/synth/design_1.vhd:1455]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_0_0' [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.runs/synth_1/.Xil/Vivado-11972-Ro/realtime/design_1_axi_gpio_0_0_stub.vhdl:34]
+INFO: [Synth 8-3491] module 'design_1_axi_timer_0_0' declared at 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.runs/synth_1/.Xil/Vivado-11972-Ro/realtime/design_1_axi_timer_0_0_stub.vhdl:5' bound to instance 'axi_timer_0' of component 'design_1_axi_timer_0_0' [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/synth/design_1.vhd:1481]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_timer_0_0' [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.runs/synth_1/.Xil/Vivado-11972-Ro/realtime/design_1_axi_timer_0_0_stub.vhdl:37]
+INFO: [Synth 8-3491] module 'design_1_ila_0_0' declared at 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.runs/synth_1/.Xil/Vivado-11972-Ro/realtime/design_1_ila_0_0_stub.vhdl:5' bound to instance 'ila_0' of component 'design_1_ila_0_0' [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/synth/design_1.vhd:1510]
+INFO: [Synth 8-638] synthesizing module 'design_1_ila_0_0' [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.runs/synth_1/.Xil/Vivado-11972-Ro/realtime/design_1_ila_0_0_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'design_1_ila_1_0' declared at 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.runs/synth_1/.Xil/Vivado-11972-Ro/realtime/design_1_ila_1_0_stub.vhdl:5' bound to instance 'ila_1' of component 'design_1_ila_1_0' [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/synth/design_1.vhd:1533]
+INFO: [Synth 8-638] synthesizing module 'design_1_ila_1_0' [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.runs/synth_1/.Xil/Vivado-11972-Ro/realtime/design_1_ila_1_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'design_1_processing_system7_0_0' declared at 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.runs/synth_1/.Xil/Vivado-11972-Ro/realtime/design_1_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'design_1_processing_system7_0_0' [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/synth/design_1.vhd:1540]
+INFO: [Synth 8-638] synthesizing module 'design_1_processing_system7_0_0' [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.runs/synth_1/.Xil/Vivado-11972-Ro/realtime/design_1_processing_system7_0_0_stub.vhdl:77]
+INFO: [Synth 8-3491] module 'design_1_proportional_pwm_0_0' declared at 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.runs/synth_1/.Xil/Vivado-11972-Ro/realtime/design_1_proportional_pwm_0_0_stub.vhdl:5' bound to instance 'proportional_pwm_0' of component 'design_1_proportional_pwm_0_0' [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/synth/design_1.vhd:1609]
+INFO: [Synth 8-638] synthesizing module 'design_1_proportional_pwm_0_0' [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.runs/synth_1/.Xil/Vivado-11972-Ro/realtime/design_1_proportional_pwm_0_0_stub.vhdl:14]
+INFO: [Synth 8-638] synthesizing module 'design_1_ps7_0_axi_periph_0' [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/synth/design_1.vhd:629]
 INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_15SPJYW' [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/synth/design_1.vhd:57]
 INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_15SPJYW' (1#1) [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/synth/design_1.vhd:57]
-INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_XU9C55' [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/synth/design_1.vhd:158]
-INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_XU9C55' (2#1) [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/synth/design_1.vhd:158]
-INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_UYSKKA' [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/synth/design_1.vhd:282]
-INFO: [Synth 8-3491] module 'design_1_auto_pc_0' declared at 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.runs/synth_1/.Xil/Vivado-9732-Ro/realtime/design_1_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_0' [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/synth/design_1.vhd:465]
-INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_0' [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.runs/synth_1/.Xil/Vivado-9732-Ro/realtime/design_1_auto_pc_0_stub.vhdl:70]
-INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_UYSKKA' (3#1) [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/synth/design_1.vhd:282]
-INFO: [Synth 8-3491] module 'design_1_xbar_0' declared at 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.runs/synth_1/.Xil/Vivado-9732-Ro/realtime/design_1_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'design_1_xbar_0' [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/synth/design_1.vhd:1012]
-INFO: [Synth 8-638] synthesizing module 'design_1_xbar_0' [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.runs/synth_1/.Xil/Vivado-9732-Ro/realtime/design_1_xbar_0_stub.vhdl:51]
-INFO: [Synth 8-256] done synthesizing module 'design_1_ps7_0_axi_periph_0' (4#1) [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/synth/design_1.vhd:617]
-INFO: [Synth 8-3491] module 'design_1_rst_ps7_0_50M_0' declared at 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.runs/synth_1/.Xil/Vivado-9732-Ro/realtime/design_1_rst_ps7_0_50M_0_stub.vhdl:5' bound to instance 'rst_ps7_0_50M' of component 'design_1_rst_ps7_0_50M_0' [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/synth/design_1.vhd:1610]
-INFO: [Synth 8-638] synthesizing module 'design_1_rst_ps7_0_50M_0' [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.runs/synth_1/.Xil/Vivado-9732-Ro/realtime/design_1_rst_ps7_0_50M_0_stub.vhdl:21]
-INFO: [Synth 8-256] done synthesizing module 'design_1' (5#1) [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/synth/design_1.vhd:1109]
+INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_XU9C55' [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/synth/design_1.vhd:162]
+INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_XU9C55' (2#1) [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/synth/design_1.vhd:162]
+INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_UYSKKA' [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/synth/design_1.vhd:292]
+INFO: [Synth 8-3491] module 'design_1_auto_pc_0' declared at 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.runs/synth_1/.Xil/Vivado-11972-Ro/realtime/design_1_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_0' [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/synth/design_1.vhd:475]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_0' [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.runs/synth_1/.Xil/Vivado-11972-Ro/realtime/design_1_auto_pc_0_stub.vhdl:70]
+INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_UYSKKA' (3#1) [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/synth/design_1.vhd:292]
+INFO: [Synth 8-3491] module 'design_1_xbar_0' declared at 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.runs/synth_1/.Xil/Vivado-11972-Ro/realtime/design_1_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'design_1_xbar_0' [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/synth/design_1.vhd:1034]
+INFO: [Synth 8-638] synthesizing module 'design_1_xbar_0' [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.runs/synth_1/.Xil/Vivado-11972-Ro/realtime/design_1_xbar_0_stub.vhdl:51]
+INFO: [Synth 8-256] done synthesizing module 'design_1_ps7_0_axi_periph_0' (4#1) [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/synth/design_1.vhd:629]
+INFO: [Synth 8-3491] module 'design_1_rst_ps7_0_50M_0' declared at 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.runs/synth_1/.Xil/Vivado-11972-Ro/realtime/design_1_rst_ps7_0_50M_0_stub.vhdl:5' bound to instance 'rst_ps7_0_50M' of component 'design_1_rst_ps7_0_50M_0' [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/synth/design_1.vhd:1700]
+INFO: [Synth 8-638] synthesizing module 'design_1_rst_ps7_0_50M_0' [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.runs/synth_1/.Xil/Vivado-11972-Ro/realtime/design_1_rst_ps7_0_50M_0_stub.vhdl:21]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ps7_0_axi_periph'. This will prevent further optimization [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/synth/design_1.vhd:1615]
+INFO: [Synth 8-256] done synthesizing module 'design_1' (5#1) [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/synth/design_1.vhd:1133]
 INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (6#1) [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:42]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1142.891 ; gain = 62.145
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1168.762 ; gain = 89.477
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1142.891 ; gain = 62.145
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1168.762 ; gain = 89.477
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1142.891 ; gain = 62.145
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1168.762 ; gain = 89.477
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1142.891 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1168.762 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -81,6 +87,10 @@ Parsing XDC File [d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_p
 Finished Parsing XDC File [d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0_in_context.xdc] for cell 'design_1_i/rst_ps7_0_50M'
 Parsing XDC File [d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/ip/design_1_proportional_pwm_0_0/design_1_proportional_pwm_0_0/design_1_proportional_pwm_0_0_in_context.xdc] for cell 'design_1_i/proportional_pwm_0'
 Finished Parsing XDC File [d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/ip/design_1_proportional_pwm_0_0/design_1_proportional_pwm_0_0/design_1_proportional_pwm_0_0_in_context.xdc] for cell 'design_1_i/proportional_pwm_0'
+Parsing XDC File [d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/ip/design_1_ila_0_0/design_1_ila_0_0/design_1_ila_0_0_in_context.xdc] for cell 'design_1_i/ila_0'
+Finished Parsing XDC File [d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/ip/design_1_ila_0_0/design_1_ila_0_0/design_1_ila_0_0_in_context.xdc] for cell 'design_1_i/ila_0'
+Parsing XDC File [d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/ip/design_1_ila_1_0/design_1_ila_1_0/design_1_ila_1_0_in_context.xdc] for cell 'design_1_i/ila_1'
+Finished Parsing XDC File [d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/ip/design_1_ila_1_0/design_1_ila_1_0/design_1_ila_1_0_in_context.xdc] for cell 'design_1_i/ila_1'
 Parsing XDC File [d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
 Finished Parsing XDC File [d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
 Parsing XDC File [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/constrs_1/new/constraints.xdc]
@@ -96,20 +106,20 @@ Parsing XDC File [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_p
 Finished Parsing XDC File [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1200.773 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1223.785 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1200.773 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1223.785 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1200.773 ; gain = 120.027
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1223.785 ; gain = 144.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1200.773 ; gain = 120.027
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1223.785 ; gain = 144.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -382,12 +392,14 @@ Applied set_property DONT_TOUCH = true for design_1_i/ps7_0_axi_periph/xbar. (co
 Applied set_property DONT_TOUCH = true for design_1_i/ps7_0_axi_periph. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/rst_ps7_0_50M. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/proportional_pwm_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/ila_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/ila_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1200.773 ; gain = 120.027
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1223.785 ; gain = 144.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1200.773 ; gain = 120.027
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1223.785 ; gain = 144.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -409,25 +421,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1200.773 ; gain = 120.027
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1223.785 ; gain = 144.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1223.328 ; gain = 142.582
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1241.629 ; gain = 162.344
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1223.328 ; gain = 142.582
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1241.793 ; gain = 162.508
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1242.953 ; gain = 162.207
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1261.418 ; gain = 182.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -445,37 +457,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1247.684 ; gain = 166.938
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1267.203 ; gain = 187.918
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1247.684 ; gain = 166.938
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1267.203 ; gain = 187.918
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1247.684 ; gain = 166.938
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1267.203 ; gain = 187.918
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1247.684 ; gain = 166.938
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1267.203 ; gain = 187.918
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1247.684 ; gain = 166.938
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1267.203 ; gain = 187.918
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1247.684 ; gain = 166.938
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1267.203 ; gain = 187.918
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -489,9 +501,11 @@ Report BlackBoxes:
 |2     |design_1_auto_pc_0              |         1|
 |3     |design_1_axi_gpio_0_0           |         1|
 |4     |design_1_axi_timer_0_0          |         1|
-|5     |design_1_processing_system7_0_0 |         1|
-|6     |design_1_proportional_pwm_0_0   |         1|
-|7     |design_1_rst_ps7_0_50M_0        |         1|
+|5     |design_1_ila_0_0                |         1|
+|6     |design_1_ila_1_0                |         1|
+|7     |design_1_processing_system7_0_0 |         1|
+|8     |design_1_proportional_pwm_0_0   |         1|
+|9     |design_1_rst_ps7_0_50M_0        |         1|
 +------+--------------------------------+----------+
 
 Report Cell Usage: 
@@ -501,32 +515,32 @@ Report Cell Usage:
 |1     |design_1_auto_pc_0_bbox              |     1|
 |2     |design_1_axi_gpio_0_0_bbox           |     1|
 |3     |design_1_axi_timer_0_0_bbox          |     1|
-|4     |design_1_processing_system7_0_0_bbox |     1|
-|5     |design_1_proportional_pwm_0_0_bbox   |     1|
-|6     |design_1_rst_ps7_0_50M_0_bbox        |     1|
-|7     |design_1_xbar_0_bbox                 |     1|
-|8     |OBUF                                 |     5|
+|4     |design_1_ila_0_0_bbox                |     1|
+|5     |design_1_ila_1_0_bbox                |     1|
+|6     |design_1_processing_system7_0_0_bbox |     1|
+|7     |design_1_proportional_pwm_0_0_bbox   |     1|
+|8     |design_1_rst_ps7_0_50M_0_bbox        |     1|
+|9     |design_1_xbar_0_bbox                 |     1|
+|10    |OBUF                                 |     5|
 +------+-------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1247.684 ; gain = 166.938
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1267.203 ; gain = 187.918
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:37 . Memory (MB): peak = 1247.684 ; gain = 109.055
-Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1247.684 ; gain = 166.938
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1267.203 ; gain = 132.895
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1267.203 ; gain = 187.918
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 1259.797 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1279.230 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1267.930 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1283.555 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-43 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
+48 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 1267.930 ; gain = 187.184
-INFO: [Common 17-600] The following parameters have non-default value.
-tcl.collectionResultDisplayLimit
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1283.555 ; gain = 204.270
 INFO: [Common 17-1381] The checkpoint 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun May 25 23:04:23 2025...
+INFO: [Common 17-206] Exiting Vivado at Sat May 31 03:24:16 2025...

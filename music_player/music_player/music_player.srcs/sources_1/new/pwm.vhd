@@ -36,13 +36,13 @@ use ieee.std_logic_unsigned.all;
 entity proportional_pwm is
   Port (
     clk: in std_logic;
-    dividend: in std_logic_vector(15 downto 0);
+    dividend: in std_logic_vector(7 downto 0);
     pwm: out std_logic
    );
 end proportional_pwm;
 
 architecture Behavioral of proportional_pwm is
-signal saw: std_logic_vector(15 downto 0);
+signal saw: std_logic_vector(7 downto 0);
 signal counter: std_logic;
 
 begin

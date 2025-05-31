@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<item value="D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\music_player\vitis\music_player_sw\Debug" key="bootgen_files_selection"/>
+	<item value="D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\music_player\music_player" key="scw_hwspec_file_selection"/>
+	<item value="D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\music_player\vitis" key="zynq_flash_files_selection"/>
 	<item value="D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\music_player\music_player" key="scw_hwspec"/>
 </section>

@@ -1,0 +1,236 @@
+/***************** Libraries *****************************/
+#include "xparameters.h"
+#include "xtmrctr.h"
+#include "xil_exception.h"
+#include <stdio.h>
+#include "xgpio.h"
+#include "xscugic.h"
+#include "ff.h"
+#include "xdevcfg.h"
+#include "xil_printf.h"
+
+/***************** Macros ********************************/
+#define TMRCTR_DEVICE_ID	XPAR_TMRCTR_0_DEVICE_ID
+#define TMRCTR_INTERRUPT_ID	XPAR_FABRIC_AXI_TIMER_0_INTERRUPT_INTR
+
+#define INTC_DEVICE_ID		XPAR_PS7_SCUGIC_0_DEVICE_ID
+//#define INTC		        XIntc
+//#define INTC_HANDLER	    XIntc_InterruptHandler
+
+#define TIMER_CNTR_0	    0
+#define RESET_VALUE	        (2^32) - 2000// maximum count F (1.000.000.000)
+
+/***************** Function declaration *******************/
+void TmrCtrIntrExample(XTmrCtr *InstancePtr,
+			           u16      DeviceId);
+
+void TmrCtrSetupIntrSystem(XTmrCtr *InstancePtr,
+				           u16      DeviceId);
+
+void TimerCounterHandler(void *CallBackRef, u8 TmrCtrNumber);
+
+void SdReaderSetup();
+
+u32 SdStartSong(TCHAR *filename);
+
+u16 PlaySong();
+
+/***************** IPs Instantiation **********************/
+XScuGic  IntcInstance;
+XTmrCtr  TimerCounterInst;
+XGpio    GPIO;
+
+FATFS fs;
+unsigned leds = 0b0000;
+u32 SongSize;
+u32 CurrentByte;
+FIL Rfp;
+UINT br;
+/***************** Main ***********************************/
+int main(void){
+
+	XGpio_Initialize(&GPIO, XPAR_GPIO_0_DEVICE_ID); // initialization of GPIO
+
+
+	SdReaderSetup();
+
+
+	SongSize = SdStartSong("BATTLE.wav");
+
+	TmrCtrIntrExample(&TimerCounterInst,
+					      TMRCTR_DEVICE_ID);
+
+}
+
+/***************** Function Definition ********************/
+void TmrCtrIntrExample(XTmrCtr *TmrCtrInstancePtr,
+			           u16      DeviceId)
+{
+	XTmrCtr_Initialize(TmrCtrInstancePtr, DeviceId); // initialization of TIMER
+
+	TmrCtrSetupIntrSystem(TmrCtrInstancePtr,    // of the interrupt system
+					      DeviceId);
+
+
+}
+
+
+/***********************************************************/
+void TimerCounterHandler(void *CallBackRef, u8 TmrCtrNumber)
+{
+	// each time and interrupt is generated this is executed
+	if (XTmrCtr_IsExpired(&TimerCounterInst,0)){
+	    XTmrCtr_Stop(&TimerCounterInst, 0);
+        u16 SongSample;
+		XGpio_DiscreteWrite(&GPIO, 1, leds);
+		leds = ~leds;
+		SongSample = PlaySong();
+		XGpio_DiscreteWrite(&GPIO, 2, SongSample);
+
+		XTmrCtr_Reset(&TimerCounterInst, 0); // Reseteo del Timer
+		XTmrCtr_Start(&TimerCounterInst, 0);
+	}
+
+}
+
+/***********************************************************/
+void TmrCtrSetupIntrSystem(XTmrCtr *TmrCtrInstancePtr,
+				           u16      DeviceId)
+{
+	XScuGic_Config *IntcConfig;
+
+
+
+	IntcConfig = XScuGic_LookupConfig(INTC_DEVICE_ID);
+
+	s32 status;
+
+	status =  XScuGic_CfgInitialize(&IntcInstance, IntcConfig,
+			IntcConfig -> CpuBaseAddress);
+
+    if(status != XST_SUCCESS){
+    	return -1;
+    }
+
+    Xil_ExceptionInit();// initialization of Xilinx exceptions subsystem
+        // necessary before registering our Interrupt Handler
+
+    	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
+    						            (Xil_ExceptionHandler)XScuGic_InterruptHandler,
+    						             &IntcInstance);
+    	Xil_ExceptionEnable();
+
+
+    	XTmrCtr_SetHandler(&TimerCounterInst, (XTmrCtr_Handler)TimerCounterHandler, &TimerCounterInst);
+  		XTmrCtr_SetResetValue(&TimerCounterInst, TIMER_CNTR_0, RESET_VALUE);
+  		XTmrCtr_SetOptions(&TimerCounterInst, TIMER_CNTR_0, XTC_INT_MODE_OPTION | XTC_AUTO_RELOAD_OPTION);
+   		XTmrCtr_Start(&TimerCounterInst, TIMER_CNTR_0);
+
+    	XScuGic_SetPriorityTriggerType(&IntcInstance, TMRCTR_INTERRUPT_ID,
+    	    		 0x18, 0x01);
+
+    	status = XScuGic_Connect(&IntcInstance, TMRCTR_INTERRUPT_ID,
+    	    		(Xil_ExceptionHandler)TimerCounterHandler, (void *) TmrCtrInstancePtr);
+
+
+//	XIntc_Initialize(IntcInstancePtr, INTC_DEVICE_ID);
+//
+//	status = XIntc_Connect(IntcInstancePtr, IntrId,
+//				 (XInterruptHandler)XTmrCtr_InterruptHandler,
+//				 (void *)TmrCtrInstancePtr);
+
+	if(status != XST_SUCCESS){
+	    	return -1;
+	    }
+
+	XScuGic_Enable(&IntcInstance, TMRCTR_INTERRUPT_ID);
+
+	// connect gic to processor
+
+
+} // enables exception management
+
+/***********************************************************/
+TCHAR *path = "0:/";
+void SdReaderSetup()
+{
+	FRESULT rc;
+	rc = f_mount (&fs, path, 0);
+	if(rc != FR_OK)
+	    {
+	        xil_printf("ERROR : f_mount returned %d\r\n",rc);
+	        return XST_FAILURE;
+	    }
+}
+
+/***********************************************************/
+unsigned main_song_sample = 0;
+
+u32 SdStartSong(TCHAR *filename)
+{   FRESULT rc;
+
+    FIL fil;
+
+    u8 DataSizeBuff[4];
+    u32 DataSize;
+
+
+	rc = f_open (&Rfp, filename, FA_READ);
+
+	if(rc != FR_OK)
+		    {
+		        xil_printf("ERROR : f_mount returned %d\r\n",rc);
+		        return XST_FAILURE;
+		    }
+
+	rc = f_lseek (&Rfp, 40);
+
+	if(rc != FR_OK)
+			    {
+			        xil_printf("ERROR : f_mount returned %d\r\n",rc);
+			        return XST_FAILURE;
+			    }
+
+	rc = f_read (&Rfp, &DataSizeBuff, (UINT)4, &br);
+
+	if(rc != FR_OK)
+				    {
+				        xil_printf("ERROR : f_mount returned %d\r\n",rc);
+				        return XST_FAILURE;
+				    }
+	DataSize = (DataSizeBuff[0]) | (DataSizeBuff[1] << 8) | (DataSizeBuff[2] << 16) | (DataSizeBuff[3] << 24);
+    CurrentByte = 44;
+
+//	xil_printf("%c %c", ReadBuffer[0], ReadBuffer[1]);
+	return DataSize;
+}
+
+u16 PlaySong()
+{
+	FRESULT rc;
+	u8 ReadBuffer[2];
+	int16_t sample;
+	u16 pos_sample;
+	u16 _12bit_sample;
+	if(CurrentByte >= SongSize + 44){
+		CurrentByte = 44;
+	}
+	rc = f_lseek (&Rfp, CurrentByte);
+
+	rc = f_read (&Rfp, &ReadBuffer, (UINT)2, &br);
+
+	CurrentByte += 2;
+	sample  = (ReadBuffer[0]) | (ReadBuffer[1] << 8);
+	pos_sample = abs(sample);
+	if(sample <0){
+		pos_sample =  32768 - pos_sample;
+	}
+	else{
+		pos_sample =  32768 + pos_sample;
+	}
+	_12bit_sample = pos_sample & 0xFFF0;
+//	pos_sample = sample + 32768;
+//	xil_printf("muestra es: %d\n\r", pos_sample);
+	return _12bit_sample;
+
+}

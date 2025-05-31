@@ -2,7 +2,7 @@ set_property SRC_FILE_INFO {cfile:d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/musi
 set_property SRC_FILE_INFO {cfile:D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/constrs_1/new/constraints.xdc rfile:../../../music_player.srcs/constrs_1/new/constraints.xdc id:2} [current_design]
 current_instance design_1_i/processing_system7_0
 set_property src_info {type:SCOPED_XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
-create_clock -period 20.000 [get_ports {}]
+create_clock -period 10.000 [get_ports {}]
 current_instance
 set_property src_info {type:XDC file:2 line:27 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN M14   IOSTANDARD LVCMOS33 } [get_ports { leds_4bits[0] }]; #IO_L23P_T3_35 Sch=led[0]

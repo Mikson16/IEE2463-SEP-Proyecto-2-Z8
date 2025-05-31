@@ -1,0 +1,10 @@
+14:34:35 **** Incremental Build of configuration Debug for project music_player_sw_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 50326 D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis2/music_player_plt/export/music_player_plt/music_player_plt.xpfm standalone_domain D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis2/music_player_sw_system/Debug/system.bif
+sdcard_gen --xpfm D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis2/music_player_plt/export/music_player_plt/music_player_plt.xpfm --sys_config music_player_plt --bif D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis2/music_player_sw_system/Debug/system.bif --bitstream D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis2/music_player_sw/_ide/bitstream/design_1_wrapper.bit --elf D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis2/music_player_sw/Debug/music_player_sw.elf,ps7_cortexa9_0
+creating BOOT.BIN using D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis2/music_player_sw/_ide/bitstream/design_1_wrapper.bit
+Running D:/Xilinx/Vitis/2020.1/bin/bootgen  -image D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis2/music_player_sw_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+14:34:40 Build Finished (took 4s.298ms)
+

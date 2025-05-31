@@ -1,0 +1,7 @@
+//arch = zynq; split = false; format = BIN
+the_ROM_image:
+{
+	[bootloader]D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\music_player\vitis2\music_player_plt\export\music_player_plt\sw\music_player_plt\boot\fsbl.elf
+	D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\music_player\vitis2\music_player_plt\bitstream\design_1_wrapper.bit
+	D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\music_player\vitis2\music_player_sw1\Release\music_player_sw1.elf
+}

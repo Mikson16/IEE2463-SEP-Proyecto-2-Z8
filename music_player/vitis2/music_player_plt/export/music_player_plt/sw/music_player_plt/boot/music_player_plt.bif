@@ -1,0 +1,7 @@
+/*music_player_plt*/
+the_ROM_image:
+{
+  [bootloader]<music_player_plt/boot/fsbl.elf>
+   <bitstream> 
+  <elf,ps7_cortexa9_0>
+}

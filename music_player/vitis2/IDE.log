@@ -1,0 +1,35 @@
+13:53:12 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\music_player\vitis2\temp_xsdb_launch_script.tcl
+13:53:12 INFO  : Registering command handlers for Vitis TCF services
+13:53:14 INFO  : XSCT server has started successfully.
+13:53:14 INFO  : plnx-install-location is set to ''
+13:53:14 INFO  : Successfully done setting XSCT server connection channel  
+13:53:14 INFO  : Successfully done setting workspace for the tool. 
+13:53:14 INFO  : Successfully done query RDI_DATADIR 
+13:53:14 INFO  : Platform repository initialization has completed.
+13:56:31 INFO  : Result from executing command 'getProjects': music_player_plt
+13:56:31 INFO  : Result from executing command 'getPlatforms': 
+13:59:05 INFO  : Result from executing command 'getProjects': music_player_plt
+13:59:05 INFO  : Result from executing command 'getPlatforms': music_player_plt|D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis2/music_player_plt/export/music_player_plt/music_player_plt.xpfm
+14:32:25 INFO  : Checking for BSP changes to sync application flags for project 'music_player_sw'...
+14:33:29 INFO  : Successfully done sdx_reload_mss "D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis2/music_player_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+14:33:30 INFO  : Successfully done sdx_reload_mss "D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis2/music_player_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+14:33:46 INFO  : Checking for BSP changes to sync application flags for project 'music_player_sw'...
+14:33:57 INFO  : (SwPlatform)  Successfully done add_library 
+14:34:02 INFO  : (SwPlatform) Successfully done update_mss 
+14:34:02 INFO  : Successfully done sdx_reload_mss "D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis2/music_player_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+14:34:34 INFO  : Result from executing command 'getProjects': music_player_plt
+14:34:34 INFO  : Result from executing command 'getPlatforms': music_player_plt|D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis2/music_player_plt/export/music_player_plt/music_player_plt.xpfm
+14:34:34 INFO  : Checking for BSP changes to sync application flags for project 'music_player_sw'...
+14:34:34 INFO  : Updating application flags with new BSP settings...
+14:34:34 INFO  : Successfully updated application flags for project music_player_sw.
+14:35:28 INFO  : Checking for BSP changes to sync application flags for project 'music_player_sw'...
+14:43:11 INFO  : Checking for BSP changes to sync application flags for project 'music_player_sw1'...
+14:43:21 INFO  : Checking for BSP changes to sync application flags for project 'music_player_sw1'...
+14:43:53 INFO  : Checking for BSP changes to sync application flags for project 'music_player_sw1'...
+14:45:47 INFO  : Invoking Bootgen: bootgen -image output.bif -arch zynq -o D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis2/BOOT.bin
+14:45:47 INFO  : Creating new bif file D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\music_player\vitis2\output.bif
+14:45:48 INFO  : Bootgen command execution is done.
+14:47:45 INFO  : Checking for BSP changes to sync application flags for project 'music_player_sw1'...
+14:48:34 INFO  : Invoking Bootgen: bootgen -image output.bif -arch zynq -o D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis2/BOOT.bin -w on
+14:48:34 INFO  : Overwriting existing bif file D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\music_player\vitis2\output.bif
+14:48:35 INFO  : Bootgen command execution is done.

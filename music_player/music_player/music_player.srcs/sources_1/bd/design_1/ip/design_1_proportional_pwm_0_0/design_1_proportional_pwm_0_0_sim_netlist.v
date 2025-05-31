@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Sun May 25 23:02:20 2025
+// Date        : Sat May 31 03:23:42 2025
 // Host        : Ro running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/ip/design_1_proportional_pwm_0_0/design_1_proportional_pwm_0_0_sim_netlist.v
@@ -19,12 +19,12 @@ module design_1_proportional_pwm_0_0
    (clk,
     dividend,
     pwm);
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, FREQ_HZ 50000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *) input clk;
-  input [15:0]dividend;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *) input clk;
+  input [7:0]dividend;
   output pwm;
 
   wire clk;
-  wire [15:0]dividend;
+  wire [7:0]dividend;
   wire pwm;
 
   design_1_proportional_pwm_0_0_proportional_pwm U0
@@ -40,23 +40,12 @@ module design_1_proportional_pwm_0_0_proportional_pwm
     dividend);
   output pwm;
   input clk;
-  input [15:0]dividend;
+  input [7:0]dividend;
 
   wire clk;
   wire counter;
-  wire [15:0]dividend;
+  wire [7:0]dividend;
   wire gtOp;
-  wire gtOp_carry__0_i_1_n_0;
-  wire gtOp_carry__0_i_2_n_0;
-  wire gtOp_carry__0_i_3_n_0;
-  wire gtOp_carry__0_i_4_n_0;
-  wire gtOp_carry__0_i_5_n_0;
-  wire gtOp_carry__0_i_6_n_0;
-  wire gtOp_carry__0_i_7_n_0;
-  wire gtOp_carry__0_i_8_n_0;
-  wire gtOp_carry__0_n_1;
-  wire gtOp_carry__0_n_2;
-  wire gtOp_carry__0_n_3;
   wire gtOp_carry_i_1_n_0;
   wire gtOp_carry_i_2_n_0;
   wire gtOp_carry_i_3_n_0;
@@ -65,48 +54,16 @@ module design_1_proportional_pwm_0_0_proportional_pwm
   wire gtOp_carry_i_6_n_0;
   wire gtOp_carry_i_7_n_0;
   wire gtOp_carry_i_8_n_0;
-  wire gtOp_carry_n_0;
   wire gtOp_carry_n_1;
   wire gtOp_carry_n_2;
   wire gtOp_carry_n_3;
   wire p_0_in;
+  wire [7:1]plusOp;
   wire pwm;
-  wire \saw[0]_i_2_n_0 ;
-  wire [15:0]saw_reg;
-  wire \saw_reg[0]_i_1_n_0 ;
-  wire \saw_reg[0]_i_1_n_1 ;
-  wire \saw_reg[0]_i_1_n_2 ;
-  wire \saw_reg[0]_i_1_n_3 ;
-  wire \saw_reg[0]_i_1_n_4 ;
-  wire \saw_reg[0]_i_1_n_5 ;
-  wire \saw_reg[0]_i_1_n_6 ;
-  wire \saw_reg[0]_i_1_n_7 ;
-  wire \saw_reg[12]_i_1_n_1 ;
-  wire \saw_reg[12]_i_1_n_2 ;
-  wire \saw_reg[12]_i_1_n_3 ;
-  wire \saw_reg[12]_i_1_n_4 ;
-  wire \saw_reg[12]_i_1_n_5 ;
-  wire \saw_reg[12]_i_1_n_6 ;
-  wire \saw_reg[12]_i_1_n_7 ;
-  wire \saw_reg[4]_i_1_n_0 ;
-  wire \saw_reg[4]_i_1_n_1 ;
-  wire \saw_reg[4]_i_1_n_2 ;
-  wire \saw_reg[4]_i_1_n_3 ;
-  wire \saw_reg[4]_i_1_n_4 ;
-  wire \saw_reg[4]_i_1_n_5 ;
-  wire \saw_reg[4]_i_1_n_6 ;
-  wire \saw_reg[4]_i_1_n_7 ;
-  wire \saw_reg[8]_i_1_n_0 ;
-  wire \saw_reg[8]_i_1_n_1 ;
-  wire \saw_reg[8]_i_1_n_2 ;
-  wire \saw_reg[8]_i_1_n_3 ;
-  wire \saw_reg[8]_i_1_n_4 ;
-  wire \saw_reg[8]_i_1_n_5 ;
-  wire \saw_reg[8]_i_1_n_6 ;
-  wire \saw_reg[8]_i_1_n_7 ;
+  wire \saw[0]_i_1_n_0 ;
+  wire \saw[7]_i_2_n_0 ;
+  wire [7:0]saw_reg;
   wire [3:0]NLW_gtOp_carry_O_UNCONNECTED;
-  wire [3:0]NLW_gtOp_carry__0_O_UNCONNECTED;
-  wire [3:3]\NLW_saw_reg[12]_i_1_CO_UNCONNECTED ;
 
   LUT1 #(
     .INIT(2'h1)) 
@@ -122,83 +79,11 @@ module design_1_proportional_pwm_0_0_proportional_pwm
   (* COMPARATOR_THRESHOLD = "11" *) 
   CARRY4 gtOp_carry
        (.CI(1'b0),
-        .CO({gtOp_carry_n_0,gtOp_carry_n_1,gtOp_carry_n_2,gtOp_carry_n_3}),
+        .CO({gtOp,gtOp_carry_n_1,gtOp_carry_n_2,gtOp_carry_n_3}),
         .CYINIT(1'b0),
         .DI({gtOp_carry_i_1_n_0,gtOp_carry_i_2_n_0,gtOp_carry_i_3_n_0,gtOp_carry_i_4_n_0}),
         .O(NLW_gtOp_carry_O_UNCONNECTED[3:0]),
         .S({gtOp_carry_i_5_n_0,gtOp_carry_i_6_n_0,gtOp_carry_i_7_n_0,gtOp_carry_i_8_n_0}));
-  (* COMPARATOR_THRESHOLD = "11" *) 
-  CARRY4 gtOp_carry__0
-       (.CI(gtOp_carry_n_0),
-        .CO({gtOp,gtOp_carry__0_n_1,gtOp_carry__0_n_2,gtOp_carry__0_n_3}),
-        .CYINIT(1'b0),
-        .DI({gtOp_carry__0_i_1_n_0,gtOp_carry__0_i_2_n_0,gtOp_carry__0_i_3_n_0,gtOp_carry__0_i_4_n_0}),
-        .O(NLW_gtOp_carry__0_O_UNCONNECTED[3:0]),
-        .S({gtOp_carry__0_i_5_n_0,gtOp_carry__0_i_6_n_0,gtOp_carry__0_i_7_n_0,gtOp_carry__0_i_8_n_0}));
-  LUT4 #(
-    .INIT(16'h2F02)) 
-    gtOp_carry__0_i_1
-       (.I0(dividend[14]),
-        .I1(saw_reg[14]),
-        .I2(saw_reg[15]),
-        .I3(dividend[15]),
-        .O(gtOp_carry__0_i_1_n_0));
-  LUT4 #(
-    .INIT(16'h2F02)) 
-    gtOp_carry__0_i_2
-       (.I0(dividend[12]),
-        .I1(saw_reg[12]),
-        .I2(saw_reg[13]),
-        .I3(dividend[13]),
-        .O(gtOp_carry__0_i_2_n_0));
-  LUT4 #(
-    .INIT(16'h2F02)) 
-    gtOp_carry__0_i_3
-       (.I0(dividend[10]),
-        .I1(saw_reg[10]),
-        .I2(saw_reg[11]),
-        .I3(dividend[11]),
-        .O(gtOp_carry__0_i_3_n_0));
-  LUT4 #(
-    .INIT(16'h2F02)) 
-    gtOp_carry__0_i_4
-       (.I0(dividend[8]),
-        .I1(saw_reg[8]),
-        .I2(saw_reg[9]),
-        .I3(dividend[9]),
-        .O(gtOp_carry__0_i_4_n_0));
-  LUT4 #(
-    .INIT(16'h9009)) 
-    gtOp_carry__0_i_5
-       (.I0(dividend[14]),
-        .I1(saw_reg[14]),
-        .I2(dividend[15]),
-        .I3(saw_reg[15]),
-        .O(gtOp_carry__0_i_5_n_0));
-  LUT4 #(
-    .INIT(16'h9009)) 
-    gtOp_carry__0_i_6
-       (.I0(dividend[12]),
-        .I1(saw_reg[12]),
-        .I2(dividend[13]),
-        .I3(saw_reg[13]),
-        .O(gtOp_carry__0_i_6_n_0));
-  LUT4 #(
-    .INIT(16'h9009)) 
-    gtOp_carry__0_i_7
-       (.I0(dividend[10]),
-        .I1(saw_reg[10]),
-        .I2(dividend[11]),
-        .I3(saw_reg[11]),
-        .O(gtOp_carry__0_i_7_n_0));
-  LUT4 #(
-    .INIT(16'h9009)) 
-    gtOp_carry__0_i_8
-       (.I0(dividend[8]),
-        .I1(saw_reg[8]),
-        .I2(dividend[9]),
-        .I3(saw_reg[9]),
-        .O(gtOp_carry__0_i_8_n_0));
   LUT4 #(
     .INIT(16'h2F02)) 
     gtOp_carry_i_1
@@ -271,136 +156,125 @@ module design_1_proportional_pwm_0_0_proportional_pwm
         .R(1'b0));
   LUT1 #(
     .INIT(2'h1)) 
-    \saw[0]_i_2 
+    \saw[0]_i_1 
        (.I0(saw_reg[0]),
-        .O(\saw[0]_i_2_n_0 ));
+        .O(\saw[0]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT2 #(
+    .INIT(4'h6)) 
+    \saw[1]_i_1 
+       (.I0(saw_reg[0]),
+        .I1(saw_reg[1]),
+        .O(plusOp[1]));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT3 #(
+    .INIT(8'h78)) 
+    \saw[2]_i_1 
+       (.I0(saw_reg[0]),
+        .I1(saw_reg[1]),
+        .I2(saw_reg[2]),
+        .O(plusOp[2]));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT4 #(
+    .INIT(16'h7F80)) 
+    \saw[3]_i_1 
+       (.I0(saw_reg[1]),
+        .I1(saw_reg[0]),
+        .I2(saw_reg[2]),
+        .I3(saw_reg[3]),
+        .O(plusOp[3]));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT5 #(
+    .INIT(32'h7FFF8000)) 
+    \saw[4]_i_1 
+       (.I0(saw_reg[2]),
+        .I1(saw_reg[0]),
+        .I2(saw_reg[1]),
+        .I3(saw_reg[3]),
+        .I4(saw_reg[4]),
+        .O(plusOp[4]));
+  LUT6 #(
+    .INIT(64'h7FFFFFFF80000000)) 
+    \saw[5]_i_1 
+       (.I0(saw_reg[3]),
+        .I1(saw_reg[1]),
+        .I2(saw_reg[0]),
+        .I3(saw_reg[2]),
+        .I4(saw_reg[4]),
+        .I5(saw_reg[5]),
+        .O(plusOp[5]));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT2 #(
+    .INIT(4'h6)) 
+    \saw[6]_i_1 
+       (.I0(\saw[7]_i_2_n_0 ),
+        .I1(saw_reg[6]),
+        .O(plusOp[6]));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT3 #(
+    .INIT(8'h78)) 
+    \saw[7]_i_1 
+       (.I0(\saw[7]_i_2_n_0 ),
+        .I1(saw_reg[6]),
+        .I2(saw_reg[7]),
+        .O(plusOp[7]));
+  LUT6 #(
+    .INIT(64'h8000000000000000)) 
+    \saw[7]_i_2 
+       (.I0(saw_reg[5]),
+        .I1(saw_reg[3]),
+        .I2(saw_reg[1]),
+        .I3(saw_reg[0]),
+        .I4(saw_reg[2]),
+        .I5(saw_reg[4]),
+        .O(\saw[7]_i_2_n_0 ));
   FDRE \saw_reg[0] 
        (.C(clk),
         .CE(counter),
-        .D(\saw_reg[0]_i_1_n_7 ),
+        .D(\saw[0]_i_1_n_0 ),
         .Q(saw_reg[0]),
-        .R(1'b0));
-  (* ADDER_THRESHOLD = "11" *) 
-  CARRY4 \saw_reg[0]_i_1 
-       (.CI(1'b0),
-        .CO({\saw_reg[0]_i_1_n_0 ,\saw_reg[0]_i_1_n_1 ,\saw_reg[0]_i_1_n_2 ,\saw_reg[0]_i_1_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b1}),
-        .O({\saw_reg[0]_i_1_n_4 ,\saw_reg[0]_i_1_n_5 ,\saw_reg[0]_i_1_n_6 ,\saw_reg[0]_i_1_n_7 }),
-        .S({saw_reg[3:1],\saw[0]_i_2_n_0 }));
-  FDRE \saw_reg[10] 
-       (.C(clk),
-        .CE(counter),
-        .D(\saw_reg[8]_i_1_n_5 ),
-        .Q(saw_reg[10]),
-        .R(1'b0));
-  FDRE \saw_reg[11] 
-       (.C(clk),
-        .CE(counter),
-        .D(\saw_reg[8]_i_1_n_4 ),
-        .Q(saw_reg[11]),
-        .R(1'b0));
-  FDRE \saw_reg[12] 
-       (.C(clk),
-        .CE(counter),
-        .D(\saw_reg[12]_i_1_n_7 ),
-        .Q(saw_reg[12]),
-        .R(1'b0));
-  (* ADDER_THRESHOLD = "11" *) 
-  CARRY4 \saw_reg[12]_i_1 
-       (.CI(\saw_reg[8]_i_1_n_0 ),
-        .CO({\NLW_saw_reg[12]_i_1_CO_UNCONNECTED [3],\saw_reg[12]_i_1_n_1 ,\saw_reg[12]_i_1_n_2 ,\saw_reg[12]_i_1_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\saw_reg[12]_i_1_n_4 ,\saw_reg[12]_i_1_n_5 ,\saw_reg[12]_i_1_n_6 ,\saw_reg[12]_i_1_n_7 }),
-        .S(saw_reg[15:12]));
-  FDRE \saw_reg[13] 
-       (.C(clk),
-        .CE(counter),
-        .D(\saw_reg[12]_i_1_n_6 ),
-        .Q(saw_reg[13]),
-        .R(1'b0));
-  FDRE \saw_reg[14] 
-       (.C(clk),
-        .CE(counter),
-        .D(\saw_reg[12]_i_1_n_5 ),
-        .Q(saw_reg[14]),
-        .R(1'b0));
-  FDRE \saw_reg[15] 
-       (.C(clk),
-        .CE(counter),
-        .D(\saw_reg[12]_i_1_n_4 ),
-        .Q(saw_reg[15]),
         .R(1'b0));
   FDRE \saw_reg[1] 
        (.C(clk),
         .CE(counter),
-        .D(\saw_reg[0]_i_1_n_6 ),
+        .D(plusOp[1]),
         .Q(saw_reg[1]),
         .R(1'b0));
   FDRE \saw_reg[2] 
        (.C(clk),
         .CE(counter),
-        .D(\saw_reg[0]_i_1_n_5 ),
+        .D(plusOp[2]),
         .Q(saw_reg[2]),
         .R(1'b0));
   FDRE \saw_reg[3] 
        (.C(clk),
         .CE(counter),
-        .D(\saw_reg[0]_i_1_n_4 ),
+        .D(plusOp[3]),
         .Q(saw_reg[3]),
         .R(1'b0));
   FDRE \saw_reg[4] 
        (.C(clk),
         .CE(counter),
-        .D(\saw_reg[4]_i_1_n_7 ),
+        .D(plusOp[4]),
         .Q(saw_reg[4]),
         .R(1'b0));
-  (* ADDER_THRESHOLD = "11" *) 
-  CARRY4 \saw_reg[4]_i_1 
-       (.CI(\saw_reg[0]_i_1_n_0 ),
-        .CO({\saw_reg[4]_i_1_n_0 ,\saw_reg[4]_i_1_n_1 ,\saw_reg[4]_i_1_n_2 ,\saw_reg[4]_i_1_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\saw_reg[4]_i_1_n_4 ,\saw_reg[4]_i_1_n_5 ,\saw_reg[4]_i_1_n_6 ,\saw_reg[4]_i_1_n_7 }),
-        .S(saw_reg[7:4]));
   FDRE \saw_reg[5] 
        (.C(clk),
         .CE(counter),
-        .D(\saw_reg[4]_i_1_n_6 ),
+        .D(plusOp[5]),
         .Q(saw_reg[5]),
         .R(1'b0));
   FDRE \saw_reg[6] 
        (.C(clk),
         .CE(counter),
-        .D(\saw_reg[4]_i_1_n_5 ),
+        .D(plusOp[6]),
         .Q(saw_reg[6]),
         .R(1'b0));
   FDRE \saw_reg[7] 
        (.C(clk),
         .CE(counter),
-        .D(\saw_reg[4]_i_1_n_4 ),
+        .D(plusOp[7]),
         .Q(saw_reg[7]),
-        .R(1'b0));
-  FDRE \saw_reg[8] 
-       (.C(clk),
-        .CE(counter),
-        .D(\saw_reg[8]_i_1_n_7 ),
-        .Q(saw_reg[8]),
-        .R(1'b0));
-  (* ADDER_THRESHOLD = "11" *) 
-  CARRY4 \saw_reg[8]_i_1 
-       (.CI(\saw_reg[4]_i_1_n_0 ),
-        .CO({\saw_reg[8]_i_1_n_0 ,\saw_reg[8]_i_1_n_1 ,\saw_reg[8]_i_1_n_2 ,\saw_reg[8]_i_1_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\saw_reg[8]_i_1_n_4 ,\saw_reg[8]_i_1_n_5 ,\saw_reg[8]_i_1_n_6 ,\saw_reg[8]_i_1_n_7 }),
-        .S(saw_reg[11:8]));
-  FDRE \saw_reg[9] 
-       (.C(clk),
-        .CE(counter),
-        .D(\saw_reg[8]_i_1_n_6 ),
-        .Q(saw_reg[9]),
         .R(1'b0));
 endmodule
 `ifndef GLBL

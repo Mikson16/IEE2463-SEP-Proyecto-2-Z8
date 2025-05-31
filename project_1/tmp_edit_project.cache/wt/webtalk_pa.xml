@@ -3,13 +3,9 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<<<<<<< HEAD
-<application name="pa" timeStamp="Mon May 19 09:51:57 2025">
-=======
-<application name="pa" timeStamp="Mon May 26 00:24:42 2025">
->>>>>>> fc1f3e6806ee130741fbb56c8077ebac14a5a455
+<application name="pa" timeStamp="Sat May 31 03:51:19 2025">
 <section name="Project Information" visible="false">
-<property name="ProjectID" value="bfeda499d9ad40f281a204779552f012" type="ProjectID"/>
+<property name="ProjectID" value="acdc89832b714b44b43544b0ef0dc616" type="ProjectID"/>
 <property name="ProjectIteration" value="1" type="ProjectIteration"/>
 </section>
 <section name="PlanAhead Usage" visible="true">
@@ -21,79 +17,15 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ImplStrategy" value="Vivado Implementation Defaults" type="ImplStrategy"/>
 </item>
 <item name="Java Command Handlers">
-<<<<<<< HEAD
-<property name="AutoConnectTarget" value="5" type="JavaHandler"/>
-<property name="CloseProject" value="1" type="JavaHandler"/>
-<property name="CustomizeRSBBlock" value="1" type="JavaHandler"/>
-<property name="FileExit" value="6" type="JavaHandler"/>
-=======
-<property name="FileExit" value="7" type="JavaHandler"/>
->>>>>>> fc1f3e6806ee130741fbb56c8077ebac14a5a455
-<property name="IPPackagerHandler" value="5" type="JavaHandler"/>
-<property name="OpenBlockDesign" value="1" type="JavaHandler"/>
-<property name="OpenHardwareManager" value="2" type="JavaHandler"/>
-<property name="OpenProject" value="2" type="JavaHandler"/>
-<property name="RegenerateRSBLayout" value="1" type="JavaHandler"/>
-<property name="RunTrigger" value="4" type="JavaHandler"/>
-<property name="SetVioValueRadix" value="1" type="JavaHandler"/>
-<property name="ValidateRSBDesign" value="1" type="JavaHandler"/>
-<property name="ZoomFit" value="1" type="JavaHandler"/>
+<property name="FileExit" value="1" type="JavaHandler"/>
 </item>
 <item name="Gui Handlers">
-<property name="BaseDialog_OK" value="1" type="GuiHandlerData"/>
-<property name="ClkConfigTreeTablePanel_CLK_CONFIG_TREE_TABLE" value="5" type="GuiHandlerData"/>
-<property name="CmdMsgDialog_OK" value="4" type="GuiHandlerData"/>
-<property name="CodeView_TOGGLE_COLUMN_SELECTION_MODE" value="2" type="GuiHandlerData"/>
-<<<<<<< HEAD
-<property name="DDRConfigTreeTablePanel_DDR_CONFIG_TREE_TABLE" value="6" type="GuiHandlerData"/>
-<property name="FileSetPanel_FILE_SET_PANEL_TREE" value="40" type="GuiHandlerData"/>
-<property name="FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE" value="4" type="GuiHandlerData"/>
-<property name="GettingStartedView_OPEN_PROJECT" value="1" type="GuiHandlerData"/>
-<property name="HJFileChooserHelpers_JUMP_TO_RECENT_PROJECT_DIRECTORY" value="1" type="GuiHandlerData"/>
-<property name="HardwareDashboardOptionsPanel_CLOSE_DASHBOARD_OPTIONS" value="1" type="GuiHandlerData"/>
-<property name="HardwareDashboardOptionsPanel_LAYER_TREE" value="1" type="GuiHandlerData"/>
-<property name="HardwareDashboardView_SHOW_DASHBOARD_OPTIONS" value="1" type="GuiHandlerData"/>
-<property name="HardwareIlaWaveformView_RUN_TRIGGER_FOR_THIS_ILA_CORE" value="4" type="GuiHandlerData"/>
-<property name="LabtoolsMenu_RADIX" value="1" type="GuiHandlerData"/>
-<property name="LabtoolsMenu_UNSIGNED_DECIMAL" value="1" type="GuiHandlerData"/>
-<property name="MainMenuMgr_CHECKPOINT" value="1" type="GuiHandlerData"/>
-<property name="MainMenuMgr_EDIT" value="2" type="GuiHandlerData"/>
-<property name="MainMenuMgr_FILE" value="6" type="GuiHandlerData"/>
-<property name="MainMenuMgr_PROJECT" value="3" type="GuiHandlerData"/>
-<property name="MainMenuMgr_WINDOW" value="2" type="GuiHandlerData"/>
-=======
-<property name="FileSetPanel_FILE_SET_PANEL_TREE" value="37" type="GuiHandlerData"/>
->>>>>>> fc1f3e6806ee130741fbb56c8077ebac14a5a455
-<property name="MessageBanner_CHANGES_DETECTED_IN_VIVADO_PROJECT_THAT" value="6" type="GuiHandlerData"/>
-<property name="PACommandNames_AUTO_CONNECT_TARGET" value="5" type="GuiHandlerData"/>
-<property name="PACommandNames_OPEN_PROJECT" value="1" type="GuiHandlerData"/>
-<property name="PACommandNames_REGENERATE_LAYOUT" value="1" type="GuiHandlerData"/>
-<property name="PACommandNames_VALIDATE_RSB_DESIGN" value="1" type="GuiHandlerData"/>
-<property name="PACommandNames_ZOOM_FIT" value="1" type="GuiHandlerData"/>
-<property name="PAViews_DASHBOARD" value="6" type="GuiHandlerData"/>
-<property name="PAViews_PROJECT_SUMMARY" value="1" type="GuiHandlerData"/>
-<property name="PackagerStepsPanel_PACKAGER_STEPS_LIST" value="22" type="GuiHandlerData"/>
-<property name="ProbesView_PROBES_TREE" value="1" type="GuiHandlerData"/>
-<property name="ProgramDebugTab_OPEN_TARGET" value="5" type="GuiHandlerData"/>
-<property name="ReviewContentPanel_PACKAGE_IP" value="1" type="GuiHandlerData"/>
-<property name="ReviewContentPanel_RE_PACKAGE_IP" value="5" type="GuiHandlerData"/>
-<property name="TaskBanner_CLOSE" value="1" type="GuiHandlerData"/>
-<property name="TriggerSetupPanel_TABLE" value="2" type="GuiHandlerData"/>
-<property name="VioProbesTreeTablePanel_ADD_PROBE" value="2" type="GuiHandlerData"/>
-<property name="VioProbesTreeTablePanel_OK" value="1" type="GuiHandlerData"/>
-<property name="VioProbesTreeTablePanel_VIO_PROBES_TREE_TABLE" value="10" type="GuiHandlerData"/>
-<property name="WaveformNameTree_WAVEFORM_NAME_TREE" value="4" type="GuiHandlerData"/>
+<property name="FileSetPanel_FILE_SET_PANEL_TREE" value="3" type="GuiHandlerData"/>
 </item>
 <item name="Other">
-<<<<<<< HEAD
-<property name="GuiMode" value="33" type="GuiMode"/>
+<property name="GuiMode" value="133" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
-<property name="TclMode" value="24" type="TclMode"/>
-=======
-<property name="GuiMode" value="126" type="GuiMode"/>
-<property name="BatchMode" value="0" type="BatchMode"/>
-<property name="TclMode" value="89" type="TclMode"/>
->>>>>>> fc1f3e6806ee130741fbb56c8077ebac14a5a455
+<property name="TclMode" value="94" type="TclMode"/>
 </item>
 </section>
 </application>

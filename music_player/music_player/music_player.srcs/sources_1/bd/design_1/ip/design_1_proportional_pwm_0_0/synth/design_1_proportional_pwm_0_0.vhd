@@ -56,7 +56,7 @@ USE ieee.numeric_std.ALL;
 ENTITY design_1_proportional_pwm_0_0 IS
   PORT (
     clk : IN STD_LOGIC;
-    dividend : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    dividend : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     pwm : OUT STD_LOGIC
   );
 END design_1_proportional_pwm_0_0;
@@ -67,7 +67,7 @@ ARCHITECTURE design_1_proportional_pwm_0_0_arch OF design_1_proportional_pwm_0_0
   COMPONENT proportional_pwm IS
     PORT (
       clk : IN STD_LOGIC;
-      dividend : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+      dividend : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
       pwm : OUT STD_LOGIC
     );
   END COMPONENT proportional_pwm;
@@ -81,7 +81,7 @@ ARCHITECTURE design_1_proportional_pwm_0_0_arch OF design_1_proportional_pwm_0_0
   ATTRIBUTE IP_DEFINITION_SOURCE OF design_1_proportional_pwm_0_0_arch: ARCHITECTURE IS "module_ref";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
-  ATTRIBUTE X_INTERFACE_PARAMETER OF clk: SIGNAL IS "XIL_INTERFACENAME clk, FREQ_HZ 50000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF clk: SIGNAL IS "XIL_INTERFACENAME clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF clk: SIGNAL IS "xilinx.com:signal:clock:1.0 clk CLK";
 BEGIN
   U0 : proportional_pwm

@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sat May 31 02:02:47 2025
+# Process ID: 20248
+# Current directory: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/ipcore
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9448 D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\ipcore\edit_music_player_v1_0.xpr
+# Log file: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/ipcore/vivado.log
+# Journal file: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/ipcore\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/ipcore/edit_music_player_v1_0.xpr
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/ipcore/music_player_1.0/hdl/music_player_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/ipcore/music_player_1.0/hdl/music_player_v1_0.v:]
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/ipcore/edit_music_player_v1_0.srcs/sources_1'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/ipcore/music_player_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/U/2025/Primer_semestre/Lab_electro/3/vivado/ipcore'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2020.1/data/ip'.
+open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 1081.113 ; gain = 0.000
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat May 31 03:51:24 2025...

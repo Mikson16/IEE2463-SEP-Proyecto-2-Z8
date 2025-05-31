@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="music_player_sw" key="programflash.hwplatform"/>
+	<item value="D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis/music_player/export/music_player/sw/music_player/boot/fsbl.elf" key="music_player_sw-fsblFile"/>
+	<item value="false" key="music_player_sw-verifyFlash"/>
+	<item value="" key="music_player_sw-offSet"/>
+	<item value="D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\music_player\vitis\BOOT.bin" key="music_player_sw-imgFile"/>
+	<item value="Auto Detect" key="music_player_sw-device"/>
+	<item value="Local" key="music_player_sw-target"/>
+	<item value="qspi-x4-single" key="music_player_sw-flashType"/>
+	<item value="false" key="music_player_sw-blankCheck"/>
+</section>

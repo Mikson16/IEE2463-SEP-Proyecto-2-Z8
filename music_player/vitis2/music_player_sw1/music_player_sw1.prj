@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="music_player_sw1" location="D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis2/music_player_sw1" platform="D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis2/music_player_plt/export/music_player_plt/music_player_plt.xpfm" platformUID="xilinx:zybo-z7-10::0.0(custom)" systemProject="music_player_sw1_system" sysConfig="music_player_plt" runtime="C/C++" cpu="standalone_domain" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="de72a0bd72a81e75b4a64b6675ba9c02">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.716826164">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.645377131">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

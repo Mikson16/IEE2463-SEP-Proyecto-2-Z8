@@ -1,0 +1,55 @@
+14:35:28 **** Incremental Build of configuration Release for project music_player_sw ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O2 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -ID:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis2/music_player_plt/export/music_player_plt/sw/music_player_plt/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'TmrCtrSetupIntrSystem':
+../src/helloworld.c:124:13: warning: 'return' with a value, in function returning void [-Wreturn-type]
+  124 |      return -1;
+      |             ^
+../src/helloworld.c:111:6: note: declared here
+  111 | void TmrCtrSetupIntrSystem(XTmrCtr *TmrCtrInstancePtr,
+      |      ^~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:149:14: warning: 'return' with a value, in function returning void [-Wreturn-type]
+  149 |       return -1;
+      |              ^
+../src/helloworld.c:111:6: note: declared here
+  111 | void TmrCtrSetupIntrSystem(XTmrCtr *TmrCtrInstancePtr,
+      |      ^~~~~~~~~~~~~~~~~~~~~
+In file included from D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis2/music_player_plt/export/music_player_plt/sw/music_player_plt/standalone_domain/bspinclude/include/xtmrctr.h:157,
+                 from ../src/helloworld.c:3:
+../src/helloworld.c: In function 'SdReaderSetup':
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis2/music_player_plt/export/music_player_plt/sw/music_player_plt/standalone_domain/bspinclude/include/xstatus.h:39:41: warning: 'return' with a value, in function returning void [-Wreturn-type]
+   39 | #define XST_FAILURE                     1L
+      |                                         ^~
+../src/helloworld.c:167:17: note: in expansion of macro 'XST_FAILURE'
+  167 |          return XST_FAILURE;
+      |                 ^~~~~~~~~~~
+../src/helloworld.c:160:6: note: declared here
+  160 | void SdReaderSetup()
+      |      ^~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O2 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -ID:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis2/music_player_plt/export/music_player_plt/sw/music_player_plt/standalone_domain/bspinclude/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: music_player_sw.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LD:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis2/music_player_plt/export/music_player_plt/sw/music_player_plt/standalone_domain/bsplib/lib -o "music_player_sw.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: music_player_sw.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size music_player_sw.elf  |tee "music_player_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  60168	   1992	  26224	  88384	  15940	music_player_sw.elf
+'Finished building: music_player_sw.elf.size'
+' '
+
+14:35:29 Build Finished (took 1s.54ms)
+

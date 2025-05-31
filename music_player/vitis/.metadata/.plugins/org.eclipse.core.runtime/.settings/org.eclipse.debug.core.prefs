@@ -3,4 +3,6 @@
 //org.eclipse.debug.core.PREFERRED_DELEGATES/org.eclipse.cdt.launch.postmortemLaunchType=org.eclipse.cdt.dsf.gdb.launch.coreCLaunch,debug,;
 //org.eclipse.debug.core.PREFERRED_DELEGATES/org.eclipse.cdt.launch.remoteApplicationLaunchType=org.eclipse.rse.remotecdt.dsf.debug,debug,;
 eclipse.preferences.version=1
-prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<watchExpressions/>\r\n
+org.eclipse.debug.core.PREF_BREAKPOINT_MANAGER_ENABLED_STATE=true
+org.eclipse.debug.core.USE_STEP_FILTERS=false
+prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<watchExpressions>\r\n    <expression enabled\="true" text\="ReadBuffer"/>\r\n    <expression enabled\="true" text\="filename"/>\r\n    <expression enabled\="true" text\="DataSizeBuff"/>\r\n    <expression enabled\="true" text\="DataSize"/>\r\n    <expression enabled\="true" text\="signed_sample"/>\r\n    <expression enabled\="true" text\="amplitude"/>\r\n    <expression enabled\="true" text\="unsigned_sample"/>\r\n</watchExpressions>\r\n

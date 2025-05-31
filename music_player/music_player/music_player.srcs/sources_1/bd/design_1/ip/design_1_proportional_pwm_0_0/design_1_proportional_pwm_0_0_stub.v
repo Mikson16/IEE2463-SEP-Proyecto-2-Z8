@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Sun May 25 23:02:20 2025
+// Date        : Sat May 31 03:23:42 2025
 // Host        : Ro running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/music_player/music_player.srcs/sources_1/bd/design_1/ip/design_1_proportional_pwm_0_0/design_1_proportional_pwm_0_0_stub.v
@@ -15,8 +15,8 @@
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* x_core_info = "proportional_pwm,Vivado 2020.1" *)
 module design_1_proportional_pwm_0_0(clk, dividend, pwm)
-/* synthesis syn_black_box black_box_pad_pin="clk,dividend[15:0],pwm" */;
+/* synthesis syn_black_box black_box_pad_pin="clk,dividend[7:0],pwm" */;
   input clk;
-  input [15:0]dividend;
+  input [7:0]dividend;
   output pwm;
 endmodule
