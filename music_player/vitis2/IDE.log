@@ -33,3 +33,15 @@
 14:48:34 INFO  : Invoking Bootgen: bootgen -image output.bif -arch zynq -o D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player/vitis2/BOOT.bin -w on
 14:48:34 INFO  : Overwriting existing bif file D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\music_player\vitis2\output.bif
 14:48:35 INFO  : Bootgen command execution is done.
+08:53:19 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\andre\Projects\IEE2463-SEP-Proyecto-2-Z8\music_player\vitis2\temp_xsdb_launch_script.tcl
+08:53:22 INFO  : XSCT server has started successfully.
+08:53:22 INFO  : plnx-install-location is set to ''
+08:53:22 INFO  : Successfully done setting XSCT server connection channel  
+08:53:22 INFO  : Successfully done setting workspace for the tool. 
+08:53:28 INFO  : Registering command handlers for Vitis TCF services
+08:53:29 ERROR : Error encountered while initializing user repository paths
+Reason: No Platforms Found.
+
+
+08:53:29 INFO  : Platform repository initialization has completed.
+08:53:29 INFO  : Successfully done query RDI_DATADIR 
