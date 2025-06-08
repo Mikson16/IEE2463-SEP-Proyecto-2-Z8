@@ -36,6 +36,11 @@
         a4_uses                     -- a4_uses
 */
 
+/*Parametros*/
+#define NUM_ZYBOMONES 8
+
+/*Estructuras*/
+
 typedef struct
 {
     uint8_t active;     // 1 bit: estado active/inactive
@@ -57,13 +62,21 @@ typedef struct
     uint8_t a2_uses;    // 4 bits: a2_uses
     uint8_t a3_uses;    // 4 bits: a3_uses
     uint8_t a4_uses;    // 4 bits: a4_uses
-    uint64_t bits;      // 55 bits: concatenación de todos los atributos
-} Zybomon_att;
+    // uint64_t bits;      // 55 bits: concatenación de todos los atributos
+} Zybomon;
+
+typedef struct
+{
+    Zybomon *zybomones; // Array dinámico de zybomones
+} ZybomonArray;
 
 /*  Prototipo funciones */
 // Devuelve un número aleatorio entre min y max (incluidos)
-uint8_t generar_numero_aleatorio(int min, int max);
+uint8_t generar_numero_aleatorio(int min, int max); // no usado
 // Cambia un numero int a bits
-uint64_t concatenar_atributos(int numero, Zybomon_att *zybomon);
+uint64_t concatenar_atributos(int numero, Zybomon *zybomon); // no usado
+
+// Generar un zybomon aleatorio
+Zybomon generar_zybomon(void);
 
 #endif
