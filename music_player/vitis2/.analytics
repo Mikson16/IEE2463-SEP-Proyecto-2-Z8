@@ -23,3 +23,6 @@ timestamp=[2025-05-31 14:47:46], mode=BUILD, duration=0:00:01.042, duration_ms=1
 timestamp=[2025-06-06 08:53:25], mode=WORKBENCH_START, duration=0:00:12.060, duration_ms=12060, data={}
 timestamp=[2025-06-06 08:53:27], mode=WORKBENCH_UI_INIT, duration=0:00:01.848, duration_ms=1848, data={editors_count=4, platform_editors_count=1, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,music_player_plt,music_player_sw1,music_player_sw1_system}
 timestamp=[2025-06-06 08:53:29], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.226, duration_ms=226, data={}
+timestamp=[2025-06-09 08:25:33], mode=WORKBENCH_START, duration=0:00:24.377, duration_ms=24377, data={}
+timestamp=[2025-06-09 08:25:34], mode=WORKBENCH_UI_INIT, duration=0:00:01.209, duration_ms=1209, data={editors_count=4, platform_editors_count=1, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,music_player_plt,music_player_sw1,music_player_sw1_system}
+timestamp=[2025-06-09 08:25:35], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.137, duration_ms=137, data={}

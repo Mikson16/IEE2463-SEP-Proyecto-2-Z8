@@ -51,7 +51,7 @@ begin
 process(clk)
 begin
   if rising_edge(clk) then
-    if counter = '1'then
+    if counter = '1'then -- frecuencia portadora: 100M /(256*2) = 195312.5 Hz
       saw <= saw + 1;
       counter <= '0';
     else
@@ -72,7 +72,7 @@ begin
   end if;
 end process;
 
-    
+   --- Arreglar problema del volumen de salida
     
 
 end Behavioral;

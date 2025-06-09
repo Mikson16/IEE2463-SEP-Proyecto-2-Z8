@@ -45,3 +45,15 @@ Reason: No Platforms Found.
 
 08:53:29 INFO  : Platform repository initialization has completed.
 08:53:29 INFO  : Successfully done query RDI_DATADIR 
+08:25:18 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\andre\Projects\IEE2463-SEP-Proyecto-2-Z8\music_player\vitis2\temp_xsdb_launch_script.tcl
+08:25:24 INFO  : XSCT server has started successfully.
+08:25:24 INFO  : plnx-install-location is set to ''
+08:25:24 INFO  : Successfully done setting XSCT server connection channel  
+08:25:24 INFO  : Successfully done setting workspace for the tool. 
+08:25:35 ERROR : Error encountered while initializing user repository paths
+Reason: No Platforms Found.
+
+
+08:25:35 INFO  : Platform repository initialization has completed.
+08:25:35 INFO  : Registering command handlers for Vitis TCF services
+08:25:47 INFO  : Successfully done query RDI_DATADIR 
