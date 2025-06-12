@@ -11,6 +11,9 @@
 #include <math.h>
 #include <stdlib.h>
 #include <unistd.h>
+//#include "ADC.h"
+//#include "xspi.h"
+
 /***************** Macros ********************************/
 #define TMRCTR_DEVICE_ID	XPAR_TMRCTR_0_DEVICE_ID
 #define TMRCTR_INTERRUPT_ID	XPAR_FABRIC_AXI_TIMER_0_INTERRUPT_INTR
@@ -41,7 +44,7 @@ XTmrCtr  TimerCounterInst;
 XGpio    GPIO;
 
 FATFS fs;
-unsigned leds = 0b0000;
+u8 volumen = 0;
 u32 SongSize;
 u32 CurrentByte;
 FIL Rfp;
@@ -94,8 +97,12 @@ void TimerCounterHandler(void *CallBackRef, u8 TmrCtrNumber)
 
 	    XTmrCtr_Stop(&TimerCounterInst, 0);
 
-		XGpio_DiscreteWrite(&GPIO, 1, leds); //Parpadeo de Leds
-		leds = ~leds;
+	    //Falta modificar hardware para agregar spi
+
+	    volumen = 120;//read_POT1() / 4; //PAra reducir de u16 a u8
+
+		XGpio_DiscreteWrite(&GPIO, 1, volumen); // Modificador volumen
+
 
 		u8 SongSample;
 		SongSample = PlaySong(); //Se lee la siguiente muestra del archivo de auido

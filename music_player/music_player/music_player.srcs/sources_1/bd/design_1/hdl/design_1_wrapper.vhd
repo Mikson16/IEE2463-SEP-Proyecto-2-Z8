@@ -1,8 +1,8 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
---Date        : Sat May 31 03:23:05 2025
---Host        : Ro running 64-bit major release  (build 9200)
+--Date        : Wed Jun 11 09:05:54 2025
+--Host        : AndresP running 64-bit major release  (build 9200)
 --Command     : generate_target design_1_wrapper.bd
 --Design      : design_1_wrapper
 --Purpose     : IP block netlist
@@ -34,8 +34,7 @@ entity design_1_wrapper is
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
-    buzzer : out STD_LOGIC;
-    leds_4bits_tri_o : out STD_LOGIC_VECTOR ( 3 downto 0 )
+    buzzer : out STD_LOGIC
   );
 end design_1_wrapper;
 
@@ -43,7 +42,6 @@ architecture STRUCTURE of design_1_wrapper is
   component design_1 is
   port (
     buzzer : out STD_LOGIC;
-    leds_4bits_tri_o : out STD_LOGIC_VECTOR ( 3 downto 0 );
     DDR_cas_n : inout STD_LOGIC;
     DDR_cke : inout STD_LOGIC;
     DDR_ck_n : inout STD_LOGIC;
@@ -91,7 +89,6 @@ design_1_i: component design_1
       FIXED_IO_ps_clk => FIXED_IO_ps_clk,
       FIXED_IO_ps_porb => FIXED_IO_ps_porb,
       FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
-      buzzer => buzzer,
-      leds_4bits_tri_o(3 downto 0) => leds_4bits_tri_o(3 downto 0)
+      buzzer => buzzer
     );
 end STRUCTURE;

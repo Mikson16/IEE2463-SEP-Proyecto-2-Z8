@@ -37,25 +37,24 @@ entity proportional_pwm is
   Port (
     clk: in std_logic;
     dividend: in std_logic_vector(7 downto 0);
+    divisor: in std_logic_vector(7 downto 0);
     pwm: out std_logic
    );
 end proportional_pwm;
 
 architecture Behavioral of proportional_pwm is
 signal saw: std_logic_vector(7 downto 0);
-signal counter: std_logic;
 
 begin
 
-
+-- diente de sierra con maximo segun divisor
 process(clk)
 begin
   if rising_edge(clk) then
-    if counter = '1'then -- frecuencia portadora: 100M /(256*2) = 195312.5 Hz
-      saw <= saw + 1;
-      counter <= '0';
+    if saw >= divisor - 1 then --
+      saw <= std_logic_vector(to_unsigned(0, 8));
     else
-      counter <= '1';
+      saw <= saw + 1;
     end if;
   end if;
 end process;
@@ -72,7 +71,8 @@ begin
   end if;
 end process;
 
-   --- Arreglar problema del volumen de salida
+-- el resultado de intensidad es equivalente a la division entre dividendo y divisor
+    
     
 
 end Behavioral;
