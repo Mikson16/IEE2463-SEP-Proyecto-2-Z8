@@ -1,0 +1,102 @@
+#include "LCD_GUI.h"
+#include <stdio.h>
+#include "LCD_Driver.h"
+
+extern LCD_DIS sLCD_DIS;
+
+
+
+void BitM_DisString_EN(POINT Xstart, POINT Ystart, const char * pString,
+                      sFONT* Font,COLOR Color_Background, COLOR Color_Foreground, int *BitMapPtr)
+{
+    POINT Xpoint = Xstart;
+    POINT Ypoint = Ystart;
+
+    if(Xstart >= sLCD_DIS.LCD_Dis_Column || Ystart >= sLCD_DIS.LCD_Dis_Page) {
+        return;
+    }
+
+    while(* pString != '\0') {
+        //if X direction filled , reposition to(Xstart,Ypoint),Ypoint is Y direction plus the height of the character
+        if((Xpoint + Font->Width ) > sLCD_DIS.LCD_Dis_Column ) {
+            Xpoint = Xstart;
+            Ypoint += Font->Height;
+        }
+
+        // If the Y direction is full, reposition to(Xstart, Ystart)
+        if((Ypoint  + Font->Height ) > sLCD_DIS.LCD_Dis_Page ) {
+            Xpoint = Xstart;
+            Ypoint = Ystart;
+        }
+        BitM_DisChar(Xpoint, Ypoint, * pString, Font, Color_Background, Color_Foreground,(int *) BitMapPtr);
+
+        //The next character of the address
+        pString ++;
+
+        //The next word of the abscissa increases the font of the broadband
+        Xpoint += Font->Width + 1;
+    }
+}
+
+void BitM_DisChar(POINT Xpoint, POINT Ypoint, const char Acsii_Char,
+                 sFONT* Font, COLOR Color_Background, COLOR Color_Foreground, uint_16 *BitMapPtr)
+{
+    POINT Page, Column;
+
+    if(Xpoint >= sLCD_DIS.LCD_Dis_Column || Ypoint >= sLCD_DIS.LCD_Dis_Page) {
+        return;
+    }
+
+    uint32_t Char_Offset =(Acsii_Char - ' ') * Font->Height *(Font->Width / 8 +(Font->Width % 8 ? 1 : 0));
+    const unsigned char *ptr = &Font->table[Char_Offset];
+
+    for(Page = 0; Page < Font->Height; Page ++ ) {
+        for(Column = 0; Column < Font->Width; Column ++ ) {
+
+            //To determine whether the font background color and screen background color is consistent
+            if(FONT_BACKGROUND == Color_Background) { //this process is to speed up the scan
+                if(*ptr &(0x80 >>(Column % 8)))
+                	*BitMapPtr[Xpoint + Column,Ypoint + Page] = Color_Foreground;
+//                    GUI_DrawPoint(Xpoint + Column, Ypoint + Page, Color_Foreground, DOT_PIXEL_DFT, DOT_STYLE_DFT);
+            } else {
+                if(*ptr &(0x80 >>(Column % 8))) {
+                	*BitMapPtr[Xpoint + Column,Ypoint + Page] = Color_Foreground;
+//                    GUI_DrawPoint(Xpoint + Column, Ypoint + Page, Color_Foreground, DOT_PIXEL_DFT, DOT_STYLE_DFT);
+                } else {
+                	*BitMapPtr[Xpoint + Column,Ypoint + Page] = Color_Background;
+//                    GUI_DrawPoint(Xpoint + Column, Ypoint + Page, Color_Background, DOT_PIXEL_DFT, DOT_STYLE_DFT);
+                }
+            }
+            //One pixel is 8 bits
+            if(Column % 8 == 7)
+                ptr++;
+        }/* Write a line */
+        if(Font->Width % 8 != 0)
+            ptr++;
+    }/* Write all */
+}
+
+void Paint_Bitmap(COLOR Color, int *BitMapPtr)
+{
+	POINT x, y;
+	for(y = 0; y < 128; y ++ ) {
+	        for(x = 0; x < 128; x ++ ) {
+	        	*BitMapPtr[x,y] = Color;
+	        }
+	}
+}
+
+void GUI_Update_Bitmap(int *Prev_BitMapPtr, int *New_BitMapPtr)
+{
+	POINT x, y;
+	COLOR Color;
+
+	for(y = 0; y < 128; y ++ ) {
+			for(x = 0; x < 128; x ++ ) {
+				if (*Prev_BitMapPtr[x,y] != *New_BitMapPtr[x,y]){
+					Color = *New_BitMapPtr[x,y];
+					GUI_DrawPoint(x, y, Color, DOT_PIXEL_DFT, DOT_STYLE_DFT);
+				}
+			}
+		}
+}

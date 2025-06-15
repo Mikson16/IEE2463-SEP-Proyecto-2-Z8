@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Thu Jun 12 20:13:09 2025
-# Process ID: 13108
+# Start of session at: Sat Jun 14 15:02:38 2025
+# Process ID: 16840
 # Current directory: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/input_reader/vivado/vivado.runs/DEMO_ila_0_0_synth_1
 # Command line: vivado.exe -log DEMO_ila_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DEMO_ila_0_0.tcl
 # Log file: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/input_reader/vivado/vivado.runs/DEMO_ila_0_0_synth_1/DEMO_ila_0_0.vds

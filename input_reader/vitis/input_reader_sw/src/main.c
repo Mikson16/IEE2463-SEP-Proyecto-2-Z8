@@ -15,8 +15,11 @@
 #include "I2C.h"
 #include "xtmrctr.h"
 #include "xscugic.h"
+#include "ff.h"
 
-extern XGpio gpio0; XGpio gpio1;
+#include "Bitmap.h"
+
+extern XGpio gpio0; XGpio gpio1; XGpio gpio2;
 extern XSpi  SpiInstance;	 /* The instance of the SPI device */
 extern XSpi  SpiInstance1;
 extern const unsigned char font[] ;
@@ -29,6 +32,7 @@ extern const unsigned char font[] ;
 #define TMRCTR_DEVICE_ID	XPAR_TMRCTR_0_DEVICE_ID
 #define TMRCTR_INTERRUPT_ID	XPAR_FABRIC_AXI_TIMER_0_INTERRUPT_INTR
 #define GPIO_LIGHT_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_1_IP2INTC_IRPT_INTR
+#define GPIO_BTN_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_2_IP2INTC_IRPT_INTR
 
 #define INTC_DEVICE_ID		XPAR_PS7_SCUGIC_0_DEVICE_ID
 
@@ -37,13 +41,86 @@ extern const unsigned char font[] ;
 
 #define LIGHT_INT XGPIO_IR_CH1_MASK
 
+#define ref_time 6
+
 XScuGic  IntcInstance;
 XTmrCtr  TimerInst0;
+
+BITMAP new_bitmap;
+BITMAP prev_bitmap;
+
+BITMAP pok_sprite;
+
+int movex, movey, movex_prev, movey_prev = 0;
+
+u32 refractx, refracty = 0;
+
+int pok_y = 0;
+int pok_x = 0;
 
 void readInputs(void *CallBackRef);
 
 void lightHandler(void *CallBackRef);
 
+void btnHandler(void *CallBackRef);
+
+
+
+void JoyHandler(int joyx,int joyy)
+{
+	if(joyx > 340) {
+		movex = 1;
+	}
+	else if(joyx < 200) {
+		movex = -1;
+	}
+	else{
+		movex = 0;
+	}
+	if(joyy > 340) {
+		movey = -1;
+	}
+	else if(joyy < 172) {
+		movey = 1;
+	}
+	else{
+		movey = 0;
+	}
+
+	if(movex != movex_prev){
+		refractx = 0;
+		pok_x = pok_x + movex*10;
+	}
+	else{
+	if(refractx == ref_time){
+		refractx = ref_time/2;
+		pok_x = pok_x + movex*10;
+	}
+	else{
+		refractx ++;
+	}
+}
+
+
+	if(movey != movey_prev){
+		refracty = 0;
+		pok_y = pok_y + movey*10;
+	}
+	else{
+		if(refracty == ref_time){
+			refracty = ref_time/2;
+			pok_y = pok_y + movey*10;
+		}
+		else{
+			refracty ++;
+		}
+	}
+
+	movex_prev = movex;
+	movey_prev = movey;
+
+
+}
 
 int main()
 {
@@ -59,9 +136,15 @@ int main()
 	}
 
 	/* Initialize the GPIO 1 driver */
-		Status = XGpio_Initialize(&gpio1, XPAR_AXI_GPIO_1_DEVICE_ID);
+	Status = XGpio_Initialize(&gpio1, XPAR_AXI_GPIO_1_DEVICE_ID);
+	if (Status != XST_SUCCESS) {
+		xil_printf("Gpio 1 Initialization Failed\r\n");
+		return XST_FAILURE;
+	}
+
+	Status = XGpio_Initialize(&gpio2, XPAR_AXI_GPIO_2_DEVICE_ID);
 		if (Status != XST_SUCCESS) {
-			xil_printf("Gpio 1 Initialization Failed\r\n");
+			xil_printf("Gpio 2 Initialization Failed\r\n");
 			return XST_FAILURE;
 		}
 
@@ -99,18 +182,28 @@ int main()
 	GUI_INTRO();
 	delay_ms(500);
 	LCD_Clear(GUI_BACKGROUND);
+
+
+	Paint_Bitmap(GUI_BACKGROUND, &prev_bitmap);
+	Paint_Bitmap(GUI_BACKGROUND, &new_bitmap);
+	SdReaderSetup();
+	Open_Sprite("pokemon.BMP", &pok_sprite);
+
 	//Define arrays for joystick, accelerometer, temperatura and ligth sensors.
 	// The ADC transform the data in 10bits, for temperatura and light sensors the data lenght is 16bits. For simplicity all
 	// arrays are defined as 16bits.
 	XTmrCtr_Initialize(&TimerInst0, TMRCTR_DEVICE_ID);
-	InterruptSetUp(&TimerInst0, &gpio1, TMRCTR_DEVICE_ID);
+	InterruptSetUp(&TimerInst0, &gpio1, &gpio2, TMRCTR_DEVICE_ID);
 
 	config_opt();
 
 
+
+
+
     return 0;
 }
-void InterruptSetUp(XTmrCtr *TmrCtrInstancePtr, XGpio *LightGpioInstancePtr,
+void InterruptSetUp(XTmrCtr *TmrCtrInstancePtr, XGpio *LightGpioInstancePtr, XGpio *BtnGpioInstancePtr,
         u16      DeviceId)
 {
 	XScuGic_Config *IntcConfig;
@@ -129,6 +222,9 @@ void InterruptSetUp(XTmrCtr *TmrCtrInstancePtr, XGpio *LightGpioInstancePtr,
 	    XGpio_InterruptEnable(&gpio1, LIGHT_INT);
 	    XGpio_InterruptGlobalEnable(&gpio1);
 
+	    XGpio_InterruptEnable(&gpio2, 1);
+	    XGpio_InterruptGlobalEnable(&gpio2);
+
 	    Xil_ExceptionInit();// initialization of Xilinx exceptions subsystem
 	        // necessary before registering our Interrupt Handler
 
@@ -146,7 +242,9 @@ void InterruptSetUp(XTmrCtr *TmrCtrInstancePtr, XGpio *LightGpioInstancePtr,
 	    XScuGic_SetPriorityTriggerType(&IntcInstance, TMRCTR_INTERRUPT_ID,
 	        		 0x18, 0x01);
 	    XScuGic_SetPriorityTriggerType(&IntcInstance, GPIO_LIGHT_INTERRUPT_ID,
-	    	        		 0x20, 0x03);
+					 0x20, 0x03);
+	    XScuGic_SetPriorityTriggerType(&IntcInstance, GPIO_BTN_INTERRUPT_ID,
+					 0x28, 0x03);
 
 	    status = XScuGic_Connect(&IntcInstance, TMRCTR_INTERRUPT_ID,
 	        		(Xil_ExceptionHandler)readInputs, (void *) TmrCtrInstancePtr);
@@ -156,7 +254,14 @@ void InterruptSetUp(XTmrCtr *TmrCtrInstancePtr, XGpio *LightGpioInstancePtr,
 		    }
 
 		status = XScuGic_Connect(&IntcInstance, GPIO_LIGHT_INTERRUPT_ID,
-			        		(Xil_ExceptionHandler)lightHandler, (void *) LightGpioInstancePtr);
+					(Xil_ExceptionHandler)lightHandler, (void *) LightGpioInstancePtr);
+
+		if(status != XST_SUCCESS){
+				return -1;
+			}
+
+		status = XScuGic_Connect(&IntcInstance, GPIO_BTN_INTERRUPT_ID,
+					(Xil_ExceptionHandler)btnHandler, (void *) BtnGpioInstancePtr);
 
 		if(status != XST_SUCCESS){
 				return -1;
@@ -164,6 +269,7 @@ void InterruptSetUp(XTmrCtr *TmrCtrInstancePtr, XGpio *LightGpioInstancePtr,
 
 		XScuGic_Enable(&IntcInstance, TMRCTR_INTERRUPT_ID);
 		XScuGic_Enable(&IntcInstance, GPIO_LIGHT_INTERRUPT_ID);
+		XScuGic_Enable(&IntcInstance, GPIO_BTN_INTERRUPT_ID);
 		XTmrCtr_Start(&TimerInst0, TIMER_CNTR_0);
 }
 char joyx[16] = {};
@@ -187,8 +293,22 @@ void readInputs(void *CallBackRef)
 //    Tirq = XGpio_DiscreteRead(&gpio1, 1);
 //    Lirq = XGpio_DiscreteRead(&gpio1, 2);
 //    xil_printf("Tirq es: %d, Lirq es: %d",Tirq,Lirq);
+	// Here we overwrite in black the value of the data. It is like "clear" the space.(as background is black)
+	//LCD_Clear(GUI_BACKGROUND);
+//	BitM_DisString_EN(5,30,joyx,&Font12,GUI_BACKGROUND,GUI_BACKGROUND, &new_bitmap);
+//	BitM_DisString_EN(5,65,joyy,&Font12,GUI_BACKGROUND,GUI_BACKGROUND, &new_bitmap);
+//	BitM_DisString_EN(50,30,tmp,&Font12,GUI_BACKGROUND,GUI_BACKGROUND, &new_bitmap);
+//	BitM_DisString_EN(50,65,opt,&Font12,GUI_BACKGROUND,GUI_BACKGROUND, &new_bitmap);
+//	BitM_DisString_EN(95,30,pot1,&Font12,GUI_BACKGROUND,GUI_BACKGROUND, &new_bitmap);
+//	BitM_DisString_EN(95,65,pot2,&Font12,GUI_BACKGROUND,GUI_BACKGROUND, &new_bitmap);
+//	BitM_DisString_EN(5,100,acx, &Font12,GUI_BACKGROUND,GUI_BACKGROUND, &new_bitmap);
+//	BitM_DisString_EN(50,100,acy, &Font12,GUI_BACKGROUND,GUI_BACKGROUND, &new_bitmap);
+//	BitM_DisString_EN(95,100,mic, &Font12,GUI_BACKGROUND,GUI_BACKGROUND, &new_bitmap);
 
+	Paint_Bitmap(GUI_BACKGROUND, &new_bitmap);
 	/*
+
+
 
 	// Here we write in black the space where the data will be written. It is like "clear" the space.
 	GUI_DisString_EN(5,40,joyx,&Font16,GUI_BACKGROUND,GUI_BACKGROUND);
@@ -220,27 +340,42 @@ void readInputs(void *CallBackRef)
 */
 // GUI_DisString_EN() is the function to draw a string in the screen.
 // Here we write the text "Ejex", "EjeY", "Temp", "Luz",etc.
-GUI_DisString_EN(5,10,"Ejex",&Font12,GUI_BACKGROUND,CYAN);
-GUI_DisString_EN(5,45,"EjeY",&Font12,GUI_BACKGROUND,CYAN);
-GUI_DisString_EN(50,10,"Temp",&Font12,GUI_BACKGROUND,CYAN);
-GUI_DisString_EN(50,45,"Luz",&Font12,GUI_BACKGROUND,CYAN);
-GUI_DisString_EN(95,10,"POT1",&Font12,GUI_BACKGROUND,CYAN);
-GUI_DisString_EN(95,45,"POT2",&Font12,GUI_BACKGROUND,CYAN);
-GUI_DisString_EN(5,80,"ACX",&Font12,GUI_BACKGROUND,CYAN);
-GUI_DisString_EN(50,80,"ACY",&Font12,GUI_BACKGROUND,CYAN);
-GUI_DisString_EN(95,80,"MIC",&Font12,GUI_BACKGROUND,CYAN);
+//GUI_DisString_EN(5,10,"Ejex",&Font12,GUI_BACKGROUND,CYAN);
+//GUI_DisString_EN(5,45,"EjeY",&Font12,GUI_BACKGROUND,CYAN);
+//GUI_DisString_EN(50,10,"Temp",&Font12,GUI_BACKGROUND,CYAN);
+//GUI_DisString_EN(50,45,"Luz",&Font12,GUI_BACKGROUND,CYAN);
+//GUI_DisString_EN(95,10,"POT1",&Font12,GUI_BACKGROUND,CYAN);
+//GUI_DisString_EN(95,45,"POT2",&Font12,GUI_BACKGROUND,CYAN);
+//GUI_DisString_EN(5,80,"ACX",&Font12,GUI_BACKGROUND,CYAN);
+//GUI_DisString_EN(50,80,"ACY",&Font12,GUI_BACKGROUND,CYAN);
+//GUI_DisString_EN(95,80,"MIC",&Font12,GUI_BACKGROUND,CYAN);
 
-// Here we overwrite in black the value of the data. It is like "clear" the space.(as background is black)
-//LCD_Clear(GUI_BACKGROUND);
-GUI_DisString_EN(5,30,joyx,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
-GUI_DisString_EN(5,65,joyy,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
-GUI_DisString_EN(50,30,tmp,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
-GUI_DisString_EN(50,65,opt,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
-GUI_DisString_EN(95,30,pot1,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
-GUI_DisString_EN(95,65,pot2,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
-GUI_DisString_EN(5,100,acx, &Font12,GUI_BACKGROUND,GUI_BACKGROUND);
-GUI_DisString_EN(50,100,acy, &Font12,GUI_BACKGROUND,GUI_BACKGROUND);
-GUI_DisString_EN(95,100,mic, &Font12,GUI_BACKGROUND,GUI_BACKGROUND);
+if(pok_x > 127){
+	pok_x = 127;
+}
+else if(pok_x < 0){
+	pok_x = 0;
+}
+
+if(pok_y > 127){
+	pok_y = 127;
+}
+else if(pok_y < 0){
+	pok_y = 0;
+}
+
+Paint_Sprite(pok_x, pok_y,  &new_bitmap, &pok_sprite);
+
+BitM_DisString_EN(5,10,"Ejex",&Font12,GUI_BACKGROUND,CYAN, &new_bitmap);
+BitM_DisString_EN(5,45,"EjeY",&Font12,GUI_BACKGROUND,CYAN, &new_bitmap);
+BitM_DisString_EN(50,10,"Temp",&Font12,GUI_BACKGROUND,CYAN, &new_bitmap);
+BitM_DisString_EN(50,45,"Luz",&Font12,GUI_BACKGROUND,CYAN, &new_bitmap);
+BitM_DisString_EN(95,10,"POT1",&Font12,GUI_BACKGROUND,CYAN, &new_bitmap);
+BitM_DisString_EN(95,45,"POT2",&Font12,GUI_BACKGROUND,CYAN, &new_bitmap);
+BitM_DisString_EN(5,80,"ACX",&Font12,GUI_BACKGROUND,CYAN, &new_bitmap);
+BitM_DisString_EN(50,80,"ACY",&Font12,GUI_BACKGROUND,CYAN, &new_bitmap);
+BitM_DisString_EN(95,80,"MIC",&Font12,GUI_BACKGROUND,CYAN, &new_bitmap);
+
 
 // Function "sprintf" copy the value of "read_XXXX()" into the value of the array defined.
 // Here we read joystick , temperature sensor, light sensor, accelerometer, etc.
@@ -254,17 +389,24 @@ sprintf(acx, "%d", read_acx());
 sprintf(acy, "%d", read_acy());
 sprintf(mic, "%d", read_MIC());
 
+
+JoyHandler(read_joyx(), read_joyy());
+
+
+
 // Here we write the value which is constantly refresh.
 // Position is the same as where we previously put in black.
-GUI_DisString_EN(5,30,joyx,&Font12,GUI_BACKGROUND,text_color);
-GUI_DisString_EN(5,65,joyy,&Font12,GUI_BACKGROUND,text_color);
-GUI_DisString_EN(50,30,tmp,&Font12,GUI_BACKGROUND,text_color);
-GUI_DisString_EN(50,65,opt,&Font12,GUI_BACKGROUND,text_color);
-GUI_DisString_EN(95,30,pot1,&Font12,GUI_BACKGROUND,text_color);
-GUI_DisString_EN(95,65,pot2,&Font12,GUI_BACKGROUND,text_color);
-GUI_DisString_EN(5,100,acx, &Font12,GUI_BACKGROUND,text_color);
-GUI_DisString_EN(50,100,acy, &Font12,GUI_BACKGROUND,text_color);
-GUI_DisString_EN(95,100,mic, &Font12,GUI_BACKGROUND,text_color);
+BitM_DisString_EN(5,30,joyx,&Font12,GUI_BACKGROUND,text_color, &new_bitmap);
+BitM_DisString_EN(5,65,joyy,&Font12,GUI_BACKGROUND,text_color, &new_bitmap);
+BitM_DisString_EN(50,30,tmp,&Font12,GUI_BACKGROUND,text_color, &new_bitmap);
+BitM_DisString_EN(50,65,opt,&Font12,GUI_BACKGROUND,text_color, &new_bitmap);
+BitM_DisString_EN(95,30,pot1,&Font12,GUI_BACKGROUND,text_color, &new_bitmap);
+BitM_DisString_EN(95,65,pot2,&Font12,GUI_BACKGROUND,text_color, &new_bitmap);
+BitM_DisString_EN(5,100,acx, &Font12,GUI_BACKGROUND,text_color, &new_bitmap);
+BitM_DisString_EN(50,100,acy, &Font12,GUI_BACKGROUND,text_color, &new_bitmap);
+BitM_DisString_EN(95,100,mic, &Font12,GUI_BACKGROUND,text_color, &new_bitmap);
+GUI_Update_Bitmap(&prev_bitmap, &new_bitmap);
+prev_bitmap = new_bitmap;
 	//We send through UART the data for each reading. This allows us to see what is happening inside the uP.
 	xil_printf("JX :%d\n", read_joyx());
 	xil_printf("JY :%d\n", read_joyy());
@@ -295,3 +437,35 @@ void lightHandler(void *CallBackRef)
 	XGpio_InterruptEnable(&gpio1, LIGHT_INT);
 
 }
+void btnHandler(void *CallBackRef)
+{
+	XGpio_InterruptDisable(&gpio2, 1);
+	u8 btns;
+	btns = XGpio_DiscreteRead(&gpio2, 1); //Se envía al bloque PWM
+	if(btns >= 4){
+		text_color = MAGENTA;
+	}
+	else if(btns >= 2){
+		text_color = GREEN;
+	}
+	else if(btns >= 1){
+		text_color = RED;
+	}
+	(void)XGpio_InterruptClear(&gpio2, 1);
+	XGpio_InterruptEnable(&gpio2, 1);
+}
+
+FATFS fs;
+TCHAR *path = "0:/";
+void SdReaderSetup()
+{
+	FRESULT rc;
+	rc = f_mount (&fs, path, 0);
+	if(rc != FR_OK)
+	    {
+	        xil_printf("ERROR : f_mount returned %d\r\n",rc);
+	        return XST_FAILURE;
+	    }
+}
+
+

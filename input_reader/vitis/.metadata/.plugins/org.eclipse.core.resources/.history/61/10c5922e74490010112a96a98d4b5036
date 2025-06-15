@@ -1,0 +1,11 @@
+#ifndef __BITMAP_H
+#define __BITMAP_H
+
+void BitM_DisString_EN(POINT Xstart, POINT Ystart, const char * pString, sFONT* Font,COLOR Color_Background, COLOR Color_Foreground, int *BitMapPtr);
+void BitM_DisChar(POINT Xpoint, POINT Ypoint, const char Acsii_Char, sFONT* Font, COLOR Color_Background, COLOR Color_Foreground, int *BitMapPtr);
+void Paint_Bitmap(COLOR Color, int *BitMapPtr);
+void GUI_Update_Bitmap(*Prev_BitMapPtr, int *New_BitMapPtr);
+
+
+
+#endif

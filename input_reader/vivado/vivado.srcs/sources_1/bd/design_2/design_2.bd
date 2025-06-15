@@ -1,0 +1,181 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x0",
+      "device": "xc7z010clg400-1",
+      "name": "design_2",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.1"
+    },
+    "design_tree": {
+      "debouncer_0": "",
+      "debouncer_1": "",
+      "debouncer_2": "",
+      "xlconcat_0": "",
+      "ila_0": ""
+    },
+    "ports": {
+      "BTN_JY": {
+        "direction": "I"
+      },
+      "BTN0": {
+        "direction": "I"
+      },
+      "BTN1": {
+        "direction": "I"
+      },
+      "clk": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "debouncer_0": {
+        "vlnv": "xilinx.com:module_ref:debouncer:1.0",
+        "xci_name": "design_2_debouncer_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "debouncer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "btn": {
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "press": {
+            "direction": "O"
+          }
+        }
+      },
+      "debouncer_1": {
+        "vlnv": "xilinx.com:module_ref:debouncer:1.0",
+        "xci_name": "design_2_debouncer_0_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "debouncer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "btn": {
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "press": {
+            "direction": "O"
+          }
+        }
+      },
+      "debouncer_2": {
+        "vlnv": "xilinx.com:module_ref:debouncer:1.0",
+        "xci_name": "design_2_debouncer_0_2",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "debouncer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "btn": {
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "press": {
+            "direction": "O"
+          }
+        }
+      },
+      "xlconcat_0": {
+        "vlnv": "xilinx.com:ip:xlconcat:2.1",
+        "xci_name": "design_2_xlconcat_0_0",
+        "parameters": {
+          "NUM_PORTS": {
+            "value": "3"
+          }
+        }
+      },
+      "ila_0": {
+        "vlnv": "xilinx.com:ip:ila:6.2",
+        "xci_name": "design_2_ila_0_0",
+        "parameters": {
+          "C_ENABLE_ILA_AXI_MON": {
+            "value": "false"
+          },
+          "C_MONITOR_TYPE": {
+            "value": "Native"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "4"
+          },
+          "C_PROBE3_WIDTH": {
+            "value": "3"
+          }
+        }
+      }
+    },
+    "nets": {
+      "BTN0_1": {
+        "ports": [
+          "BTN0",
+          "debouncer_0/btn"
+        ]
+      },
+      "BTN1_1": {
+        "ports": [
+          "BTN1",
+          "debouncer_1/btn"
+        ]
+      },
+      "BTN_JY_1": {
+        "ports": [
+          "BTN_JY",
+          "debouncer_2/btn"
+        ]
+      },
+      "clk_1": {
+        "ports": [
+          "clk",
+          "debouncer_0/clk",
+          "debouncer_1/clk",
+          "debouncer_2/clk",
+          "ila_0/clk"
+        ]
+      },
+      "debouncer_0_press": {
+        "ports": [
+          "debouncer_0/press",
+          "xlconcat_0/In0",
+          "ila_0/probe0"
+        ]
+      },
+      "debouncer_1_press": {
+        "ports": [
+          "debouncer_1/press",
+          "xlconcat_0/In1",
+          "ila_0/probe1"
+        ]
+      },
+      "debouncer_2_press": {
+        "ports": [
+          "debouncer_2/press",
+          "xlconcat_0/In2",
+          "ila_0/probe2"
+        ]
+      },
+      "xlconcat_0_dout": {
+        "ports": [
+          "xlconcat_0/dout",
+          "ila_0/probe3"
+        ]
+      }
+    }
+  }
+}

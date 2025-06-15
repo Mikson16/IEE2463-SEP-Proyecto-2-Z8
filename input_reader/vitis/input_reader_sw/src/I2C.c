@@ -49,7 +49,7 @@ int read_tmp(){
 float read_opt(){
     // configuration
 	// 0000 / 0 01 1 / 1 0 1 1 / 1 0 11
-	u8 config[3] = {0x1, 0xc4, 0xbb};
+//	u8 config[3] = {0x01, 0xc4, 0xbb};
 	XIic_Send(iic.BaseAddress,OPT_ADDR,(u8 *)&config, 3, XIIC_STOP);
 
 	SendBuffer[0] = 0x00;
@@ -71,6 +71,11 @@ float read_opt(){
 	return Lux;
 }
 void config_opt(){
+	// configuration
+	// 0000 / 0 01 1 / 1 0 1 1 / 1 0 11
+	u8 config[3] = {0x01, 0xc4, 0xbb};
+	XIic_Send(iic.BaseAddress,OPT_ADDR,(u8 *)&config, 3, XIIC_STOP);
+
 	u8 lowlimit[3] = {0x02, 0x11, 0xF4};//10 lux
 	XIic_Send(iic.BaseAddress,OPT_ADDR,(u8 *)&lowlimit, 3, XIIC_STOP);
 

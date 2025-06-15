@@ -48,6 +48,21 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==DEMO_axi_timer_
 # IP: bd/DEMO/ip/DEMO_ila_0_0/DEMO_ila_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==DEMO_ila_0_0 || ORIG_REF_NAME==DEMO_ila_0_0} -quiet] -quiet
 
+# IP: bd/DEMO/ip/DEMO_debouncer_0_0/DEMO_debouncer_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==DEMO_debouncer_0_0 || ORIG_REF_NAME==DEMO_debouncer_0_0} -quiet] -quiet
+
+# IP: bd/DEMO/ip/DEMO_debouncer_0_1/DEMO_debouncer_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==DEMO_debouncer_0_1 || ORIG_REF_NAME==DEMO_debouncer_0_1} -quiet] -quiet
+
+# IP: bd/DEMO/ip/DEMO_debouncer_0_2/DEMO_debouncer_0_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==DEMO_debouncer_0_2 || ORIG_REF_NAME==DEMO_debouncer_0_2} -quiet] -quiet
+
+# IP: bd/DEMO/ip/DEMO_xlconcat_1_0/DEMO_xlconcat_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==DEMO_xlconcat_1_0 || ORIG_REF_NAME==DEMO_xlconcat_1_0} -quiet] -quiet
+
+# IP: bd/DEMO/ip/DEMO_axi_gpio_2_0/DEMO_axi_gpio_2_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==DEMO_axi_gpio_2_0 || ORIG_REF_NAME==DEMO_axi_gpio_2_0} -quiet] -quiet
+
 # IP: bd/DEMO/ip/DEMO_auto_pc_0/DEMO_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==DEMO_auto_pc_0 || ORIG_REF_NAME==DEMO_auto_pc_0} -quiet] -quiet
 

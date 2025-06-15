@@ -70,6 +70,9 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "DEMO_ila_0_0_synth_1" START { ROLLUP_AUTO }
+set_param tcl.collectionResultDisplayLimit 0
+set_param chipscope.maxJobs 3
+set_param xicom.use_bs_reader 1
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
@@ -93,7 +96,7 @@ set_property ip_output_repo d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/input_read
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/input_reader/vivado/vivado.srcs/sources_1/bd/DEMO/ip/DEMO_ila_0_0/DEMO_ila_0_0.xci
+read_ip -quiet D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/input_reader/vivado/vivado.srcs/sources_1/bd/DEMO/ip/DEMO_ila_0_0/DEMO_ila_0_0.xci
 set_property used_in_synthesis false [get_files -all d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/input_reader/vivado/vivado.srcs/sources_1/bd/DEMO/ip/DEMO_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
 set_property used_in_implementation false [get_files -all d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/input_reader/vivado/vivado.srcs/sources_1/bd/DEMO/ip/DEMO_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
 set_property used_in_implementation false [get_files -all d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/input_reader/vivado/vivado.srcs/sources_1/bd/DEMO/ip/DEMO_ila_0_0/ila_v6_2/constraints/ila.xdc]

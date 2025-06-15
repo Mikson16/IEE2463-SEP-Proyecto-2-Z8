@@ -70,6 +70,9 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param tcl.collectionResultDisplayLimit 0
+set_param chipscope.maxJobs 3
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z010clg400-1
 
@@ -122,6 +125,9 @@ set_property used_in_synthesis false [get_files -all d:/proyectosep2/IEE2463-SEP
 set_property used_in_implementation false [get_files -all d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/input_reader/vivado/vivado.srcs/sources_1/bd/DEMO/ip/DEMO_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
 set_property used_in_implementation false [get_files -all d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/input_reader/vivado/vivado.srcs/sources_1/bd/DEMO/ip/DEMO_ila_0_0/ila_v6_2/constraints/ila.xdc]
 set_property used_in_implementation false [get_files -all d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/input_reader/vivado/vivado.srcs/sources_1/bd/DEMO/ip/DEMO_ila_0_0/DEMO_ila_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/input_reader/vivado/vivado.srcs/sources_1/bd/DEMO/ip/DEMO_axi_gpio_2_0/DEMO_axi_gpio_2_0_board.xdc]
+set_property used_in_implementation false [get_files -all d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/input_reader/vivado/vivado.srcs/sources_1/bd/DEMO/ip/DEMO_axi_gpio_2_0/DEMO_axi_gpio_2_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/input_reader/vivado/vivado.srcs/sources_1/bd/DEMO/ip/DEMO_axi_gpio_2_0/DEMO_axi_gpio_2_0.xdc]
 set_property used_in_implementation false [get_files -all d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/input_reader/vivado/vivado.srcs/sources_1/bd/DEMO/ip/DEMO_auto_pc_0/DEMO_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/input_reader/vivado/vivado.srcs/sources_1/bd/DEMO/DEMO_ooc.xdc]
 

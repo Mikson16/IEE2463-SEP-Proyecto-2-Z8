@@ -1,10 +1,10 @@
-22:08:51 **** Incremental Build of configuration Debug for project input_reader_sw_system ****
+00:47:12 **** Incremental Build of configuration Debug for project input_reader_sw_system ****
 make all 
 Generating bif file for the system project
-generate_system_bif.bat 52074 D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/input_reader/vitis/input_reader_plt/export/input_reader_plt/input_reader_plt.xpfm standalone_domain D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/input_reader/vitis/input_reader_sw_system/Debug/system.bif
+generate_system_bif.bat 50254 D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/input_reader/vitis/input_reader_plt/export/input_reader_plt/input_reader_plt.xpfm standalone_domain D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/input_reader/vitis/input_reader_sw_system/Debug/system.bif
 sdcard_gen --xpfm D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/input_reader/vitis/input_reader_plt/export/input_reader_plt/input_reader_plt.xpfm --sys_config input_reader_plt --bif D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/input_reader/vitis/input_reader_sw_system/Debug/system.bif --bitstream D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/input_reader/vitis/input_reader_sw/_ide/bitstream/DEMO_wrapper.bit --elf D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/input_reader/vitis/input_reader_sw/Debug/input_reader_sw.elf,ps7_cortexa9_0
 creating BOOT.BIN using D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/input_reader/vitis/input_reader_sw/_ide/bitstream/DEMO_wrapper.bit
 Running D:/Xilinx/Vitis/2020.1/bin/bootgen  -image D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/input_reader/vitis/input_reader_sw_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
 
-22:08:55 Build Finished (took 4s.212ms)
+00:47:16 Build Finished (took 4s.227ms)
 

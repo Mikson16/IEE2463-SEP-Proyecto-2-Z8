@@ -1,0 +1,88 @@
+#include "I2C.h"
+#include <math.h>
+XIic  iic;
+u8 SendBuffer[2];
+u8 RecvBuffer[2];
+u8 config[3];
+float Lux;
+int16_t val;
+int temp;
+int exponent;
+
+int init_IIC() {
+
+		XIic_Config *iic_conf;
+
+	    init_platform();
+
+	    iic_conf = XIic_LookupConfig(IIC_dev);
+	    XIic_CfgInitialize(&iic, iic_conf, iic_conf->BaseAddress);
+	    XIic_Start(&iic);
+
+
+		SendBuffer[0] = 0xfe;
+		XIic_Send(iic.BaseAddress,TMP_ADDR,(u8 *)&SendBuffer, 1,XIIC_REPEATED_START);
+		XIic_Recv(iic.BaseAddress,TMP_ADDR,(u8 *)&RecvBuffer, 2,XIIC_STOP);
+
+
+		SendBuffer[0] = 0x02;
+		XIic_Send(iic.BaseAddress,TMP_ADDR,(u8 *)&SendBuffer, 1,XIIC_STOP);
+
+		SendBuffer[0] = 0x80;
+		XIic_Send(iic.BaseAddress,TMP_ADDR,(u8 *)&SendBuffer, 1,XIIC_REPEATED_START);
+		SendBuffer[0] = 0x82;
+		XIic_Send(iic.BaseAddress,TMP_ADDR,(u8 *)&SendBuffer, 1,XIIC_REPEATED_START);
+
+
+
+    return XST_SUCCESS;
+}
+
+int read_tmp(){
+	SendBuffer[0] = 0x01; // envia para leer temp
+	XIic_Send(iic.BaseAddress, TMP_ADDR, (u8 *)&SendBuffer, 1, XIIC_REPEATED_START);
+	XIic_Recv(iic.BaseAddress, TMP_ADDR, (u8 *)&RecvBuffer, 2, XIIC_STOP);
+	val = (RecvBuffer[0] << 8) | (RecvBuffer[1]);
+	temp = val / 128;
+	return temp;
+}
+float read_opt(){
+    // configuration
+	// 0000 / 0 01 1 / 1 0 1 1 / 1 0 11
+	u8 config[3] = {0x01, 0xc4, 0xbb};
+	XIic_Send(iic.BaseAddress,OPT_ADDR,(u8 *)&config, 3, XIIC_STOP);
+
+	SendBuffer[0] = 0x00;
+	XIic_Send(iic.BaseAddress,OPT_ADDR,(u8 *)&SendBuffer, 1, XIIC_REPEATED_START);
+	XIic_Recv(iic.BaseAddress,OPT_ADDR,(u8 *)&RecvBuffer, 2, XIIC_STOP);
+
+	exponent = 1 << ((RecvBuffer[0] & 0b11110000)/16);
+
+	u8 byte1 = RecvBuffer[0] & 0b00001111;
+
+	Lux = (float)(byte1*256 + RecvBuffer[1])*0.01*exponent;
+
+//	Lux = 1.1;
+
+	SendBuffer[0] = 0x01;
+	XIic_Send(iic.BaseAddress,OPT_ADDR,(u8 *)&SendBuffer, 1, XIIC_REPEATED_START);
+	XIic_Recv(iic.BaseAddress,OPT_ADDR,(u8 *)&RecvBuffer, 2, XIIC_STOP);
+
+	return Lux;
+}
+void config_opt(){
+	// configuration
+	// 0000 / 0 01 1 / 1 0 1 1 / 1 0 11
+	u8 config[3] = {0x01, 0xc4, 0xbb};
+	XIic_Send(iic.BaseAddress,OPT_ADDR,(u8 *)&config, 3, XIIC_STOP);
+
+	u8 lowlimit[3] = {0x02, 0x11, 0xF4};//10 lux
+	XIic_Send(iic.BaseAddress,OPT_ADDR,(u8 *)&lowlimit, 3, XIIC_STOP);
+
+	u8 highlimit[3] = {0x03, 0x29, 0xC4}; //100 lux
+//	u8 highlimit[3] = {0x03, 0x73, 0xD0}; //10240 lux
+	XIic_Send(iic.BaseAddress,OPT_ADDR,(u8 *)&highlimit, 3, XIIC_STOP);
+
+//	u8 config[3] = {0x3, 0xc4, 0xbb};
+//	XIic_Send(iic.BaseAddress,OPT_ADDR,(u8 *)&config, 3, XIIC_STOP);
+}

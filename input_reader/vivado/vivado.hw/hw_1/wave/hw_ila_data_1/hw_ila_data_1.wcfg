@@ -15,23 +15,36 @@
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="264"></NameColumnWidth>
-      <ValueColumnWidth column_width="62"></ValueColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="2" />
+   <WVObjectSize size="4" />
    <wave_markers>
    </wave_markers>
-   <wvobject fp_name="DEMO_i/lirc_1" type="logic">
+   <wvobject fp_name="DEMO_i/axi_gpio_2_ip2intc_irpt" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">DEMO_i/lirc_1</obj_property>
-      <obj_property name="ObjectShortName">lirc_1</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">DEMO_i/axi_gpio_2_ip2intc_irpt</obj_property>
+      <obj_property name="ObjectShortName">axi_gpio_2_ip2intc_irpt</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="DEMO_i/axi_gpio_1_ip2intc_irpt" type="logic">
+   <wvobject fp_name="DEMO_i/BTN0_0_1" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">DEMO_i/axi_gpio_1_ip2intc_irpt</obj_property>
-      <obj_property name="ObjectShortName">axi_gpio_1_ip2intc_irpt</obj_property>
+      <obj_property name="ElementShortName">DEMO_i/BTN0_0_1</obj_property>
+      <obj_property name="ObjectShortName">BTN0_0_1</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="DEMO_i/debouncer_0_press" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">DEMO_i/debouncer_0_press</obj_property>
+      <obj_property name="ObjectShortName">debouncer_0_press</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="DEMO_i/xlconcat_1_dout" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">DEMO_i/xlconcat_1_dout[2:0]</obj_property>
+      <obj_property name="ObjectShortName">xlconcat_1_dout[2:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>

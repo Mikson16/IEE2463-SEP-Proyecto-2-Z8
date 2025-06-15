@@ -221,7 +221,7 @@
 /******************************************************************/
 
 /* Definitions for driver GPIO */
-#define XPAR_XGPIO_NUM_INSTANCES 2
+#define XPAR_XGPIO_NUM_INSTANCES 3
 
 /* Definitions for peripheral AXI_GPIO_0 */
 #define XPAR_AXI_GPIO_0_BASEADDR 0x41200000
@@ -239,6 +239,14 @@
 #define XPAR_AXI_GPIO_1_IS_DUAL 0
 
 
+/* Definitions for peripheral AXI_GPIO_2 */
+#define XPAR_AXI_GPIO_2_BASEADDR 0x41220000
+#define XPAR_AXI_GPIO_2_HIGHADDR 0x4122FFFF
+#define XPAR_AXI_GPIO_2_DEVICE_ID 2
+#define XPAR_AXI_GPIO_2_INTERRUPT_PRESENT 1
+#define XPAR_AXI_GPIO_2_IS_DUAL 0
+
+
 /******************************************************************/
 
 /* Canonical definitions for peripheral AXI_GPIO_0 */
@@ -254,6 +262,13 @@
 #define XPAR_GPIO_1_DEVICE_ID XPAR_AXI_GPIO_1_DEVICE_ID
 #define XPAR_GPIO_1_INTERRUPT_PRESENT 1
 #define XPAR_GPIO_1_IS_DUAL 0
+
+/* Canonical definitions for peripheral AXI_GPIO_2 */
+#define XPAR_GPIO_2_BASEADDR 0x41220000
+#define XPAR_GPIO_2_HIGHADDR 0x4122FFFF
+#define XPAR_GPIO_2_DEVICE_ID XPAR_AXI_GPIO_2_DEVICE_ID
+#define XPAR_GPIO_2_INTERRUPT_PRESENT 1
+#define XPAR_GPIO_2_IS_DUAL 0
 
 
 /******************************************************************/
@@ -329,6 +344,7 @@
 #define XPAR_FABRIC_AXI_TIMER_0_INTERRUPT_INTR 61U
 #define XPAR_FABRIC_AXI_TIMER_1_INTERRUPT_INTR 62U
 #define XPAR_FABRIC_AXI_GPIO_1_IP2INTC_IRPT_INTR 63U
+#define XPAR_FABRIC_AXI_GPIO_2_IP2INTC_IRPT_INTR 64U
 
 /******************************************************************/
 
@@ -336,6 +352,7 @@
 #define XPAR_FABRIC_TMRCTR_0_VEC_ID XPAR_FABRIC_AXI_TIMER_0_INTERRUPT_INTR
 #define XPAR_FABRIC_TMRCTR_1_VEC_ID XPAR_FABRIC_AXI_TIMER_1_INTERRUPT_INTR
 #define XPAR_FABRIC_GPIO_1_VEC_ID XPAR_FABRIC_AXI_GPIO_1_IP2INTC_IRPT_INTR
+#define XPAR_FABRIC_GPIO_2_VEC_ID XPAR_FABRIC_AXI_GPIO_2_IP2INTC_IRPT_INTR
 
 /******************************************************************/
 
@@ -596,4 +613,11 @@
 
 /******************************************************************/
 
+/* Xilinx FAT File System Library (XilFFs) User Settings */
+#define FILE_SYSTEM_INTERFACE_SD
+#define FILE_SYSTEM_USE_MKFS
+#define FILE_SYSTEM_NUM_LOGIC_VOL 2
+#define FILE_SYSTEM_USE_STRFUNC 0
+#define FILE_SYSTEM_SET_FS_RPATH 0
+#define FILE_SYSTEM_WORD_ACCESS
 #endif  /* end of protection macro */
