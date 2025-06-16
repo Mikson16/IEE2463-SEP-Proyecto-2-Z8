@@ -1,84 +1,35 @@
-00:47:11 **** Incremental Build of configuration Debug for project input_reader_sw ****
+08:56:27 **** Incremental Build of configuration Debug for project input_reader_sw ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-'Building file: ../src/main.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -ID:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/input_reader/vitis/input_reader_plt/export/input_reader_plt/sw/input_reader_plt/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main':
-../src/main.c:189:2: warning: implicit declaration of function 'SdReaderSetup' [-Wimplicit-function-declaration]
-  189 |  SdReaderSetup();
-      |  ^~~~~~~~~~~~~
-../src/main.c:196:2: warning: implicit declaration of function 'InterruptSetUp' [-Wimplicit-function-declaration]
-  196 |  InterruptSetUp(&TimerInst0, &gpio1, &gpio2, TMRCTR_DEVICE_ID);
-      |  ^~~~~~~~~~~~~~
-../src/main.c: At top level:
-../src/main.c:206:6: warning: conflicting types for 'InterruptSetUp'
-  206 | void InterruptSetUp(XTmrCtr *TmrCtrInstancePtr, XGpio *LightGpioInstancePtr, XGpio *BtnGpioInstancePtr,
-      |      ^~~~~~~~~~~~~~
-../src/main.c:196:2: note: previous implicit declaration of 'InterruptSetUp' was here
-  196 |  InterruptSetUp(&TimerInst0, &gpio1, &gpio2, TMRCTR_DEVICE_ID);
-      |  ^~~~~~~~~~~~~~
-../src/main.c: In function 'InterruptSetUp':
-../src/main.c:219:14: warning: 'return' with a value, in function returning void [-Wreturn-type]
-  219 |       return -1;
-      |              ^
-../src/main.c:206:6: note: declared here
-  206 | void InterruptSetUp(XTmrCtr *TmrCtrInstancePtr, XGpio *LightGpioInstancePtr, XGpio *BtnGpioInstancePtr,
-      |      ^~~~~~~~~~~~~~
-../src/main.c:253:15: warning: 'return' with a value, in function returning void [-Wreturn-type]
-  253 |        return -1;
-      |               ^
-../src/main.c:206:6: note: declared here
-  206 | void InterruptSetUp(XTmrCtr *TmrCtrInstancePtr, XGpio *LightGpioInstancePtr, XGpio *BtnGpioInstancePtr,
-      |      ^~~~~~~~~~~~~~
-../src/main.c:260:12: warning: 'return' with a value, in function returning void [-Wreturn-type]
-  260 |     return -1;
-      |            ^
-../src/main.c:206:6: note: declared here
-  206 | void InterruptSetUp(XTmrCtr *TmrCtrInstancePtr, XGpio *LightGpioInstancePtr, XGpio *BtnGpioInstancePtr,
-      |      ^~~~~~~~~~~~~~
-../src/main.c:267:12: warning: 'return' with a value, in function returning void [-Wreturn-type]
-  267 |     return -1;
-      |            ^
-../src/main.c:206:6: note: declared here
-  206 | void InterruptSetUp(XTmrCtr *TmrCtrInstancePtr, XGpio *LightGpioInstancePtr, XGpio *BtnGpioInstancePtr,
-      |      ^~~~~~~~~~~~~~
-../src/main.c: At top level:
-../src/main.c:460:6: warning: conflicting types for 'SdReaderSetup'
-  460 | void SdReaderSetup()
-      |      ^~~~~~~~~~~~~
-../src/main.c:189:2: note: previous implicit declaration of 'SdReaderSetup' was here
-  189 |  SdReaderSetup();
-      |  ^~~~~~~~~~~~~
-In file included from D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/input_reader/vitis/input_reader_plt/export/input_reader_plt/sw/input_reader_plt/standalone_domain/bspinclude/include/xil_io.h:42,
-                 from D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/input_reader/vitis/input_reader_plt/export/input_reader_plt/sw/input_reader_plt/standalone_domain/bspinclude/include/sleep.h:30,
-                 from ../src/main.c:2:
-../src/main.c: In function 'SdReaderSetup':
-D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/input_reader/vitis/input_reader_plt/export/input_reader_plt/sw/input_reader_plt/standalone_domain/bspinclude/include/xstatus.h:39:41: warning: 'return' with a value, in function returning void [-Wreturn-type]
-   39 | #define XST_FAILURE                     1L
-      |                                         ^~
-../src/main.c:467:17: note: in expansion of macro 'XST_FAILURE'
-  467 |          return XST_FAILURE;
-      |                 ^~~~~~~~~~~
-../src/main.c:460:6: note: declared here
-  460 | void SdReaderSetup()
-      |      ^~~~~~~~~~~~~
-'Finished building: ../src/main.c'
-' '
 'Building target: input_reader_sw.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LD:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/input_reader/vitis/input_reader_plt/export/input_reader_plt/sw/input_reader_plt/standalone_domain/bsplib/lib -o "input_reader_sw.elf"  ./src/ADC.o ./src/Bitmap.o ./src/Delay.o ./src/I2C.o ./src/LCD_Driver.o ./src/LCD_GUI.o ./src/LCD_SPI.o ./src/font12.o ./src/font16.o ./src/font20.o ./src/font24.o ./src/font8.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/input_reader/vitis/input_reader_plt/export/input_reader_plt/sw/input_reader_plt/standalone_domain/bsplib/lib -o "input_reader_sw.elf"  ./src/ADC.o ./src/Bitmap.o ./src/Delay.o ./src/I2C.o ./src/LCD_Driver.o ./src/LCD_GUI.o ./src/LCD_SPI.o ./src/font12.o ./src/font16.o ./src/font20.o ./src/font24.o ./src/font8.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/vitis/2020.1/gnu/aarch32/nt/gcc-arm-none-eabi/x86_64-oesdk-mingw32/usr/bin/arm-xilinx-eabi/../../libexec/arm-xilinx-eabi/gcc/arm-xilinx-eabi/9.2.0/real-ld.exe: ./src/Bitmap.o: in function `Open_Sprite':
+C:\Users\andre\Projects\IEE2463-SEP-Proyecto-2-Z8\input_reader\vitis\input_reader_sw\Debug/../src/Bitmap.c:138: undefined reference to `f_open'
+c:/xilinx/vitis/2020.1/gnu/aarch32/nt/gcc-arm-none-eabi/x86_64-oesdk-mingw32/usr/bin/arm-xilinx-eabi/../../libexec/arm-xilinx-eabi/gcc/arm-xilinx-eabi/9.2.0/real-ld.exe: C:\Users\andre\Projects\IEE2463-SEP-Proyecto-2-Z8\input_reader\vitis\input_reader_sw\Debug/../src/Bitmap.c:148: undefined reference to `f_lseek'
+c:/xilinx/vitis/2020.1/gnu/aarch32/nt/gcc-arm-none-eabi/x86_64-oesdk-mingw32/usr/bin/arm-xilinx-eabi/../../libexec/arm-xilinx-eabi/gcc/arm-xilinx-eabi/9.2.0/real-ld.exe: C:\Users\andre\Projects\IEE2463-SEP-Proyecto-2-Z8\input_reader\vitis\input_reader_sw\Debug/../src/Bitmap.c:156: undefined reference to `f_read'
+c:/xilinx/vitis/2020.1/gnu/aarch32/nt/gcc-arm-none-eabi/x86_64-oesdk-mingw32/usr/bin/arm-xilinx-eabi/../../libexec/arm-xilinx-eabi/gcc/arm-xilinx-eabi/9.2.0/real-ld.exe: C:\Users\andre\Projects\IEE2463-SEP-Proyecto-2-Z8\input_reader\vitis\input_reader_sw\Debug/../src/Bitmap.c:170: undefined reference to `f_lseek'
+c:/xilinx/vitis/2020.1/gnu/aarch32/nt/gcc-arm-none-eabi/x86_64-oesdk-mingw32/usr/bin/arm-xilinx-eabi/../../libexec/arm-xilinx-eabi/gcc/arm-xilinx-eabi/9.2.0/real-ld.exe: C:\Users\andre\Projects\IEE2463-SEP-Proyecto-2-Z8\input_reader\vitis\input_reader_sw\Debug/../src/Bitmap.c:178: undefined reference to `f_read'
+c:/xilinx/vitis/2020.1/gnu/aarch32/nt/gcc-arm-none-eabi/x86_64-oesdk-mingw32/usr/bin/arm-xilinx-eabi/../../libexec/arm-xilinx-eabi/gcc/arm-xilinx-eabi/9.2.0/real-ld.exe: C:\Users\andre\Projects\IEE2463-SEP-Proyecto-2-Z8\input_reader\vitis\input_reader_sw\Debug/../src/Bitmap.c:191: undefined reference to `f_lseek'
+c:/xilinx/vitis/2020.1/gnu/aarch32/nt/gcc-arm-none-eabi/x86_64-oesdk-mingw32/usr/bin/arm-xilinx-eabi/../../libexec/arm-xilinx-eabi/gcc/arm-xilinx-eabi/9.2.0/real-ld.exe: C:\Users\andre\Projects\IEE2463-SEP-Proyecto-2-Z8\input_reader\vitis\input_reader_sw\Debug/../src/Bitmap.c:199: undefined reference to `f_read'
+c:/xilinx/vitis/2020.1/gnu/aarch32/nt/gcc-arm-none-eabi/x86_64-oesdk-mingw32/usr/bin/arm-xilinx-eabi/../../libexec/arm-xilinx-eabi/gcc/arm-xilinx-eabi/9.2.0/real-ld.exe: C:\Users\andre\Projects\IEE2463-SEP-Proyecto-2-Z8\input_reader\vitis\input_reader_sw\Debug/../src/Bitmap.c:210: undefined reference to `f_read'
+c:/xilinx/vitis/2020.1/gnu/aarch32/nt/gcc-arm-none-eabi/x86_64-oesdk-mingw32/usr/bin/arm-xilinx-eabi/../../libexec/arm-xilinx-eabi/gcc/arm-xilinx-eabi/9.2.0/real-ld.exe: C:\Users\andre\Projects\IEE2463-SEP-Proyecto-2-Z8\input_reader\vitis\input_reader_sw\Debug/../src/Bitmap.c:228: undefined reference to `f_lseek'
+c:/xilinx/vitis/2020.1/gnu/aarch32/nt/gcc-arm-none-eabi/x86_64-oesdk-mingw32/usr/bin/arm-xilinx-eabi/../../libexec/arm-xilinx-eabi/gcc/arm-xilinx-eabi/9.2.0/real-ld.exe: C:\Users\andre\Projects\IEE2463-SEP-Proyecto-2-Z8\input_reader\vitis\input_reader_sw\Debug/../src/Bitmap.c:245: undefined reference to `f_read'
+c:/xilinx/vitis/2020.1/gnu/aarch32/nt/gcc-arm-none-eabi/x86_64-oesdk-mingw32/usr/bin/arm-xilinx-eabi/../../libexec/arm-xilinx-eabi/gcc/arm-xilinx-eabi/9.2.0/real-ld.exe: C:\Users\andre\Projects\IEE2463-SEP-Proyecto-2-Z8\input_reader\vitis\input_reader_sw\Debug/../src/Bitmap.c:260: undefined reference to `f_read'
+c:/xilinx/vitis/2020.1/gnu/aarch32/nt/gcc-arm-none-eabi/x86_64-oesdk-mingw32/usr/bin/arm-xilinx-eabi/../../libexec/arm-xilinx-eabi/gcc/arm-xilinx-eabi/9.2.0/real-ld.exe: C:\Users\andre\Projects\IEE2463-SEP-Proyecto-2-Z8\input_reader\vitis\input_reader_sw\Debug/../src/Bitmap.c:262: undefined reference to `f_close'
+c:/xilinx/vitis/2020.1/gnu/aarch32/nt/gcc-arm-none-eabi/x86_64-oesdk-mingw32/usr/bin/arm-xilinx-eabi/../../libexec/arm-xilinx-eabi/gcc/arm-xilinx-eabi/9.2.0/real-ld.exe: ./src/main.o: in function `SdReaderSetup':
+C:\Users\andre\Projects\IEE2463-SEP-Proyecto-2-Z8\input_reader\vitis\input_reader_sw\Debug/../src/main.c:463: undefined reference to `f_mount'
+collect2.exe: error: ld returned 1 exit status
 'Finished building target: input_reader_sw.elf'
 ' '
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size input_reader_sw.elf  |tee "input_reader_sw.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 324060	   3556	 223536	 551152	  868f0	input_reader_sw.elf
+arm-none-eabi-size: 'input_reader_sw.elf': No such file
 'Finished building: input_reader_sw.elf.size'
 ' '
 
-00:47:12 Build Finished (took 988ms)
+08:56:29 Build Finished (took 1s.820ms)
 
