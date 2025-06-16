@@ -3,42 +3,42 @@
 #include <time.h>
 
 // #!TODO Cambiar valores
-Zybomon generar_zybomon(void)
+Zybomon generar_zybomon(int active)
 {
     Zybomon zybomon;
 
-    // Inicializar la semilla del generador de números aleatorios
-    srand((unsigned int)time(NULL));
-
     // Generar valores aleatorios para cada atributo
-    zybomon.active = rand() % 2;   // 1 bit: active/inactive
-    zybomon.health = rand() % 256; // 8 bits: Health
-    zybomon.mon_type = rand() % 8; // 3 bits: mon_type (0-7)
-    zybomon.a1_type = rand() % 3;  // 3 bits: a1_type (0-7)
-    zybomon.a2_type = rand() % 3;  // 3 bits: a2_type (0-7)
-    zybomon.a3_type = rand() % 3;  // 3 bits: a3_type (0-7)
-    zybomon.a4_type = rand() % 3;  // 3 bits: a4_type (0-7)
+    zybomon.active = active;         // active/inactive, se define activo solo 1
+    zybomon.max_health = MAX_HEALTH; // Parametro predefinido
 
-    zybomon.max_health = rand() % 4; // 2 bits: max_health (0-3)
-    zybomon.attack = rand() % 4;     // 2 bits: attack (0-3)
-    zybomon.defence = rand() % 4;    // 2 bits: defence (0-3)
-    zybomon.speed = rand() % 4;      // 2 bits: speed (0-3)
+    zybomon.health = rand() % (MAX_HEALTH - MIN_HEALTH + 1) + MIN_HEALTH; // MIN_HEALTH-MAX_HEALTH
 
-    zybomon.a1_power = rand() % 4; // 2 bits: a1_power (0-3) 100 max
-    zybomon.a2_power = rand() % 4; // 2 bits: a2_power (0-3)
-    zybomon.a3_power = rand() % 4; // 2 bits: a3_power (0-3)
-    zybomon.a4_power = rand() % 4; // 2 bits: a4_power (0-3)
+    zybomon.mon_type = rand() % ZYBOMON_TYPES; // 0-(ZYBOMON_TYPES-1)
+    zybomon.a1_type = rand() % ATTACK_TYPES;   // 0-(ATTACK_TYPES-1)
+    zybomon.a2_type = rand() % ATTACK_TYPES;
+    zybomon.a3_type = rand() % ATTACK_TYPES;
+    zybomon.a4_type = rand() % ATTACK_TYPES;
 
-    zybomon.a1_uses = rand() % 16; // 4 bits: a1_uses (0-15)
-    zybomon.a2_uses = rand() % 16; // 4 bits: a2_uses (0-15)
-    zybomon.a3_uses = rand() % 16; // 4 bits: a3_uses
-    zybomon.a4_uses = rand() % 16; // 4 bits: a4_uses (0-15)
+    zybomon.attack = rand() % (MAX_ATTACK + 1);   // 0-MAX_ATTACK
+    zybomon.defense = rand() % (MAX_DEFENSE + 1); // 0-MAX_DEFENSE
+    zybomon.speed = rand() % (MAX_SPEED + 1);     // 0-MAX_SPEED
+
+    zybomon.a1_power = rand() % (MAX_A_POWER + 1); // 0-MAX_A_POWER
+    zybomon.a2_power = rand() % (MAX_A_POWER + 1);
+    zybomon.a3_power = rand() % (MAX_A_POWER + 1);
+    zybomon.a4_power = rand() % (MAX_A_POWER + 1);
+
+    zybomon.a1_uses = rand() % (MAX_A_USES + 1); // 0-MAX_A_USES
+    zybomon.a2_uses = rand() % (MAX_A_USES + 1);
+    zybomon.a3_uses = rand() % (MAX_A_USES + 1);
+    zybomon.a4_uses = rand() % (MAX_A_USES + 1);
 
     // Retornar el zybomon generado
     return zybomon;
 };
 
 /*Instanciacion para testear*/
+/*
 #include <stdio.h>
 int main()
 {
@@ -87,3 +87,4 @@ int main()
     printf("Liberacion memoria realizada.\n");
     return 0;
 }
+*/

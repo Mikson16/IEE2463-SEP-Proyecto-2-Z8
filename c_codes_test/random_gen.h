@@ -38,30 +38,38 @@
 
 /*Parametros*/
 #define NUM_ZYBOMONES 8
-
+#define MIN_HEALTH 100
+#define MAX_HEALTH 255
+#define ZYBOMON_TYPES 4 // 4 tipos 0-3
+#define ATTACK_TYPES 4  // 4 tipos de ataque 0-3
+#define MAX_ATTACK 80
+#define MAX_DEFENSE 80
+#define MAX_SPEED 80 // Eventualmente estos parametros podemos configurarlos por uart
+#define MAX_A_POWER 100
+#define MAX_A_USES 15
 /*Estructuras*/
 
 typedef struct
 {
-    uint8_t active;     // 1 bit: estado active/inactive
-    uint8_t health;     // 8 bits: Health
-    uint8_t mon_type;   // 3 bits: mon_type
-    uint8_t a1_type;    // 3 bits: a1_type
-    uint8_t a2_type;    // 3 bits: a2_type
-    uint8_t a3_type;    // 3 bits: a3_type
-    uint8_t a4_type;    // 3 bits: a4_type
-    uint8_t max_health; // 2 bits: max_health
-    uint8_t attack;     // 2 bits: attack
-    uint8_t defence;    // 2 bits: defence
-    uint8_t speed;      // 2 bits: speed
-    uint8_t a1_power;   // 2 bits: a1_power
-    uint8_t a2_power;   // 2 bits: a2_power
-    uint8_t a3_power;   // 2 bits: a3_power
-    uint8_t a4_power;   // 2 bits: a4_power
-    uint8_t a1_uses;    // 4 bits: a1_uses
-    uint8_t a2_uses;    // 4 bits: a2_uses
-    uint8_t a3_uses;    // 4 bits: a3_uses
-    uint8_t a4_uses;    // 4 bits: a4_uses
+    int active;     // estado active/inactive
+    int health;     //  Health
+    int mon_type;   //  mon_type
+    int a1_type;    //  a1_type
+    int a2_type;    //  a2_type
+    int a3_type;    //  a3_type
+    int a4_type;    //  a4_type
+    int max_health; //  max_health
+    int attack;     //  attack
+    int defense;    //  defence
+    int speed;      //  speed
+    int a1_power;   //  a1_power
+    int a2_power;   //  a2_power
+    int a3_power;   //  a3_power
+    int a4_power;   //  a4_power
+    int a1_uses;    //  a1_uses
+    int a2_uses;    //  a2_uses
+    int a3_uses;    //  a3_uses
+    int a4_uses;    //  a4_uses
     // uint64_t bits;      // 55 bits: concatenación de todos los atributos
 } Zybomon;
 
@@ -71,12 +79,7 @@ typedef struct
 } ZybomonArray;
 
 /*  Prototipo funciones */
-// Devuelve un número aleatorio entre min y max (incluidos)
-uint8_t generar_numero_aleatorio(int min, int max); // no usado
-// Cambia un numero int a bits
-uint64_t concatenar_atributos(int numero, Zybomon *zybomon); // no usado
-
 // Generar un zybomon aleatorio
-Zybomon generar_zybomon(void);
+Zybomon generar_zybomon(int active);
 
 #endif
