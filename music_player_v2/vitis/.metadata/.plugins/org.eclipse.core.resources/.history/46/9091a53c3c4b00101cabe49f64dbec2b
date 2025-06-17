@@ -1,0 +1,250 @@
+/***************** Libraries *****************************/
+#include "xparameters.h"
+#include "xtmrctr.h"
+#include "xil_exception.h"
+#include <stdio.h>
+//#include "xgpio.h"
+#include "xscugic.h"
+#include "ff.h"
+#include "xdevcfg.h"
+#include "xil_printf.h"
+#include <math.h>
+#include <stdlib.h>
+#include <unistd.h>
+/***************** Macros ********************************/
+#define TMRCTR_DEVICE_ID	XPAR_TMRCTR_0_DEVICE_ID
+#define TMRCTR_INTERRUPT_ID	XPAR_FABRIC_AXI_TIMER_0_INTERRUPT_INTR
+
+#define INTC_DEVICE_ID		XPAR_PS7_SCUGIC_0_DEVICE_ID
+
+#define TIMER_CNTR_0	    0
+#define RESET_VALUE	        (2^32) - 12500/4// 8 kHz
+
+/***************** Function declaration *******************/
+void TmrCtrIntrExample(XTmrCtr *InstancePtr,
+			           u16      DeviceId);
+
+void TmrCtrSetupIntrSystem(XTmrCtr *InstancePtr,
+				           u16      DeviceId);
+
+void TimerCounterHandler(void *CallBackRef, u8 TmrCtrNumber);
+
+void SdReaderSetup();
+
+u32 SdStartSong(TCHAR *filename);
+
+u32 PlaySong();
+
+/***************** IPs Instantiation **********************/
+XScuGic  IntcInstance;
+XTmrCtr  TimerCounterInst;
+//XGpio    GPIO;
+
+FATFS fs;
+unsigned leds = 0b0000;
+u32 SongSize;
+u32 CurrentByte;
+FIL Rfp;
+UINT br;
+/***************** Main ***********************************/
+int main(void){
+
+//	XGpio_Initialize(&GPIO, XPAR_GPIO_0_DEVICE_ID); // inicializacion del GPIO
+
+
+	SdReaderSetup(); //Inicializacion de memoria SD
+
+
+	SongSize = SdStartSong("BATTLE.wav"); //Apertura de archivo de audio
+	Xil_Out32(XPAR_AXI_BUZZER_0_S00_AXI_BASEADDR + 4, 1);
+
+/*********Para debuguear**********/
+//	while(1){
+//		u8 SongSample;
+//					SongSample = PlaySong(); //Se lee la siguiente muestra del archivo de auido
+//					XGpio_DiscreteWrite(&GPIO, 2, SongSample); //Se envía al bloque PWM
+//		usleep(125);
+//	}
+
+
+
+
+	TmrCtrIntrExample(&TimerCounterInst,
+					      TMRCTR_DEVICE_ID); //Inicializacion de Timer e interrupciones
+
+}
+
+/***************** Function Definition ********************/
+void TmrCtrIntrExample(XTmrCtr *TmrCtrInstancePtr,
+			           u16      DeviceId)
+{
+	XTmrCtr_Initialize(TmrCtrInstancePtr, DeviceId); // initialization of TIMER
+
+	TmrCtrSetupIntrSystem(TmrCtrInstancePtr,    // of the interrupt system
+					      DeviceId);
+
+
+}
+
+
+/***********************************************************/
+void TimerCounterHandler(void *CallBackRef, u8 TmrCtrNumber)
+{
+
+	if (XTmrCtr_IsExpired(&TimerCounterInst,0)){
+
+	    XTmrCtr_Stop(&TimerCounterInst, 0);
+
+		XGpio_DiscreteWrite(&GPIO, 1, leds); //Parpadeo de Leds
+		leds = ~leds;
+
+		u32 SongSample;
+		SongSample = PlaySong(); //Se lee la siguiente muestra del archivo de auido
+		Xil_Out32(XPAR_AXI_BUZZER_0_S00_AXI_BASEADDR, SongSample);
+		XGpio_DiscreteWrite(&GPIO, 2, SongSample); //Se envía al bloque PWM
+
+		XTmrCtr_Reset(&TimerCounterInst, 0);
+		XTmrCtr_Start(&TimerCounterInst, 0);
+	}
+
+}
+
+/***********************************************************/
+void TmrCtrSetupIntrSystem(XTmrCtr *TmrCtrInstancePtr,
+				           u16      DeviceId)
+{
+	XScuGic_Config *IntcConfig;
+
+	IntcConfig = XScuGic_LookupConfig(INTC_DEVICE_ID);
+
+	s32 status;
+
+	status =  XScuGic_CfgInitialize(&IntcInstance, IntcConfig,
+			IntcConfig -> CpuBaseAddress);
+
+    if(status != XST_SUCCESS){
+    	return -1;
+    }
+
+    Xil_ExceptionInit();// initialization of Xilinx exceptions subsystem
+        // necessary before registering our Interrupt Handler
+
+    Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
+    						            (Xil_ExceptionHandler)XScuGic_InterruptHandler,
+    						             &IntcInstance);
+    Xil_ExceptionEnable();
+
+
+    XTmrCtr_SetHandler(&TimerCounterInst, (XTmrCtr_Handler)TimerCounterHandler, &TimerCounterInst);
+  	XTmrCtr_SetResetValue(&TimerCounterInst, TIMER_CNTR_0, RESET_VALUE);
+  	XTmrCtr_SetOptions(&TimerCounterInst, TIMER_CNTR_0, XTC_INT_MODE_OPTION | XTC_AUTO_RELOAD_OPTION);
+   	XTmrCtr_Start(&TimerCounterInst, TIMER_CNTR_0);
+
+    XScuGic_SetPriorityTriggerType(&IntcInstance, TMRCTR_INTERRUPT_ID,
+        		 0x18, 0x01);
+
+    status = XScuGic_Connect(&IntcInstance, TMRCTR_INTERRUPT_ID,
+        		(Xil_ExceptionHandler)TimerCounterHandler, (void *) TmrCtrInstancePtr);
+
+
+	if(status != XST_SUCCESS){
+	    	return -1;
+	    }
+
+	XScuGic_Enable(&IntcInstance, TMRCTR_INTERRUPT_ID);
+
+
+
+} // enables exception management
+
+/***********************************************************/
+TCHAR *path = "0:/";
+void SdReaderSetup()
+{
+	FRESULT rc;
+	rc = f_mount (&fs, path, 0);
+	if(rc != FR_OK)
+	    {
+	        xil_printf("ERROR : f_mount returned %d\r\n",rc);
+	        return XST_FAILURE;
+	    }
+}
+
+/***********************************************************/
+unsigned main_song_sample = 0;
+
+u32 SdStartSong(TCHAR *filename)
+{   FRESULT rc;
+
+    u8 DataSizeBuff[4];
+    u32 DataSize;
+
+
+	rc = f_open (&Rfp, filename, FA_READ);
+
+	if(rc != FR_OK)
+		    {
+		        xil_printf("ERROR : f_mount returned %d\r\n",rc);
+		        return XST_FAILURE;
+		    }
+
+	rc = f_lseek (&Rfp, 40);
+
+	if(rc != FR_OK)
+			    {
+			        xil_printf("ERROR : f_lseek returned %d\r\n",rc);
+			        return XST_FAILURE;
+			    }
+
+	rc = f_read (&Rfp, &DataSizeBuff, (UINT)4, &br);
+
+	if(rc != FR_OK)
+				    {
+				        xil_printf("ERROR : f_read returned %d\r\n",rc);
+				        return XST_FAILURE;
+				    }
+
+	// El conjunto de bytes esta en little endian, por lo que se concatenan al reves
+	DataSize = (DataSizeBuff[0]) | (DataSizeBuff[1] << 8) | (DataSizeBuff[2] << 16) | (DataSizeBuff[3] << 24);
+
+	// Las muestras de la cancion en archivos .wav empiezan a partir del byte 44
+    CurrentByte = 44;
+
+	return DataSize;
+}
+
+u32 PlaySong()
+{
+	FRESULT rc;
+	u8 ReadBuffer[4];
+	int32_t sample;
+
+	if(CurrentByte + 4 >= SongSize + 44){
+		CurrentByte = 44;
+	}
+
+	rc = f_lseek (&Rfp, CurrentByte);
+
+	if(rc != FR_OK)
+					    {
+					        xil_printf("ERROR : f_lseek returned %d\r\n",rc);
+					        return XST_FAILURE;
+					    }
+
+
+	rc = f_read (&Rfp, &ReadBuffer, (UINT)4, &br);
+
+	if(rc != FR_OK)
+					    {
+					        xil_printf("ERROR : f_read returned %d\r\n",rc);
+					        return XST_FAILURE;
+					    }
+
+	CurrentByte += 4;
+
+	sample  = (ReadBuffer[0] << 24) | (ReadBuffer[1] << 16) | (ReadBuffer[2] << 8) | ReadBuffer[3];
+
+//    xil_printf("sample %d\r\n");
+	return sample;
+
+}
