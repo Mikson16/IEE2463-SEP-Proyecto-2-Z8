@@ -2,13 +2,13 @@
 // #include "xil_io.h"
 // #include "xil_printf.h"
 // #include "xparameters.h"
-#include <unistd.h> // Libreria necesaria para sleep
+// #include <unistd.h> // Libreria necesaria para sleep
 
 // Añadir para utilizar GPIO
 // #include "xgpio.h"
 
 // Menus
-#include "menus.h"
+#include "estados.h" // Importa el header de estados
 
 // Librerias anadidas de momento, pueden variar en el futuro
 
@@ -18,15 +18,31 @@ int main()
 {
     // Iniciando
     // xil_printf("Iniciando sistema de menu...\n");
-    printf("Iniciando sistema de menu...\n");
-    menu_init(); // Inicializa la máquina de estados
-    // xil_printf("Sistema de menu iniciado\n");
-    printf("Sistema de menu iniciado\n");
-
-    while (!terminar_menus())
+    printf("Iniciando sistema de estados...\n");
+    State_setup *setup = init_setup(); // Inicializa el setup de estados
+    if (setup == NULL)
     {
-        menu_exe(); // Ejecuta el estado actual
-        sleep(1);   // Espera 1 segundo entre cada ejecución
+        // xil_printf("Error al inicializar el setup de estados\n");
+        printf("Error al inicializar el setup de estados\n");
+        return -1; // Termina el programa si falla la inicialización
+    }
+    // xil_printf("Setup de estados inicializado\n");
+    printf("Setup de estados inicializado\n");
+    State *head = state_init(setup); // Inicializa el estado principal
+    if (head == NULL)
+    {
+        // xil_printf("Error al inicializar el estado principal\n");
+        printf("Error al inicializar el estado principal\n");
+        kill_program(setup, NULL); // Libera la memoria si falla la inicialización
+        return -1;                 // Termina el programa si falla la inicialización
+    }
+    // xil_printf("Estado principal inicializado\n");
+    printf("Estado principal inicializado\n");
+    printf("Sistema de estados iniciado\n");
+
+    while (1) // Bucle infinito para mantener el sistema activo
+    {
+        state_flow(head); // Ejecuta el flujo de estados
     }
     // xil_printf("Sistema de menu terminado\n");
     return 0;

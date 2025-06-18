@@ -13,4 +13,7 @@ typedef struct
     ZybomonArray zybomon_array; // Estructura que contiene el array de zybomones
 } Trainer;
 
+/*Prototipo funciones*/
+Trainer *crear_trainer(int active);           // Crea un trainer con un array de zybomones
+void imprimir_info_trainer(Trainer *trainer); // Imprime la info del trainer
 #endif
