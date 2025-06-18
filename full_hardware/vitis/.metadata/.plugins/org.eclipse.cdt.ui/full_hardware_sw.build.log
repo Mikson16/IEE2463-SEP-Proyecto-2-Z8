@@ -1,0 +1,25 @@
+00:38:39 **** Incremental Build of configuration Debug for project full_hardware_sw ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -ID:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/sw/full_hardware_plt/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: full_hardware_sw.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LD:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/sw/full_hardware_plt/standalone_domain/bsplib/lib -o "full_hardware_sw.elf"  ./src/ADC.o ./src/Bitmap.o ./src/Delay.o ./src/I2C.o ./src/LCD_Driver.o ./src/LCD_GUI.o ./src/LCD_SPI.o ./src/audio.o ./src/font12.o ./src/font16.o ./src/font20.o ./src/font24.o ./src/font8.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: full_hardware_sw.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size full_hardware_sw.elf  |tee "full_hardware_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 326692	   3556	 223568	 553816	  87358	full_hardware_sw.elf
+'Finished building: full_hardware_sw.elf.size'
+' '
+
+00:38:40 Build Finished (took 1s.440ms)
+

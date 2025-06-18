@@ -1,10 +1,10 @@
-01:41:01 **** Incremental Build of configuration Debug for project music_player_v2_sw_system ****
+15:24:39 **** Incremental Build of configuration Debug for project music_player_v2_sw_system ****
 make all 
 Generating bif file for the system project
-generate_system_bif.bat 50893 D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player_v2/vitis/music_player_v2_plt/export/music_player_v2_plt/music_player_v2_plt.xpfm standalone_domain D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player_v2/vitis/music_player_v2_sw_system/Debug/system.bif
+generate_system_bif.bat 50212 D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player_v2/vitis/music_player_v2_plt/export/music_player_v2_plt/music_player_v2_plt.xpfm standalone_domain D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player_v2/vitis/music_player_v2_sw_system/Debug/system.bif
 sdcard_gen --xpfm D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player_v2/vitis/music_player_v2_plt/export/music_player_v2_plt/music_player_v2_plt.xpfm --sys_config music_player_v2_plt --bif D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player_v2/vitis/music_player_v2_sw_system/Debug/system.bif --bitstream D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player_v2/vitis/music_player_v2_sw/_ide/bitstream/design_1_wrapper.bit --elf D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player_v2/vitis/music_player_v2_sw/Debug/music_player_v2_sw.elf,ps7_cortexa9_0
 creating BOOT.BIN using D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player_v2/vitis/music_player_v2_sw/_ide/bitstream/design_1_wrapper.bit
 Running D:/Xilinx/Vitis/2020.1/bin/bootgen  -image D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/music_player_v2/vitis/music_player_v2_sw_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
 
-01:41:06 Build Finished (took 4s.209ms)
+15:24:43 Build Finished (took 4s.327ms)
 

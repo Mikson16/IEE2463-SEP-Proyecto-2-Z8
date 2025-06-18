@@ -1,0 +1,72 @@
+!SESSION 2025-06-17 23:58:27.777 -----------------------------------------------
+eclipse.buildId=2020.1
+java.version=9.0.4
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+This is a continuation of log file D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\full_hardware\vitis\.metadata\.bak_0.log
+Created Time: 2025-06-18 00:39:05.146
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-06-18 00:39:05.146
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-7: Launching SystemDebugger_full_hardware_sw_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-06-18 00:39:05.146
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-7: Launching SystemDebugger_full_hardware_sw_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-06-18 00:39:05.165
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-7: Launching SystemDebugger_full_hardware_sw_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-06-18 00:39:05.165
+!MESSAGE XSCT Command: [dow D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_sw/Debug/full_hardware_sw.elf], Thread: Worker-7: Launching SystemDebugger_full_hardware_sw_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-06-18 00:39:05.977
+!MESSAGE XSCT command with result: [dow D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_sw/Debug/full_hardware_sw.elf], Result: [null, ]. Thread: Worker-7: Launching SystemDebugger_full_hardware_sw_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-06-18 00:39:05.977
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#1"}], Thread: Worker-7: Launching SystemDebugger_full_hardware_sw_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-06-18 00:39:06.024
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#1"}], Result: [null, ]. Thread: Worker-7: Launching SystemDebugger_full_hardware_sw_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-06-18 00:39:06.026
+!MESSAGE XSCT Command: [dow D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/music_player_sw/Debug/music_player_sw.elf], Thread: Worker-7: Launching SystemDebugger_full_hardware_sw_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-06-18 00:39:06.430
+!MESSAGE XSCT command with result: [dow D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/music_player_sw/Debug/music_player_sw.elf], Result: [null, ]. Thread: Worker-7: Launching SystemDebugger_full_hardware_sw_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-06-18 00:39:06.430
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-7: Launching SystemDebugger_full_hardware_sw_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-06-18 00:39:06.435
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-7: Launching SystemDebugger_full_hardware_sw_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-06-18 00:39:06.494
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-7: Launching SystemDebugger_full_hardware_sw_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-06-18 00:39:06.511
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-7: Launching SystemDebugger_full_hardware_sw_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-06-18 00:39:06.513
+!MESSAGE XSCT Command: [con], Thread: Worker-7: Launching SystemDebugger_full_hardware_sw_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-06-18 00:39:06.559
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-7: Launching SystemDebugger_full_hardware_sw_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-06-18 00:39:06.559
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#1"}], Thread: Worker-7: Launching SystemDebugger_full_hardware_sw_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-06-18 00:39:06.559
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#1"}], Result: [null, ]. Thread: Worker-7: Launching SystemDebugger_full_hardware_sw_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-06-18 00:39:06.573
+!MESSAGE XSCT Command: [con], Thread: Worker-7: Launching SystemDebugger_full_hardware_sw_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-06-18 00:39:06.607
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-7: Launching SystemDebugger_full_hardware_sw_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-06-18 00:46:56.637
+!MESSAGE XSCT Command: [disconnect tcfchan#17], Thread: Thread-886
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-06-18 00:46:56.648
+!MESSAGE XSCT command with result: [disconnect tcfchan#17], Result: [null, ]. Thread: Thread-886

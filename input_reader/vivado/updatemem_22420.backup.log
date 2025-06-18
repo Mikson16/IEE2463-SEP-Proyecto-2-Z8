@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# updatemem v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# 
+# Start of session at: Tue Jun 17 21:24:04 2025
+# Process ID: 22420
+# Current directory: d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/input_reader/vivado
+# Command line: updatemem.exe -mode batch -source D:/Xilinx/Vitis/2020.1/scripts/updatemem/main.tcl -notrace -tclargs -meminfo D:/U/2025/Primer_semestre/SEP/AYU6/actividad/ayu6acti/_ide/bitstream/design_2_wrapper.mmi -data D:\U\2025\Primer_semestre\SEP\AYU6\actividad\ayu6acti\Debug\ayu6acti.elf -proc design_2_i/microblaze_0 -bit D:/U/2025/Primer_semestre/SEP/AYU6/actividad/ayu6acti/_ide/bitstream/design_2_wrapper.bit -out D:/U/2025/Primer_semestre/SEP/AYU6/actividad/ayu6acti/_ide/bitstream/download.bit -force
+# Log file: d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/input_reader/vivado/updatemem.log
+# Journal file: d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/input_reader/vivado\updatemem.jou
+#-----------------------------------------------------------
+source D:/Xilinx/Vitis/2020.1/scripts/updatemem/main.tcl -notrace
+Command: update_mem -meminfo D:/U/2025/Primer_semestre/SEP/AYU6/actividad/ayu6acti/_ide/bitstream/design_2_wrapper.mmi -data {D:\U\2025\Primer_semestre\SEP\AYU6\actividad\ayu6acti\Debug\ayu6acti.elf} -proc design_2_i/microblaze_0 -bit D:/U/2025/Primer_semestre/SEP/AYU6/actividad/ayu6acti/_ide/bitstream/design_2_wrapper.bit -out D:/U/2025/Primer_semestre/SEP/AYU6/actividad/ayu6acti/_ide/bitstream/download.bit -force
+Loading bitfile D:/U/2025/Primer_semestre/SEP/AYU6/actividad/ayu6acti/_ide/bitstream/design_2_wrapper.bit
+Loading data files...
+Updating memory content...
+Creating bitstream...
+Writing bitstream D:/U/2025/Primer_semestre/SEP/AYU6/actividad/ayu6acti/_ide/bitstream/download.bit...
+0 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+update_mem completed successfully
+update_mem: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 897.738 ; gain = 452.930
+INFO: [Common 17-206] Exiting updatemem at Tue Jun 17 21:24:13 2025...

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdx:platform sdx:vendor="xilinx.com"
+              sdx:library="sdx"
+              sdx:name="full_hardware_plt"
+              sdx:version="1.0"
+              sdx:schemaVersion="1.0"
+              xmlns:sdx="http://www.xilinx.com/sdx">
+    <sdx:description>
+full_hardware_plt
+    </sdx:description>
+    <sdx:systemConfigurations sdx:defaultConfiguration="full_hardware_plt">
+        <sdx:configuration sdx:name="full_hardware_plt"
+                           sdx:displayName="full_hardware_plt"
+                           sdx:defaultProcessorGroup="music_domain"
+                           sdx:runtimes="cpp">
+            <sdx:description>full_hardware_plt</sdx:description>
+            <sdx:bootImages sdx:default="standard">
+                <sdx:image sdx:name="standard"
+                            sdx:bif="full_hardware_plt/boot/full_hardware_plt.bif"
+                            sdx:readme="full_hardware_plt/boot/generic.readme"
+                            sdx:qemuArguments="full_hardware_plt/qemu/qemu_args.txt"
+                            />
+                <sdx:image sdx:name="standalone_domain"
+                            sdx:bif="full_hardware_plt/boot/full_hardware_plt.bif"
+                            sdx:readme="full_hardware_plt/boot/generic.readme"
+                            sdx:qemuArguments="full_hardware_plt/standalone_domain/qemu/qemu_args.txt"
+                            />
+                <sdx:image sdx:name="music_domain"
+                            sdx:bif="full_hardware_plt/boot/full_hardware_plt.bif"
+                            sdx:readme="full_hardware_plt/boot/generic.readme"
+                            sdx:qemuArguments="full_hardware_plt/music_domain/qemu/qemu_args.txt"
+                            />
+            </sdx:bootImages>
+            <sdx:processorGroup sdx:name="standalone_domain"
+                                sdx:displayName="standalone on ps7_cortexa9_0"
+                                sdx:cpuType="cortex-a9"
+                                sdx:cpuInstance="ps7_cortexa9_0">
+                <sdx:os sdx:name="standalone"
+                        sdx:displayName="standalone"
+                        sdx:bspLibraryPaths="full_hardware_plt/standalone_domain/bsplib/lib"
+                        sdx:bspIncludePaths="full_hardware_plt/standalone_domain/bspinclude/include"
+                        sdx:bspConfig="full_hardware_plt/standalone_domain/system.mss"
+                />
+            </sdx:processorGroup>
+            <sdx:processorGroup sdx:name="music_domain"
+                                sdx:displayName="music_domain"
+                                sdx:cpuType="cortex-a9"
+                                sdx:cpuInstance="ps7_cortexa9_1">
+                <sdx:os sdx:name="standalone"
+                        sdx:displayName="standalone"
+                        sdx:bspLibraryPaths="full_hardware_plt/music_domain/bsplib/lib"
+                        sdx:bspIncludePaths="full_hardware_plt/music_domain/bspinclude/include"
+                        sdx:bspConfig="full_hardware_plt/music_domain/system.mss"
+                />
+            </sdx:processorGroup>
+        </sdx:configuration>
+    </sdx:systemConfigurations>
+</sdx:platform>

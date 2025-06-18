@@ -1,0 +1,8 @@
+/*full_hardware_plt*/
+the_ROM_image:
+{
+  [bootloader]<full_hardware_plt/boot/fsbl.elf>
+   <bitstream> 
+  <elf,ps7_cortexa9_0>
+  <elf,ps7_cortexa9_1>
+}
