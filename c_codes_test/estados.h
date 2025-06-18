@@ -32,7 +32,13 @@ typedef struct
 State_setup *init_setup(void);
 State *state_init(State_setup *setup);
 State *create_state(int state_id, State_setup *setup); // Crea un nuevo estado con el entrenador activo
-void identificador_estado(State *state);
+// void identificador_estado(State *state);
 void state_flow(State *state); // Llevara todo el flujo de los estados
 void kill_program(State_setup *setup, State *head);
+/*Prototipo de funciones para cada estado*/
+void state_main(State *state);
+void state_selection(State *state);
+void state_info(State *state);
+void state_battle(State *state);
+void state_damage(State *state);
 #endif

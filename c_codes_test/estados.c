@@ -160,7 +160,74 @@ void kill_program(State_setup *setup, State *head)
     printf("Programa terminado y memoria liberada.\n");
 }
 
+void state_main(State *state)
+{
+    // Implementar la lógica del estado principal aquí
+    // Por ahora, solo imprimimos el id del estado
+    printf("Estado principal con id: %d\n", state->state_id);
+    // Aquí podrías agregar más lógica relacionada con el estado principal
+}
+void state_selection(State *state)
+{
+    // Implementar la lógica del estado de selección aquí
+    // Por ahora, solo imprimimos el id del estado
+    printf("Estado de selección con id: %d\n", state->state_id);
+    // Aquí podrías agregar más lógica relacionada con el estado de selección
+}
+void state_info(State *state)
+{
+    // Implementar la lógica del estado de información aquí
+    // Por ahora, solo imprimimos el id del estado
+    printf("Estado de información con id: %d\n", state->state_id);
+    // Aquí podrías agregar más lógica relacionada con el estado de información
+}
+void state_battle(State *state)
+{
+    // Implementar la lógica del estado de batalla aquí
+    // Por ahora, solo imprimimos el id del estado
+    printf("Estado de batalla con id: %d\n", state->state_id);
+    // Aquí podrías agregar más lógica relacionada con el estado de batalla
+    // Por ejemplo, podrías iniciar una batalla entre los entrenadores activos
+}
+void state_damage(State *state)
+{
+    // Implementar la lógica del estado de daño aquí
+    // Por ahora, solo imprimimos el id del estado
+    printf("Estado de daño con id: %d\n", state->state_id);
+    // Aquí podrías agregar más lógica relacionada con el estado de daño
+    // Por ejemplo, podrías aplicar daño a los zybomones de los entrenadores
+}
+
+/*Esta funcion maneja el flujo de estados*/
+void state_flow(State *state)
+{
+    // Implementar el flujo de estados aquí
+    // Por ahora, solo imprimimos el id del estado
+    printf("Flujo del estado con id: %d\n", state->state_id);
+    if (state->state_id == 0)
+    {
+        state_main(state);
+    }
+    else if (state->state_id == 1)
+    {
+        state_selection(state);
+    }
+    else if (state->state_id == 2)
+    {
+        state_info(state);
+    }
+    else if (state->state_id == 3)
+    {
+        state_battle(state);
+    }
+    else if (state->state_id == 4)
+    {
+        state_damage(state);
+    }
+}
+
 /*Codigo para testeo*/
+/*
 int main()
 {
     printf("Iniciando test de creacion y liberacion de estados...\n");
@@ -198,7 +265,7 @@ int main()
         printf("Damage state tiene trainer_1 activo: %d\n", next->trainer_1->active);
     }
 
-    /*Ahora con el otro lado de la lista*/
+    //Ahora con el otro lado de la lista
     printf("Recorriendo estados desde el estado principal:\n");
     current = main_state;
     printf("  MAIN Estado id: %d\n", current->state_id);
@@ -211,7 +278,7 @@ int main()
         printf("    Tiene next a estado id: %d\n", next->state_id);
         printf("Selection state tiene trainer_1 activo: %d\n", next->trainer_1->active);
     }
-    current = next->next; // Avanzar al siguiente estado
+    current = next->next; //siguiente estado
     if (current)
     {
         printf("  INFO Estado id: %d\n", current->state_id);
@@ -219,8 +286,9 @@ int main()
         printf("Info state tiene trainer_1 activo: %d\n", current->trainer_1->active);
     }
 
-    // Liberar toda la memoria
+    //Liberar toda la memoria
     kill_program(setup, main_state);
 
     return 0;
-}
+    }
+*/
