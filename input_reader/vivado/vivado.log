@@ -1,0 +1,430 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue Jun 17 15:28:55 2025
+# Process ID: 20700
+# Current directory: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/input_reader/vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2352 D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\input_reader\vivado\vivado.xpr
+# Log file: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/input_reader/vivado/vivado.log
+# Journal file: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/input_reader/vivado\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/input_reader/vivado/vivado.xpr
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory 'D:/U/2025/Primer_semestre/SEP/SEP/Proyecto_Base_Booster_v2/DEMODEFINITIVA/ip_repo/BUZZER_1.0'.
+WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory 'D:/U/2025/Primer_semestre/SEP/SEP/Proyecto_Base_Booster_v2/DEMODEFINITIVA/ip_repo/My_PWM_1.0'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/U/2025/Primer_semestre/SEP/SEP/Proyecto_Base_Booster_v2/DEMODEFINITIVA/ip_repo/BUZZER_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/U/2025/Primer_semestre/SEP/SEP/Proyecto_Base_Booster_v2/DEMODEFINITIVA/ip_repo/My_PWM_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2020.1/data/ip'.
+open_project: Time (s): cpu = 00:00:26 ; elapsed = 00:00:24 . Memory (MB): peak = 1080.852 ; gain = 0.000
+update_compile_order -fileset sources_1
+save_project_as vivado D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado -force
+WARNING: [IP_Flow 19-3571] IP 'DEMO_debouncer_0_1' is restricted:
+* Module reference is stale and needs refreshing.
+WARNING: [IP_Flow 19-3571] IP 'DEMO_debouncer_0_2' is restricted:
+* Module reference is stale and needs refreshing.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/U/2025/Primer_semestre/SEP/SEP/Proyecto_Base_Booster_v2/DEMODEFINITIVA/ip_repo/BUZZER_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/U/2025/Primer_semestre/SEP/SEP/Proyecto_Base_Booster_v2/DEMODEFINITIVA/ip_repo/My_PWM_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/U/2025/Primer_semestre/SEP/SEP/Proyecto_Base_Booster_v2/DEMODEFINITIVA/ip_repo/BUZZER_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/U/2025/Primer_semestre/SEP/SEP/Proyecto_Base_Booster_v2/DEMODEFINITIVA/ip_repo/My_PWM_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/U/2025/Primer_semestre/SEP/SEP/Proyecto_Base_Booster_v2/DEMODEFINITIVA/ip_repo/BUZZER_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/U/2025/Primer_semestre/SEP/SEP/Proyecto_Base_Booster_v2/DEMODEFINITIVA/ip_repo/My_PWM_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/U/2025/Primer_semestre/SEP/SEP/Proyecto_Base_Booster_v2/DEMODEFINITIVA/ip_repo/BUZZER_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/U/2025/Primer_semestre/SEP/SEP/Proyecto_Base_Booster_v2/DEMODEFINITIVA/ip_repo/My_PWM_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+save_project_as: Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1775.527 ; gain = 0.000
+open_bd_design {D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/DEMO.bd}
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:module_ref:BUZZER:1.0 - BUZZER_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding component instance block -- xilinx.com:ip:axi_iic:2.0 - axi_iic_0
+Adding component instance block -- xilinx.com:ip:axi_quad_spi:3.2 - axi_quad_spi_0
+Adding component instance block -- xilinx.com:ip:axi_quad_spi:3.2 - axi_quad_spi_1
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_1
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding component instance block -- xilinx.com:ip:axi_timer:2.0 - axi_timer_0
+Adding component instance block -- xilinx.com:ip:axi_timer:2.0 - axi_timer_1
+Adding component instance block -- xilinx.com:ip:ila:6.2 - ila_0
+INFO: [xilinx.com:ip:ila:6.2-6] /ila_0: Xilinx recommends using the System ILA IP in IP Integrator. The System ILA IP is functionally equivalent to an ILA and offers additional benefits in debugging interfaces both within IP Integrator and the Hardware Manager. Consult the Programming and Debug User Guide UG908 for further details.
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_1
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_2
+Adding component instance block -- xilinx.com:module_ref:debouncer:1.0 - debouncer_0
+Adding component instance block -- xilinx.com:module_ref:debouncer:1.0 - debouncer_1
+Adding component instance block -- xilinx.com:module_ref:debouncer:1.0 - debouncer_2
+WARNING: [BD 41-1731] Type mismatch between connected pins: /axi_gpio_2/ip2intc_irpt(intr) and /ila_0/probe1(undef)
+Successfully read diagram <DEMO> from BD file <D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/DEMO.bd>
+open_bd_design: Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 1775.527 ; gain = 0.000
+set_property  ip_repo_paths  d:/U/2025/Primer_semestre/SEP/SEP/Proyecto_Base_Booster_v2/DEMODEFINITIVA/ip_repo/My_PWM_1.0 [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/U/2025/Primer_semestre/SEP/SEP/Proyecto_Base_Booster_v2/DEMODEFINITIVA/ip_repo/My_PWM_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+set_property  ip_repo_paths  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/ipcore [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/ipcore'.
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:axi_buzzer:1.0 axi_buzzer_0
+endgroup
+set_property location {5 1604 560} [get_bd_cells axi_buzzer_0]
+delete_bd_objs [get_bd_nets clk_0_1] [get_bd_nets BUZZER_0_LEDS] [get_bd_nets BUZZER_0_BUZZER_PWM] [get_bd_cells BUZZER_0]
+set_property location {5 1591 157} [get_bd_cells axi_buzzer_0]
+update_compile_order -fileset sources_1
+connect_bd_net [get_bd_ports BUZZER_PWM] [get_bd_pins axi_buzzer_0/pwm]
+delete_bd_objs [get_bd_ports LEDS]
+connect_bd_net [get_bd_pins axi_buzzer_0/clk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_buzzer_0/S00_AXI} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_buzzer_0/S00_AXI]
+Slave segment '/axi_buzzer_0/S00_AXI/S00_AXI_reg' is being assigned into address space '/processing_system7_0/Data' at <0x43C0_0000 [ 64K ]>.
+INFO: [Vivado 12-8231] Launching Vitis
+INFO: [Vivado 12-417] Running vitis
+INFO: [Vivado 12-8232] Vitis launch initiated. Please check console for any further messages.
+export_ip_user_files -of_objects  [get_files D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/hdl/DEMO_wrapper.vhd] -no_script -reset -force -quiet
+remove_files  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/hdl/DEMO_wrapper.vhd
+set_property is_enabled false [get_files  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/new/BUZZER.vhd]
+update_compile_order -fileset sources_1
+update_module_reference DEMO_BUZZER_0_0
+ERROR: [IP_Flow 19-262] [HDL Parser] Failed to parse top module entity.  This can result from an empty entity or module declaration (i.e. no ports or parameters/generics).  Check that design unit "BUZZER" of HDL file "d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/new/debouncer.vhd" is not empty.
+ERROR: [IP_Flow 19-258] [HDL Parser] Error parsing HDL file 'd:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/new/debouncer.vhd'.
+WARNING: [IP_Flow 19-378] There are no ports found from top-level file 'd:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/new/debouncer.vhd'.
+ERROR: [IP_Flow 19-4668] Failed to infer definition from module 'BUZZER'.
+ERROR: [Common 17-39] 'update_module_reference' failed due to earlier errors.
+validate_bd_design
+WARNING: [IP_Flow 19-4684] Expected long value for param C_ILA_CLK_FREQ but, float/scientific notation value 1e+08 is provided. The value is converted to long type(100000000)
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 has negative value -0.050 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 has negative value -0.044 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-3]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.035 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-4]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.100 . PS DDR interfaces might fail when entering negative DQS skew values. 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+INFO: [xilinx.com:ip:axi_quad_spi:3.2-1] /axi_quad_spi_0 
+                   #######################################################################################
+                   INFO: AXI Quad SPI core's AXI Lite Clock and EXT SPI CLK are synchronous to each other.
+                   ########################################################################################
+INFO: [xilinx.com:ip:axi_quad_spi:3.2-1] /axi_quad_spi_1 
+                   #######################################################################################
+                   INFO: AXI Quad SPI core's AXI Lite Clock and EXT SPI CLK are synchronous to each other.
+                   ########################################################################################
+WARNING: [BD 41-927] Following properties on pin /debouncer_0/btn_AL have been updated from connected ip, but BD cell '/debouncer_0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	PortWidth = 3 
+Please resolve any mismatches by directly setting properties on BD cell </debouncer_0> to completely resolve these warnings.
+WARNING: [BD 41-927] Following properties on pin /debouncer_0/clk have been updated from connected ip, but BD cell '/debouncer_0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 1e+08 
+Please resolve any mismatches by directly setting properties on BD cell </debouncer_0> to completely resolve these warnings.
+WARNING: [BD 41-927] Following properties on pin /debouncer_0/press have been updated from connected ip, but BD cell '/debouncer_0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	SENSITIVITY = LEVEL_HIGH 
+Please resolve any mismatches by directly setting properties on BD cell </debouncer_0> to completely resolve these warnings.
+WARNING: [BD 41-927] Following properties on pin /debouncer_1/clk have been updated from connected ip, but BD cell '/debouncer_1' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 1e+08 
+Please resolve any mismatches by directly setting properties on BD cell </debouncer_1> to completely resolve these warnings.
+WARNING: [BD 41-927] Following properties on pin /debouncer_2/clk have been updated from connected ip, but BD cell '/debouncer_2' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 1e+08 
+Please resolve any mismatches by directly setting properties on BD cell </debouncer_2> to completely resolve these warnings.
+validate_bd_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1775.527 ; gain = 0.000
+make_wrapper -files [get_files D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/DEMO.bd] -top
+INFO: [BD 41-1662] The design 'DEMO.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : <D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\full_hardware\vivado\vivado.srcs\sources_1\bd\DEMO\DEMO.bd> 
+Wrote  : <D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/ui/bd_58220e03.ui> 
+VHDL Output written to : D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/synth/DEMO.vhd
+VHDL Output written to : D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/sim/DEMO.vhd
+VHDL Output written to : D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/hdl/DEMO_wrapper.vhd
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/ipcore'.
+make_wrapper: Time (s): cpu = 00:00:07 ; elapsed = 00:00:23 . Memory (MB): peak = 1775.527 ; gain = 0.000
+add_files -norecurse D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/hdl/DEMO_wrapper.vhd
+update_compile_order -fileset sources_1
+reset_run synth_1
+reset_run DEMO_axi_timer_0_0_synth_1
+reset_run DEMO_axi_timer_0_1_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+INFO: [BD 41-1662] The design 'DEMO.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : <D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\full_hardware\vivado\vivado.srcs\sources_1\bd\DEMO\DEMO.bd> 
+VHDL Output written to : D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/synth/DEMO.vhd
+VHDL Output written to : D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/sim/DEMO.vhd
+VHDL Output written to : D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/hdl/DEMO_wrapper.vhd
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_GP0'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'd:/U/2025/Primer_semestre/SEP/LAB10/project_1/project_1.srcs/sources_1/bd/DEMO/ip/DEMO_axi_timer_0_0/DEMO_axi_timer_0_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_timer_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'd:/U/2025/Primer_semestre/SEP/LAB10/project_1/project_1.srcs/sources_1/bd/DEMO/ip/DEMO_axi_timer_0_1/DEMO_axi_timer_0_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_timer_1 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'd:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/ip/DEMO_ila_0_0/DEMO_ila_0_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ila_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'd:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/ip/DEMO_auto_pc_0/DEMO_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_buzzer_0 .
+Exporting to file D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/hw_handoff/DEMO.hwh
+Generated Block Design Tcl file D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/hw_handoff/DEMO_bd.tcl
+Generated Hardware Definition File D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/synth/DEMO.hwdef
+[Tue Jun 17 15:39:16 2025] Launched DEMO_xbar_0_synth_1, DEMO_processing_system7_0_0_synth_1, DEMO_rst_ps7_0_50M_0_synth_1, DEMO_axi_timer_0_0_synth_1, DEMO_axi_timer_0_1_synth_1, DEMO_ila_0_0_synth_1, DEMO_auto_pc_0_synth_1, DEMO_axi_buzzer_0_0_synth_1, synth_1...
+Run output will be captured here:
+DEMO_xbar_0_synth_1: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.runs/DEMO_xbar_0_synth_1/runme.log
+DEMO_processing_system7_0_0_synth_1: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.runs/DEMO_processing_system7_0_0_synth_1/runme.log
+DEMO_rst_ps7_0_50M_0_synth_1: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.runs/DEMO_rst_ps7_0_50M_0_synth_1/runme.log
+DEMO_axi_timer_0_0_synth_1: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.runs/DEMO_axi_timer_0_0_synth_1/runme.log
+DEMO_axi_timer_0_1_synth_1: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.runs/DEMO_axi_timer_0_1_synth_1/runme.log
+DEMO_ila_0_0_synth_1: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.runs/DEMO_ila_0_0_synth_1/runme.log
+DEMO_auto_pc_0_synth_1: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.runs/DEMO_auto_pc_0_synth_1/runme.log
+DEMO_axi_buzzer_0_0_synth_1: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.runs/DEMO_axi_buzzer_0_0_synth_1/runme.log
+synth_1: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.runs/synth_1/runme.log
+[Tue Jun 17 15:39:16 2025] Launched impl_1...
+Run output will be captured here: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:38 ; elapsed = 00:00:45 . Memory (MB): peak = 1775.527 ; gain = 0.000
+set_property pfm_name {} [get_files -all {D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/DEMO.bd}]
+write_hw_platform -fixed -include_bit -force -file D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/DEMO_wrapper.xsa
+INFO: [Vivado 12-4895] Creating Hardware Platform: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/DEMO_wrapper.xsa ...
+INFO: [Hsi 55-2053] elapsed time for repository (D:/Xilinx/Vivado/2020.1/data\embeddedsw) loading 0 seconds
+INFO: [Vivado 12-4896] Successfully created Hardware Platform: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/DEMO_wrapper.xsa
+write_hw_platform: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1775.527 ; gain = 0.000
+INFO: [Vivado 12-8231] Launching Vitis
+INFO: [Vivado 12-417] Running vitis
+INFO: [Vivado 12-8232] Vitis launch initiated. Please check console for any further messages.
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 has negative value -0.050 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 has negative value -0.044 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-3]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.035 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-4]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.100 . PS DDR interfaces might fail when entering negative DQS skew values. 
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 blk_mem_gen_0
+endgroup
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+delete_bd_objs [get_bd_cells blk_mem_gen_0]
+INFO: [Vivado 12-8231] Launching Vitis
+INFO: [Vivado 12-417] Running vitis
+INFO: [Vivado 12-8232] Vitis launch initiated. Please check console for any further messages.
+INFO: [Vivado 12-8231] Launching Vitis
+INFO: [Vivado 12-417] Running vitis
+INFO: [Vivado 12-8232] Vitis launch initiated. Please check console for any further messages.
+INFO: [Vivado 12-8231] Launching Vitis
+INFO: [Vivado 12-417] Running vitis
+INFO: [Vivado 12-8232] Vitis launch initiated. Please check console for any further messages.
+INFO: [Vivado 12-8231] Launching Vitis
+INFO: [Vivado 12-417] Running vitis
+INFO: [Vivado 12-8232] Vitis launch initiated. Please check console for any further messages.
+INFO: [Vivado 12-8231] Launching Vitis
+INFO: [Vivado 12-417] Running vitis
+INFO: [Vivado 12-8232] Vitis launch initiated. Please check console for any further messages.
+INFO: [Vivado 12-8231] Launching Vitis
+INFO: [Vivado 12-417] Running vitis
+INFO: [Vivado 12-8232] Vitis launch initiated. Please check console for any further messages.
+INFO: [Vivado 12-8231] Launching Vitis
+INFO: [Vivado 12-417] Running vitis
+INFO: [Vivado 12-8232] Vitis launch initiated. Please check console for any further messages.
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 has negative value -0.050 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 has negative value -0.044 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-3]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.035 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-4]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.100 . PS DDR interfaces might fail when entering negative DQS skew values. 
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 has negative value -0.050 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 has negative value -0.044 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-3]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.035 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-4]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.100 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 has negative value -0.050 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 has negative value -0.044 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-3]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.035 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-4]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.100 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 has negative value -0.050 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 has negative value -0.044 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-3]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.035 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-4]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.100 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 has negative value -0.050 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 has negative value -0.044 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-3]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.035 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-4]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.100 . PS DDR interfaces might fail when entering negative DQS skew values. 
+INFO: [Vivado 12-8231] Launching Vitis
+INFO: [Vivado 12-417] Running vitis
+INFO: [Vivado 12-8232] Vitis launch initiated. Please check console for any further messages.
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 has negative value -0.050 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 has negative value -0.044 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-3]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.035 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-4]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.100 . PS DDR interfaces might fail when entering negative DQS skew values. 
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 has negative value -0.050 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 has negative value -0.044 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-3]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.035 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-4]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.100 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 has negative value -0.050 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 has negative value -0.044 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-3]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.035 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-4]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.100 . PS DDR interfaces might fail when entering negative DQS skew values. 
+startgroup
+set_property -dict [list CONFIG.PCW_QSPI_GRP_SINGLE_SS_ENABLE {1} CONFIG.PCW_MIO_47_PULLUP {disabled}] [get_bd_cells processing_system7_0]
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 has negative value -0.050 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 has negative value -0.044 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-3]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.035 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-4]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.100 . PS DDR interfaces might fail when entering negative DQS skew values. 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+endgroup
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 has negative value -0.050 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 has negative value -0.044 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-3]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.035 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-4]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.100 . PS DDR interfaces might fail when entering negative DQS skew values. 
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 has negative value -0.044 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.035 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-3]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.100 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 has negative value -0.044 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.035 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-3]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.100 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.035 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.100 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.035 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.100 . PS DDR interfaces might fail when entering negative DQS skew values. 
+WARNING: [IP_Flow 19-3258] Validation failed for parameter 'PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1' with value ''. Invalid long/float value '' specified for parameter 'PCW UIPARAM DDR DQS TO CLK DELAY 1(PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1)' for BD Cell 'processing_system7_0'.
+
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.035 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.100 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.100 . PS DDR interfaces might fail when entering negative DQS skew values. 
+startgroup
+set_property -dict [list CONFIG.PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 {0} CONFIG.PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 {0} CONFIG.PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 {0} CONFIG.PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 {0}] [get_bd_cells processing_system7_0]
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+endgroup
+save_bd_design
+Wrote  : <D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\full_hardware\vivado\vivado.srcs\sources_1\bd\DEMO\DEMO.bd> 
+Wrote  : <D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/ui/bd_58220e03.ui> 
+export_ip_user_files -of_objects  [get_files D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/hdl/DEMO_wrapper.vhd] -no_script -reset -force -quiet
+remove_files  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/hdl/DEMO_wrapper.vhd
+make_wrapper -files [get_files D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/DEMO.bd] -top
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+INFO: [xilinx.com:ip:axi_quad_spi:3.2-1] /axi_quad_spi_0 
+                   #######################################################################################
+                   INFO: AXI Quad SPI core's AXI Lite Clock and EXT SPI CLK are synchronous to each other.
+                   ########################################################################################
+INFO: [xilinx.com:ip:axi_quad_spi:3.2-1] /axi_quad_spi_0 
+                   #######################################################################################
+                   INFO: AXI Quad SPI core's AXI Lite Clock and EXT SPI CLK are synchronous to each other.
+                   ########################################################################################
+INFO: [xilinx.com:ip:axi_quad_spi:3.2-1] /axi_quad_spi_1 
+                   #######################################################################################
+                   INFO: AXI Quad SPI core's AXI Lite Clock and EXT SPI CLK are synchronous to each other.
+                   ########################################################################################
+INFO: [xilinx.com:ip:axi_quad_spi:3.2-1] /axi_quad_spi_1 
+                   #######################################################################################
+                   INFO: AXI Quad SPI core's AXI Lite Clock and EXT SPI CLK are synchronous to each other.
+                   ########################################################################################
+WARNING: [BD 41-927] Following properties on pin /debouncer_0/btn_AL have been updated from connected ip, but BD cell '/debouncer_0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	PortWidth = 3 
+Please resolve any mismatches by directly setting properties on BD cell </debouncer_0> to completely resolve these warnings.
+WARNING: [BD 41-927] Following properties on pin /debouncer_0/press have been updated from connected ip, but BD cell '/debouncer_0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	SENSITIVITY = LEVEL_HIGH 
+Please resolve any mismatches by directly setting properties on BD cell </debouncer_0> to completely resolve these warnings.
+Wrote  : <D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\full_hardware\vivado\vivado.srcs\sources_1\bd\DEMO\DEMO.bd> 
+VHDL Output written to : D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/synth/DEMO.vhd
+VHDL Output written to : D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/sim/DEMO.vhd
+VHDL Output written to : D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/hdl/DEMO_wrapper.vhd
+make_wrapper: Time (s): cpu = 00:00:33 ; elapsed = 00:00:31 . Memory (MB): peak = 1775.527 ; gain = 0.000
+add_files -norecurse D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/hdl/DEMO_wrapper.vhd
+reset_run synth_1
+reset_run DEMO_axi_timer_0_0_synth_1
+reset_run DEMO_axi_timer_0_1_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+INFO: [BD 41-1662] The design 'DEMO.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : <D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\full_hardware\vivado\vivado.srcs\sources_1\bd\DEMO\DEMO.bd> 
+VHDL Output written to : D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/synth/DEMO.vhd
+VHDL Output written to : D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/sim/DEMO.vhd
+VHDL Output written to : D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/hdl/DEMO_wrapper.vhd
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_GP0'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'd:/U/2025/Primer_semestre/SEP/LAB10/project_1/project_1.srcs/sources_1/bd/DEMO/ip/DEMO_axi_timer_0_0/DEMO_axi_timer_0_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_timer_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'd:/U/2025/Primer_semestre/SEP/LAB10/project_1/project_1.srcs/sources_1/bd/DEMO/ip/DEMO_axi_timer_0_1/DEMO_axi_timer_0_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_timer_1 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'd:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/ip/DEMO_ila_0_0/DEMO_ila_0_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ila_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'd:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/ip/DEMO_auto_pc_0/DEMO_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/hw_handoff/DEMO.hwh
+Generated Block Design Tcl file D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/hw_handoff/DEMO_bd.tcl
+Generated Hardware Definition File D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/synth/DEMO.hwdef
+[Wed Jun 18 00:17:55 2025] Launched DEMO_xbar_0_synth_1, DEMO_processing_system7_0_0_synth_1, DEMO_rst_ps7_0_50M_0_synth_1, DEMO_axi_timer_0_0_synth_1, DEMO_axi_timer_0_1_synth_1, DEMO_ila_0_0_synth_1, DEMO_auto_pc_0_synth_1, synth_1...
+Run output will be captured here:
+DEMO_xbar_0_synth_1: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.runs/DEMO_xbar_0_synth_1/runme.log
+DEMO_processing_system7_0_0_synth_1: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.runs/DEMO_processing_system7_0_0_synth_1/runme.log
+DEMO_rst_ps7_0_50M_0_synth_1: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.runs/DEMO_rst_ps7_0_50M_0_synth_1/runme.log
+DEMO_axi_timer_0_0_synth_1: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.runs/DEMO_axi_timer_0_0_synth_1/runme.log
+DEMO_axi_timer_0_1_synth_1: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.runs/DEMO_axi_timer_0_1_synth_1/runme.log
+DEMO_ila_0_0_synth_1: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.runs/DEMO_ila_0_0_synth_1/runme.log
+DEMO_auto_pc_0_synth_1: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.runs/DEMO_auto_pc_0_synth_1/runme.log
+synth_1: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.runs/synth_1/runme.log
+[Wed Jun 18 00:17:55 2025] Launched impl_1...
+Run output will be captured here: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:30 ; elapsed = 00:00:38 . Memory (MB): peak = 1776.656 ; gain = 1.129
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+set_property pfm_name {} [get_files -all {D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/DEMO.bd}]
+write_hw_platform -fixed -include_bit -force -file D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/DEMO_wrapper.xsa
+INFO: [Vivado 12-4895] Creating Hardware Platform: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/DEMO_wrapper.xsa ...
+INFO: [Vivado 12-4896] Successfully created Hardware Platform: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/DEMO_wrapper.xsa
+write_hw_platform: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1805.184 ; gain = 28.527
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+set_property -dict [list CONFIG.PCW_QSPI_GRP_SINGLE_SS_ENABLE {1} CONFIG.PCW_UIPARAM_GENERATE_SUMMARY {NONE}] [get_bd_cells processing_system7_0]
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+endgroup
+set_property pfm_name {} [get_files -all {D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/DEMO.bd}]
+save_bd_design
+Wrote  : <D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\full_hardware\vivado\vivado.srcs\sources_1\bd\DEMO\DEMO.bd> 
+write_hw_platform -fixed -include_bit -force -file D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/DEMO_wrapper.xsa
+INFO: [Vivado 12-4895] Creating Hardware Platform: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/DEMO_wrapper.xsa ...
+CRITICAL WARNING: [Vivado_Tcl 4-412] Exported hardware design may be stale because Block Design D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/DEMO.bd is not generated
+CRITICAL WARNING: [Vivado_Tcl 4-412] Exported hardware design may be stale because Block Design D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/DEMO.bd is not generated
+CRITICAL WARNING: [Vivado_Tcl 4-412] Exported hardware design may be stale because Block Design D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/DEMO.bd is not generated
+CRITICAL WARNING: [Vivado 12-7009] BD 'DEMO' is not in validated state. Please validate and re-generate the BD prior to generating a Hardware Platform. The BD can be validated in the GUI or by using Tcl command validate_bd_design in the Tcl console.
+CRITICAL WARNING: [Vivado_Tcl 4-412] Exported hardware design may be stale because Block Design D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/DEMO.bd is not generated
+INFO: [Vivado 12-4896] Successfully created Hardware Platform: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/DEMO_wrapper.xsa
+write_hw_platform: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1817.520 ; gain = 12.336
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Jun 18 01:06:36 2025...

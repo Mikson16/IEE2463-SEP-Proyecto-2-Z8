@@ -2,12 +2,18 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="Open" key="selection"/>
+		<item value="text_color" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="text_color"/>
+			<item value="plays"/>
+			<item value="play"/>
+			<item value="floor"/>
+			<item value="xil_printf"/>
+			<item value="PlaySong"/>
 			<item value="open"/>
 			<item value="object"/>
 			<item value="XST_DEVICE_BLOCK_NOT_FOUND"/>
@@ -17,11 +23,6 @@
 			<item value="RESET_VALUE"/>
 			<item value="INPUT_RESET_VALUE"/>
 			<item value="TIMER_CNTR_0"/>
-			<item value="TMRCTR_INTERRUPT_ID"/>
-			<item value="TMRCTR_DEVICE_ID"/>
-			<item value="gpio2"/>
-			<item value="gpio1"/>
-			<item value="gpio0"/>
 		</list>
 		<list key="replacehistory">
 			<item value="LIGHT_INT_CH"/>

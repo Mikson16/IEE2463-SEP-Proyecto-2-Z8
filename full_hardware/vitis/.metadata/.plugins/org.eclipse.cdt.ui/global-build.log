@@ -1,6 +1,13 @@
 Nothing to build in platform 'full_hardware_plt'
 
-00:38:39 **** Incremental Build of configuration Debug for project full_hardware_sw ****
+02:44:06 **** Incremental Build of configuration Debug for project full_hardware_sw ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+make[1]: Nothing to be done for 'main-build'.
+02:44:07 **** Incremental Build of configuration Debug for project music_player_sw ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -8,31 +15,28 @@ a9-linaro-pre-build-step
 make --no-print-directory main-build
 'Building file: ../src/main.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -ID:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/sw/full_hardware_plt/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -ID:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/sw/full_hardware_plt/music_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'readInputs':
+../src/main.c:504:5: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+  504 |  if(abs(mic_amp) > 70){
+      |     ^~~
 'Finished building: ../src/main.c'
 ' '
-'Building target: full_hardware_sw.elf'
+'Building target: music_player_sw.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LD:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/sw/full_hardware_plt/standalone_domain/bsplib/lib -o "full_hardware_sw.elf"  ./src/ADC.o ./src/Bitmap.o ./src/Delay.o ./src/I2C.o ./src/LCD_Driver.o ./src/LCD_GUI.o ./src/LCD_SPI.o ./src/audio.o ./src/font12.o ./src/font16.o ./src/font20.o ./src/font24.o ./src/font8.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: full_hardware_sw.elf'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LD:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/sw/full_hardware_plt/music_domain/bsplib/lib -o "music_player_sw.elf"  ./src/ADC.o ./src/Bitmap.o ./src/Delay.o ./src/I2C.o ./src/LCD_Driver.o ./src/LCD_GUI.o ./src/LCD_SPI.o ./src/audio.o ./src/font12.o ./src/font16.o ./src/font20.o ./src/font24.o ./src/font8.o ./src/gameUI.o ./src/main.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: music_player_sw.elf'
 ' '
 'Invoking: ARM v7 Print Size'
-arm-none-eabi-size full_hardware_sw.elf  |tee "full_hardware_sw.elf.size"
+arm-none-eabi-size music_player_sw.elf  |tee "music_player_sw.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 326692	   3556	 223568	 553816	  87358	full_hardware_sw.elf
-'Finished building: full_hardware_sw.elf.size'
+ 395512	   3580	 682384	1081476	 108084	music_player_sw.elf
+'Finished building: music_player_sw.elf.size'
 ' '
-00:38:40 **** Incremental Build of configuration Debug for project music_player_sw ****
-make all 
-make --no-print-directory pre-build
-a9-linaro-pre-build-step
-' '
-make --no-print-directory main-build
-make[1]: Nothing to be done for 'main-build'.
-00:38:41 **** Incremental Build of configuration Debug for project full_hardware_sw_system ****
+02:44:09 **** Incremental Build of configuration Debug for project full_hardware_sw_system ****
 make all 
 Generating bif file for the system project
-generate_system_bif.bat 52933 D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/full_hardware_plt.xpfm standalone_domain,music_domain D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_sw_system/Debug/system.bif
+generate_system_bif.bat 52025 D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/full_hardware_plt.xpfm standalone_domain,music_domain D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_sw_system/Debug/system.bif
 sdcard_gen --xpfm D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/full_hardware_plt.xpfm --sys_config full_hardware_plt --bif D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_sw_system/Debug/system.bif --bitstream D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_sw/_ide/bitstream/DEMO_wrapper.bit --elf D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_sw/Debug/full_hardware_sw.elf,ps7_cortexa9_0 --elf D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/music_player_sw/Debug/music_player_sw.elf,ps7_cortexa9_1
 creating BOOT.BIN using D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_sw/_ide/bitstream/DEMO_wrapper.bit
 Running D:/Xilinx/Vitis/2020.1/bin/bootgen  -image D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_sw_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN

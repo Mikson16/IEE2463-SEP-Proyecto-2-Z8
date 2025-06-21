@@ -1,0 +1,398 @@
+#include "LCD_GUI.h"
+#include <stdio.h>
+#include "LCD_Driver.h"
+#include <stdint.h>
+//#include <unistd.h>
+#include "Bitmap.h"
+#include "ff.h"
+#include "xil_cache.h"
+
+#define SHARED_MEMORY_BASE 0x3FE00000
+
+extern LCD_DIS sLCD_DIS;
+
+
+
+void BitM_DisString_EN(POINT Xstart, POINT Ystart, const char * pString,
+                      sFONT* Font,COLOR Color_Background, COLOR Color_Foreground, BITMAP *BitMapPtr)
+{
+    POINT Xpoint = Xstart;
+    POINT Ypoint = Ystart;
+
+    if(Xstart >= sLCD_DIS.LCD_Dis_Column || Ystart >= sLCD_DIS.LCD_Dis_Page) {
+        return;
+    }
+
+    while(* pString != '\0') {
+        //if X direction filled , reposition to(Xstart,Ypoint),Ypoint is Y direction plus the height of the character
+        if((Xpoint + Font->Width ) > sLCD_DIS.LCD_Dis_Column ) {
+            Xpoint = Xstart;
+            Ypoint += Font->Height;
+        }
+
+        // If the Y direction is full, reposition to(Xstart, Ystart)
+        if((Ypoint  + Font->Height ) > sLCD_DIS.LCD_Dis_Page ) {
+            Xpoint = Xstart;
+            Ypoint = Ystart;
+        }
+        BitM_DisChar(Xpoint, Ypoint, * pString, Font, Color_Background, Color_Foreground,(BITMAP *) BitMapPtr);
+
+        //The next character of the address
+        pString ++;
+
+        //The next word of the abscissa increases the font of the broadband
+        Xpoint += Font->Width + 1;
+    }
+}
+
+void BitM_DisChar(POINT Xpoint, POINT Ypoint, const char Acsii_Char,
+                 sFONT* Font, COLOR Color_Background, COLOR Color_Foreground, BITMAP *BitMapPtr)
+{
+    POINT Page, Column;
+
+    if(Xpoint >= sLCD_DIS.LCD_Dis_Column || Ypoint >= sLCD_DIS.LCD_Dis_Page) {
+        return;
+    }
+
+    uint32_t Char_Offset =(Acsii_Char - ' ') * Font->Height *(Font->Width / 8 +(Font->Width % 8 ? 1 : 0));
+    const unsigned char *ptr = &Font->table[Char_Offset];
+
+    for(Page = 0; Page < Font->Height; Page ++ ) {
+        for(Column = 0; Column < Font->Width; Column ++ ) {
+
+            //To determine whether the font background color and screen background color is consistent
+            if(FONT_BACKGROUND == Color_Background) { //this process is to speed up the scan
+                if(*ptr &(0x80 >>(Column % 8)))
+                	BitMapPtr->map[Xpoint + Column][Ypoint + Page] = Color_Foreground;
+//                    GUI_DrawPoint(Xpoint + Column, Ypoint + Page, Color_Foreground, DOT_PIXEL_DFT, DOT_STYLE_DFT);
+            } else {
+                if(*ptr &(0x80 >>(Column % 8))) {
+                    BitMapPtr->map[Xpoint + Column][Ypoint + Page] = Color_Foreground;
+//                    GUI_DrawPoint(Xpoint + Column, Ypoint + Page, Color_Foreground, DOT_PIXEL_DFT, DOT_STYLE_DFT);
+                } else {
+                	BitMapPtr->map[Xpoint + Column][Ypoint + Page] = Color_Background;
+//                    GUI_DrawPoint(Xpoint + Column, Ypoint + Page, Color_Background, DOT_PIXEL_DFT, DOT_STYLE_DFT);
+                }
+            }
+            //One pixel is 8 bits
+            if(Column % 8 == 7)
+                ptr++;
+        }/* Write a line */
+        if(Font->Width % 8 != 0)
+            ptr++;
+    }/* Write all */
+}
+
+void Paint_Bitmap(COLOR Color, BITMAP *BitMapPtr)
+{
+	POINT x, y;
+	for(y = 0; y  < 128; y ++ ) {
+	        for(x = 0; x < 128; x ++ ) {
+	        	BitMapPtr->map[x][y] = Color;
+	        }
+	}
+}
+
+void Init_Bitmap(BITMAP *BitMapPtr)
+{
+	Paint_Bitmap(GUI_BACKGROUND, (BITMAP *)BitMapPtr);
+	BitMapPtr->Width = 128;
+	BitMapPtr->Height = 128;
+}
+
+void Paint_Sprite(POINT Xpoint, POINT Ypoint, BITMAP *BitMapPtr, BITMAP *SpritePtr)
+{
+	POINT x, y;
+	COLOR sprite_pixel;
+	for(y = 0; y + Ypoint < 128; y ++ ) {
+	        for(x = 0; x + Xpoint< 128; x ++ ) {
+	        	if (x < SpritePtr->Width && y < SpritePtr->Height){
+	        		sprite_pixel = SpritePtr->map[x][y];
+	        		if(sprite_pixel != BLUE){
+	        			BitMapPtr->map[x + Xpoint][y + Ypoint] = sprite_pixel;
+	        		}
+
+	        	}
+
+	        }
+	}
+}
+
+void GUI_Update_Bitmap(BITMAP *Prev_BitMapPtr, BITMAP *New_BitMapPtr)
+{
+	POINT x, y;
+	COLOR Color;
+
+	for(y = 0; y < 128; y ++ ) {
+			for(x = 0; x < 128; x ++ ) {
+				if (Prev_BitMapPtr->map[x][y] != New_BitMapPtr->map[x][y]){
+					Color = New_BitMapPtr->map[x][y];
+					GUI_DrawPoint(x, y, Color, DOT_PIXEL_DFT, DOT_STYLE_DFT);
+				}
+			}
+		}
+}
+
+
+
+
+FIL Rfp;
+UINT br;
+
+void Open_Sprite(TCHAR *filename, BITMAP *SpritePtr)
+{
+	FRESULT rc;
+	rc = f_open(&Rfp, filename, FA_READ);
+
+	if(rc != FR_OK)
+		{
+			xil_printf("ERROR 1: f_open returned %d\r\n",rc);
+//			return XST_FAILURE;
+		}
+	u8 SizeBuff[4];
+
+	u32 FileSize;
+	rc = f_lseek (&Rfp, 0x02);
+
+	if(rc != FR_OK)
+		{
+			xil_printf("ERROR : f_lseek returned %d\r\n",rc);
+//			return XST_FAILURE;
+		}
+
+	rc = f_read (&Rfp, &SizeBuff, (UINT)4, &br);
+
+	if(rc != FR_OK)
+		{
+			xil_printf("ERROR : f_read returned %d\r\n",rc);
+//			return XST_FAILURE;
+		}
+
+	// El conjunto de bytes esta en little endian, por lo que se concatenan al reves
+	FileSize = (SizeBuff[0]) | (SizeBuff[1] << 8) | (SizeBuff[2] << 16) | (SizeBuff[3] << 24);
+
+
+	u32 DataSize;
+
+	rc = f_lseek (&Rfp, 0x0A);
+
+	if(rc != FR_OK)
+		{
+			xil_printf("ERROR : f_lseek returned %d\r\n",rc);
+//			return XST_FAILURE;
+		}
+
+	rc = f_read (&Rfp, &SizeBuff, (UINT)4, &br);
+
+	if(rc != FR_OK)
+		{
+			xil_printf("ERROR : f_read returned %d\r\n",rc);
+//			return XST_FAILURE;
+		}
+
+	// El conjunto de bytes esta en little endian, por lo que se concatenan al reves
+	DataSize = (SizeBuff[0]) | (SizeBuff[1] << 8) | (SizeBuff[2] << 16) | (SizeBuff[3] << 24);
+
+	u32 Width, Height;
+
+	rc = f_lseek (&Rfp, 0x12);
+
+	if(rc != FR_OK)
+		{
+			xil_printf("ERROR : f_lseek returned %d\r\n",rc);
+//			return XST_FAILURE;
+		}
+
+	rc = f_read (&Rfp, &SizeBuff, (UINT)4, &br);
+
+	if(rc != FR_OK)
+		{
+			xil_printf("ERROR : f_read returned %d\r\n",rc);
+//			return XST_FAILURE;
+		}
+
+	// El conjunto de bytes esta en little endian, por lo que se concatenan al reves
+	Width = (SizeBuff[0]) | (SizeBuff[1] << 8) | (SizeBuff[2] << 16) | (SizeBuff[3] << 24);
+
+	rc = f_read (&Rfp, &SizeBuff, (UINT)4, &br);
+
+	if(rc != FR_OK)
+		{
+			xil_printf("ERROR : f_read returned %d\r\n",rc);
+//			return XST_FAILURE;
+		}
+
+	// El conjunto de bytes esta en little endian, por lo que se concatenan al reves
+	Height = (SizeBuff[0]) | (SizeBuff[1] << 8) | (SizeBuff[2] << 16) | (SizeBuff[3] << 24);
+
+	BITMAP Sprite;
+
+	SpritePtr->Width = Width;
+	SpritePtr->Height = Height;
+
+
+
+	rc = f_lseek (&Rfp, DataSize);
+
+	if(rc != FR_OK)
+		{
+			xil_printf("ERROR : f_lseek returned %d\r\n",rc);
+//			return XST_FAILURE;
+		}
+
+	u8 ReadBuff[2];
+
+	int x, y;
+	y = Height - 1;
+	int pixel;
+		while(y >= 0) {
+			x = 0;
+			while(x < Width) {
+//				index = (y)*Width + (x+1);
+				rc = f_read (&Rfp, &ReadBuff, (UINT)2, &br);
+
+				if(rc != FR_OK)
+					{
+						xil_printf("ERROR : f_read returned %d\r\n",rc);
+//						return XST_FAILURE;
+				}
+                pixel = (ReadBuff[0]) | (ReadBuff[1] << 8);
+
+                COLOR rchannel = 0xF800 & pixel;
+                COLOR gchannel = 0x07E0 & pixel;
+                COLOR bchannel = 0x001F & pixel;
+
+                pixel = bchannel << 11 | gchannel | rchannel >> 11;
+				if(1){
+					SpritePtr->map[x][y] = pixel;
+					;
+					x += 1;
+		        }
+			}
+			y = y - 1;
+			if(height%2 == 0){
+				rc = f_read (&Rfp, &ReadBuff, (UINT)2, &br);
+			}
+		}
+	rc = f_close(&Rfp);
+
+		if(rc != FR_OK)
+			{
+				xil_printf("ERROR : f_close returned %d\r\n",rc);
+//				return XST_FAILURE;
+			}
+}
+void Send_Bitmap(BITMAP *BitMapPtr)
+{
+	int address_sum = 0;
+	POINT x, y;
+	COLOR pixel;
+	for(y = 0; y < 128; y ++ ) {
+		for(x = 0; x < 128; x ++ ) {
+			 pixel = BitMapPtr->map[x][y];
+			 Xil_Out32(SHARED_MEMORY_BASE + address_sum*4, pixel);
+			 address_sum ++;
+
+			}
+		}
+}
+void Retrieve_Bitmap(BITMAP *BitMapPtr)
+{
+	int address_sum = 0;
+	POINT x, y;
+	COLOR pixel;
+	for(y = 0; y < 128; y ++ ) {
+		for(x = 0; x < 128; x ++ ) {
+			 pixel = Xil_In32(SHARED_MEMORY_BASE + address_sum*4);
+			 BitMapPtr->map[x][y] = pixel;
+			 address_sum ++;
+
+			}
+		}
+}
+void LCD_SetGramScanWay2(LCD_SCAN_DIR Scan_dir)
+{
+    //Get the screen scan direction
+    sLCD_DIS.LCD_Scan_Dir = Scan_dir;
+
+    //Get GRAM and LCD width and height
+    if(Scan_dir == L2R_U2D || Scan_dir == L2R_D2U || Scan_dir == R2L_U2D || Scan_dir == R2L_D2U) {
+        sLCD_DIS.LCD_Dis_Column	= LCD_HEIGHT ;
+        sLCD_DIS.LCD_Dis_Page = LCD_WIDTH ;
+    } else {
+        sLCD_DIS.LCD_Dis_Column	= LCD_WIDTH ;
+        sLCD_DIS.LCD_Dis_Page = LCD_HEIGHT ;
+    }
+
+    // Gets the scan direction of GRAM
+    uint16_t MemoryAccessReg_Data=0;  //0x36
+    switch (Scan_dir) {
+    case L2R_U2D:
+        MemoryAccessReg_Data = 0X00 | 0x00;//x Scan direction | y Scan direction
+        break;
+    case L2R_D2U:
+        MemoryAccessReg_Data = 0x00 | 0x80;//0xC8 | 0X10
+        break;
+    case R2L_U2D://	0X4
+        MemoryAccessReg_Data = 0x40 | 0x00;
+        break;
+    case R2L_D2U://	0XC
+        MemoryAccessReg_Data = 0x40 | 0x80;
+        break;
+    case U2D_L2R://0X2
+        MemoryAccessReg_Data = 0X00 | 0X00 | 0x20;
+        break;
+    case U2D_R2L://0X6
+        MemoryAccessReg_Data = 0x00 | 0X40 | 0x20;
+        break;
+    case D2U_L2R://0XA
+        MemoryAccessReg_Data = 0x80 | 0x00 | 0x20;
+        break;
+    case D2U_R2L://0XE
+        MemoryAccessReg_Data = 0x40 | 0x80 | 0x20;
+        break;
+    }
+
+    //please set (MemoryAccessReg_Data & 0x10) != 1
+    if((MemoryAccessReg_Data && 0x20) != 1) {
+        sLCD_DIS.LCD_X_Adjust = LCD_X;
+        sLCD_DIS.LCD_Y_Adjust = LCD_Y;
+    } else {
+        sLCD_DIS.LCD_X_Adjust = LCD_Y;
+        sLCD_DIS.LCD_Y_Adjust = LCD_X;
+    }
+
+    // Set the read / write scan direction of the frame memory
+//    LCD_WriteReg(0x36); //MX, MY, RGB mode
+//#if defined(LCD_1IN44)
+//    LCD_WriteData_8Bit( MemoryAccessReg_Data | 0x08);	//0x08 set RGB
+//#elif defined(LCD_1IN8)
+//    LCD_WriteData_8Bit( MemoryAccessReg_Data & 0xf7);	//RGB color filter panel
+//#endif
+
+}
+void DrawHealth(POINT Xpoint, POINT Ypoint, BITMAP *BitMapPtr, int health_ptg){
+	POINT x, y;
+	int health_pixels;
+	COLOR color;
+
+
+
+	if(0 < health_ptg < 5){
+		health_pixels = 1;
+		color = 0x429D;
+	}
+	else{
+		health_pixels = health_ptg/100*49;
+		color = 0x3d67;
+	}
+
+	for (y = 0; y < 2; y++){
+		for (x = 0; x < 49; x++){
+			if(x  + 1 > 49 - health_pixels){
+				BitMapPtr->map[x + Xpoint][y + Ypoint] = color;
+			}
+		}
+	}
+
+}

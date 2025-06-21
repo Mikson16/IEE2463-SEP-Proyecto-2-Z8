@@ -1,0 +1,68 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Wed Jun 18 16:18:25 2025
+# Process ID: 4560
+# Current directory: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17960 D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\full_hardware\vivado\vivado.xpr
+# Log file: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.log
+# Journal file: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/ipcore'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2020.1/data/ip'.
+open_project: Time (s): cpu = 00:00:37 ; elapsed = 00:00:58 . Memory (MB): peak = 1039.715 ; gain = 72.352
+update_compile_order -fileset sources_1
+INFO: [Vivado 12-8231] Launching Vitis
+INFO: [Vivado 12-417] Running vitis
+INFO: [Vivado 12-8232] Vitis launch initiated. Please check console for any further messages.
+open_bd_design {D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/DEMO.bd}
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding component instance block -- xilinx.com:ip:axi_iic:2.0 - axi_iic_0
+Adding component instance block -- xilinx.com:ip:axi_quad_spi:3.2 - axi_quad_spi_0
+Adding component instance block -- xilinx.com:ip:axi_quad_spi:3.2 - axi_quad_spi_1
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_1
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding component instance block -- xilinx.com:ip:axi_timer:2.0 - axi_timer_0
+Adding component instance block -- xilinx.com:ip:axi_timer:2.0 - axi_timer_1
+Adding component instance block -- xilinx.com:ip:ila:6.2 - ila_0
+INFO: [xilinx.com:ip:ila:6.2-6] /ila_0: Xilinx recommends using the System ILA IP in IP Integrator. The System ILA IP is functionally equivalent to an ILA and offers additional benefits in debugging interfaces both within IP Integrator and the Hardware Manager. Consult the Programming and Debug User Guide UG908 for further details.
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_1
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_2
+Adding component instance block -- xilinx.com:module_ref:debouncer:1.0 - debouncer_0
+Adding component instance block -- xilinx.com:module_ref:debouncer:1.0 - debouncer_1
+Adding component instance block -- xilinx.com:module_ref:debouncer:1.0 - debouncer_2
+Adding component instance block -- xilinx.com:user:axi_buzzer:1.0 - axi_buzzer_0
+WARNING: [BD 41-1731] Type mismatch between connected pins: /axi_gpio_2/ip2intc_irpt(intr) and /ila_0/probe1(undef)
+Successfully read diagram <DEMO> from BD file <D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/DEMO.bd>
+open_bd_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 1700.035 ; gain = 0.000
+ipx::edit_ip_in_project -upgrade true -name axi_buzzer_v1_0_project -directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/ipcore/axi_buzzer_v1_0_project d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/ipcore/axi_buzzer_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2020.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/ipcore'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1700.035 ; gain = 0.000
+update_compile_order -fileset sources_1
+current_project vivado
+INFO: [Vivado 12-8231] Launching Vitis
+INFO: [Vivado 12-417] Running vitis
+INFO: [Vivado 12-8232] Vitis launch initiated. Please check console for any further messages.
+close_project
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Jun 19 01:00:03 2025...
