@@ -14,6 +14,6 @@ typedef struct
 } Trainer;
 
 /*Prototipo funciones*/
-Trainer *crear_trainer(int active);           // Crea un trainer con un array de zybomones
-void imprimir_info_trainer(Trainer *trainer); // Imprime la info del trainer
+Trainer *crear_trainer(int active); // Crea un trainer con un array de zybomones
+void imprimir_info_trainer(Trainer *trainer);
 #endif

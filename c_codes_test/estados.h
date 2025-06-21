@@ -33,12 +33,15 @@ State_setup *init_setup(void);
 State *state_init(State_setup *setup);
 State *create_state(int state_id, State_setup *setup); // Crea un nuevo estado con el entrenador activo
 // void identificador_estado(State *state);
-void state_flow(State *state); // Llevara todo el flujo de los estados
+State *state_flow(State *state); // Llevara todo el flujo de los estados
 void kill_program(State_setup *setup, State *head);
 /*Prototipo de funciones para cada estado*/
-void state_main(State *state);
-void state_selection(State *state);
-void state_info(State *state);
-void state_battle(State *state);
-void state_damage(State *state);
+State *state_main(State *state);
+State *state_selection(State *state);
+State *state_info(State *state);
+State *state_battle(State *state);
+State *state_damage(State *state);
+State *state_final(State *state); // Se accede solo cuando el juego termina
+/*Prototipo para obtener info de trainers*/
+void imprimir_active_trainers(State *state); // Imprime los trainers activos en el estado actual
 #endif

@@ -40,10 +40,13 @@ int main()
     printf("Estado principal inicializado\n");
     printf("Sistema de estados iniciado\n");
 
-    while (1) // Bucle infinito para mantener el sistema activo
+    State *current = head;
+    while (current != NULL)
     {
-        state_flow(head); // Ejecuta el flujo de estados
+        current = state_flow(current);
     }
+    printf("Estado final alcanzado o flujo terminado. Liberando memoria...\n");
+    kill_program(setup, head);
     // xil_printf("Sistema de menu terminado\n");
     return 0;
 }
