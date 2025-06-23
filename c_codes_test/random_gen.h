@@ -51,6 +51,7 @@
 
 typedef struct
 {
+    char name[20];  // Nombre del zybomon
     int active;     // estado active/inactive
     int health;     //  Health
     int mon_type;   //  mon_type

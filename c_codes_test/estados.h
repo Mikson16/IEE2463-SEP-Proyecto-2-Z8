@@ -44,4 +44,6 @@ State *state_damage(State *state);
 State *state_final(State *state); // Se accede solo cuando el juego termina
 /*Prototipo para obtener info de trainers*/
 void imprimir_active_trainers(State *state); // Imprime los trainers activos en el estado actual
+/*Funciones para los estados*/
+void nombrar_zybomon(Trainer *trainer); // Asigna un nombre a cada zybomon del trainer
 #endif

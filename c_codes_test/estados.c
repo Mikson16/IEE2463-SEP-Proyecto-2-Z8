@@ -5,6 +5,7 @@
 #include "trainer.h"
 #include "random_gen.h"
 #include <stdlib.h>
+#include <string.h>
 
 /*Imprimir info trainers*/
 void imprimir_active_trainers(State *state)
@@ -24,7 +25,22 @@ void imprimir_active_trainers(State *state)
         printf("Error al imprimir los trainers activos. Ambos trainers no pueden estar activos o inactivos al mismo tiempo.\n");
     }
 }
+/*Funciones para los estados*/
+void nombrar_zybomon(Trainer *trainer)
+{
+    for (int i = 0; i < NUM_ZYBOMONES / 2; i++)
+    {
+        printf("Zybomon #%d, ingrese un nombre: ", i + 1);
+        fgets(trainer->zybomon_array.zybomones[i].name, sizeof(trainer->zybomon_array.zybomones[i].name), stdin);
 
+        // Elimina el salto de línea si existe
+        size_t len = strlen(trainer->zybomon_array.zybomones[i].name);
+        if (len > 0 && trainer->zybomon_array.zybomones[i].name[len - 1] == '\n')
+        {
+            trainer->zybomon_array.zybomones[i].name[len - 1] = '\0';
+        }
+    }
+}
 // Inicializa el estado
 State *create_state(int state_id, State_setup *setup)
 {
@@ -55,10 +71,13 @@ State_setup *init_setup(void)
     setup->trainer = crear_trainer(1);   // Crear trainer 1
     setup->trainer_2 = crear_trainer(0); // Crear trainer 2
     printf("Trainer 1\n");
+    nombrar_zybomon(setup->trainer);       // Asignar nombres a los zybomones del trainer 1
     imprimir_info_trainer(setup->trainer); // Imprimir info del trainer 1
     printf("Trainer 2\n");
+    nombrar_zybomon(setup->trainer_2);       // Asignar nombres a los zybomones del trainer 2
     imprimir_info_trainer(setup->trainer_2); // Imprimir info del trainer 2
     // Aqui llevar a acabo todas las funciones de seteo antes del flujo del juego
+
     return setup;
 }
 

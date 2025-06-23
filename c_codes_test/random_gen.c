@@ -6,6 +6,8 @@
 Zybomon generar_zybomon(int active)
 {
     Zybomon zybomon;
+    // Nombre nulo inicialmente
+    zybomon.name[0] = '\0'; // Inicializar el nombre como vacío
 
     // Generar valores aleatorios para cada atributo
     zybomon.active = active;         // active/inactive, se define activo solo 1

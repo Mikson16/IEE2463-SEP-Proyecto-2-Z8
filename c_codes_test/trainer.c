@@ -47,6 +47,7 @@ void imprimir_info_trainer(Trainer *trainer)
     for (int i = 0; i < NUM_ZYBOMONES / 2; i++)
     {
         printf("Zybomon #%d:\n", i + 1);
+        printf("Name: %s\n", trainer->zybomon_array.zybomones[i].name);
         printf("  Health: %d\n", trainer->zybomon_array.zybomones[i].health);
         printf("  Active: %d\n", trainer->zybomon_array.zybomones[i].active);
         printf("  Mon Type: %d\n", trainer->zybomon_array.zybomones[i].mon_type);
