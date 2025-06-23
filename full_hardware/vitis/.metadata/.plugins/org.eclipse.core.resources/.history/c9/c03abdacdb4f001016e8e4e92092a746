@@ -1,0 +1,56 @@
+#ifndef ZYBOMON_H
+#define ZYBOMON_H
+
+#include <stdint.h>
+#include <stdbool.h>
+
+
+typedef enum{
+	FIRE = 0,
+	WATER,
+	PLANT,
+	NORMAL
+} E_TYPE;
+
+typedef struct{
+	int power;
+	int uses;
+	int max_uses;
+	E_TYPE e_type;
+	char name[11];
+} ATTACK;
+
+typedef struct{
+	int active;
+	int lp;
+	int max_lp;
+	int atk;
+	int def;
+	int spd;
+	E_TYPE e_type;
+	ATTACK attacks[4];
+	TCHAR *front_sprite;
+	TCHAR *back_sprite;
+	char name[11];
+} ZYBOMON;
+
+typedef struct{
+	char name[11];
+	ZYBOMON zybomons[4];
+	int active;
+} TRAINER;
+
+
+/*Parametros*/
+#define NUM_ZYBOMONS 8
+#define MIN_HEALTH 100
+#define MAX_HEALTH 255
+#define ZYBOMON_TYPES 4 // 4 tipos 0-3
+#define ATTACK_TYPES 4  // 4 tipos de ataque 0-3
+#define MAX_ATTACK 80
+#define MAX_DEFENSE 80
+#define MAX_SPEED 80 // Eventualmente estos parametros podemos configurarlos por uart
+#define MAX_A_POWER 3
+#define MAX_A_USES 15
+
+#endif

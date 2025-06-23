@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <sleep.h>
+#include <stdlib.h>
 #include <time.h>
 //#include <unistd.h>
 #include "platform.h"
@@ -17,8 +18,9 @@
 #include "xscugic.h"
 #include "ff.h"
 #include "audio.h"
-
+#include "states.h"
 #include "Bitmap.h"
+#include "zybomon.h"
 
 XGpio gpioLight; XGpio gpioBtn;
 //extern XSpi  SpiInstance;	 /* The instance of the SPI device */
@@ -57,8 +59,16 @@ XScuGic  IntcInstance;
 XTmrCtr  InputTimerInst;
 XTmrCtr  AudioTimerInst;
 
+
+Stack state_stack;
+Stack Xselection_stack;
+Stack Yselection_stack;
+
+TRAINER trainer1;
+TRAINER trainer2;
+
 BITMAP new_bitmap;
-BITMAP prev_bitmap;
+//BITMAP prev_bitmap;
 
 BITMAP background_sprite;
 BITMAP UI_sprite;
@@ -67,7 +77,7 @@ BITMAP mon_sprite1;
 BITMAP mon_sprite2;
 BITMAP aux_sprite1;
 BITMAP aux_sprite2;
-BITMAP pok_sprite;
+//BITMAP pok_sprite;
 
 int movex, movey, movex_prev, movey_prev = 0;
 
@@ -75,8 +85,11 @@ u32 refractx, refracty = 0;
 
 int tiltx = 256;
 
-int pok_y = 0;
-int pok_x = 0;
+int Xoptions;
+int Yoptions;
+
+int select_x = 0;
+int select_y= 0;
 
 u32 AudioSize;
 u32 CurrentByte;
@@ -93,7 +106,8 @@ int SongIndex = 0;
 FATFS fs;
 TCHAR *path = "0:/";
 
-int text_color = YELLOW;
+int light_mode =  0;
+int text_color = BLACK;
 
 
 void readInputs(void *CallBackRef);
@@ -108,14 +122,101 @@ void SdOpenSprite(TCHAR *filename, BITMAP *SpritePtr);
 
 void ShowBattleView(BITMAP *BitMapPtr);
 
+void ShowBattleViewMenu(BITMAP *BitMapPtr);
+
+void ShowAttackMenu(BITMAP * BitMapPtr);
+
 int SdReaderSetup(void);
 
 int InterruptSetUp(XTmrCtr *InputTmrInstancePtr, XTmrCtr *AudioTmrInstancePtr, XGpio *LightGpioInstancePtr, XGpio *BtnGpioInstancePtr);
 
+void LoadStateSprites(STATE_ID state_id)
+{
+	if(state_id == ST_BV){
+		if(light_mode == 0){
+			SdOpenSprite("BV_BG_L.BMP", &background_sprite);
+		}
+		else{
+			SdOpenSprite("BV_BG_D.BMP", &background_sprite);
+		}
+
+		SdOpenSprite(trainer1.zybomons[0].back_sprite, &mon_sprite1);
+		SdOpenSprite(trainer2.zybomons[0].front_sprite, &mon_sprite2);
+		SdOpenSprite("HEBAR.BMP", &aux_sprite1);
+	}
+	else if(state_id == ST_BV_MENU){
+		if(light_mode == 0){
+			SdOpenSprite("BV_BG_L.BMP", &background_sprite);
+		}
+		else{
+			SdOpenSprite("BV_BG_D.BMP", &background_sprite);
+		}
+		SdOpenSprite("SLCT_BV.BMP", &selection_sprite);
+		SdOpenSprite(trainer1.zybomons[0].back_sprite, &mon_sprite1);
+		SdOpenSprite(trainer2.zybomons[0].front_sprite, &mon_sprite2);
+		SdOpenSprite("HEBAR.BMP", &aux_sprite1);
+
+		SdOpenSprite("BV_MENU.BMP", &UI_sprite);
+	}
+	else if(state_id == ST_AT_MENU){
+		SdOpenSprite("SLCT_BV.BMP", &selection_sprite);
+		SdOpenSprite("AT_M_L.BMP", &background_sprite);
+
+	}
+
+}
+
+void advance_state()
+{
+	if(peek(&state_stack) == ST_BV){
+		push(&state_stack, ST_BV_MENU);
+		push(&Xselection_stack, select_x);
+		push(&Yselection_stack, select_y);
+		LoadStateSprites(ST_BV_MENU);
+	}
+	else if(peek(&state_stack) == ST_BV_MENU){
+		if(select_x == 0){
+			push(&state_stack, ST_AT_MENU);
+			push(&Xselection_stack, select_x);
+			push(&Yselection_stack, select_y);
+			LoadStateSprites(ST_AT_MENU);
+		}
+
+	}
+}
+void back_state()
+{
+	pop(&state_stack);
+//	pop(&state_stack);
+	select_x = pop(&Xselection_stack);
+	select_y = pop(&Yselection_stack);
+	LoadStateSprites(peek(&state_stack));
+}
+
+
+void StateHandler()
+{
+	if(peek(&state_stack)== ST_BV){
+		ShowBattleView(&new_bitmap);
+		Xoptions = 1;
+		Yoptions = 1;
+	}
+	else if(peek(&state_stack) == ST_BV_MENU){
+		ShowBattleViewMenu(&new_bitmap);
+		Xoptions = 2;
+		Yoptions = 1;
+	}
+	else if(peek(&state_stack) == ST_AT_MENU){
+		ShowAttackMenu(&new_bitmap);
+		Xoptions = 2;
+		Yoptions = 2;
+		}
+}
+
 void AccHandler(int new_tilt)
 {
 	if(new_tilt >= 256 + 56 && tiltx < 256 + 56){
-		text_color = BLUE;
+//		text_color = BLUE;
 		if(SongIndex < 1){
 			SongIndex += 1;
 			AudioFile = SongFile[SongIndex];
@@ -123,7 +224,7 @@ void AccHandler(int new_tilt)
 		}
 	}
 	else if(new_tilt <= 256 - 56 && tiltx > 256 - 56){
-		text_color = GRAY;
+//		text_color = GRAY;
 		if(SongIndex > 0){
 			SongIndex -= 1;
 			AudioFile = SongFile[SongIndex];
@@ -156,12 +257,12 @@ void JoyHandler(int joyx,int joyy)
 
 	if(movex != movex_prev){
 		refractx = 0;
-		pok_x = pok_x + movex*10;
+		select_x = select_x + movex;
 	}
 	else{
 	if(refractx == ref_time){
 		refractx = ref_time/2;
-		pok_x = pok_x + movex*10;
+		select_x = select_x + movex;
 	}
 	else{
 		refractx ++;
@@ -171,12 +272,12 @@ void JoyHandler(int joyx,int joyy)
 
 	if(movey != movey_prev){
 		refracty = 0;
-		pok_y = pok_y + movey*10;
+		select_y = select_y + movey;
 	}
 	else{
 		if(refracty == ref_time){
 			refracty = ref_time/2;
-			pok_y = pok_y + movey*10;
+			select_y = select_y + movey;
 		}
 		else{
 			refracty ++;
@@ -185,6 +286,20 @@ void JoyHandler(int joyx,int joyy)
 
 	movex_prev = movex;
 	movey_prev = movey;
+
+	if(select_x > Xoptions - 1){
+		select_x = Xoptions - 1;
+	}
+	else if(select_x < 0){
+		select_x = 0;
+	}
+
+	if(select_y > Yoptions - 1){
+		select_y = Yoptions - 1;
+	}
+	else if(select_y < 0){
+		select_y = 0;
+	}
 
 
 }
@@ -266,22 +381,33 @@ int main()
 	//Define arrays for joystick, accelerometer, temperatura and ligth sensors.
 	// The ADC transform the data in 10bits, for temperatura and light sensors the data lenght is 16bits. For simplicity all
 	// arrays are defined as 16bits.
+
+
+	init_trainer(&trainer1, 1);
+	init_trainer(&trainer2, 0);
+
 	XTmrCtr_Initialize(&InputTimerInst, INPUT_TMRCTR_DEVICE_ID);
 	XTmrCtr_Initialize(&AudioTimerInst, AUDIO_TMRCTR_DEVICE_ID);
 	InterruptSetUp(&InputTimerInst, &AudioTimerInst, &gpioLight, &gpioBtn);
 
-	SdOpenSprite("pokemon.BMP", &pok_sprite);
+//	SdOpenSprite("pokemon.BMP", &pok_sprite);
 
 	SdOpenSprite("BV_BG_L.BMP", &background_sprite);
-	SdOpenSprite("PIKA_B.BMP", &mon_sprite1);
+	SdOpenSprite(trainer1.zybomons[0].back_sprite, &mon_sprite1);
 	SdOpenSprite("PIKA.BMP", &mon_sprite2);
 	SdOpenSprite("HEBAR.BMP", &aux_sprite1);
 
+	init_stack(&state_stack);
+	init_stack(&Xselection_stack);
+	init_stack(&Yselection_stack);
+
+	push(&state_stack, ST_BV);
 
 
 	xil_printf("iniciado");
 
 	config_opt();
+
 
 
 
@@ -406,7 +532,8 @@ void readInputs(void *CallBackRef)
 //	BitM_DisString_EN(95,100,mic, &Font12,GUI_BACKGROUND,GUI_BACKGROUND, &new_bitmap);
 
 //	Paint_Bitmap(GUI_BACKGROUND, &new_bitmap);
-	ShowBattleView(&new_bitmap);
+	StateHandler();
+//	ShowBattleView(&new_bitmap);
 	/*
 
 
@@ -451,19 +578,19 @@ void readInputs(void *CallBackRef)
 //GUI_DisString_EN(50,80,"ACY",&Font12,GUI_BACKGROUND,CYAN);
 //GUI_DisString_EN(95,80,"MIC",&Font12,GUI_BACKGROUND,CYAN);
 
-if(pok_x > 127){
-	pok_x = 127;
-}
-else if(pok_x < 0){
-	pok_x = 0;
-}
-
-if(pok_y > 127){
-	pok_y = 127;
-}
-else if(pok_y < 0){
-	pok_y = 0;
-}
+//if(pok_x > 127){
+//	pok_x = 127;
+//}
+//else if(pok_x < 0){
+//	pok_x = 0;
+//}
+//
+//if(pok_y > 127){
+//	pok_y = 127;
+//}
+//else if(pok_y < 0){
+//	pok_y = 0;
+//}
 
 //Paint_Sprite(pok_x, pok_y,  &new_bitmap, &pok_sprite);
 
@@ -591,11 +718,14 @@ void lightHandler(void *CallBackRef)
 	float light;
 	light = read_opt();
 	if(light < 10){
-		text_color = CYAN;
+		text_color = WHITE;
+		light_mode = 1;
 	}
 	else{
-		text_color = YELLOW;
+		text_color = BLACK;
+		light_mode = 0;
 	}
+	LoadStateSprites(peek(&state_stack));
 	(void)XGpio_InterruptClear(&gpioLight, LIGHT_INT_CH);
 	XGpio_InterruptEnable(&gpioLight, LIGHT_INT_CH);
 
@@ -606,13 +736,18 @@ void btnHandler(void *CallBackRef)
 	u8 btns;
 	btns = XGpio_DiscreteRead(&gpioBtn, BTN_INT_CH); //Se envía al bloque PWM
 	if(btns >= 4){
-		text_color = MAGENTA;
+//		text_color = MAGENTA;
 	}
 	else if(btns >= 2){
-		text_color = GREEN;
+//		text_color = GREEN;
+		if(peek(&state_stack) != ST_BV){
+			back_state();
+		}
+
 	}
 	else if(btns >= 1){
-		text_color = RED;
+//		text_color = RED;
+		advance_state();
 	}
 	(void)XGpio_InterruptClear(&gpioBtn, BTN_INT_CH);
 	XGpio_InterruptEnable(&gpioBtn, BTN_INT_CH);
@@ -668,40 +803,94 @@ void ShowBattleView(BITMAP *BitMapPtr){
 
 	Paint_Sprite(8, 54, (BITMAP *)BitMapPtr, &mon_sprite1);
 
-	BitM_DisString_EN(14, 14,"Placeholder",&Font8,GUI_BACKGROUND, BLACK , (BITMAP *)BitMapPtr);
+	BitM_DisString_EN(14, 14, trainer2.zybomons[0].name,&Font8,GUI_BACKGROUND, text_color , (BITMAP *)BitMapPtr);
 
 	Paint_Sprite(14, 22, (BITMAP *)BitMapPtr, &aux_sprite1);
 
 	char health_str1[16] = {};
 
-	int max_health1 = 254;
-	int health1 = 100;
+	int max_health1 = trainer2.zybomons[0].max_lp;
+	int health1 = trainer2.zybomons[0].lp;
 
 	sprintf(health_str1, "%d/%d", health1, max_health1);
 
-	BitM_DisString_EN(14, 30,health_str1,&Font8,GUI_BACKGROUND, BLACK , (BITMAP *)BitMapPtr);
+	BitM_DisString_EN(14, 30,health_str1,&Font8,GUI_BACKGROUND, text_color , (BITMAP *)BitMapPtr);
 
 	DrawHealth(16, 24, (BITMAP *)BitMapPtr, (health1*100)/max_health1);
 	xil_printf("vida: %d/n",(health1*100)/max_health1);
 
 
 
-	BitM_DisString_EN(72, 86,"Placeholder",&Font8,GUI_BACKGROUND, BLACK , (BITMAP *)BitMapPtr);
+	BitM_DisString_EN(72, 86,trainer1.zybomons[0].name,&Font8,GUI_BACKGROUND, text_color , (BITMAP *)BitMapPtr);
 
 	Paint_Sprite(72, 94, (BITMAP *)BitMapPtr, &aux_sprite1);
 
 	char health_str2[16] = {};
 
-	int max_health2 = 85;
-	int health2 = 1;
+	int max_health2 = trainer1.zybomons[0].max_lp;
+	int health2 = trainer1.zybomons[0].lp;
 
 	sprintf(health_str2, "%d/%d", health2, max_health2);
 
-	BitM_DisString_EN(96, 102,health_str2,&Font8,GUI_BACKGROUND, BLACK , (BITMAP *)BitMapPtr);
+	BitM_DisString_EN(96, 102,health_str2,&Font8,GUI_BACKGROUND, text_color , (BITMAP *)BitMapPtr);
 
 	DrawHealth(74, 96, (BITMAP *)BitMapPtr, (health2*100)/max_health2);
 
 
+
+}
+
+void ShowBattleViewMenu(BITMAP *BitMapPtr){
+
+	ShowBattleView((BITMAP *)BitMapPtr);
+
+	Paint_Sprite(0, 104, (BITMAP *)BitMapPtr, &UI_sprite);
+
+
+	int x, y;
+
+	x = 2 + 64*select_x;
+
+	y = 106;
+
+	Paint_Sprite((POINT)x, (POINT)y, (BITMAP *)BitMapPtr, &selection_sprite);
+
+
+}
+
+void ShowAttackMenu(BITMAP * BitMapPtr){
+	Paint_Sprite(0, 0, (BITMAP *)BitMapPtr, &background_sprite);
+
+//	ATTACK attack1 = trainer1.zybomons[0].attacks[0];
+//	ATTACK attack2 = trainer1.zybomons[0].attacks[1];
+//	ATTACK attack3 = trainer1.zybomons[0].attacks[2];
+//	ATTACK attack4 = trainer1.zybomons[0].attacks[3];
+
+
+	BitM_DisString_EN(8, 86, trainer1.zybomons[0].attacks[0].name,&Font12,GUI_BACKGROUND, BLACK , (BITMAP *)BitMapPtr);
+	BitM_DisString_EN(72, 86, trainer1.zybomons[0].attacks[1].name,&Font12,GUI_BACKGROUND, BLACK , (BITMAP *)BitMapPtr);
+	BitM_DisString_EN(8, 107, trainer1.zybomons[0].attacks[2].name,&Font12,GUI_BACKGROUND, BLACK , (BITMAP *)BitMapPtr);
+	BitM_DisString_EN(72, 107, trainer1.zybomons[0].attacks[3].name,&Font12,GUI_BACKGROUND, BLACK , (BITMAP *)BitMapPtr);
+
+	int selected = select_x + select_y *2;
+
+	char power_str[11] = {};
+
+	sprintf(power_str, "PODER %d", trainer1.zybomons[0].attacks[selected].power);
+	BitM_DisString_EN(24, 20, power_str,&Font12,GUI_BACKGROUND, BLACK , (BITMAP *)BitMapPtr);
+
+	char uses_str[11] = {};
+
+	sprintf(uses_str, "USOS %d/%d", trainer1.zybomons[0].attacks[selected].uses, trainer1.zybomons[0].attacks[selected].max_uses);
+	BitM_DisString_EN(24, 48, uses_str,&Font12,GUI_BACKGROUND, BLACK , (BITMAP *)BitMapPtr);
+
+	int x, y;
+
+	x = 2 + 64*select_x;
+
+	y = 82 + 24*select_y;
+
+	Paint_Sprite((POINT)x, (POINT)y, (BITMAP *)BitMapPtr, &selection_sprite);
 
 }
 

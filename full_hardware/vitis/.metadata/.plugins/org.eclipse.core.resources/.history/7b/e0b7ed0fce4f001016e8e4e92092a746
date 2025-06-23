@@ -1,0 +1,42 @@
+#ifndef ZYBOMON_H
+#define ZYBOMON_H
+
+#include <stdint.h>
+#include <stdbool.h>
+
+
+typedef enum{
+	FIRE = 0,
+	WATER,
+	PLANT,
+	NORMAL
+} E_TYPE;
+
+typedef struct{
+	int power;
+	int uses;
+	E_TYPE e_type;
+} ATTACK;
+
+typedef struct{
+	int active;
+	int lp;
+	int max_lp;
+	int atk;
+	int def;
+	int spd;
+	E_TYPE e_type;
+	ATTACK attacks[4];
+	TCHAR *front_sprite;
+	TCHAR *back_sprite;
+	char name[10];
+} ZYBOMON;
+
+typedef struct{
+	char name[10];
+	ZYBOMON zybomones[4];
+	int active;
+} TRAINER;
+
+
+#endif

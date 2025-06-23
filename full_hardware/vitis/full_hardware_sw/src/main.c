@@ -60,7 +60,6 @@ int main()
 	}
 	Retrieve_Bitmap(&screen_bitmap);
 	CORE_FLAG = 0;
-	BitM_DisString_EN(5,10,"Ejex",&Font12,GUI_BACKGROUND,CYAN, &screen_bitmap);
 	GUI_Update_Bitmap(&prev_bitmap, &screen_bitmap);
 	prev_bitmap = screen_bitmap;
 //	xil_printf("listo");
