@@ -1,0 +1,20 @@
+14:16:52 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\andre\Projects\IEE2463-SEP-Proyecto-2-Z8\PS\vitis\temp_xsdb_launch_script.tcl
+14:16:52 INFO  : Registering command handlers for Vitis TCF services
+14:16:55 INFO  : XSCT server has started successfully.
+14:16:55 INFO  : plnx-install-location is set to ''
+14:16:55 INFO  : Successfully done setting XSCT server connection channel  
+14:16:56 INFO  : Successfully done setting workspace for the tool. 
+14:16:56 INFO  : Successfully done query RDI_DATADIR 
+14:16:57 INFO  : Platform repository initialization has completed.
+14:18:47 INFO  : Result from executing command 'getProjects': design_1_wrapper
+14:18:47 INFO  : Result from executing command 'getPlatforms': 
+14:18:48 INFO  : Platform 'design_1_wrapper' is added to custom repositories.
+14:19:03 INFO  : Platform 'design_1_wrapper' is added to custom repositories.
+14:45:44 INFO  : Result from executing command 'getProjects': design_1_wrapper
+14:45:44 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/PS/vitis/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+14:45:45 INFO  : Checking for BSP changes to sync application flags for project 'main_ps'...
+14:47:02 INFO  : Checking for BSP changes to sync application flags for project 'main_ps'...
+14:54:21 INFO  : Checking for BSP changes to sync application flags for project 'main_ps'...
+14:54:47 INFO  : Checking for BSP changes to sync application flags for project 'main_ps'...
+14:59:37 INFO  : Checking for BSP changes to sync application flags for project 'main_ps'...
+15:00:20 INFO  : Checking for BSP changes to sync application flags for project 'main_ps'...

@@ -1,0 +1,17 @@
+timestamp=[2025-06-24 14:16:50], mode=WORKBENCH_START, duration=0:00:08.164, duration_ms=8164, data={}
+timestamp=[2025-06-24 14:16:51], mode=WORKBENCH_UI_INIT, duration=0:00:00.855, duration_ms=855, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
+timestamp=[2025-06-24 14:16:57], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:04.736, duration_ms=4736, data={}
+timestamp=[2025-06-24 14:19:03], mode=APP_CREATION, duration=0:00:38.925, duration_ms=38925, data={name=main_ps, project_type=sdk, os=standalone, processor=ps7_cortexa9, runtime=cpp, platform=design_1_wrapper, application_type=application}
+timestamp=[2025-06-24 14:45:45], mode=PLATFORM_GENERATION, duration=0:02:02.111, duration_ms=122111, data={name=design_1_wrapper}
+timestamp=[2025-06-24 14:45:50], mode=BUILD, duration=0:00:04.971, duration_ms=4971, data={name=main_ps, configuration=Debug, clean_build=false}
+timestamp=[2025-06-24 14:46:00], mode=BUILD, duration=0:00:09.665, duration_ms=9665, data={name=main_ps_system, configuration=Debug, clean_build=false}
+timestamp=[2025-06-24 14:47:03], mode=BUILD, duration=0:00:01.609, duration_ms=1609, data={name=main_ps, configuration=Debug, clean_build=false}
+timestamp=[2025-06-24 14:47:13], mode=BUILD, duration=0:00:08.873, duration_ms=8873, data={name=main_ps_system, configuration=Debug, clean_build=false}
+timestamp=[2025-06-24 14:54:24], mode=BUILD, duration=0:00:02.633, duration_ms=2633, data={name=main_ps, configuration=Debug, clean_build=false}
+timestamp=[2025-06-24 14:54:28], mode=BUILD, duration=0:00:03.733, duration_ms=3733, data={name=main_ps_system, configuration=Debug, clean_build=false}
+timestamp=[2025-06-24 14:54:49], mode=BUILD, duration=0:00:01.814, duration_ms=1814, data={name=main_ps, configuration=Debug, clean_build=false}
+timestamp=[2025-06-24 14:54:59], mode=BUILD, duration=0:00:09.460, duration_ms=9460, data={name=main_ps_system, configuration=Debug, clean_build=false}
+timestamp=[2025-06-24 14:59:39], mode=BUILD, duration=0:00:01.742, duration_ms=1742, data={name=main_ps, configuration=Debug, clean_build=false}
+timestamp=[2025-06-24 14:59:48], mode=BUILD, duration=0:00:08.424, duration_ms=8424, data={name=main_ps_system, configuration=Debug, clean_build=false}
+timestamp=[2025-06-24 15:00:22], mode=BUILD, duration=0:00:01.818, duration_ms=1818, data={name=main_ps, configuration=Debug, clean_build=false}
+timestamp=[2025-06-24 15:00:31], mode=BUILD, duration=0:00:08.793, duration_ms=8793, data={name=main_ps_system, configuration=Debug, clean_build=false}

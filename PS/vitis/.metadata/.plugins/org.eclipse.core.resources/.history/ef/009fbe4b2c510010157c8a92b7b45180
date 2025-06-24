@@ -354,11 +354,6 @@ State *state_final(State *state)
         }
         return state->next; // Retorna al estado principal
     }
-    else
-    {
-        printf("[FINAL] Opción no válida. Permaneciendo en el estado final.\n");
-        return state; // Permanece en el estado final
-    }
 }
 
 /*Esta funcion maneja el flujo de estados*/

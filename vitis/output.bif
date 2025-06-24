@@ -1,6 +1,0 @@
-//arch = zynq; split = false; format = BIN
-the_ROM_image:
-{
-	[bootloader]D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\vitis\booter\export\booter\sw\booter\boot\fsbl.elf
-	D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\project_1\project_1.runs\impl_1\design_1_wrapper.bit
-}

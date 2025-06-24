@@ -1,0 +1,16 @@
+set_property SRC_FILE_INFO {cfile:c:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/PS/vivado/Ps/Ps.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc rfile:../../../Ps.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc id:1 order:EARLY scoped_inst:design_1_i/processing_system7_0} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/constrs_1/new/constraints.xdc rfile:../../../../../../full_hardware/vivado/vivado.srcs/constrs_1/new/constraints.xdc id:2} [current_design]
+current_instance design_1_i/processing_system7_0
+set_property src_info {type:SCOPED_XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
+create_clock -period 10.000 [get_ports {}]
+current_instance
+set_property src_info {type:XDC file:2 line:8 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN K17   IOSTANDARD LVCMOS33 } [get_ports { clk }]; #IO_L12P_T1_MRCC_35 Sch=sysclk
+set_property src_info {type:XDC file:2 line:27 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN M14   IOSTANDARD LVCMOS33 } [get_ports { LED[0] }]; #IO_L23P_T3_35 Sch=led[0]
+set_property src_info {type:XDC file:2 line:28 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN M15   IOSTANDARD LVCMOS33 } [get_ports { LED[1] }]; #IO_L23N_T3_35 Sch=led[1]
+set_property src_info {type:XDC file:2 line:29 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN G14   IOSTANDARD LVCMOS33 } [get_ports { LED[2] }]; #IO_0_35 Sch=led[2]
+set_property src_info {type:XDC file:2 line:30 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN D18   IOSTANDARD LVCMOS33 } [get_ports { LED[3] }]; #IO_L3N_T0_DQS_AD1N_35 Sch=led[3]

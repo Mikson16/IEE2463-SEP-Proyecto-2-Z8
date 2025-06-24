@@ -12,17 +12,17 @@ void imprimir_active_trainers(State *state)
 {
     if (state->trainer_1->active == 1 && state->trainer_2->active == 0)
     {
-        printf("Trainer 1 activo: %d\n", state->trainer_1->active);
-        printf("Trainer 2 inactivo: %d\n", state->trainer_2->active);
+    	xil_printf("Trainer 1 activo: %d\n", state->trainer_1->active);
+    	xil_printf("Trainer 2 inactivo: %d\n", state->trainer_2->active);
     }
     else if (state->trainer_2->active == 1 && state->trainer_1->active == 0)
     {
-        printf("Trainer 1 inactivo: %d\n", state->trainer_1->active);
-        printf("Trainer 2 activo: %d\n", state->trainer_2->active);
+    	xil_printf("Trainer 1 inactivo: %d\n", state->trainer_1->active);
+    	xil_printf("Trainer 2 activo: %d\n", state->trainer_2->active);
     }
     else
     {
-        printf("Error al imprimir los trainers activos. Ambos trainers no pueden estar activos o inactivos al mismo tiempo.\n");
+    	xil_printf("Error al imprimir los trainers activos. Ambos trainers no pueden estar activos o inactivos al mismo tiempo.\n");
     }
 }
 /*Funciones para los estados*/
@@ -30,7 +30,7 @@ void nombrar_zybomon(Trainer *trainer)
 {
     for (int i = 0; i < NUM_ZYBOMONES / 2; i++)
     {
-        printf("Zybomon #%d, ingrese un nombre: ", i + 1);
+    	xil_printf("Zybomon #%d, ingrese un nombre: ", i + 1);
         fgets(trainer->zybomon_array.zybomones[i].name, sizeof(trainer->zybomon_array.zybomones[i].name), stdin);
 
         // Elimina el salto de línea si existe
@@ -47,7 +47,7 @@ State *create_state(int state_id, State_setup *setup)
     State *new_state = (State *)malloc(sizeof(State));
     if (new_state == NULL)
     {
-        printf("Error allocando en memoria\n");
+    	xil_printf("Error allocando en memoria\n");
         return NULL;
     }
     new_state->trainer_1 = setup->trainer; // Asigna el trainer activo al nuevo estado
@@ -64,16 +64,16 @@ State_setup *init_setup(void)
     State_setup *setup = (State_setup *)malloc(sizeof(State_setup));
     if (setup == NULL)
     {
-        printf("Error allocando en memoria\n");
+    	xil_printf("Error allocando en memoria\n");
         return NULL;
     }
     setup->next = NULL;                  // Inicializa el puntero al siguiente estado como NULL
     setup->trainer = crear_trainer(1);   // Crear trainer 1
     setup->trainer_2 = crear_trainer(0); // Crear trainer 2
-    printf("Trainer 1\n");
+    xil_printf("Trainer 1\n");
     nombrar_zybomon(setup->trainer);       // Asignar nombres a los zybomones del trainer 1
     imprimir_info_trainer(setup->trainer); // Imprimir info del trainer 1
-    printf("Trainer 2\n");
+    xil_printf("Trainer 2\n");
     nombrar_zybomon(setup->trainer_2);       // Asignar nombres a los zybomones del trainer 2
     imprimir_info_trainer(setup->trainer_2); // Imprimir info del trainer 2
     // Aqui llevar a acabo todas las funciones de seteo antes del flujo del juego
@@ -89,7 +89,7 @@ State *state_init(State_setup *setup)
     {
         return NULL; // Error al crear el estado
     }
-    printf("Estado principal creado con id: %d\n", main_state->state_id);
+    xil_printf("Estado principal creado con id: %d\n", main_state->state_id);
 
     State *selection_state = create_state(1, setup);
     if (selection_state == NULL)
@@ -98,7 +98,7 @@ State *state_init(State_setup *setup)
     }
     main_state->next = selection_state; // Enlazar el estado principal con el de selección
     selection_state->prev = main_state; // Enlazar el estado de selección con el
-    printf("Estado de selección creado con id: %d\n", selection_state->state_id);
+    xil_printf("Estado de selección creado con id: %d\n", selection_state->state_id);
 
     State *info_state = create_state(2, setup);
     if (info_state == NULL)
@@ -107,7 +107,7 @@ State *state_init(State_setup *setup)
     }
     selection_state->next = info_state; // Enlazar el estado de selección con el info_state
     info_state->prev = selection_state; // Enlazar el estado de info_state con el de selección
-    printf("Estado de información creado con id: %d\n", info_state->state_id);
+    xil_printf("Estado de información creado con id: %d\n", info_state->state_id);
 
     State *battle_state = create_state(3, setup);
     if (battle_state == NULL)
@@ -115,7 +115,7 @@ State *state_init(State_setup *setup)
         return NULL; // Error al crear el estado
     }
     main_state->next_2 = battle_state; // Enlazar el estado principal con el de batalla
-    printf("Estado de batalla creado con id: %d\n", battle_state->state_id);
+    xil_printf("Estado de batalla creado con id: %d\n", battle_state->state_id);
 
     State *damage_state = create_state(4, setup);
     if (damage_state == NULL)
@@ -123,7 +123,7 @@ State *state_init(State_setup *setup)
         return NULL; // Error al crear el estado
     }
     battle_state->next = damage_state; // Enlazar el estado de batalla con el de daño
-    printf("Estado de daño creado con id: %d\n", damage_state->state_id);
+    xil_printf("Estado de daño creado con id: %d\n", damage_state->state_id);
 
     State *state_final = create_state(5, setup);
     if (state_final == NULL)
@@ -132,7 +132,7 @@ State *state_init(State_setup *setup)
     }
     damage_state->next = state_final; // Enlazar el estado de daño con el estado final
     state_final->next = main_state;   // Enlazar el estado final con el estado principal
-    printf("Estado final creado con id: %d\n", state_final->state_id);
+    xil_printf("Estado final creado con id: %d\n", state_final->state_id);
 
     return main_state; // Retorna el estado principal
 }
@@ -204,22 +204,22 @@ void kill_program(State_setup *setup, State *head)
         free(setup->trainer_2);
     }
     free(setup); // Liberar memoria del setup
-    printf("Programa terminado y memoria liberada.\n");
+    xil_printf("Programa terminado y memoria liberada.\n");
 }
 
 State *state_main(State *state)
 {
     // Implementar la lógica del estado principal aquí
     // Por ahora, solo imprimimos el id del estado
-    printf("[MAIN] con id: %d\n", state->state_id);
+    xil_printf("[MAIN] con id: %d\n", state->state_id);
     imprimir_active_trainers(state); // Imprime los trainers activos en el estado actual
     // Aquí podrías agregar más lógica relacionada con el estado principal
     /* eventualmente agregar logica que permite pasar de MAIN A BATTLE o a SELECTION*/
     /*Logica basica para cambiar de estado por input de consola*/
     int opcion;
-    printf("[MAIN] Elige una opción:\n");
-    printf("1. Ir a SELECTION\n");
-    printf("2. Ir a BATTLE\n");
+    xil_printf("[MAIN] Elige una opción:\n");
+    xil_printf("1. Ir a SELECTION\n");
+    xil_printf("2. Ir a BATTLE\n");
     scanf("%d", &opcion);
     if (opcion == 1)
     {
@@ -231,7 +231,7 @@ State *state_main(State *state)
     }
     else
     {
-        printf("[MAIN] Opción no válida. Permaneciendo en el estado principal.\n");
+        xil_printf("[MAIN] Opción no válida. Permaneciendo en el estado principal.\n");
         return state; // Permanece en el estado principal
     }
 }
@@ -239,14 +239,14 @@ State *state_selection(State *state)
 {
     // Implementar la lógica del estado de selección aquí
     // Por ahora, solo imprimimos el id del estado
-    printf("[SELECTION] con id: %d\n", state->state_id);
+    xil_printf("[SELECTION] con id: %d\n", state->state_id);
     imprimir_active_trainers(state); // Imprime los trainers activos en el estado actual
     // Aquí podrías agregar más lógica relacionada con el estado de selección
     /*Logica basica para cambiar de estado por meido de input de consola*/
     int opcion;
-    printf("[SELECTION] Elige una opción:\n");
-    printf("1. Ir a INFO\n");
-    printf("2. Volver a MAIN\n");
+    xil_printf("[SELECTION] Elige una opción:\n");
+    xil_printf("1. Ir a INFO\n");
+    xil_printf("2. Volver a MAIN\n");
     scanf("%d", &opcion);
     if (opcion == 1)
     {
@@ -258,7 +258,7 @@ State *state_selection(State *state)
     }
     else
     {
-        printf("[SELECTION] Opción no válida. Permaneciendo en el estado de selección.\n");
+        xil_printf("[SELECTION] Opción no válida. Permaneciendo en el estado de selección.\n");
         return state; // Permanece en el estado de selección
     }
 }
@@ -266,13 +266,13 @@ State *state_info(State *state)
 {
     // Implementar la lógica del estado de información aquí
     // Por ahora, solo imprimimos el id del estado
-    printf("[INFO] con id: %d\n", state->state_id);
+    xil_printf("[INFO] con id: %d\n", state->state_id);
     imprimir_active_trainers(state); // Imprime los trainers activos en el estado actual
     // Aquí podrías agregar más lógica relacionada con el estado de información
     /*Logica basica para cambiar de estado por meido de input de consola*/
     int opcion;
-    printf("[INFO] Elige una opción:\n");
-    printf("1. Volver a SELECTION\n");
+    xil_printf("[INFO] Elige una opción:\n");
+    xil_printf("1. Volver a SELECTION\n");
     scanf("%d", &opcion);
     if (opcion == 1)
     {
@@ -280,7 +280,7 @@ State *state_info(State *state)
     }
     else
     {
-        printf("[INFO] Opción no válida. Permaneciendo en el estado de información.\n");
+        xil_printf("[INFO] Opción no válida. Permaneciendo en el estado de información.\n");
         return state; // Permanece en el estado de información
     }
 }
@@ -288,7 +288,7 @@ State *state_battle(State *state)
 {
     // Implementar la lógica del estado de batalla aquí
     // Por ahora, solo imprimimos el id del estado
-    printf("[BATTLE] Estado de batalla con id: %d\n", state->state_id);
+    xil_printf("[BATTLE] Estado de batalla con id: %d\n", state->state_id);
     imprimir_active_trainers(state); // Imprime los trainers activos en el estado actual
     // Aquí podrías agregar más lógica relacionada con el estado de batalla
     // Por ejemplo, podrías iniciar una batalla entre los entrenadores activos
@@ -302,7 +302,7 @@ State *state_damage(State *state)
 {
     // Implementar la lógica del estado de daño aquí
     // Por ahora, solo imprimimos el id del estado
-    printf("[DAMAGE] Estado de daño con id: %d\n", state->state_id);
+    xil_printf("[DAMAGE] Estado de daño con id: %d\n", state->state_id);
     imprimir_active_trainers(state); // Imprime los trainers activos en el estado actual
     // Aquí podrías agregar más lógica relacionada con el estado de daño
     // Por ejemplo, podrías aplicar daño a los zybomones de los entrenadores
@@ -311,8 +311,8 @@ State *state_damage(State *state)
     /*Aqui agregar el resto de la logica de daño*/
 
     // Por ahora, simplemente retornamos al estado principal
-    printf("[DAMAGE] Calculando daño...\n");
-    printf("[DAMAGE] Daño calculado. Avanzando al estado final...\n");
+    xil_printf("[DAMAGE] Calculando daño...\n");
+    xil_printf("[DAMAGE] Daño calculado. Avanzando al estado final...\n");
     return state->next; // Retorna al estado final después de calcular el daño
 }
 /*Estado Final*/
@@ -320,24 +320,24 @@ State *state_final(State *state)
 {
     // Implementar la lógica del estado final aquí
     // Por ahora, solo imprimimos el id del estado
-    printf("[FINAL] Estado final con id: %d\n", state->state_id);
+    xil_printf("[FINAL] Estado final con id: %d\n", state->state_id);
     imprimir_active_trainers(state); // Imprime los trainers activos en el estado actual
     // Aquí agregar más lógica relacionada con el estado final
 
     /*Test para simular que el juego continua o termina*/
     int opcion;
-    printf("[FINAL] Elige una opción:\n");
-    printf("1. Terminar el juego\n");
-    printf("2. Volver al estado principal\n");
+    xil_printf("[FINAL] Elige una opción:\n");
+    xil_printf("1. Terminar el juego\n");
+    xil_printf("2. Volver al estado principal\n");
     scanf("%d", &opcion);
     if (opcion == 1)
     {
-        printf("[FINAL] Terminando el juego...\n");
+        xil_printf("[FINAL] Terminando el juego...\n");
         return NULL; // Retorno null para cerrar el flujo de estados
     }
     else if (opcion == 2)
     {
-        printf("[FINAL] Volviendo al estado principal...\n");
+        xil_printf("[FINAL] Volviendo al estado principal...\n");
         if (state->trainer_1->active == 1 && state->trainer_2->active == 0)
         {
             state->trainer_1->active = 0; // Desactiva el trainer 1
@@ -350,24 +350,19 @@ State *state_final(State *state)
         }
         else
         {
-            printf("[ERROR FINAL] Error al cambiar de trainer activo.\n");
+            xil_printf("[ERROR FINAL] Error al cambiar de trainer activo.\n");
         }
         return state->next; // Retorna al estado principal
-    }
-    else
-    {
-        printf("[FINAL] Opción no válida. Permaneciendo en el estado final.\n");
-        return state; // Permanece en el estado final
     }
 }
 
 /*Esta funcion maneja el flujo de estados*/
 State *state_flow(State *state) // state es head en el main
 {
-    printf("Flujo de estados iniciado...\n");
+    xil_printf("Flujo de estados iniciado...\n");
     // Implementar el flujo de estados aquí
     // Por ahora, solo imprimimos el id del estado
-    printf("Flujo del estado con id: %d\n", state->state_id);
+    xil_printf("Flujo del estado con id: %d\n", state->state_id);
     if (state->state_id == 0)
     {
         return state_main(state); // Retorna el siguiente estado
@@ -396,7 +391,7 @@ State *state_flow(State *state) // state es head en el main
     }
     else
     {
-        printf("Estado desconocido con id: %d\n", state->state_id);
+        xil_printf("Estado desconocido con id: %d\n", state->state_id);
         return NULL; // Termina el flujo si el estado es desconocido
     }
 }
@@ -404,13 +399,13 @@ State *state_flow(State *state) // state es head en el main
 /*
 int main()
 {
-    printf("Iniciando test de creacion y liberacion de estados...\n");
+    xil_printf("Iniciando test de creacion y liberacion de estados...\n");
 
     // Inicializar setup
     State_setup *setup = init_setup();
     if (!setup)
     {
-        printf("Fallo al inicializar setup.\n");
+        xil_printf("Fallo al inicializar setup.\n");
         return 1;
     }
 
@@ -418,46 +413,46 @@ int main()
     State *main_state = state_init(setup);
     if (!main_state)
     {
-        printf("Fallo al crear los estados.\n");
+        xil_printf("Fallo al crear los estados.\n");
         kill_program(setup, NULL);
         return 1;
     }
 
     // Recorrer y mostrar los estados creados
-    printf("Estados creados:\n");
+    xil_printf("Estados creados:\n");
     State *current = main_state;
     State *next_2 = main_state->next_2;
     if (next_2)
     {
-        printf("  Estado id: %d\n", next_2->state_id);
-        printf("Battle state tiene trainer_1 activo: %d\n", next_2->trainer_1->active);
+        xil_printf("  Estado id: %d\n", next_2->state_id);
+        xil_printf("Battle state tiene trainer_1 activo: %d\n", next_2->trainer_1->active);
     }
     State *next = next_2->next;
     if (next)
     {
-        printf("  Estado id: %d\n", next->state_id);
-        printf("Damage state tiene trainer_1 activo: %d\n", next->trainer_1->active);
+        xil_printf("  Estado id: %d\n", next->state_id);
+        xil_printf("Damage state tiene trainer_1 activo: %d\n", next->trainer_1->active);
     }
 
     //Ahora con el otro lado de la lista
-    printf("Recorriendo estados desde el estado principal:\n");
+    xil_printf("Recorriendo estados desde el estado principal:\n");
     current = main_state;
-    printf("  MAIN Estado id: %d\n", current->state_id);
-    printf("Main state tiene trainer_1 activo: %d\n", current->trainer_1->active);
-    printf("  Tiene next_2 a estado id: %d\n", current->next_2->state_id);
+    xil_printf("  MAIN Estado id: %d\n", current->state_id);
+    xil_printf("Main state tiene trainer_1 activo: %d\n", current->trainer_1->active);
+    xil_printf("  Tiene next_2 a estado id: %d\n", current->next_2->state_id);
     next = current->next;
     if (next)
     {
-        printf("  SELECTION Estado id: %d\n", next->state_id);
-        printf("    Tiene next a estado id: %d\n", next->state_id);
-        printf("Selection state tiene trainer_1 activo: %d\n", next->trainer_1->active);
+        xil_printf("  SELECTION Estado id: %d\n", next->state_id);
+        xil_printf("    Tiene next a estado id: %d\n", next->state_id);
+        xil_printf("Selection state tiene trainer_1 activo: %d\n", next->trainer_1->active);
     }
     current = next->next; //siguiente estado
     if (current)
     {
-        printf("  INFO Estado id: %d\n", current->state_id);
-        printf("  Estado id: %d\n", current->state_id);
-        printf("Info state tiene trainer_1 activo: %d\n", current->trainer_1->active);
+        xil_printf("  INFO Estado id: %d\n", current->state_id);
+        xil_printf("  Estado id: %d\n", current->state_id);
+        xil_printf("Info state tiene trainer_1 activo: %d\n", current->trainer_1->active);
     }
 
     //Liberar toda la memoria
