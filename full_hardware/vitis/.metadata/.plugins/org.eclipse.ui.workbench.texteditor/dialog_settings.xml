@@ -2,12 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="pok_sprite" key="selection"/>
+		<item value="selected" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="selected"/>
 			<item value="pok_sprite"/>
 			<item value="text_color"/>
 			<item value="plays"/>
@@ -22,7 +23,6 @@
 			<item value="PS7_SCUGIC_1"/>
 			<item value="LIGHT_INT"/>
 			<item value="RESET_VALUE"/>
-			<item value="INPUT_RESET_VALUE"/>
 		</list>
 		<list key="replacehistory">
 			<item value="LIGHT_INT_CH"/>

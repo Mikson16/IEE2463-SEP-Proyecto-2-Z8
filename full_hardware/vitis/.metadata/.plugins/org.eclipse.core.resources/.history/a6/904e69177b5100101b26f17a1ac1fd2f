@@ -1,0 +1,95 @@
+#include "zybomon.h"
+#include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
+#include <math.h>
+#include <stdint.h>
+#include "xil_printf.h"
+#include "ADC.h"
+
+ZYBOMON generate_zybomon(int active)
+{
+    ZYBOMON zybomon;
+
+    // Generar valores aleatorios para cada atributo
+    srand(read_POT2());
+    zybomon.active = active;         // active/inactive, se define activo solo 1
+    zybomon.max_lp = MAX_HEALTH; // Parametro predefinido
+
+    zybomon.lp = rand() % (MAX_HEALTH - MIN_HEALTH + 1) + MIN_HEALTH; // MIN_HEALTH-MAX_HEALTH
+
+    zybomon.e_type = rand() % ZYBOMON_TYPES; // 0-(ZYBOMON_TYPES-1)
+
+    zybomon.atk = rand() % (MAX_ATTACK + 1);   // 0-MAX_ATTACK
+    zybomon.def = rand() % (MAX_DEFENSE + 1); // 0-MAX_DEFENSE
+    zybomon.spd = rand() % (MAX_SPEED + 1);     // 0-MAX_SPEED
+
+    zybomon.front_sprite = "PIKA.BMP";
+    zybomon.back_sprite = "PIKA_B.BMP";
+
+    strcpy(zybomon.name, "placeholder");
+
+
+    int i;
+
+
+    for(i = 0; i < 4; i++){
+    	ATTACK attack;
+    	attack.e_type = rand() % ATTACK_TYPES;
+    	int power = rand() % MAX_A_POWER; // 0-MAX_A_POWER
+    	int str_end;
+    	if(attack.e_type == FIRE){
+			strcpy(attack.name, "Flama");
+			str_end = 5;
+		}
+    	else if(attack.e_type == WATER){
+    		strcpy(attack.name, "Chorro");
+    		str_end = 6;
+    	}
+    	else if(attack.e_type == PLANT){
+    		strcpy(attack.name, "Hoja");
+    		str_end = 4;
+    	}
+    	else if(attack.e_type == NORMAL){
+    		strcpy(attack.name, "Garra");
+    		str_end = 5;
+    	}
+    	if(power == 0){
+    		attack.power = 60;
+    		attack.uses = 30;
+    		attack.max_uses = 30;
+    		attack.name[str_end] = '-';
+    		attack.name[str_end + 1] = '\0';
+
+    	}
+    	else if(power == 1){
+    		attack.power = 80;
+    		attack.uses = 15;
+    		attack.max_uses = 15;
+    	}
+    	else if(power == 2){
+    		attack.power = 100;
+    		attack.uses = 5;
+    		attack.max_uses = 5;
+    		attack.name[str_end] = '+';
+    		attack.name[str_end + 1] = '\0';
+    	}
+
+
+        zybomon.attacks[i] = attack;
+    }
+
+    // Retornar el zybomon generado
+    return zybomon;
+};
+
+void init_trainer(TRAINER * trainerPtr, int active)
+{
+	strcpy(trainerPtr->name , "placeholder");
+	trainerPtr->active = active;
+	int i = 0;
+	trainerPtr->zybomons[i] = generate_zybomon(1);
+	for(i = 1; i < 4; i++){
+		trainerPtr->zybomons[i] = generate_zybomon(0);
+	}
+}

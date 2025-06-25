@@ -15,3 +15,14 @@ timestamp=[2025-06-24 14:59:39], mode=BUILD, duration=0:00:01.742, duration_ms=1
 timestamp=[2025-06-24 14:59:48], mode=BUILD, duration=0:00:08.424, duration_ms=8424, data={name=main_ps_system, configuration=Debug, clean_build=false}
 timestamp=[2025-06-24 15:00:22], mode=BUILD, duration=0:00:01.818, duration_ms=1818, data={name=main_ps, configuration=Debug, clean_build=false}
 timestamp=[2025-06-24 15:00:31], mode=BUILD, duration=0:00:08.793, duration_ms=8793, data={name=main_ps_system, configuration=Debug, clean_build=false}
+timestamp=[2025-06-24 21:08:50], mode=WORKBENCH_START, duration=0:00:26.266, duration_ms=26266, data={}
+timestamp=[2025-06-24 21:08:51], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.109, duration_ms=109, data={}
+timestamp=[2025-06-24 21:08:53], mode=WORKBENCH_UI_INIT, duration=0:00:03.135, duration_ms=3135, data={editors_count=7, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,design_1_wrapper,main_ps,main_ps_system}
+timestamp=[2025-06-24 21:09:52], mode=PLATFORM_GENERATION, duration=0:00:32.681, duration_ms=32681, data={name=design_1_wrapper}
+timestamp=[2025-06-24 21:10:53], mode=BUILD, duration=0:00:02.485, duration_ms=2485, data={name=main_ps, configuration=Debug, clean_build=false}
+timestamp=[2025-06-24 21:10:55], mode=BUILD, duration=0:00:01.317, duration_ms=1317, data={name=main_ps_system, configuration=Debug, clean_build=false}
+timestamp=[2025-06-24 21:12:31], mode=PLATFORM_GENERATION, duration=0:00:01.404, duration_ms=1404, data={name=design_1_wrapper}
+timestamp=[2025-06-24 21:13:05], mode=BUILD, duration=0:00:00.856, duration_ms=856, data={name=main_ps, configuration=Debug, clean_build=false}
+timestamp=[2025-06-24 21:13:10], mode=BUILD, duration=0:00:05.406, duration_ms=5406, data={name=main_ps_system, configuration=Debug, clean_build=false}
+timestamp=[2025-06-24 21:17:25], mode=BUILD, duration=0:00:00.801, duration_ms=801, data={name=main_ps, configuration=Debug, clean_build=false}
+timestamp=[2025-06-24 21:17:30], mode=BUILD, duration=0:00:04.223, duration_ms=4223, data={name=main_ps_system, configuration=Debug, clean_build=false}

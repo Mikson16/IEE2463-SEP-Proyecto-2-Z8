@@ -1,6 +1,7 @@
 #include "trainer.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include "xil_printf.h"
 
 Trainer *crear_trainer(int active)
 {

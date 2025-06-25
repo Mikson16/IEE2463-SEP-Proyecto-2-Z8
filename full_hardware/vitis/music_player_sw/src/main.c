@@ -51,7 +51,7 @@ extern const unsigned char font[] ;
 #define LIGHT_INT_CH XGPIO_IR_CH1_MASK
 #define BTN_INT_CH XGPIO_IR_CH1_MASK
 
-#define CORE_FLAG (*(volatile unsigned long *)(0x0))
+#define CORE_FLAG (*(volatile unsigned long *)(0x3FF00000))
 
 #define ref_time 6
 
@@ -77,6 +77,7 @@ BITMAP mon_sprite1;
 BITMAP mon_sprite2;
 BITMAP aux_sprite1;
 BITMAP aux_sprite2;
+BITMAP type_sprite;
 //BITMAP pok_sprite;
 
 int movex, movey, movex_prev, movey_prev = 0;
@@ -125,6 +126,7 @@ void ShowBattleView(BITMAP *BitMapPtr);
 void ShowBattleViewMenu(BITMAP *BitMapPtr);
 
 void ShowAttackMenu(BITMAP * BitMapPtr);
+void ShowZybomonMenu(BITMAP * BitMapPtr, int selected);
 
 int SdReaderSetup(void);
 
@@ -163,6 +165,12 @@ void LoadStateSprites(STATE_ID state_id)
 		SdOpenSprite("AT_M_L.BMP", &background_sprite);
 
 	}
+	else if(state_id == ST_ZYB_MENU){
+		SdOpenSprite("ZYB_M.BMP", &background_sprite);
+		SdOpenSprite("HEBAR.BMP", &aux_sprite1);
+		SdOpenSprite("SLCT_ZYB.BMP", &selection_sprite);
+
+	}
 
 }
 
@@ -180,6 +188,12 @@ void advance_state()
 			push(&Xselection_stack, select_x);
 			push(&Yselection_stack, select_y);
 			LoadStateSprites(ST_AT_MENU);
+		}
+		else if(select_x == 1){
+			push(&state_stack, ST_ZYB_MENU);
+			push(&Xselection_stack, select_x);
+			push(&Yselection_stack, select_y);
+			LoadStateSprites(ST_ZYB_MENU);
 		}
 
 	}
@@ -210,6 +224,11 @@ void StateHandler()
 		ShowAttackMenu(&new_bitmap);
 		Xoptions = 2;
 		Yoptions = 2;
+		}
+	else if(peek(&state_stack) == ST_ZYB_MENU){
+		ShowZybomonMenu(&new_bitmap, select_y);
+		Xoptions = 1;
+		Yoptions = 4;
 		}
 }
 
@@ -382,7 +401,7 @@ int main()
 	// The ADC transform the data in 10bits, for temperatura and light sensors the data lenght is 16bits. For simplicity all
 	// arrays are defined as 16bits.
 
-
+	srand(read_POT2());
 	init_trainer(&trainer1, 1);
 	init_trainer(&trainer2, 0);
 
@@ -396,6 +415,7 @@ int main()
 	SdOpenSprite(trainer1.zybomons[0].back_sprite, &mon_sprite1);
 	SdOpenSprite("PIKA.BMP", &mon_sprite2);
 	SdOpenSprite("HEBAR.BMP", &aux_sprite1);
+	SdOpenSprite("TYPES.BMP", &type_sprite);
 
 	init_stack(&state_stack);
 	init_stack(&Xselection_stack);
@@ -832,7 +852,7 @@ void ShowBattleView(BITMAP *BitMapPtr){
 
 	sprintf(health_str2, "%d/%d", health2, max_health2);
 
-	BitM_DisString_EN(96, 102,health_str2,&Font8,GUI_BACKGROUND, text_color , (BITMAP *)BitMapPtr);
+	BitM_DisString_EN(72, 102,health_str2,&Font8,GUI_BACKGROUND, text_color , (BITMAP *)BitMapPtr);
 
 	DrawHealth(74, 96, (BITMAP *)BitMapPtr, (health2*100)/max_health2);
 
@@ -869,20 +889,23 @@ void ShowAttackMenu(BITMAP * BitMapPtr){
 
 	BitM_DisString_EN(8, 86, trainer1.zybomons[0].attacks[0].name,&Font12,GUI_BACKGROUND, BLACK , (BITMAP *)BitMapPtr);
 	BitM_DisString_EN(72, 86, trainer1.zybomons[0].attacks[1].name,&Font12,GUI_BACKGROUND, BLACK , (BITMAP *)BitMapPtr);
-	BitM_DisString_EN(8, 107, trainer1.zybomons[0].attacks[2].name,&Font12,GUI_BACKGROUND, BLACK , (BITMAP *)BitMapPtr);
-	BitM_DisString_EN(72, 107, trainer1.zybomons[0].attacks[3].name,&Font12,GUI_BACKGROUND, BLACK , (BITMAP *)BitMapPtr);
+	BitM_DisString_EN(8, 110, trainer1.zybomons[0].attacks[2].name,&Font12,GUI_BACKGROUND, BLACK , (BITMAP *)BitMapPtr);
+	BitM_DisString_EN(72, 110, trainer1.zybomons[0].attacks[3].name,&Font12,GUI_BACKGROUND, BLACK , (BITMAP *)BitMapPtr);
 
 	int selected = select_x + select_y *2;
+
+	Paint_Type(trainer1.zybomons[0].attacks[selected].e_type, 60, 8, (BITMAP *)BitMapPtr, &type_sprite);
+
 
 	char power_str[11] = {};
 
 	sprintf(power_str, "PODER %d", trainer1.zybomons[0].attacks[selected].power);
-	BitM_DisString_EN(24, 20, power_str,&Font12,GUI_BACKGROUND, BLACK , (BITMAP *)BitMapPtr);
+	BitM_DisString_EN(24, 28, power_str,&Font12,GUI_BACKGROUND, BLACK , (BITMAP *)BitMapPtr);
 
 	char uses_str[11] = {};
 
 	sprintf(uses_str, "USOS %d/%d", trainer1.zybomons[0].attacks[selected].uses, trainer1.zybomons[0].attacks[selected].max_uses);
-	BitM_DisString_EN(24, 48, uses_str,&Font12,GUI_BACKGROUND, BLACK , (BITMAP *)BitMapPtr);
+	BitM_DisString_EN(24, 56, uses_str,&Font12,GUI_BACKGROUND, BLACK , (BITMAP *)BitMapPtr);
 
 	int x, y;
 
@@ -894,4 +917,37 @@ void ShowAttackMenu(BITMAP * BitMapPtr){
 
 }
 
+void ShowZybomonMenu(BITMAP * BitMapPtr, int selected){
+	Paint_Sprite(0, 0, (BITMAP *)BitMapPtr, &background_sprite);
 
+//	ATTACK attack1 = trainer1.zybomons[0].attacks[0];
+//	ATTACK attack2 = trainer1.zybomons[0].attacks[1];
+//	ATTACK attack3 = trainer1.zybomons[0].attacks[2];
+//	ATTACK attack4 = trainer1.zybomons[0].attacks[3];
+
+	int i;
+	int delta_y = 20;
+
+	for(i = 0; i < 4; i++){
+
+
+		Paint_Type(trainer1.zybomons[i].e_type, 4, 17 + i*delta_y, (BITMAP *)BitMapPtr, &type_sprite);
+
+		char health_str[16] = {};
+
+		int max_health = trainer1.zybomons[i].max_lp;
+		int health = trainer1.zybomons[i].lp;
+
+		sprintf(health_str, "%d/%d", health, max_health);
+		BitM_DisString_EN(27, 20 + i*delta_y,health_str,&Font8,GUI_BACKGROUND, BLACK , (BITMAP *)BitMapPtr);
+
+		Paint_Sprite(70, 21 + i*delta_y, (BITMAP *)BitMapPtr, &aux_sprite1);
+		DrawHealth(72, 23 + i*delta_y, (BITMAP *)BitMapPtr, (health*100)/max_health);
+	}
+
+
+	BitM_DisString_EN(16, 110, trainer1.zybomons[selected].name,&Font12,GUI_BACKGROUND, BLACK , (BITMAP *)BitMapPtr);
+
+	Paint_Sprite(0, 15 + selected*delta_y, (BITMAP *)BitMapPtr, &selection_sprite);
+
+}

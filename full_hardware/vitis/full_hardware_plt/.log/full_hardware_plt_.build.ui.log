@@ -1,2 +1,6 @@
-2025-06-23T00:25:07.6561644000-Nothing to build in platform 'full_hardware_plt'
+2025-06-25T03:01:39.220950400255-03:01:39 **** Incremental Build of project full_hardware_plt ****
+000-buildplatform.bat 51095 full_hardware_plt no_domain_build 
+000-XSDB Server Channel: tcfchan#2
+00255-
+03:01:41 Build Finished (took 1s.917ms)
 

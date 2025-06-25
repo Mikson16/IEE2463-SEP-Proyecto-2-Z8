@@ -18,3 +18,115 @@
 14:54:47 INFO  : Checking for BSP changes to sync application flags for project 'main_ps'...
 14:59:37 INFO  : Checking for BSP changes to sync application flags for project 'main_ps'...
 15:00:20 INFO  : Checking for BSP changes to sync application flags for project 'main_ps'...
+21:08:37 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\PS\vitis\temp_xsdb_launch_script.tcl
+21:08:45 INFO  : XSCT server has started successfully.
+21:08:46 INFO  : plnx-install-location is set to ''
+21:08:46 INFO  : Successfully done setting XSCT server connection channel  
+21:08:46 INFO  : Successfully done setting workspace for the tool. 
+21:08:51 ERROR : Error encountered while initializing user repository paths
+Reason: No Platforms Found.
+
+
+21:08:51 INFO  : Platform repository initialization has completed.
+21:08:53 INFO  : Registering command handlers for Vitis TCF services
+21:09:13 INFO  : Successfully done query RDI_DATADIR 
+21:09:51 INFO  : Result from executing command 'getProjects': design_1_wrapper
+21:09:51 INFO  : Result from executing command 'getPlatforms': 
+21:10:49 INFO  : Checking for BSP changes to sync application flags for project 'main_ps'...
+21:12:24 INFO  : Hardware specification for platform project 'design_1_wrapper' is updated.
+21:12:30 INFO  : Result from executing command 'getProjects': design_1_wrapper
+21:12:30 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/PS/vitis/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+21:13:02 INFO  : Checking for BSP changes to sync application flags for project 'main_ps'...
+21:13:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:13:50 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FC8DA' is selected.
+21:13:50 INFO  : 'jtag frequency' command is executed.
+21:13:50 INFO  : Context for 'APU' is selected.
+21:13:50 INFO  : System reset is completed.
+21:13:53 INFO  : 'after 3000' command is executed.
+21:13:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC8DA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC8DA-13722093-0"}' command is executed.
+21:13:54 INFO  : FPGA configured successfully with bitstream "D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/PS/vitis/main_ps/_ide/bitstream/design_1_wrapper.bit"
+21:13:54 INFO  : Context for 'APU' is selected.
+21:13:54 INFO  : Hardware design and registers information is loaded from 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/PS/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+21:13:54 INFO  : 'configparams force-mem-access 1' command is executed.
+21:13:54 INFO  : Context for 'APU' is selected.
+21:13:54 INFO  : Sourcing of 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/PS/vitis/main_ps/_ide/psinit/ps7_init.tcl' is done.
+21:13:55 INFO  : 'ps7_init' command is executed.
+21:13:55 INFO  : 'ps7_post_config' command is executed.
+21:13:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:13:55 INFO  : The application 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/PS/vitis/main_ps/Debug/main_ps.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:13:55 INFO  : 'configparams force-mem-access 0' command is executed.
+21:13:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC8DA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC8DA-13722093-0"}
+fpga -file D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/PS/vitis/main_ps/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/PS/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/PS/vitis/main_ps/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/PS/vitis/main_ps/Debug/main_ps.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:13:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:13:55 INFO  : 'con' command is executed.
+21:13:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:13:55 INFO  : Launch script is exported to file 'D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\PS\vitis\.sdk\launch_scripts\single_application_debug\systemdebugger_main_ps_system_standalone.tcl'
+21:14:27 INFO  : Disconnected from the channel tcfchan#5.
+21:17:25 INFO  : Checking for BSP changes to sync application flags for project 'main_ps'...
+21:17:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:17:48 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FC8DA' is selected.
+21:17:48 INFO  : 'jtag frequency' command is executed.
+21:17:48 INFO  : Context for 'APU' is selected.
+21:17:48 INFO  : System reset is completed.
+21:17:51 INFO  : 'after 3000' command is executed.
+21:17:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC8DA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC8DA-13722093-0"}' command is executed.
+21:17:53 INFO  : FPGA configured successfully with bitstream "D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/PS/vitis/main_ps/_ide/bitstream/design_1_wrapper.bit"
+21:17:53 INFO  : Context for 'APU' is selected.
+21:17:53 INFO  : Hardware design and registers information is loaded from 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/PS/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+21:17:53 INFO  : 'configparams force-mem-access 1' command is executed.
+21:17:53 INFO  : Context for 'APU' is selected.
+21:17:53 INFO  : Sourcing of 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/PS/vitis/main_ps/_ide/psinit/ps7_init.tcl' is done.
+21:17:53 INFO  : 'ps7_init' command is executed.
+21:17:53 INFO  : 'ps7_post_config' command is executed.
+21:17:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:17:53 INFO  : The application 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/PS/vitis/main_ps/Debug/main_ps.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:17:53 INFO  : 'configparams force-mem-access 0' command is executed.
+21:17:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC8DA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC8DA-13722093-0"}
+fpga -file D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/PS/vitis/main_ps/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/PS/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/PS/vitis/main_ps/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/PS/vitis/main_ps/Debug/main_ps.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:17:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:17:53 INFO  : 'con' command is executed.
+21:17:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:17:53 INFO  : Launch script is exported to file 'D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\PS\vitis\.sdk\launch_scripts\single_application_debug\systemdebugger_main_ps_system_standalone.tcl'
+21:31:30 INFO  : Disconnected from the channel tcfchan#7.

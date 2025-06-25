@@ -18,7 +18,7 @@
 
 #include "Bitmap.h"
 
-#define CORE_FLAG (*(volatile unsigned long *)(0x0))
+#define CORE_FLAG (*(volatile unsigned long *)((0x3FF00000)))
 
 extern XGpio gpio0;
 extern XSpi  SpiInstance;

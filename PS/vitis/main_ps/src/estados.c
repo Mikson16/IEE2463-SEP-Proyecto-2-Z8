@@ -29,10 +29,12 @@ void imprimir_active_trainers(State *state)
 /*Funciones para los estados*/
 void nombrar_zybomon(Trainer *trainer)
 {
-    for (int i = 0; i < NUM_ZYBOMONES / 2; i++)
+    char input_str[11];
+	for (int i = 0; i < NUM_ZYBOMONES / 2; i++)
     {
     	xil_printf("Zybomon #%d, ingrese un nombre: ", i + 1);
-        fgets(trainer->zybomon_array.zybomones[i].name, sizeof(trainer->zybomon_array.zybomones[i].name), stdin);
+    	scanf("%s", &input_str);
+        fgets(trainer->zybomon_array.zybomones[i].name, sizeof(trainer->zybomon_array.zybomones[i].name), input_str);
 
         // Elimina el salto de línea si existe
         size_t len = strlen(trainer->zybomon_array.zybomones[i].name);

@@ -8,7 +8,8 @@ typedef enum{
 	ST_SETUP = 0,
 	ST_BV,
 	ST_BV_MENU,
-	ST_AT_MENU
+	ST_AT_MENU,
+	ST_ZYB_MENU
 
 } STATE_ID;
 

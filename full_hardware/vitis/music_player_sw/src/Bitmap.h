@@ -3,6 +3,7 @@
 
 #include "ff.h"
 #include "LCD_GUI.h"
+#include "zybomon.h"
 
 typedef struct {
     int map[128][128];
@@ -20,6 +21,7 @@ void Send_Bitmap(BITMAP *BitMapPtr);
 void Retrieve_Bitmap(BITMAP *BitMapPtr);
 void LCD_SetGramScanWay2(LCD_SCAN_DIR Scan_dir);
 void DrawHealth(POINT Xpoint, POINT Ypoint, BITMAP *BitMapPtr, int health_ptg);
+void Paint_Type(E_TYPE e_type, POINT Xpoint, POINT Ypoint, BITMAP *BitMapPtr, BITMAP *SpritePtr);
 
 
 

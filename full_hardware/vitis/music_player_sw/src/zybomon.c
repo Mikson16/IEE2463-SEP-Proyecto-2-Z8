@@ -5,6 +5,7 @@
 #include <math.h>
 #include <stdint.h>
 #include "xil_printf.h"
+#include "ADC.h"
 
 ZYBOMON generate_zybomon(int active)
 {
@@ -35,7 +36,7 @@ ZYBOMON generate_zybomon(int active)
     	ATTACK attack;
     	attack.e_type = rand() % ATTACK_TYPES;
     	int power = rand() % MAX_A_POWER; // 0-MAX_A_POWER
-    	int str_end;
+    	int str_end = 0;
     	if(attack.e_type == FIRE){
 			strcpy(attack.name, "Flama");
 			str_end = 5;

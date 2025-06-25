@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="full_hardware_sw_system" key="programflash.hwplatform"/>
+	<item value="" key="full_hardware_sw_system-offSet"/>
+	<item value="false" key="full_hardware_sw-verifyFlash"/>
+	<item value="D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\full_hardware\vitis\BOOT.bin" key="full_hardware_sw-imgFile"/>
+	<item value="D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/sw/full_hardware_plt/boot/fsbl.elf" key="full_hardware_sw-fsblFile"/>
+	<item value="qspi-x4-single" key="full_hardware_sw-flashType"/>
+	<item value="Auto Detect" key="full_hardware_sw-device"/>
+	<item value="Auto Detect" key="full_hardware_sw_system-device"/>
+	<item value="qspi-x4-single" key="full_hardware_sw_system-flashType"/>
+	<item value="" key="full_hardware_sw-offSet"/>
+	<item value="D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/sw/full_hardware_plt/boot/fsbl.elf" key="full_hardware_sw_system-fsblFile"/>
+	<item value="false" key="full_hardware_sw-blankCheck"/>
+	<item value="Local" key="full_hardware_sw-target"/>
+	<item value="false" key="full_hardware_sw_system-blankCheck"/>
+	<item value="D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\full_hardware\vitis\BOOT.bin" key="full_hardware_sw_system-imgFile"/>
+	<item value="false" key="full_hardware_sw_system-verifyFlash"/>
+	<item value="Local" key="full_hardware_sw_system-target"/>
+</section>

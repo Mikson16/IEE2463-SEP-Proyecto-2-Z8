@@ -6,6 +6,7 @@
 #include "Bitmap.h"
 #include "ff.h"
 #include "xil_cache.h"
+#include "zybomon.h"
 
 #define SHARED_MEMORY_BASE 0x3FE00000
 
@@ -397,4 +398,40 @@ void DrawHealth(POINT Xpoint, POINT Ypoint, BITMAP *BitMapPtr, int health_ptg){
 		}
 	}
 
+}
+
+void Paint_Type(E_TYPE e_type, POINT Xpoint, POINT Ypoint, BITMAP *BitMapPtr, BITMAP *SpritePtr)
+{
+	POINT x, y;
+	COLOR sprite_pixel;
+	POINT x_type = 0;
+	POINT y_type = 0;
+	if(e_type == FIRE){
+		x_type = 8;
+		y_type = 8;
+	}
+	else if(e_type == WATER){
+		x_type = 28;
+		y_type = 8;
+	}
+	else if(e_type == PLANT){
+		x_type = 48;
+		y_type = 8;
+	}
+	else if(e_type == NORMAL){
+		x_type = 68;
+		y_type = 8;
+	}
+	for(y = 0; y < 13; y ++ ) {
+	        for(x = 0; x < 18; x ++ ) {
+	        	if (x < SpritePtr->Width && y < SpritePtr->Height){
+	        		sprite_pixel = SpritePtr->map[x + x_type][y + y_type];
+	        		if(sprite_pixel != BLUE){
+	        			BitMapPtr->map[x + Xpoint][y + Ypoint] = sprite_pixel;
+	        		}
+
+	        	}
+
+	        }
+	}
 }
