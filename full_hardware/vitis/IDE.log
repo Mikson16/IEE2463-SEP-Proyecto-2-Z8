@@ -13622,3 +13622,21 @@ con
 03:26:10 INFO  : Overwriting existing bif file D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\full_hardware\vitis\output.bif
 03:26:11 INFO  : Bootgen command execution is done.
 03:30:09 INFO  : Disconnected from the channel tcfchan#4.
+23:01:15 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\andre\Projects\IEE2463-SEP-Proyecto-2-Z8\full_hardware\vitis\temp_xsdb_launch_script.tcl
+23:01:18 INFO  : XSCT server has started successfully.
+23:01:19 INFO  : plnx-install-location is set to ''
+23:01:19 INFO  : Successfully done setting XSCT server connection channel  
+23:01:19 INFO  : Successfully done setting workspace for the tool. 
+23:01:24 ERROR : Error encountered while initializing user repository paths
+Reason: No Platforms Found.
+
+
+23:01:24 INFO  : Platform repository initialization has completed.
+23:01:25 INFO  : Registering command handlers for Vitis TCF services
+23:01:25 INFO  : Successfully done query RDI_DATADIR 
+23:25:01 INFO  : Result from executing command 'getProjects': full_hardware_plt
+23:25:01 INFO  : Result from executing command 'getPlatforms': 
+23:25:02 INFO  : Checking for BSP changes to sync application flags for project 'full_hardware_sw'...
+23:25:17 INFO  : Checking for BSP changes to sync application flags for project 'music_player_sw'...
+23:26:17 INFO  : Checking for BSP changes to sync application flags for project 'full_hardware_sw'...
+23:26:23 INFO  : Checking for BSP changes to sync application flags for project 'music_player_sw'...

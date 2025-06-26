@@ -9,86 +9,104 @@
 
 ZYBOMON generate_zybomon(int active)
 {
-    ZYBOMON zybomon;
+	ZYBOMON zybomon;
 
-    // Generar valores aleatorios para cada atributo
-    zybomon.active = active;         // active/inactive, se define activo solo 1
-    zybomon.max_lp = MAX_HEALTH; // Parametro predefinido
+	// Generar valores aleatorios para cada atributo
+	zybomon.active = active;	 // active/inactive, se define activo solo 1
+	zybomon.max_lp = MAX_HEALTH; // Parametro predefinido
 
-    zybomon.lp = rand() % (MAX_HEALTH - MIN_HEALTH + 1) + MIN_HEALTH; // MIN_HEALTH-MAX_HEALTH
+	zybomon.lp = rand() % (MAX_HEALTH - MIN_HEALTH + 1) + MIN_HEALTH; // MIN_HEALTH-MAX_HEALTH
 
-    zybomon.e_type = rand() % ZYBOMON_TYPES; // 0-(ZYBOMON_TYPES-1)
+	zybomon.e_type = rand() % ZYBOMON_TYPES; // 0-(ZYBOMON_TYPES-1)
 
-    zybomon.atk = rand() % (MAX_ATTACK + 1);   // 0-MAX_ATTACK
-    zybomon.def = rand() % (MAX_DEFENSE + 1); // 0-MAX_DEFENSE
-    zybomon.spd = rand() % (MAX_SPEED + 1);     // 0-MAX_SPEED
+	zybomon.atk = rand() % (MAX_ATTACK + 1);  // 0-MAX_ATTACK
+	zybomon.def = rand() % (MAX_DEFENSE + 1); // 0-MAX_DEFENSE
+	zybomon.spd = rand() % (MAX_SPEED + 1);	  // 0-MAX_SPEED
 
-    zybomon.front_sprite = "PIKA.BMP";
-    zybomon.back_sprite = "PIKA_B.BMP";
+	zybomon.front_sprite = "PIKA.BMP";
+	zybomon.back_sprite = "PIKA_B.BMP";
 
-    strcpy(zybomon.name, "placeholder");
+	strcpy(zybomon.name, "placeholder");
 
+	int i;
 
-    int i;
-
-
-    for(i = 0; i < 4; i++){
-    	ATTACK attack;
-    	attack.e_type = rand() % ATTACK_TYPES;
-    	int power = rand() % MAX_A_POWER; // 0-MAX_A_POWER
-    	int str_end = 0;
-    	if(attack.e_type == FIRE){
+	for (i = 0; i < 4; i++)
+	{
+		ATTACK attack;
+		attack.e_type = rand() % ATTACK_TYPES;
+		int power = rand() % MAX_A_POWER; // 0-MAX_A_POWER
+		int str_end = 0;
+		if (attack.e_type == FIRE)
+		{
 			strcpy(attack.name, "Flama");
 			str_end = 5;
 		}
-    	else if(attack.e_type == WATER){
-    		strcpy(attack.name, "Chorro");
-    		str_end = 6;
-    	}
-    	else if(attack.e_type == PLANT){
-    		strcpy(attack.name, "Hoja");
-    		str_end = 4;
-    	}
-    	else if(attack.e_type == NORMAL){
-    		strcpy(attack.name, "Garra");
-    		str_end = 5;
-    	}
-    	if(power == 0){
-    		attack.power = 60;
-    		attack.uses = 30;
-    		attack.max_uses = 30;
-    		attack.name[str_end] = '-';
-    		attack.name[str_end + 1] = '\0';
+		else if (attack.e_type == WATER)
+		{
+			strcpy(attack.name, "Chorro");
+			str_end = 6;
+		}
+		else if (attack.e_type == PLANT)
+		{
+			strcpy(attack.name, "Hoja");
+			str_end = 4;
+		}
+		else if (attack.e_type == NORMAL)
+		{
+			strcpy(attack.name, "Garra");
+			str_end = 5;
+		}
+		if (power == 0)
+		{
+			attack.power = 60;
+			attack.uses = 30;
+			attack.max_uses = 30;
+			attack.name[str_end] = '-';
+			attack.name[str_end + 1] = '\0';
+		}
+		else if (power == 1)
+		{
+			attack.power = 80;
+			attack.uses = 15;
+			attack.max_uses = 15;
+		}
+		else if (power == 2)
+		{
+			attack.power = 100;
+			attack.uses = 5;
+			attack.max_uses = 5;
+			attack.name[str_end] = '+';
+			attack.name[str_end + 1] = '\0';
+		}
 
-    	}
-    	else if(power == 1){
-    		attack.power = 80;
-    		attack.uses = 15;
-    		attack.max_uses = 15;
-    	}
-    	else if(power == 2){
-    		attack.power = 100;
-    		attack.uses = 5;
-    		attack.max_uses = 5;
-    		attack.name[str_end] = '+';
-    		attack.name[str_end + 1] = '\0';
-    	}
+		zybomon.attacks[i] = attack;
+	}
 
-
-        zybomon.attacks[i] = attack;
-    }
-
-    // Retornar el zybomon generado
-    return zybomon;
+	// Retornar el zybomon generado
+	return zybomon;
 };
 
-void init_trainer(TRAINER * trainerPtr, int active)
+void init_trainer(TRAINER *trainerPtr, int active)
 {
-	strcpy(trainerPtr->name , "placeholder");
+	xil_printf("Initializing trainer...\n");
+	xil_printf("Ingrese un nombre para el entrenador: \n");
+	char trainer_name[20];
+	scanf("%19s", trainer_name);			// Limitar input para evitar overflow
+	strcpy(trainerPtr->name, trainer_name); // Copiar el input al nombre del trainer
 	trainerPtr->active = active;
 	int i = 0;
 	trainerPtr->zybomons[i] = generate_zybomon(1);
-	for(i = 1; i < 4; i++){
+	char first_name[20];
+	xil_printf("Ingrese un nombre para el primer zybomon: \n");
+	scanf("%19s", first_name);						  // Limitar input para evitar overflow
+	strcpy(trainerPtr->zybomons[i].name, first_name); // Copiar el input al nombre del primer zybomon
+	for (i = 1; i < 4; i++)
+	{
 		trainerPtr->zybomons[i] = generate_zybomon(0);
+		// Agregar nombre zybomones inactivos
+		char zybomon_name[20];
+		xil_printf("Ingrese un nombre para el zybomon %d: \n", i + 1);
+		scanf("%19s", zybomon_name);						// Limitar input para evitar overflow
+		strcpy(trainerPtr->zybomons[i].name, zybomon_name); // Copiar el input al nombre del zybomon
 	}
 }

@@ -32,11 +32,11 @@ typedef struct{
 	ATTACK attacks[4];
 	TCHAR *front_sprite;
 	TCHAR *back_sprite;
-	char name[20];
+	char name[11];
 } ZYBOMON;
 
 typedef struct{
-	char name[20];
+	char name[11];
 	ZYBOMON zybomons[4];
 	int active;
 } TRAINER;
