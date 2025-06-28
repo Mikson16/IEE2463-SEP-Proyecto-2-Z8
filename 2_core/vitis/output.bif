@@ -1,0 +1,8 @@
+//arch = zynq; split = false; format = BIN
+the_ROM_image:
+{
+	[bootloader]D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\2_core\vitis\2_core\export\2_core\sw\2_core\boot\fsbl.elf
+	D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\2_core\vitis\2_core\bitstream\DEMO_wrapper.bit
+	D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\2_core\vitis\main_core\Debug\main_core.elf
+	D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\2_core\vitis\graphics_core\Debug\graphics_core.elf
+}

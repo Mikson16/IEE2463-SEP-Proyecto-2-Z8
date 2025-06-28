@@ -1,0 +1,23 @@
+Nothing to build in platform '2_core'
+
+16:25:13 **** Incremental Build of configuration Debug for project graphics_core ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+make[1]: Nothing to be done for 'main-build'.
+16:25:14 **** Incremental Build of configuration Debug for project main_core ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+make[1]: Nothing to be done for 'main-build'.
+16:25:14 **** Incremental Build of configuration Debug for project main_core_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 50149 D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/2_core/vitis/2_core/export/2_core/2_core.xpfm standalone_domain,graphics_core D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/2_core/vitis/main_core_system/Debug/system.bif
+sdcard_gen --xpfm D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/2_core/vitis/2_core/export/2_core/2_core.xpfm --sys_config 2_core --bif D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/2_core/vitis/main_core_system/Debug/system.bif --bitstream D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/2_core/vitis/main_core/_ide/bitstream/DEMO_wrapper.bit --elf D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/2_core/vitis/main_core/Debug/main_core.elf,ps7_cortexa9_1 --elf D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/2_core/vitis/graphics_core/Debug/graphics_core.elf,ps7_cortexa9_0
+creating BOOT.BIN using D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/2_core/vitis/main_core/_ide/bitstream/DEMO_wrapper.bit
+Running D:/Xilinx/Vitis/2020.1/bin/bootgen  -image D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/2_core/vitis/main_core_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN

@@ -13640,3 +13640,149 @@ Reason: No Platforms Found.
 23:25:17 INFO  : Checking for BSP changes to sync application flags for project 'music_player_sw'...
 23:26:17 INFO  : Checking for BSP changes to sync application flags for project 'full_hardware_sw'...
 23:26:23 INFO  : Checking for BSP changes to sync application flags for project 'music_player_sw'...
+23:43:04 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\full_hardware\vitis\temp_xsdb_launch_script.tcl
+23:43:06 INFO  : XSCT server has started successfully.
+23:43:06 INFO  : plnx-install-location is set to ''
+23:43:06 INFO  : Successfully done setting XSCT server connection channel  
+23:43:06 INFO  : Successfully done setting workspace for the tool. 
+23:43:10 INFO  : Platform repository initialization has completed.
+23:43:11 INFO  : Registering command handlers for Vitis TCF services
+23:43:15 INFO  : Successfully done query RDI_DATADIR 
+23:45:46 INFO  : Result from executing command 'getProjects': full_hardware_plt
+23:45:46 INFO  : Result from executing command 'getPlatforms': full_hardware_plt|D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/full_hardware_plt.xpfm
+23:45:47 INFO  : Checking for BSP changes to sync application flags for project 'full_hardware_sw'...
+23:45:55 INFO  : Checking for BSP changes to sync application flags for project 'music_player_sw'...
+23:47:01 INFO  : Checking for BSP changes to sync application flags for project 'full_hardware_sw'...
+23:47:03 INFO  : Checking for BSP changes to sync application flags for project 'music_player_sw'...
+23:48:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:48:05 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FC8DA' is selected.
+23:48:05 INFO  : 'jtag frequency' command is executed.
+23:48:05 INFO  : Context for 'APU' is selected.
+23:48:05 INFO  : System reset is completed.
+23:48:08 INFO  : 'after 3000' command is executed.
+23:48:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC8DA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC8DA-13722093-0"}' command is executed.
+23:48:09 INFO  : FPGA configured successfully with bitstream "D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_sw/_ide/bitstream/DEMO_wrapper.bit"
+23:48:10 INFO  : Context for 'APU' is selected.
+23:48:10 INFO  : Hardware design and registers information is loaded from 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/hw/DEMO_wrapper.xsa'.
+23:48:10 INFO  : 'configparams force-mem-access 1' command is executed.
+23:48:10 INFO  : Context for 'APU' is selected.
+23:48:10 INFO  : Sourcing of 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_sw/_ide/psinit/ps7_init.tcl' is done.
+23:48:11 INFO  : 'ps7_init' command is executed.
+23:48:11 INFO  : 'ps7_post_config' command is executed.
+23:48:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:48:12 INFO  : The application 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_sw/Debug/full_hardware_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:48:12 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+23:48:13 INFO  : The application 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/music_player_sw/Debug/music_player_sw.elf' is downloaded to processor 'ps7_cortexa9_1'.
+23:48:13 INFO  : 'configparams force-mem-access 0' command is executed.
+23:48:13 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC8DA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC8DA-13722093-0"}
+fpga -file D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_sw/_ide/bitstream/DEMO_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/hw/DEMO_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_sw/Debug/full_hardware_sw.elf
+targets -set -nocase -filter {name =~ "*A9*#1"}
+dow D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/music_player_sw/Debug/music_player_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:48:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:48:13 INFO  : 'con' command is executed.
+23:48:13 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+23:48:13 INFO  : 'con' command is executed.
+23:48:13 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+targets -set -nocase -filter {name =~ "*A9*#1"}
+con
+----------------End of Script----------------
+
+23:48:13 INFO  : Launch script is exported to file 'D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\full_hardware\vitis\.sdk\launch_scripts\single_application_debug\systemdebugger_full_hardware_sw_system_standalone.tcl'
+23:48:37 INFO  : Disconnected from the channel tcfchan#4.
+23:48:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:48:37 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FC8DA' is selected.
+23:48:37 INFO  : 'jtag frequency' command is executed.
+23:48:38 INFO  : Context for 'APU' is selected.
+23:48:38 INFO  : System reset is completed.
+23:48:41 INFO  : 'after 3000' command is executed.
+23:48:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC8DA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC8DA-13722093-0"}' command is executed.
+23:48:42 INFO  : FPGA configured successfully with bitstream "D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_sw/_ide/bitstream/DEMO_wrapper.bit"
+23:48:42 INFO  : Context for 'APU' is selected.
+23:48:42 INFO  : Hardware design and registers information is loaded from 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/hw/DEMO_wrapper.xsa'.
+23:48:42 INFO  : 'configparams force-mem-access 1' command is executed.
+23:48:42 INFO  : Context for 'APU' is selected.
+23:48:42 INFO  : Sourcing of 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_sw/_ide/psinit/ps7_init.tcl' is done.
+23:48:42 INFO  : 'ps7_init' command is executed.
+23:48:42 INFO  : 'ps7_post_config' command is executed.
+23:48:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:48:43 INFO  : The application 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_sw/Debug/full_hardware_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:48:43 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+23:48:44 INFO  : The application 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/music_player_sw/Debug/music_player_sw.elf' is downloaded to processor 'ps7_cortexa9_1'.
+23:48:44 INFO  : 'configparams force-mem-access 0' command is executed.
+23:48:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC8DA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC8DA-13722093-0"}
+fpga -file D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_sw/_ide/bitstream/DEMO_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/hw/DEMO_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_sw/Debug/full_hardware_sw.elf
+targets -set -nocase -filter {name =~ "*A9*#1"}
+dow D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/music_player_sw/Debug/music_player_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:48:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:48:44 INFO  : 'con' command is executed.
+23:48:44 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+23:48:44 INFO  : 'con' command is executed.
+23:48:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+targets -set -nocase -filter {name =~ "*A9*#1"}
+con
+----------------End of Script----------------
+
+23:48:44 INFO  : Launch script is exported to file 'D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\full_hardware\vitis\.sdk\launch_scripts\single_application_debug\systemdebugger_full_hardware_sw_system_standalone.tcl'
+00:09:58 INFO  : Disconnected from the channel tcfchan#5.
+21:27:56 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\full_hardware\vitis\temp_xsdb_launch_script.tcl
+21:28:00 INFO  : XSCT server has started successfully.
+21:28:00 INFO  : plnx-install-location is set to ''
+21:28:00 INFO  : Successfully done setting XSCT server connection channel  
+21:28:00 INFO  : Successfully done setting workspace for the tool. 
+21:28:09 INFO  : Platform repository initialization has completed.
+21:28:09 INFO  : Registering command handlers for Vitis TCF services
+21:28:24 INFO  : Successfully done query RDI_DATADIR 
+22:53:35 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\full_hardware\vitis\temp_xsdb_launch_script.tcl
+22:53:40 INFO  : XSCT server has started successfully.
+22:53:40 INFO  : Successfully done setting XSCT server connection channel  
+22:53:40 INFO  : plnx-install-location is set to ''
+22:53:40 INFO  : Successfully done setting workspace for the tool. 
+22:53:48 INFO  : Platform repository initialization has completed.
+22:53:48 INFO  : Registering command handlers for Vitis TCF services
+22:54:12 INFO  : Successfully done query RDI_DATADIR 
+23:41:29 INFO  : Checking for BSP changes to sync application flags for project 'full_hardware_sw'...
+23:41:40 INFO  : Checking for BSP changes to sync application flags for project 'music_player_sw'...
+23:45:12 INFO  : Checking for BSP changes to sync application flags for project 'music_player_sw'...
+23:45:51 INFO  : Checking for BSP changes to sync application flags for project 'music_player_sw'...
+23:47:30 INFO  : Checking for BSP changes to sync application flags for project 'full_hardware_sw'...
+23:47:31 INFO  : Checking for BSP changes to sync application flags for project 'music_player_sw'...
+23:47:44 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/hw/DEMO_wrapper.xsa is already opened
+

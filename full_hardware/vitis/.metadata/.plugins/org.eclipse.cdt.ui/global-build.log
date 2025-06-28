@@ -1,138 +1,60 @@
 Nothing to build in platform 'full_hardware_plt'
 
-23:26:18 **** Incremental Build of configuration Debug for project full_hardware_sw ****
+23:47:30 **** Incremental Build of configuration Debug for project full_hardware_sw ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-'Building file: ../src/ADC.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/sw/full_hardware_plt/standalone_domain/bspinclude/include -MMD -MP -MF"src/ADC.d" -MT"src/ADC.o" -o "src/ADC.o" "../src/ADC.c"
-'Finished building: ../src/ADC.c'
-' '
-'Building file: ../src/Bitmap.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Bitmap.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/sw/full_hardware_plt/standalone_domain/bspinclude/include -MMD -MP -MF"src/Bitmap.d" -MT"src/Bitmap.o" -o "src/Bitmap.o" "../src/Bitmap.c"
-../src/Bitmap.c: In function 'Open_Sprite':
-../src/Bitmap.c:223:9: warning: unused variable 'Sprite' [-Wunused-variable]
-  223 |  BITMAP Sprite;
-      |         ^~~~~~
-../src/Bitmap.c:149:6: warning: variable 'FileSize' set but not used [-Wunused-but-set-variable]
-  149 |  u32 FileSize;
-      |      ^~~~~~~~
-'Finished building: ../src/Bitmap.c'
-' '
-'Building file: ../src/Delay.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Delay.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/sw/full_hardware_plt/standalone_domain/bspinclude/include -MMD -MP -MF"src/Delay.d" -MT"src/Delay.o" -o "src/Delay.o" "../src/Delay.c"
-'Finished building: ../src/Delay.c'
-' '
-'Building file: ../src/LCD_Driver.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/LCD_Driver.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/sw/full_hardware_plt/standalone_domain/bspinclude/include -MMD -MP -MF"src/LCD_Driver.d" -MT"src/LCD_Driver.o" -o "src/LCD_Driver.o" "../src/LCD_Driver.c"
-'Finished building: ../src/LCD_Driver.c'
-' '
-'Building file: ../src/LCD_GUI.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/LCD_GUI.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/sw/full_hardware_plt/standalone_domain/bspinclude/include -MMD -MP -MF"src/LCD_GUI.d" -MT"src/LCD_GUI.o" -o "src/LCD_GUI.o" "../src/LCD_GUI.c"
-'Finished building: ../src/LCD_GUI.c'
-' '
-'Building file: ../src/LCD_SPI.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/LCD_SPI.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/sw/full_hardware_plt/standalone_domain/bspinclude/include -MMD -MP -MF"src/LCD_SPI.d" -MT"src/LCD_SPI.o" -o "src/LCD_SPI.o" "../src/LCD_SPI.c"
-'Finished building: ../src/LCD_SPI.c'
-' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/sw/full_hardware_plt/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-'Finished building: ../src/main.c'
-' '
-'Building target: full_hardware_sw.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/sw/full_hardware_plt/standalone_domain/bsplib/lib -o "full_hardware_sw.elf"  ./src/ADC.o ./src/Bitmap.o ./src/Delay.o ./src/I2C.o ./src/LCD_Driver.o ./src/LCD_GUI.o ./src/LCD_SPI.o ./src/audio.o ./src/font12.o ./src/font16.o ./src/font20.o ./src/font24.o ./src/font8.o ./src/main.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: full_hardware_sw.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size full_hardware_sw.elf  |tee "full_hardware_sw.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 300276	   2384	 157680	 460340	  70634	full_hardware_sw.elf
-'Finished building: full_hardware_sw.elf.size'
-' '
-23:26:23 **** Incremental Build of configuration Debug for project music_player_sw ****
+make[1]: Nothing to be done for 'main-build'.
+23:47:31 **** Incremental Build of configuration Debug for project music_player_sw ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-'Building file: ../src/ADC.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/sw/full_hardware_plt/music_domain/bspinclude/include -MMD -MP -MF"src/ADC.d" -MT"src/ADC.o" -o "src/ADC.o" "../src/ADC.c"
-'Finished building: ../src/ADC.c'
-' '
 'Building file: ../src/Bitmap.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Bitmap.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/sw/full_hardware_plt/music_domain/bspinclude/include -MMD -MP -MF"src/Bitmap.d" -MT"src/Bitmap.o" -o "src/Bitmap.o" "../src/Bitmap.c"
-../src/Bitmap.c: In function 'Open_Sprite':
-../src/Bitmap.c:229:9: warning: unused variable 'Sprite' [-Wunused-variable]
-  229 |  BITMAP Sprite;
-      |         ^~~~~~
-../src/Bitmap.c:155:6: warning: variable 'FileSize' set but not used [-Wunused-but-set-variable]
-  155 |  u32 FileSize;
-      |      ^~~~~~~~
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Bitmap.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -ID:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/sw/full_hardware_plt/music_domain/bspinclude/include -MMD -MP -MF"src/Bitmap.d" -MT"src/Bitmap.o" -o "src/Bitmap.o" "../src/Bitmap.c"
 'Finished building: ../src/Bitmap.c'
-' '
-'Building file: ../src/Delay.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Delay.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/sw/full_hardware_plt/music_domain/bspinclude/include -MMD -MP -MF"src/Delay.d" -MT"src/Delay.o" -o "src/Delay.o" "../src/Delay.c"
-'Finished building: ../src/Delay.c'
-' '
-'Building file: ../src/LCD_Driver.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/LCD_Driver.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/sw/full_hardware_plt/music_domain/bspinclude/include -MMD -MP -MF"src/LCD_Driver.d" -MT"src/LCD_Driver.o" -o "src/LCD_Driver.o" "../src/LCD_Driver.c"
-'Finished building: ../src/LCD_Driver.c'
-' '
-'Building file: ../src/LCD_GUI.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/LCD_GUI.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/sw/full_hardware_plt/music_domain/bspinclude/include -MMD -MP -MF"src/LCD_GUI.d" -MT"src/LCD_GUI.o" -o "src/LCD_GUI.o" "../src/LCD_GUI.c"
-'Finished building: ../src/LCD_GUI.c'
-' '
-'Building file: ../src/LCD_SPI.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/LCD_SPI.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/sw/full_hardware_plt/music_domain/bspinclude/include -MMD -MP -MF"src/LCD_SPI.d" -MT"src/LCD_SPI.o" -o "src/LCD_SPI.o" "../src/LCD_SPI.c"
-'Finished building: ../src/LCD_SPI.c'
 ' '
 'Building file: ../src/gameUI.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gameUI.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/sw/full_hardware_plt/music_domain/bspinclude/include -MMD -MP -MF"src/gameUI.d" -MT"src/gameUI.o" -o "src/gameUI.o" "../src/gameUI.c"
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gameUI.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -ID:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/sw/full_hardware_plt/music_domain/bspinclude/include -MMD -MP -MF"src/gameUI.d" -MT"src/gameUI.o" -o "src/gameUI.o" "../src/gameUI.c"
 'Finished building: ../src/gameUI.c'
 ' '
 'Building file: ../src/main.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/sw/full_hardware_plt/music_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -ID:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/sw/full_hardware_plt/music_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
 'Finished building: ../src/main.c'
 ' '
 'Building file: ../src/zybomon.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/zybomon.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/sw/full_hardware_plt/music_domain/bspinclude/include -MMD -MP -MF"src/zybomon.d" -MT"src/zybomon.o" -o "src/zybomon.o" "../src/zybomon.c"
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/zybomon.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -ID:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/sw/full_hardware_plt/music_domain/bspinclude/include -MMD -MP -MF"src/zybomon.d" -MT"src/zybomon.o" -o "src/zybomon.o" "../src/zybomon.c"
+../src/zybomon.c: In function 'auto_trainer_battle':
+../src/zybomon.c:184:6: warning: unused variable 'max_uses' [-Wunused-variable]
+  184 |  int max_uses = -1; // Variable para rastrear el máximo número de usos
+      |      ^~~~~~~~
+../src/zybomon.c:175:9: warning: unused variable 'oponent_type' [-Wunused-variable]
+  175 |  E_TYPE oponent_type = oponent_active.e_type;
+      |         ^~~~~~~~~~~~
 'Finished building: ../src/zybomon.c'
 ' '
 'Building target: music_player_sw.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/sw/full_hardware_plt/music_domain/bsplib/lib -o "music_player_sw.elf"  ./src/ADC.o ./src/Bitmap.o ./src/Delay.o ./src/I2C.o ./src/LCD_Driver.o ./src/LCD_GUI.o ./src/LCD_SPI.o ./src/audio.o ./src/font12.o ./src/font16.o ./src/font20.o ./src/font24.o ./src/font8.o ./src/gameUI.o ./src/main.o ./src/platform.o ./src/states.o ./src/zybomon.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LD:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/sw/full_hardware_plt/music_domain/bsplib/lib -o "music_player_sw.elf"  ./src/ADC.o ./src/Bitmap.o ./src/Delay.o ./src/I2C.o ./src/LCD_Driver.o ./src/LCD_GUI.o ./src/LCD_SPI.o ./src/audio.o ./src/font12.o ./src/font16.o ./src/font20.o ./src/font24.o ./src/font8.o ./src/gameUI.o ./src/main.o ./src/platform.o ./src/states.o ./src/zybomon.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
 'Finished building target: music_player_sw.elf'
 ' '
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size music_player_sw.elf  |tee "music_player_sw.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 423060	   3584	 618240	1044884	  ff194	music_player_sw.elf
+ 424532	   3584	 618240	1046356	  ff754	music_player_sw.elf
 'Finished building: music_player_sw.elf.size'
 ' '
-23:26:31 **** Incremental Build of configuration Debug for project full_hardware_sw_system ****
+23:47:33 **** Incremental Build of configuration Debug for project full_hardware_sw_system ****
 make all 
 Generating bif file for the system project
-generate_system_bif.bat 60116 C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/full_hardware_plt.xpfm standalone_domain,music_domain C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_sw_system/Debug/system.bif
-sdcard_gen --xpfm C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/full_hardware_plt.xpfm --sys_config full_hardware_plt --bif C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_sw_system/Debug/system.bif --bitstream C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_sw/_ide/bitstream/DEMO_wrapper.bit --elf C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_sw/Debug/full_hardware_sw.elf,ps7_cortexa9_0 --elf C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/music_player_sw/Debug/music_player_sw.elf,ps7_cortexa9_1
-creating BOOT.BIN using C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_sw/_ide/bitstream/DEMO_wrapper.bit
-Error intializing SD boot data : Software platform XML error, sdx:qemuArguments value "full_hardware_plt/qemu/qemu_args.txt" path does not exist C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/sw/full_hardware_plt/qemu/qemu_args.txt, platform path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt, sdx:configuration full_hardware_plt, sdx:image standard
-make: *** [makefile:39: package] Error 1
+generate_system_bif.bat 49854 D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/full_hardware_plt.xpfm standalone_domain,music_domain D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_sw_system/Debug/system.bif
+sdcard_gen --xpfm D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/full_hardware_plt.xpfm --sys_config full_hardware_plt --bif D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_sw_system/Debug/system.bif --bitstream D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_sw/_ide/bitstream/DEMO_wrapper.bit --elf D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_sw/Debug/full_hardware_sw.elf,ps7_cortexa9_0 --elf D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/music_player_sw/Debug/music_player_sw.elf,ps7_cortexa9_1
+creating BOOT.BIN using D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_sw/_ide/bitstream/DEMO_wrapper.bit
+Running D:/Xilinx/Vitis/2020.1/bin/bootgen  -image D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_sw_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN

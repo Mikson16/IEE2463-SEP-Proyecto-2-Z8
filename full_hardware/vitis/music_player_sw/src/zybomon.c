@@ -111,91 +111,156 @@ void init_trainer(TRAINER *trainerPtr, int active)
 	}
 }
 
-ATTACK auto_trainer_battle(TRAINER *trainerPtr_2, TRAINER *trainerPtr_1)
+float type_modifier(E_TYPE attacker, E_TYPE defender)
 {
+	//se define cada interaccion en paricular para cada tipo de atacante y defensor
+	if(attacker == FIRE && defender == FIRE){
+		return 0.5;
+	}
+	else if(attacker == FIRE && defender == WATER){
+		return 0.5;
+	}
+	else if(attacker == FIRE && defender == PLANT){
+		return 2;
+	}
+	else if(attacker == FIRE && defender == NORMAL){
+		return 1;
+	}
+	else if(attacker == WATER && defender == FIRE){
+		return 2;
+	}
+	else if(attacker == WATER && defender == WATER){
+		return 0.5;
+	}
+	else if(attacker == WATER && defender == PLANT){
+		return 0.5;
+	}
+	else if(attacker == WATER && defender == NORMAL){
+		return 1;
+	}
+	else if(attacker == PLANT && defender == FIRE){
+		return 0.5;
+	}
+	else if(attacker == PLANT && defender == WATER){
+		return 2;
+	}
+	else if(attacker == PLANT && defender == PLANT){
+		return 0.5;
+	}
+	else if(attacker == PLANT && defender ==NORMAL){
+		return 1;
+	}
+	else if(attacker == NORMAL){
+		return 1;
+	}
+	return 0;
+}
+int get_damage(int attack_index, ZYBOMON attacker, ZYBOMON defender)
+{
+	int damage;
+	float type_mod = type_modifier(attacker.attacks[attack_index].e_type, defender.e_type);
+	// ecuacion de calculo de da�o
+	damage = type_mod*attacker.attacks[attack_index].power*attacker.atk/defender.def;
+	return damage;
+}
+TURN_CHOICE auto_trainer_battle(TRAINER *trainerPtr_2, TRAINER *trainerPtr_1)
+{
+	TURN_CHOICE oponent_choice;
 	/*El primer argumento correspondera al segundo jugador, el cual debera ser la computadora*/
 	xil_printf("Pensando...\n");
 	xil_printf("Analizando al oponente...\n");
 	/*Obtener el activo del oponente*/
-	ZYBOMON oponent_active;
-	for (int i = 0; i < 4; i++)
-	{
-		if (trainerPtr_1->zybomons[i].active)
-		{
-			oponent_active = trainerPtr_1->zybomons[i];
-			break;
-		}
-	}
+	ZYBOMON oponent_active = trainerPtr_1->zybomons[0];
 	/*Obtener el tipo del activo del oponente*/
 	E_TYPE oponent_type = oponent_active.e_type;
 	/*Obtener el activo propio*/
 	xil_printf("Analizando mis opciones...\n");
 	ZYBOMON my_active;
-	int my_active_index = -1; // Variable para rastrear el índice del zybomon activo
-	for (int i = 0; i < 4; i++)
-	{
-		if (trainerPtr_2->zybomons[i].active)
-		{
-			my_active = trainerPtr_2->zybomons[i];
-			my_active_index = i; // Guardar el índice del zybomon activo
-			break;
-		}
-	}
+	my_active = trainerPtr_2->zybomons[0];
+
 	/*Decidir el mejor ataque*/
 	int best_attack_index = -1;
+	int best_damage = -1;
 	int max_uses = -1; // Variable para rastrear el máximo número de usos
 	for (int i = 0; i < 4; i++)
 	{
-		ATTACK attack = my_active.attacks[i];
-		if (attack.uses > 0) // Solo considerar ataques que tengan usos disponibles
-		{
-			// Buscar siempre el mejor ataque
-			if (attack.e_type == FIRE && oponent_type == PLANT)
-			{
-				best_attack_index = i; // Fuego es fuerte contra planta
-				break;
-			}
-			else if (attack.e_type == WATER && oponent_type == FIRE)
-			{
-				best_attack_index = i; // Agua es fuerte contra fuego
-				break;
-			}
-			else if (attack.e_type == PLANT && oponent_type == WATER)
-			{
-				best_attack_index = i; // Planta es fuerte contra agua
-				break;
-			}
-			else if (attack.e_type == NORMAL && oponent_type != NORMAL)
-			{
-				best_attack_index = i; // Normal es neutral, pero si no hay mejor opción, usarlo
-			}
 
-			// Actualizar el ataque con mayor usos disponibles
-			if (attack.uses > max_uses)
-			{
-				max_uses = attack.uses;
+		if (my_active.attacks[i].uses > 0) // Solo considerar ataques que tengan usos disponibles
+		{
+			//Simular da�o de cada ataque y quedarse con el mas alto
+			int damage = get_damage(i, my_active, oponent_active);
+			if(best_damage < damage){
+				best_damage = damage;
 				best_attack_index = i;
 			}
+//
+//			// Buscar siempre el mejor ataque
+//			if (attack.e_type == FIRE && oponent_type == PLANT)
+//			{
+//				best_attack_index = i; // Fuego es fuerte contra planta
+//				break;
+//			}
+//			else if (attack.e_type == WATER && oponent_type == FIRE)
+//			{
+//				best_attack_index = i; // Agua es fuerte contra fuego
+//				break;
+//			}
+//			else if (attack.e_type == PLANT && oponent_type == WATER)
+//			{
+//				best_attack_index = i; // Planta es fuerte contra agua
+//				break;
+//			}
+//			else if (attack.e_type == NORMAL && oponent_type != NORMAL)
+//			{
+//				best_attack_index = i; // Normal es neutral, pero si no hay mejor opción, usarlo
+//			}
+//
+//			// Actualizar el ataque con mayor usos disponibles
+//			if (attack.uses > max_uses)
+//			{
+//				max_uses = attack.uses;
+//				best_attack_index = i;
+//			}
 		}
 	}
 
-	// Si no se encontró un ataque específico, usar el ataque con mayor usos disponibles
-	if (best_attack_index == -1)
+	//retornar el ataque elegido por el oponente
+	if(best_attack_index != -1){
+		oponent_choice.action = ATTACK_ACTION;
+		oponent_choice.target = best_attack_index;
+		return oponent_choice;
+	}
+	// Si no le quedan ataques con usos cambia al zybomon con mejor defensa contra el jugador
+	else
 	{
-		for (int i = 0; i < 4; i++)
+		int best_zybomon_index = -1;
+		int best_type_mod = -1;
+		for (int i = 1; i < 4; i++)
 		{
-			ATTACK attack = my_active.attacks[i];
-			if (attack.uses > max_uses)
-			{
-				max_uses = attack.uses;
-				best_attack_index = i;
+			//Verificar que el zybomon tenga vida restante
+			if(trainerPtr_2->zybomons[i].lp > 0){
+				int type_mod = type_modifier(oponent_active.e_type, my_active.e_type);
+				//Mientras menor sea el modificador por tipo menos da�o recibe
+				if(best_type_mod > type_mod){
+					best_type_mod = type_mod;
+					best_zybomon_index = i;
+				}
 			}
 		}
+		//retorna el zybomon que recibiria menos da�o
+		if(best_zybomon_index != -1){
+			oponent_choice.action = SWAP_ACTION;
+			oponent_choice.target = best_zybomon_index;
+			return oponent_choice;
+		//si no le quedan mas zybomones entra en panico (no hace nada)
+		}
+		else{
+			oponent_choice.action = PANICK_ACTION;
+			oponent_choice.target = 0;
+			return oponent_choice;
+		}
 	}
-	/*Retornar el ataque y reajustar los usos, del ataque del zybomon*/
-	ATTACK best_attack = my_active.attacks[best_attack_index];
-	trainerPtr_2->zybomons[my_active_index].attacks[best_attack_index].uses--; // Disminuir el uso del ataque seleccionado
-	return best_attack;
+	return oponent_choice;
 }
 
 /*Funcion de batalla*/
@@ -223,6 +288,7 @@ void battle(TRAINER *trainerPtr_1, TRAINER *trainerPtr_2, ATTACK atk)
 		if (trainerPtr_2->zybomons[i].active)
 		{
 			defender_active = trainerPtr_2->zybomons[i];
+
 			break;
 		}
 	}

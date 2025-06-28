@@ -7,8 +7,8 @@
 #include "xstatus.h"
 #include "xil_io.h"
 #include "xparameters.h"
+#include "audio.h"
 FATFS fs;
-
 UINT br;
 
 
@@ -22,7 +22,7 @@ u32 SdStartSong(TCHAR *filename, FIL *RfPtr, u32 *CurrentBytePtr, u8 *AudioPlaye
     u8 DataSizeBuff[4];
     u32 DataSize;
 
-    while(rc != FR_OK){
+    //Se abre el archivo de musica
 	rc = f_open (RfPtr, filename, FA_READ);
 
 	if(rc != FR_OK)
@@ -30,7 +30,8 @@ u32 SdStartSong(TCHAR *filename, FIL *RfPtr, u32 *CurrentBytePtr, u8 *AudioPlaye
 		        xil_printf("ERROR 2: f_open returned %d\r\n",rc);
 //		        return XST_FAILURE;
 		    }
-    }
+
+    //La cantidad de bytes de muestras de auido se guarda en el byte 40 del archivo .wav
 	rc = f_lseek ((FIL *)RfPtr, 40);
 
 	if(rc != FR_OK)
@@ -55,7 +56,8 @@ u32 SdStartSong(TCHAR *filename, FIL *RfPtr, u32 *CurrentBytePtr, u8 *AudioPlaye
 
     Xil_Out32(XPAR_AXI_BUZZER_0_S00_AXI_BASEADDR + 4, 5);
 
-    *AudioPlayerStatePtr = 1;
+
+    *AudioPlayerStatePtr = MUSIC;
 
     return DataSize;
 
@@ -69,6 +71,7 @@ void PlaySong(FIL *RfPtr, u32 *CurrentBytePtr, float volume)
 
 	u32 CurrentByte = *CurrentBytePtr;
 
+	//Se busca la posicion actual de la cancion
 	rc = f_lseek ((FIL *)RfPtr, CurrentByte);
 
 	if(rc != FR_OK)
@@ -77,7 +80,7 @@ void PlaySong(FIL *RfPtr, u32 *CurrentBytePtr, float volume)
 					        return XST_FAILURE;
 					    }
 
-
+    //Se leen 4 bytes
 	rc = f_read (RfPtr, &ReadBuffer, (UINT)4, &br);
 
 	if(rc != FR_OK)
@@ -86,20 +89,23 @@ void PlaySong(FIL *RfPtr, u32 *CurrentBytePtr, float volume)
 					        return XST_FAILURE;
 					    }
 
+
+	//Se aumenta la posicion guardada de la cancion
 	*CurrentBytePtr += 4;
 
 	int byte[4];
 
 	int i;
 
+
 	for(i = 0; i < 4; i ++ ){
 
+    //ajuste del volumen de cada muestra mediante la amplitud
 	byte[i] = ReadBuffer[i];
 	byte[i] = floor((byte[i] - 127)*volume);
-
-
 	byte[i] = byte[i] + 127;
 
+    //volumen minimo y maximo
 	if(byte[i] < 0){
 		byte[i] = 0;
 	}
@@ -107,12 +113,9 @@ void PlaySong(FIL *RfPtr, u32 *CurrentBytePtr, float volume)
 		byte[i] = 255;
 	}
 
-//	byte[i] = floor(ReadBuffer[i]*volume);
-//	byte2 = floor(ReadBuffer[1]*volume);
-//	byte3 = floor(ReadBuffer[2]*volume);
-//	byte4 = floor(ReadBuffer[3]*volume);
 	}
 
+	//se envian las muestras al axiBuzzer
 	sample  = (byte[0] << 24) | (byte[1] << 16) | (byte[2] << 8) | byte[3];
 
 	Xil_Out32(XPAR_AXI_BUZZER_0_S00_AXI_BASEADDR, sample);
@@ -124,6 +127,7 @@ void PlaySong(FIL *RfPtr, u32 *CurrentBytePtr, float volume)
 void SdStopSong(FIL *RfPtr, u8 *AudioPlayerStatePtr)
 {
 	FRESULT rc;
+	//se cierra el archivo de audio
 	rc = f_close ((FIL *)RfPtr);
 
 	if(rc != FR_OK)
@@ -131,22 +135,24 @@ void SdStopSong(FIL *RfPtr, u8 *AudioPlayerStatePtr)
 				xil_printf("ERROR : f_close returned %d\r\n",rc);
 				return XST_FAILURE;
 			}
+	//se detiene el PWM y se actualiza el estado
 	Xil_Out32(XPAR_AXI_BUZZER_0_S00_AXI_BASEADDR + 4, 0);
-	*AudioPlayerStatePtr = 0;
+	*AudioPlayerStatePtr = STOP;
 }
 
 u32 SdChangeSong(TCHAR *filename, FIL *RfPtr, u32 *CurrentBytePtr, u8 *AudioPlayerStatePtr)
 {
 	FRESULT rc;
-	if(*AudioPlayerStatePtr != 0){
+	//Si hay una reproduccion activa se cierra el archivo de audio
+	if(*AudioPlayerStatePtr != STOP){
 		rc = f_close ((FIL *)RfPtr);
 
 		if(rc != FR_OK)
-				{
-					xil_printf("ERROR : f_close returned %d\r\n",rc);
-					return XST_FAILURE;
-				}
+		{
+			xil_printf("ERROR : f_close returned %d\r\n", rc);
+			return XST_FAILURE;
 		}
+	}
 
 	return SdStartSong((TCHAR *) filename, (FIL *) RfPtr, (u32 *) CurrentBytePtr, (u8 *) AudioPlayerStatePtr);
 
@@ -202,7 +208,7 @@ u32 SdSoundEffect(TCHAR *filename,  FIL *RfPtr, u32 *CurrentBytePtr, u8 *AudioPl
 	Xil_Out32(XPAR_AXI_BUZZER_0_S00_AXI_BASEADDR + 4, 5);
 
 
-	*AudioPlayerStatePtr = 2;
+	*AudioPlayerStatePtr = SOUND_EFFECT;
 
 	return DataSize;
 
@@ -211,15 +217,17 @@ u32 SdResumeSong(TCHAR *filename,  FIL *RfPtr, u32 *CurrentBytePtr, u8 *AudioPla
 {
 	FRESULT rc;
 
-	if(*AudioPlayerStatePtr != 0){
+	//Si hay una reproduccion se cierra el archivo actual
+	if(*AudioPlayerStatePtr != STOP){
 		rc = f_close ((FIL *)RfPtr);
 
 		if(rc != FR_OK)
-				{
-					xil_printf("ERROR : f_close returned %d\r\n",rc);
-					return XST_FAILURE;
-				}
+		{
+			xil_printf("ERROR : f_close returned %d\r\n",rc);
+			return XST_FAILURE;
+		}
 	}
+	//Se abre la nueva cancion
 	return SdStartSong((TCHAR *) filename, (FIL *) RfPtr, (u32 *) CurrentBytePtr, (u8 *) AudioPlayerStatePtr);
 
 }

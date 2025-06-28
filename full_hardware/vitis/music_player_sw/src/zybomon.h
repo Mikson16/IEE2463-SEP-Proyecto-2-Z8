@@ -5,6 +5,22 @@
 #include <stdbool.h>
 #include "ff.h"
 
+//Acciones posibles
+typedef enum
+{
+	ATTACK_ACTION = 0,
+	SWAP_ACTION,
+	PANICK_ACTION
+} ACTION;
+
+//Struct con la informacion de que elige hacer cada jugador en su turno
+typedef struct
+{
+	ACTION action;
+	int target;
+} TURN_CHOICE;
+
+//Tipos elementales
 typedef enum
 {
 	FIRE = 0,
@@ -13,6 +29,7 @@ typedef enum
 	NORMAL
 } E_TYPE;
 
+//Struct de datos de un ataque
 typedef struct
 {
 	int power;
@@ -22,6 +39,7 @@ typedef struct
 	char name[11];
 } ATTACK;
 
+//Struct de datos de un zybomon
 typedef struct
 {
 	int active;
@@ -37,6 +55,7 @@ typedef struct
 	char name[20];
 } ZYBOMON;
 
+//Struct de datos de un entrenador
 typedef struct
 {
 	char name[20];
@@ -59,6 +78,8 @@ typedef struct
 
 ZYBOMON generate_zybomon(int active);
 void init_trainer(TRAINER *trainerPtr, int active);
-ATTACK auto_trainer_battle(TRAINER *trainerPtr_2, TRAINER *trainerPtr_1);
+float type_modifier(E_TYPE attacker, E_TYPE defender);
+int get_damage(int attack_index, ZYBOMON attacker, ZYBOMON defender);
+TURN_CHOICE auto_trainer_battle(TRAINER *trainerPtr_2, TRAINER *trainerPtr_1);
 void battle(TRAINER *trainerPtr_1, TRAINER *trainerPtr_2, ATTACK atk);
 #endif

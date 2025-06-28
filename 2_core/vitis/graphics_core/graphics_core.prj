@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="graphics_core" location="D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/2_core/vitis/graphics_core" platform="D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/2_core/vitis/2_core/export/2_core/2_core.xpfm" platformUID="xilinx:zybo-z7-10::0.0(custom)" systemProject="main_core_system" sysConfig="2_core" runtime="C/C++" cpu="graphics_core" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="ac96a4719ef4dfe420fae745994ff56f">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.1661276919">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.1671287115" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

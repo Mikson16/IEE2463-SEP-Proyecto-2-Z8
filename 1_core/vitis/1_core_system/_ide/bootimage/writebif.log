@@ -1,0 +1,9 @@
+TRACE::2025-06-25.16:01:13::SCWBifWriter::Found the complete platform D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/export/1_core_plt/1_core_plt.xpfm
+TRACE::2025-06-25.16:01:13::SCWBifWriter::hardware databse : DEMO_wrapper_3
+TRACE::2025-06-25.16:01:13::SCWBifWriter::bitstream found in the design
+TRACE::2025-06-25.16:01:13::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2025-06-25.16:01:13::SCWBifWriter::proc type : 
+TRACE::2025-06-25.16:01:13::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2025-06-25.16:01:13::SCWBifWriter::Device type is : zynq
+TRACE::2025-06-25.16:01:13::SCWBifWriter::Writing BIF to file : D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_system/_ide/bootimage/template_1_core_system.bif
+TRACE::2025-06-25.16:01:13::SCWBifWriter::Writing the Zynq Baremetal bif 

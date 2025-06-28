@@ -1,0 +1,89 @@
+16:08:16 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\2_core\vitis\temp_xsdb_launch_script.tcl
+16:08:16 INFO  : Registering command handlers for Vitis TCF services
+16:08:17 INFO  : Platform repository initialization has completed.
+16:08:18 INFO  : XSCT server has started successfully.
+16:08:18 INFO  : plnx-install-location is set to ''
+16:08:18 INFO  : Successfully done setting XSCT server connection channel  
+16:08:18 INFO  : Successfully done setting workspace for the tool. 
+16:08:18 INFO  : Successfully done query RDI_DATADIR 
+16:09:44 INFO  : Result from executing command 'getProjects': 2_core
+16:09:44 INFO  : Result from executing command 'getPlatforms': 
+16:11:28 INFO  : Result from executing command 'getProjects': 2_core
+16:11:28 INFO  : Result from executing command 'getPlatforms': 2_core|D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/2_core/vitis/2_core/export/2_core/2_core.xpfm
+16:11:30 INFO  : Successfully done sdx_reload_mss "D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/2_core/vitis/2_core/ps7_cortexa9_0/graphics_core/bsp/system.mss"
+16:11:31 INFO  : Successfully done sdx_reload_mss "D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/2_core/vitis/2_core/ps7_cortexa9_1/standalone_domain/bsp/system.mss"
+16:11:34 INFO  : (SwPlatform)  Successfully done add_library 
+16:11:35 INFO  : (SwPlatform) Successfully done update_mss 
+16:11:35 INFO  : Successfully done sdx_reload_mss "D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/2_core/vitis/2_core/ps7_cortexa9_1/standalone_domain/bsp/system.mss"
+16:12:44 INFO  : Result from executing command 'getProjects': 2_core
+16:12:44 INFO  : Result from executing command 'getPlatforms': 2_core|D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/2_core/vitis/2_core/export/2_core/2_core.xpfm
+16:18:38 INFO  : Checking for BSP changes to sync application flags for project 'graphics_core'...
+16:18:42 INFO  : Checking for BSP changes to sync application flags for project 'main_core'...
+16:19:36 INFO  : Checking for BSP changes to sync application flags for project 'graphics_core'...
+16:19:40 INFO  : Checking for BSP changes to sync application flags for project 'main_core'...
+16:21:45 INFO  : Checking for BSP changes to sync application flags for project 'graphics_core'...
+16:21:49 INFO  : Checking for BSP changes to sync application flags for project 'main_core'...
+16:22:30 INFO  : Checking for BSP changes to sync application flags for project 'graphics_core'...
+16:22:31 INFO  : Checking for BSP changes to sync application flags for project 'main_core'...
+16:23:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:23:11 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FC8DA' is selected.
+16:23:11 INFO  : 'jtag frequency' command is executed.
+16:23:11 INFO  : Context for 'APU' is selected.
+16:23:11 INFO  : System reset is completed.
+16:23:14 INFO  : 'after 3000' command is executed.
+16:23:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC8DA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC8DA-13722093-0"}' command is executed.
+16:23:16 INFO  : FPGA configured successfully with bitstream "D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/2_core/vitis/main_core/_ide/bitstream/DEMO_wrapper.bit"
+16:23:16 INFO  : Context for 'APU' is selected.
+16:23:16 INFO  : Hardware design and registers information is loaded from 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/2_core/vitis/2_core/export/2_core/hw/DEMO_wrapper.xsa'.
+16:23:16 INFO  : 'configparams force-mem-access 1' command is executed.
+16:23:16 INFO  : Context for 'APU' is selected.
+16:23:16 INFO  : Sourcing of 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/2_core/vitis/main_core/_ide/psinit/ps7_init.tcl' is done.
+16:23:16 INFO  : 'ps7_init' command is executed.
+16:23:16 INFO  : 'ps7_post_config' command is executed.
+16:23:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:23:17 INFO  : The application 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/2_core/vitis/graphics_core/Debug/graphics_core.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:23:17 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+16:23:18 INFO  : The application 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/2_core/vitis/main_core/Debug/main_core.elf' is downloaded to processor 'ps7_cortexa9_1'.
+16:23:18 INFO  : 'configparams force-mem-access 0' command is executed.
+16:23:18 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC8DA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC8DA-13722093-0"}
+fpga -file D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/2_core/vitis/main_core/_ide/bitstream/DEMO_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/2_core/vitis/2_core/export/2_core/hw/DEMO_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/2_core/vitis/main_core/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/2_core/vitis/graphics_core/Debug/graphics_core.elf
+targets -set -nocase -filter {name =~ "*A9*#1"}
+dow D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/2_core/vitis/main_core/Debug/main_core.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:23:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:23:19 INFO  : 'con' command is executed.
+16:23:19 INFO  : Context for processor 'ps7_cortexa9_1' is selected.
+16:23:19 INFO  : 'con' command is executed.
+16:23:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+targets -set -nocase -filter {name =~ "*A9*#1"}
+con
+----------------End of Script----------------
+
+16:23:19 INFO  : Launch script is exported to file 'D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\2_core\vitis\.sdk\launch_scripts\single_application_debug\systemdebugger_main_core_system_standalone.tcl'
+16:24:23 INFO  : Disconnected from the channel tcfchan#6.
+16:25:13 INFO  : Checking for BSP changes to sync application flags for project 'graphics_core'...
+16:25:14 INFO  : Checking for BSP changes to sync application flags for project 'main_core'...
+16:28:46 INFO  : Invoking Bootgen: bootgen -image output.bif -arch zynq -o D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/2_core/vitis/BOOT.bin
+16:28:46 INFO  : Creating new bif file D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\2_core\vitis\output.bif
+16:28:47 INFO  : Bootgen command execution is done.
+16:31:08 INFO  : Invoking Bootgen: bootgen -image output.bif -arch zynq -o D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/2_core/vitis/BOOT.bin -w on
+16:31:08 INFO  : Overwriting existing bif file D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\2_core\vitis\output.bif
+16:31:09 INFO  : Bootgen command execution is done.

@@ -1,0 +1,10 @@
+16:06:06 **** Incremental Build of configuration Debug for project 1_core_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 50045 D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/export/1_core_plt/1_core_plt.xpfm standalone_domain D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_system/Debug/system.bif
+sdcard_gen --xpfm D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/export/1_core_plt/1_core_plt.xpfm --sys_config 1_core_plt --bif D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_system/Debug/system.bif --bitstream D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core/_ide/bitstream/DEMO_wrapper.bit --elf D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core/Debug/1_core.elf,ps7_cortexa9_0
+creating BOOT.BIN using D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core/_ide/bitstream/DEMO_wrapper.bit
+Running D:/Xilinx/Vitis/2020.1/bin/bootgen  -image D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+16:06:10 Build Finished (took 4s.166ms)
+

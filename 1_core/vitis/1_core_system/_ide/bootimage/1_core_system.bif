@@ -1,0 +1,12 @@
+/* C:/Users/roxdl/AppData/Local/Temp/bootgen_1_core_system2184541332735963117/sd_card_temp/boot.bif */
+/* Command to create bitstream .bin file:       */
+/*   bootgen -image <bif_file> -split bin -w    */
+/* Command to create BOOT.BIN file:             */
+/*   bootgen  -image <bif_file> -w -o i BOOT.BIN */
+/*1_core_plt*/
+the_ROM_image:
+{
+ [bootloader] D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/export/1_core_plt/sw/1_core_plt/boot/fsbl.elf
+ D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core/_ide/bitstream/DEMO_wrapper.bit
+ D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core/Debug/1_core.elf
+}

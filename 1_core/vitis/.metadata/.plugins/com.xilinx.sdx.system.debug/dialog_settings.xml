@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_system/_ide/bootimage/BOOT.bin" key="1_core_system-imgFile"/>
+	<item value="" key="1_core_system-offSet"/>
+	<item value="1_core_system" key="programflash.hwplatform"/>
+	<item value="Auto Detect" key="1_core_system-device"/>
+	<item value="false" key="1_core_system-blankCheck"/>
+	<item value="D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/export/1_core_plt/sw/1_core_plt/boot/fsbl.elf" key="1_core_system-fsblFile"/>
+	<item value="false" key="1_core_system-verifyFlash"/>
+	<item value="Local" key="1_core_system-target"/>
+	<item value="qspi-x4-single" key="1_core_system-flashType"/>
+</section>

@@ -4,6 +4,7 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+//Estados del juego
 typedef enum{
 	ST_SETUP = 0,
 	ST_BV,

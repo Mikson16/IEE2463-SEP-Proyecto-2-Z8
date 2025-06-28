@@ -1,0 +1,10 @@
+16:25:13 **** Incremental Build of configuration Debug for project graphics_core ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+make[1]: Nothing to be done for 'main-build'.
+
+16:25:13 Build Finished (took 335ms)
+

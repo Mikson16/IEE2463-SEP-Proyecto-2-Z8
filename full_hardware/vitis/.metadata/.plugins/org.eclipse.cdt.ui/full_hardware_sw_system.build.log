@@ -1,11 +1,10 @@
-23:26:31 **** Incremental Build of configuration Debug for project full_hardware_sw_system ****
+23:47:33 **** Incremental Build of configuration Debug for project full_hardware_sw_system ****
 make all 
 Generating bif file for the system project
-generate_system_bif.bat 60116 C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/full_hardware_plt.xpfm standalone_domain,music_domain C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_sw_system/Debug/system.bif
-sdcard_gen --xpfm C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/full_hardware_plt.xpfm --sys_config full_hardware_plt --bif C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_sw_system/Debug/system.bif --bitstream C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_sw/_ide/bitstream/DEMO_wrapper.bit --elf C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_sw/Debug/full_hardware_sw.elf,ps7_cortexa9_0 --elf C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/music_player_sw/Debug/music_player_sw.elf,ps7_cortexa9_1
-creating BOOT.BIN using C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_sw/_ide/bitstream/DEMO_wrapper.bit
-Error intializing SD boot data : Software platform XML error, sdx:qemuArguments value "full_hardware_plt/qemu/qemu_args.txt" path does not exist C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/sw/full_hardware_plt/qemu/qemu_args.txt, platform path C:/Users/andre/Projects/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt, sdx:configuration full_hardware_plt, sdx:image standard
-make: *** [makefile:39: package] Error 1
+generate_system_bif.bat 49854 D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/full_hardware_plt.xpfm standalone_domain,music_domain D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_sw_system/Debug/system.bif
+sdcard_gen --xpfm D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_plt/export/full_hardware_plt/full_hardware_plt.xpfm --sys_config full_hardware_plt --bif D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_sw_system/Debug/system.bif --bitstream D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_sw/_ide/bitstream/DEMO_wrapper.bit --elf D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_sw/Debug/full_hardware_sw.elf,ps7_cortexa9_0 --elf D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/music_player_sw/Debug/music_player_sw.elf,ps7_cortexa9_1
+creating BOOT.BIN using D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_sw/_ide/bitstream/DEMO_wrapper.bit
+Running D:/Xilinx/Vitis/2020.1/bin/bootgen  -image D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vitis/full_hardware_sw_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
 
-23:26:38 Build Finished (took 7s.510ms)
+23:47:49 Build Finished (took 15s.664ms)
 
