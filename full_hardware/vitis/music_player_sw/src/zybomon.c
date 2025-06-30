@@ -113,44 +113,57 @@ void init_trainer(TRAINER *trainerPtr, int active)
 
 float type_modifier(E_TYPE attacker, E_TYPE defender)
 {
-	//se define cada interaccion en paricular para cada tipo de atacante y defensor
-	if(attacker == FIRE && defender == FIRE){
+	// se define cada interaccion en paricular para cada tipo de atacante y defensor
+	if (attacker == FIRE && defender == FIRE)
+	{
 		return 0.5;
 	}
-	else if(attacker == FIRE && defender == WATER){
+	else if (attacker == FIRE && defender == WATER)
+	{
 		return 0.5;
 	}
-	else if(attacker == FIRE && defender == PLANT){
+	else if (attacker == FIRE && defender == PLANT)
+	{
 		return 2;
 	}
-	else if(attacker == FIRE && defender == NORMAL){
+	else if (attacker == FIRE && defender == NORMAL)
+	{
 		return 1;
 	}
-	else if(attacker == WATER && defender == FIRE){
+	else if (attacker == WATER && defender == FIRE)
+	{
 		return 2;
 	}
-	else if(attacker == WATER && defender == WATER){
+	else if (attacker == WATER && defender == WATER)
+	{
 		return 0.5;
 	}
-	else if(attacker == WATER && defender == PLANT){
+	else if (attacker == WATER && defender == PLANT)
+	{
 		return 0.5;
 	}
-	else if(attacker == WATER && defender == NORMAL){
+	else if (attacker == WATER && defender == NORMAL)
+	{
 		return 1;
 	}
-	else if(attacker == PLANT && defender == FIRE){
+	else if (attacker == PLANT && defender == FIRE)
+	{
 		return 0.5;
 	}
-	else if(attacker == PLANT && defender == WATER){
+	else if (attacker == PLANT && defender == WATER)
+	{
 		return 2;
 	}
-	else if(attacker == PLANT && defender == PLANT){
+	else if (attacker == PLANT && defender == PLANT)
+	{
 		return 0.5;
 	}
-	else if(attacker == PLANT && defender ==NORMAL){
+	else if (attacker == PLANT && defender == NORMAL)
+	{
 		return 1;
 	}
-	else if(attacker == NORMAL){
+	else if (attacker == NORMAL)
+	{
 		return 1;
 	}
 	return 0;
@@ -159,8 +172,8 @@ int get_damage(int attack_index, ZYBOMON attacker, ZYBOMON defender)
 {
 	int damage;
 	float type_mod = type_modifier(attacker.attacks[attack_index].e_type, defender.e_type);
-	// ecuacion de calculo de daño
-	damage = type_mod*attacker.attacks[attack_index].power*attacker.atk/defender.def;
+	// ecuacion de calculo de daï¿½o
+	damage = type_mod * attacker.attacks[attack_index].power * attacker.atk / defender.def;
 	return damage;
 }
 TURN_CHOICE auto_trainer_battle(TRAINER *trainerPtr_2, TRAINER *trainerPtr_1)
@@ -187,45 +200,47 @@ TURN_CHOICE auto_trainer_battle(TRAINER *trainerPtr_2, TRAINER *trainerPtr_1)
 
 		if (my_active.attacks[i].uses > 0) // Solo considerar ataques que tengan usos disponibles
 		{
-			//Simular daño de cada ataque y quedarse con el mas alto
+			// Simular daï¿½o de cada ataque y quedarse con el mas alto
 			int damage = get_damage(i, my_active, oponent_active);
-			if(best_damage < damage){
+			if (best_damage < damage)
+			{
 				best_damage = damage;
 				best_attack_index = i;
 			}
-//
-//			// Buscar siempre el mejor ataque
-//			if (attack.e_type == FIRE && oponent_type == PLANT)
-//			{
-//				best_attack_index = i; // Fuego es fuerte contra planta
-//				break;
-//			}
-//			else if (attack.e_type == WATER && oponent_type == FIRE)
-//			{
-//				best_attack_index = i; // Agua es fuerte contra fuego
-//				break;
-//			}
-//			else if (attack.e_type == PLANT && oponent_type == WATER)
-//			{
-//				best_attack_index = i; // Planta es fuerte contra agua
-//				break;
-//			}
-//			else if (attack.e_type == NORMAL && oponent_type != NORMAL)
-//			{
-//				best_attack_index = i; // Normal es neutral, pero si no hay mejor opciÃ³n, usarlo
-//			}
-//
-//			// Actualizar el ataque con mayor usos disponibles
-//			if (attack.uses > max_uses)
-//			{
-//				max_uses = attack.uses;
-//				best_attack_index = i;
-//			}
+			//
+			//			// Buscar siempre el mejor ataque
+			//			if (attack.e_type == FIRE && oponent_type == PLANT)
+			//			{
+			//				best_attack_index = i; // Fuego es fuerte contra planta
+			//				break;
+			//			}
+			//			else if (attack.e_type == WATER && oponent_type == FIRE)
+			//			{
+			//				best_attack_index = i; // Agua es fuerte contra fuego
+			//				break;
+			//			}
+			//			else if (attack.e_type == PLANT && oponent_type == WATER)
+			//			{
+			//				best_attack_index = i; // Planta es fuerte contra agua
+			//				break;
+			//			}
+			//			else if (attack.e_type == NORMAL && oponent_type != NORMAL)
+			//			{
+			//				best_attack_index = i; // Normal es neutral, pero si no hay mejor opciÃ³n, usarlo
+			//			}
+			//
+			//			// Actualizar el ataque con mayor usos disponibles
+			//			if (attack.uses > max_uses)
+			//			{
+			//				max_uses = attack.uses;
+			//				best_attack_index = i;
+			//			}
 		}
 	}
 
-	//retornar el ataque elegido por el oponente
-	if(best_attack_index != -1){
+	// retornar el ataque elegido por el oponente
+	if (best_attack_index != -1)
+	{
 		oponent_choice.action = ATTACK_ACTION;
 		oponent_choice.target = best_attack_index;
 		return oponent_choice;
@@ -237,24 +252,28 @@ TURN_CHOICE auto_trainer_battle(TRAINER *trainerPtr_2, TRAINER *trainerPtr_1)
 		int best_type_mod = -1;
 		for (int i = 1; i < 4; i++)
 		{
-			//Verificar que el zybomon tenga vida restante
-			if(trainerPtr_2->zybomons[i].lp > 0){
+			// Verificar que el zybomon tenga vida restante
+			if (trainerPtr_2->zybomons[i].lp > 0)
+			{
 				int type_mod = type_modifier(oponent_active.e_type, my_active.e_type);
-				//Mientras menor sea el modificador por tipo menos daño recibe
-				if(best_type_mod > type_mod){
+				// Mientras menor sea el modificador por tipo menos daï¿½o recibe
+				if (best_type_mod > type_mod)
+				{
 					best_type_mod = type_mod;
 					best_zybomon_index = i;
 				}
 			}
 		}
-		//retorna el zybomon que recibiria menos daño
-		if(best_zybomon_index != -1){
+		// retorna el zybomon que recibiria menos daï¿½o
+		if (best_zybomon_index != -1)
+		{
 			oponent_choice.action = SWAP_ACTION;
 			oponent_choice.target = best_zybomon_index;
 			return oponent_choice;
-		//si no le quedan mas zybomones entra en panico (no hace nada)
+			// si no le quedan mas zybomones entra en panico (no hace nada)
 		}
-		else{
+		else
+		{
 			oponent_choice.action = PANICK_ACTION;
 			oponent_choice.target = 0;
 			return oponent_choice;

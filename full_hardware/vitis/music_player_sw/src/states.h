@@ -3,24 +3,24 @@
 
 #include <stdint.h>
 #include <stdbool.h>
+#include "zybomon.h"
 
-//Estados del juego
-typedef enum{
-	ST_SETUP = 0,
-	ST_BV,
-	ST_BV_MENU,
-	ST_AT_MENU,
-	ST_ZYB_MENU
+// Estados del juego
+typedef enum
+{
+    ST_SETUP = 0,
+    ST_BV,
+    ST_BV_MENU,
+    ST_AT_MENU,
+    ST_ZYB_MENU
 
 } STATE_ID;
 
 typedef struct State State;
 
-
-
 struct State
 {
-    State *prev;   // Puntero al estado anterior
+    State *prev; // Puntero al estado anterior
     STATE_ID state_id;
     int Xoptions;
     int Yoptions;
@@ -28,17 +28,22 @@ struct State
     int Yselected;
 };
 
-typedef struct {
+typedef struct
+{
     // Array to store stack elements
     int arr[10];
     // Index of the top element in the stack
     int top;
 } Stack;
 
-State *init_state(State * prev_state, STATE_ID state_id, int Xoptions, int Yoptions);
-void init_stack(Stack * stack);
-void push(Stack * stack, int value);
+State *init_state(State *prev_state, STATE_ID state_id, int Xoptions, int Yoptions);
+void init_stack(Stack *stack);
+void push(Stack *stack, int value);
 int pop(Stack *stack);
 int peek(Stack *stack);
-
+void handle_defeat(TRAINER *trainer, int *new_active_id);
+void handle_attack(TRAINER *attacker, TRAINER *defender, ZYBOMON *attacker_zybomon, TURN_CHOICE turn_choice);
+void handle_swap(TRAINER *trainer);
+void process_turn(TRAINER *trainer1, TRAINER *trainer2, TURN_CHOICE turn1, TURN_CHOICE turn2, ZYBOMON *zybomon1, ZYBOMON *zybomon2, int diff);
+void turn_action(TRAINER *trainerPtr_1, TRAINER *trainerPtr_2, TURN_CHOICE turn_player1, TURN_CHOICE turn_player2, ZYBOMON *zybomon1, ZYBOMON *zybomon2);
 #endif
