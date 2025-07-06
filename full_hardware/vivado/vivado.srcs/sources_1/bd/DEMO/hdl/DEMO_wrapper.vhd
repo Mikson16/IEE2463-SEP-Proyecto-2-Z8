@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
---Date        : Wed Jun 18 00:17:18 2025
+--Date        : Fri Jul  4 18:45:51 2025
 --Host        : Ro running 64-bit major release  (build 9200)
 --Command     : generate_target DEMO_wrapper.bd
 --Design      : DEMO_wrapper
@@ -88,6 +88,13 @@ architecture STRUCTURE of DEMO_wrapper is
     DDR_dqs_n : inout STD_LOGIC_VECTOR ( 3 downto 0 );
     DDR_dqs_p : inout STD_LOGIC_VECTOR ( 3 downto 0 );
     RS_tri_o : out STD_LOGIC_VECTOR ( 0 to 0 );
+    RST_tri_o : out STD_LOGIC_VECTOR ( 0 to 0 );
+    iic_rtl_scl_i : in STD_LOGIC;
+    iic_rtl_scl_o : out STD_LOGIC;
+    iic_rtl_scl_t : out STD_LOGIC;
+    iic_rtl_sda_i : in STD_LOGIC;
+    iic_rtl_sda_o : out STD_LOGIC;
+    iic_rtl_sda_t : out STD_LOGIC;
     spi_rtl_io0_i : in STD_LOGIC;
     spi_rtl_io0_o : out STD_LOGIC;
     spi_rtl_io0_t : out STD_LOGIC;
@@ -99,14 +106,7 @@ architecture STRUCTURE of DEMO_wrapper is
     spi_rtl_sck_t : out STD_LOGIC;
     spi_rtl_ss_i : in STD_LOGIC_VECTOR ( 0 to 0 );
     spi_rtl_ss_o : out STD_LOGIC_VECTOR ( 0 to 0 );
-    spi_rtl_ss_t : out STD_LOGIC;
-    RST_tri_o : out STD_LOGIC_VECTOR ( 0 to 0 );
-    iic_rtl_scl_i : in STD_LOGIC;
-    iic_rtl_scl_o : out STD_LOGIC;
-    iic_rtl_scl_t : out STD_LOGIC;
-    iic_rtl_sda_i : in STD_LOGIC;
-    iic_rtl_sda_o : out STD_LOGIC;
-    iic_rtl_sda_t : out STD_LOGIC
+    spi_rtl_ss_t : out STD_LOGIC
   );
   end component DEMO;
   component IOBUF is

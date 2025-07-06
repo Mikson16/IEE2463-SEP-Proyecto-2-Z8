@@ -1,0 +1,80 @@
+#include <stdint.h>
+#include <stdio.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include "states.h"
+#include "xil_printf.h"
+#include "zybomon.h"
+#include "ff.h"
+#include "animation.h"
+
+void init_playerSwap_anim(ANIMATION * animation, TCHAR * zybomon_sprite)
+{
+
+	FRAME frame1,frame2,frame3,frame4,frame5,frame6,frame7;
+
+    frame1.sprite = "SWAP_1.bmp";
+    frame1.sound = "OUT.wav";
+    frame1.play_sound = 1;
+    frame1.xpos = 0;
+    frame1.ypos = 0;
+    frame1.delay = 5;
+    animation->frames[0] = frame1;
+
+
+    frame2.sprite = "SWAP_2.bmp";
+    frame2.play_sound = 0;
+    frame2.xpos = 0;
+    frame2.ypos = 0;
+    frame2.delay = 5;
+    animation->frames[1] = frame2;
+
+    frame3.sprite = "SWAP_3.bmp";
+    frame3.play_sound = 0;
+    frame3.xpos = 0;
+    frame3.ypos = 0;
+    frame3.delay = 5;
+    animation->frames[2] = frame3;
+
+    frame4.sprite = "BLANK.bmp";
+    frame4.play_sound = 0;
+    frame4.xpos = 0;
+    frame4.ypos = 0;
+    frame4.delay = 5;
+    animation->frames[3] = frame4;
+
+    frame5.sprite = "SWAP_3.bmp";
+    frame5.sound = "IN.wav";
+    frame5.play_sound = 1;
+    frame5.xpos = 0;
+    frame5.ypos = 0;
+    frame5.delay = 5;
+    animation->frames[4] = frame5;
+
+    frame6.sprite = "SWAP_2.bmp";
+    frame6.play_sound = 0;
+    frame6.xpos = 0;
+    frame6.ypos = 0;
+    frame6.delay = 5;
+    animation->frames[5] = frame6;
+
+    frame7.sprite = "SWAP_1.bmp";
+    frame7.play_sound = 0;
+    frame7.xpos = 0;
+    frame7.ypos = 0;
+    frame7.delay = 5;
+    animation->frames[6] = frame7;
+
+    animation->total_frames = 7;
+
+}
+
+void load_animations(ANIMATION * player_animation, ANIMATION * cpu_amination, TRAINER * player, TRAINER * cpu, TURN_CHOICE player_choice, TURN_CHOICE cpu_choice)
+{
+	if(player_choice.action == ATTACK_ACTION){
+		init_playerSwap_anim(player_animation);
+	}
+	else{
+		init_playerSwap_anim(player_animation);
+	}
+}

@@ -3,20 +3,9 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include "states.h"
+#include "xil_printf.h"
 
-State *init_state(State *prev_state, STATE_ID state_id, int Xoptions, int Yoptions)
-{
-	State *new_state = (State *)malloc(sizeof(State));
-	;
-	new_state->prev = prev_state;
-	new_state->state_id = state_id;
-	new_state->Xoptions = Xoptions;
-	new_state->Yoptions = Yoptions;
-	new_state->Xselected = 0;
-	new_state->Yselected = 0;
-	return new_state;
-}
-
+//Implementacion de stack basada en https://www.geeksforgeeks.org/c/implement-stack-in-c/
 void init_stack(Stack *stack)
 {
 	stack->top = -1;
@@ -53,140 +42,83 @@ int peek(Stack *stack)
 	return stack->arr[stack->top];
 }
 
-void handle_defeat(TRAINER *trainer, int *new_active_id)
+/*Funcion de cambio en caso que se quiera cambiar o fue derrotado*/
+int handle_faint(TRAINER *trainer)
 {
-	/*Funcion de cambio en caso que se quiera cambiar o fue derrotado*/
-	xil_printf("Seleccione un nuevo Zybomon activo (ID entre 1 y 4): \n");
-	do
-	{
-		scanf("%d", new_active_id);
-		(*new_active_id)--; // ajustar indice
-		if (*new_active_id < 0 || *new_active_id >= 4 || trainer->zybomons[*new_active_id].lp <= 0)
-		{
-			xil_printf("ID inválido o Zybomon sin vida. Intente nuevamente.\n");
-		}
-		else
-		{
+	int i;
+	int remaining = 0;
+	for(i=1; i < 4; i++){
+		if(trainer->zybomons[i].lp > 0){
+			remaining = 1;
+			handle_swap((TRAINER *) trainer, i);
+
 			break;
 		}
-	} while (1);
+	}
+	return remaining;
+}
 
-	// Cambiar Zybomon activo
+/*Funcion que maneja el ataque y llama a handle defeat en caso de ser necesario*/
+int handle_attack(TRAINER *attacker, TRAINER *defender, int attack_index)
+{
+
+	xil_printf("[ACCION]: %s ataca con %s\n", attacker->zybomons[0].name, attacker->zybomons[0].attacks[attack_index].name);
+	attacker->zybomons[0].attacks[attack_index].uses -= 1;
+	int damage = get_damage(attack_index, attacker->zybomons[0], defender->zybomons[0]);
+	int new_hp = defender->zybomons[0].lp - damage;
+	if(new_hp <= 0){
+		xil_printf("[ACCION]: Zybomon %s de %s ha sido derrotado\n", defender->zybomons[0].name, defender->name);
+		defender->zybomons[0].lp = 0;
+		return 1;
+	}
+	else{
+		defender->zybomons[0].lp  = new_hp;
+		return 0;
+	}
+}
+
+/*Funcion de cambio de zybomon activo*/
+void handle_swap(TRAINER *trainer, int target)
+{
+	xil_printf("[ACCION]: %s cambia de Zybomon a %s \n", trainer->name, trainer->zybomons[0].name);
 	ZYBOMON temp = trainer->zybomons[0];
-	trainer->zybomons[0] = trainer->zybomons[*new_active_id];
-	trainer->zybomons[*new_active_id] = temp;
-
-	xil_printf("Nuevo Zybomon activo: %s\n", trainer->zybomons[0].name);
+	trainer->zybomons[0] = trainer->zybomons[target];
+	trainer->zybomons[target] = temp;
 }
 
-void handle_attack(TRAINER *attacker, TRAINER *defender, ZYBOMON *attacker_zybomon, TURN_CHOICE turn_choice)
+/*Funcion que carga los estados para desarrollar el fin de turno*/
+void load_turn_action(Stack *action_stack, TRAINER *trainer1, TRAINER *trainer2, TURN_CHOICE turn_player1, TURN_CHOICE turn_player2)
 {
-	/*Funcion que maneja el ataque y llama a handle defeat en caso de ser necesario*/
-	xil_printf("[TURN_ACTION]: %s ataca con el ataque %s\n", attacker->name, attacker_zybomon->attacks[turn_choice.target].name);
-	battle(attacker, defender, attacker_zybomon->attacks[turn_choice.target]);
-	if (defender->zybomons[0].lp <= 0)
-	{
-		xil_printf("[TURN_ACTION]: Zybomon de %s ha sido derrotado\n", defender->name);
-		int new_active_id;
-		handle_defeat(defender, &new_active_id);
+    push(action_stack, ST_NEW_TURN);
+	if(turn_player1.action == ATTACK_ACTION && turn_player2.action != ATTACK_ACTION){
+		push(action_stack, ST_T1_ATTACK);
 	}
-}
+	else if(turn_player2.action == ATTACK_ACTION && turn_player1.action != ATTACK_ACTION){
+		push(action_stack, ST_T2_ATTACK);
+	}
 
-void handle_swap(TRAINER *trainer)
-{
-	/*Llama a la funcion de cambio*/
-	xil_printf("[TURN_ACTION]: %s cambia de Zybomon\n", trainer->name);
-	int new_active_id;
-	handle_defeat(trainer, &new_active_id);
-}
-
-void process_turn(TRAINER *trainer1, TRAINER *trainer2, TURN_CHOICE turn1, TURN_CHOICE turn2, ZYBOMON *zybomon1, ZYBOMON *zybomon2, int diff)
-{
-	if (diff > 0)
-	{
-		// Player 1 es mas rapido
-		if (turn1.action == ATTACK_ACTION)
-		{
-			handle_attack(trainer1, trainer2, zybomon1, turn1);
-			if (turn2.action == ATTACK_ACTION && trainer2->zybomons[0].lp > 0)
-			{
-				handle_attack(trainer2, trainer1, zybomon2, turn2);
-			}
-			else if (turn2.action == SWAP_ACTION)
-			{
-				handle_swap(trainer2);
-			}
+	/*Calcula quien actua primero en base a la velocidad*/
+	else if(turn_player1.action == ATTACK_ACTION && turn_player2.action == ATTACK_ACTION){
+		if(trainer1->zybomons[0].spd > trainer2->zybomons[0].spd){
+			push(action_stack, ST_T2_ATTACK);
+			push(action_stack, ST_T1_ATTACK);
 		}
-		else if (turn1.action == SWAP_ACTION)
-		{
-			handle_swap(trainer1);
-			if (turn2.action == ATTACK_ACTION)
-			{
-				handle_attack(trainer2, trainer1, zybomon2, turn2);
-			}
-			else if (turn2.action == SWAP_ACTION)
-			{
-				handle_swap(trainer2);
-			}
+		else if(trainer2->zybomons[0].spd > trainer1->zybomons[0].spd){
+			push(action_stack, ST_T1_ATTACK);
+			push(action_stack, ST_T2_ATTACK);
+		}
+		/*Si ambos tienen la misma velocidad se determina al azar*/
+		else if(trainer2->zybomons[0].spd == trainer1->zybomons[0].spd){
+			int first = rand() % 2;
+			push(action_stack, ST_T1_ATTACK + first);
+			push(action_stack, ST_T1_ATTACK + 1 - first);
 		}
 	}
-	else if (diff < 0)
-	{
-		// Player 2 Es mas rapido
-		if (turn2.action == ATTACK_ACTION)
-		{
-			handle_attack(trainer2, trainer1, zybomon2, turn2);
-			if (turn1.action == ATTACK_ACTION && trainer1->zybomons[0].lp > 0)
-			{
-				handle_attack(trainer1, trainer2, zybomon1, turn1);
-			}
-			else if (turn1.action == SWAP_ACTION)
-			{
-				handle_swap(trainer1);
-			}
-		}
-		else if (turn2.action == SWAP_ACTION)
-		{
-			handle_swap(trainer2);
-			if (turn1.action == ATTACK_ACTION)
-			{
-				handle_attack(trainer1, trainer2, zybomon1, turn1);
-			}
-			else if (turn1.action == SWAP_ACTION)
-			{
-				handle_swap(trainer1);
-			}
-		}
-	}
-	else
-	{
-		// Tie
-		xil_printf("[TURN_ACTION]: Los zybomons tienen la misma velocidad, se da prioridad a la acción de cambiar\n");
-		if (turn1.action == SWAP_ACTION)
-		{
-			handle_swap(trainer1);
-		}
-		if (turn2.action == SWAP_ACTION)
-		{
-			handle_swap(trainer2);
-		}
-		if (turn1.action == ATTACK_ACTION && trainer2->zybomons[0].lp > 0)
-		{
-			handle_attack(trainer1, trainer2, zybomon1, turn1);
-		}
-		if (turn2.action == ATTACK_ACTION && trainer1->zybomons[0].lp > 0)
-		{
-			handle_attack(trainer2, trainer1, zybomon2, turn2);
-		}
-	}
-}
 
-void turn_action(TRAINER *trainerPtr_1, TRAINER *trainerPtr_2, TURN_CHOICE turn_player1, TURN_CHOICE turn_player2, ZYBOMON *zybomon1, ZYBOMON *zybomon2)
-{
-	/*Calcula la diferencia para decidir quien actua primero*/
-	int player1_spd = zybomon1->spd;
-	int player2_spd = zybomon2->spd;
-	int diff = player1_spd - player2_spd;
-
-	process_turn(trainerPtr_1, trainerPtr_2, turn_player1, turn_player2, zybomon1, zybomon2, diff);
+	if(turn_player2.action == SWAP_ACTION){
+		push(action_stack, ST_T2_SWAP);
+	}
+	if(turn_player1.action == SWAP_ACTION){
+		push(action_stack, ST_T1_SWAP);
+	}
 }

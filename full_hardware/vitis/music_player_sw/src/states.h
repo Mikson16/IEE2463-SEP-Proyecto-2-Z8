@@ -8,26 +8,31 @@
 // Estados del juego
 typedef enum
 {
-    ST_SETUP = 0,
-    ST_BV,
-    ST_BV_MENU,
-    ST_AT_MENU,
-    ST_ZYB_MENU
+    ST_TITLE = 0,
+	ST_NAME_PLAYER,
+	ST_NAME_ZYB,
+	ST_NAME_CPU,
+	ST_SETUP, //inicio
+    ST_BV,	//Vista de batalla
+    ST_BV_MENU,	//Menu de vista de batalla
+    ST_AT_MENU,	//Menu de ataque
+    ST_ZYB_MENU,	//Menu de zybomones
+	ST_ZYB_SUB,		//Submenu de zybomones
+	ST_INS,		//Menu de inspeccion
+	ST_END_TURN,	//Fin del turno
+	ST_T1_SWAP,		//Cambio de zybomon del jugador
+	ST_T2_SWAP,		//Cambio de zybomon del cpu
+	ST_T1_ATTACK,	//Ataque del jugador
+	ST_T2_ATTACK,	//Ataque del cpu
+	ST_T1_FAINT,	//Zybomon del jugador derrotado
+	ST_T2_FAINT,	//Zybomon del cpu derrotado
+	ST_NEW_TURN,	//Preparacion de nuevo turno
+	ST_WIN,		//Jugador gana
+	ST_LOSE		//Jugador pierde
 
 } STATE_ID;
 
-typedef struct State State;
-
-struct State
-{
-    State *prev; // Puntero al estado anterior
-    STATE_ID state_id;
-    int Xoptions;
-    int Yoptions;
-    int Xselected;
-    int Yselected;
-};
-
+//Implementacion de stack basada en https://www.geeksforgeeks.org/c/implement-stack-in-c/
 typedef struct
 {
     // Array to store stack elements
@@ -36,14 +41,13 @@ typedef struct
     int top;
 } Stack;
 
-State *init_state(State *prev_state, STATE_ID state_id, int Xoptions, int Yoptions);
+
 void init_stack(Stack *stack);
 void push(Stack *stack, int value);
 int pop(Stack *stack);
 int peek(Stack *stack);
-void handle_defeat(TRAINER *trainer, int *new_active_id);
-void handle_attack(TRAINER *attacker, TRAINER *defender, ZYBOMON *attacker_zybomon, TURN_CHOICE turn_choice);
-void handle_swap(TRAINER *trainer);
-void process_turn(TRAINER *trainer1, TRAINER *trainer2, TURN_CHOICE turn1, TURN_CHOICE turn2, ZYBOMON *zybomon1, ZYBOMON *zybomon2, int diff);
-void turn_action(TRAINER *trainerPtr_1, TRAINER *trainerPtr_2, TURN_CHOICE turn_player1, TURN_CHOICE turn_player2, ZYBOMON *zybomon1, ZYBOMON *zybomon2);
+int handle_attack(TRAINER *attacker, TRAINER *defender, int attack_index);
+void handle_swap(TRAINER *trainer, int target);
+int handle_faint(TRAINER *trainer);
+void load_turn_action(Stack *action_stack, TRAINER *trainer1, TRAINER *trainer2, TURN_CHOICE turn_player1, TURN_CHOICE turn_player2);
 #endif

@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Fri Jun 27 22:49:34 2025
+# Process ID: 18080
+# Current directory: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17856 D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\full_hardware\vivado\vivado.xpr
+# Log file: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.log
+# Journal file: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/ipcore'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2020.1/data/ip'.
+open_project: Time (s): cpu = 00:00:32 ; elapsed = 00:00:50 . Memory (MB): peak = 1047.730 ; gain = 109.984
+update_compile_order -fileset sources_1
+INFO: [Vivado 12-8231] Launching Vitis
+INFO: [Vivado 12-417] Running vitis
+INFO: [Vivado 12-8232] Vitis launch initiated. Please check console for any further messages.
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Jun 28 00:15:42 2025...

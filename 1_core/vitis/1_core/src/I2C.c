@@ -62,8 +62,6 @@ float read_opt(){
 
 	Lux = (float)(byte1*256 + RecvBuffer[1])*0.01*exponent;
 
-//	Lux = 1.1;
-
 	SendBuffer[0] = 0x01;
 	XIic_Send(iic.BaseAddress,OPT_ADDR,(u8 *)&SendBuffer, 1, XIIC_REPEATED_START);
 	XIic_Recv(iic.BaseAddress,OPT_ADDR,(u8 *)&RecvBuffer, 2, XIIC_STOP);
@@ -80,9 +78,6 @@ void config_opt(){
 	XIic_Send(iic.BaseAddress,OPT_ADDR,(u8 *)&lowlimit, 3, XIIC_STOP);
 
 	u8 highlimit[3] = {0x03, 0x29, 0xC4}; //100 lux
-//	u8 highlimit[3] = {0x03, 0x73, 0xD0}; //10240 lux
 	XIic_Send(iic.BaseAddress,OPT_ADDR,(u8 *)&highlimit, 3, XIIC_STOP);
 
-//	u8 config[3] = {0x3, 0xc4, 0xbb};
-//	XIic_Send(iic.BaseAddress,OPT_ADDR,(u8 *)&config, 3, XIIC_STOP);
 }

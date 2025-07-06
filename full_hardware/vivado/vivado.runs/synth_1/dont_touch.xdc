@@ -63,6 +63,12 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==DEMO_axi_gpio_2
 # IP: bd/DEMO/ip/DEMO_axi_buzzer_0_0/DEMO_axi_buzzer_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==DEMO_axi_buzzer_0_0 || ORIG_REF_NAME==DEMO_axi_buzzer_0_0} -quiet] -quiet
 
+# IP: bd/DEMO/ip/DEMO_vio_0_0/DEMO_vio_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==DEMO_vio_0_0 || ORIG_REF_NAME==DEMO_vio_0_0} -quiet] -quiet
+
+# IP: bd/DEMO/ip/DEMO_ila_1_0/DEMO_ila_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==DEMO_ila_1_0 || ORIG_REF_NAME==DEMO_ila_1_0} -quiet] -quiet
+
 # IP: bd/DEMO/ip/DEMO_auto_pc_0/DEMO_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==DEMO_auto_pc_0 || ORIG_REF_NAME==DEMO_auto_pc_0} -quiet] -quiet
 

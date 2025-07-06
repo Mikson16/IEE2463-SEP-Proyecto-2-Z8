@@ -1,0 +1,1225 @@
+#include <stdio.h>
+#include <sleep.h>
+#include <stdlib.h>
+#include <time.h>
+//#include <unistd.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "xparameters.h"
+#include "xgpio.h"
+#include "xstatus.h"
+#include "Delay.h"
+#include "LCD_SPI.h"
+#include "LCD_Driver.h"
+#include "LCD_GUI.h"
+#include "ADC.h"
+#include "I2C.h"
+#include "xtmrctr.h"
+#include "xscugic.h"
+#include "ff.h"
+#include "audio.h"
+#include "states.h"
+#include "Bitmap.h"
+#include "zybomon.h"
+
+//Instancias de GPIO
+XGpio gpioLight; XGpio gpioBtn; XGpio gpio0;
+extern XSpi  SpiInstance;	 /* The instance of the SPI device */
+extern XSpi  SpiInstance1;
+extern const unsigned char font[] ;
+
+#define BACKGROUND  WHITE
+#define FOREGROUND BLUE
+#define DELAY 1000
+
+//IDs de timer
+#define INPUT_TMRCTR_DEVICE_ID	XPAR_TMRCTR_0_DEVICE_ID
+#define AUDIO_TMRCTR_DEVICE_ID	XPAR_TMRCTR_1_DEVICE_ID
+
+//IDs de interrupts
+#define INPUT_TMRCTR_INTERRUPT_ID	XPAR_FABRIC_AXI_TIMER_0_INTERRUPT_INTR
+#define AUDIO_TMRCTR_INTERRUPT_ID	XPAR_FABRIC_AXI_TIMER_1_INTERRUPT_INTR
+#define GPIO_LIGHT_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_1_IP2INTC_IRPT_INTR
+#define GPIO_BTN_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_2_IP2INTC_IRPT_INTR
+
+#define INTC_DEVICE_ID		XPAR_PS7_SCUGIC_0_DEVICE_ID
+
+#define TIMER_CNTR_INPUT	    0
+#define INPUT_RESET_VALUE	        (2^32) - 5000000// 20 Hz
+
+#define TIMER_CNTR_AUDIO	    0
+#define AUDIO_RESET_VALUE	        (2^32) - 12500*4*3// 8 kHz
+
+#define LIGHT_INT_CH XGPIO_IR_CH1_MASK
+#define BTN_INT_CH XGPIO_IR_CH1_MASK
+
+// Flag de comunicacion entre nucleos
+#define CORE_FLAG (*(volatile unsigned long *)(0x3FF00000))
+
+// Tiempo refractario de lectura del joystick
+#define ref_time 6
+
+//Instanciaciones de hardware
+XScuGic  IntcInstance;
+XTmrCtr  InputTimerInst;
+XTmrCtr  AudioTimerInst;
+
+//Stacks
+Stack state_stack;
+Stack Xselection_stack;
+Stack Yselection_stack;
+
+Stack action_stack;
+
+
+//Entrenadores
+TRAINER trainer1; //Jugador
+TRAINER trainer2; //CPU
+
+//Bitmaps a escribir en la pantalla
+BITMAP new_bitmap;
+BITMAP prev_bitmap;
+
+//Sprites
+BITMAP background_sprite;
+BITMAP UI_sprite;
+BITMAP selection_sprite;
+BITMAP mon_sprite1;
+BITMAP mon_sprite2;
+BITMAP aux_sprite1;
+BITMAP aux_sprite2;
+BITMAP type_sprite;
+
+//Struct de eleccion de accion de turno
+TURN_CHOICE player_choice;
+TURN_CHOICE cpu_choice;
+
+//Varibles de joystick
+int movex, movey, movex_prev, movey_prev = 0;
+u32 refractx, refracty = 0;
+
+//Variables del accelerometro
+int tiltx = 256;
+
+
+int Xoptions; //Opciones horizontales
+int Yoptions; //Opciones verticales
+
+int select_x = 0; //Seleccion horizontal
+int select_y= 0; //Seleccion vertical
+
+//Variables de reproduccion de sonido
+u32 AudioSize; //Tamano del audio actial
+u32 CurrentByte; //Byte actual en el audio reproduciendose
+u32 SongCurrentByte; //Byte actual en la musica de combate
+FIL Rfp;
+u8 AudioPlayerState = STOP;
+float volume = 1;
+TCHAR *SongFile[2] = {"BATTLE.wav", "BATTLE2.wav"}; //Lista de reproduccion de musica de combate
+TCHAR *AudioFile = "BATTLE.wav";
+int SongIndex = 0;
+
+
+FATFS fs;
+TCHAR *path = "0:/";
+
+//Variables de modo de iluminacion
+int light_mode =  0;
+int text_color = BLACK;
+
+
+void readInputs(void *CallBackRef);
+
+void lightHandler(void *CallBackRef);
+
+void btnHandler(void *CallBackRef);
+
+void AudioTimerHandler(void *CallBackRef);
+
+void SdOpenSprite(TCHAR *filename, BITMAP *SpritePtr);
+
+void ShowBattleView(BITMAP *BitMapPtr);
+void ShowBattleViewMenu(BITMAP *BitMapPtr);
+void ShowAttackMenu(BITMAP * BitMapPtr);
+void ShowZybomonMenu(BITMAP * BitMapPtr, int selected);
+void ShowZybomonSubMenu(BITMAP * BitMapPtr, int selected);
+void ShowInsMenu(BITMAP * BitMapPtr, int selected_y, int selected_x);
+
+int SdReaderSetup(void);
+
+int InterruptSetUp(XTmrCtr *InputTmrInstancePtr, XTmrCtr *AudioTmrInstancePtr, XGpio *LightGpioInstancePtr, XGpio *BtnGpioInstancePtr);
+void enableInterrupts();
+void disableInterrupts();
+
+/*Carga los sprites necesarios segun el estado del juego*/
+
+void startGame()
+{
+	disableInterrupts();
+	SdOpenSprite("TITLE.BMP", &background_sprite);
+	Paint_Sprite(0, 0, &new_bitmap, &background_sprite);
+
+	GUI_Update_Bitmap(&prev_bitmap, &new_bitmap);
+	prev_bitmap = new_bitmap;
+
+	delay_ms(2000);
+	xil_printf("Ingrese un nombre para el entrenador: \n");
+
+	char trainer_name[20];
+	scanf("%19s", trainer_name);			// Limitar input para evitar overflow
+	strcpy(trainer1.name, trainer_name);
+	push(&state_stack, ST_NAME_ZYB);
+	int i = 0;
+	char zybomon_name[20];
+	for(i = 0; i<4 ; i++){
+		xil_printf("Ingrese un nombre para el zybomon %d: \n", i+1);
+		scanf("%19s", zybomon_name);						// Limitar input para evitar overflow
+		strcpy(trainer1.zybomons[i].name, zybomon_name); // Copiar el input al nombre del zybomon
+	}
+	xil_printf("Ingrese un nombre para el oponente: \n");
+
+	scanf("%19s", trainer_name);			// Limitar input para evitar overflow
+	strcpy(trainer2.name, trainer_name);
+
+	//Nombres de los zybomones del bot
+	strcpy(trainer2.zybomons[0].name, "pokeBOT");
+	strcpy(trainer2.zybomons[1].name, "pIAchu");
+	strcpy(trainer2.zybomons[2].name, "CPUmon");
+	strcpy(trainer2.zybomons[3].name, "Alfredo");
+
+
+	push(&state_stack, ST_SETUP);
+
+
+	enableInterrupts();
+
+	AudioSize = SdStartSong(AudioFile, &Rfp, &CurrentByte, &AudioPlayerState); //Apertura de archivo de audio
+
+
+}
+void LoadStateSprites(STATE_ID state_id)
+{
+	if(state_id == ST_BV){
+		if(light_mode == 0){
+			SdOpenSprite("BV_BG_L.BMP", &background_sprite);
+		}
+		else{
+			SdOpenSprite("BV_BG_D.BMP", &background_sprite);
+		}
+
+		SdOpenSprite(trainer1.zybomons[0].back_sprite, &mon_sprite1);
+		SdOpenSprite(trainer2.zybomons[0].front_sprite, &mon_sprite2);
+		SdOpenSprite("HEBAR.BMP", &aux_sprite1);
+	}
+	else if(state_id == ST_BV_MENU){
+		if(light_mode == 0){
+			SdOpenSprite("BV_BG_L.BMP", &background_sprite);
+		}
+		else{
+			SdOpenSprite("BV_BG_D.BMP", &background_sprite);
+		}
+		SdOpenSprite("SLCT_BV.BMP", &selection_sprite);
+		SdOpenSprite(trainer1.zybomons[0].back_sprite, &mon_sprite1);
+		SdOpenSprite(trainer2.zybomons[0].front_sprite, &mon_sprite2);
+		SdOpenSprite("HEBAR.BMP", &aux_sprite1);
+
+		SdOpenSprite("BV_MENU.BMP", &UI_sprite);
+	}
+	else if(state_id == ST_AT_MENU){
+		SdOpenSprite("SLCT_BV.BMP", &selection_sprite);
+		SdOpenSprite("AT_M_L.BMP", &background_sprite);
+
+	}
+	else if(state_id == ST_ZYB_MENU){
+		SdOpenSprite("ZYB_M.BMP", &background_sprite);
+		SdOpenSprite("HEBAR.BMP", &aux_sprite1);
+		SdOpenSprite("SLCT_ZYB.BMP", &selection_sprite);
+
+	}
+	else if(state_id == ST_ZYB_SUB){
+		SdOpenSprite("ZYB_M.BMP", &background_sprite);
+		SdOpenSprite("HEBAR.BMP", &aux_sprite1);
+		SdOpenSprite("SL_ZYB2.BMP", &selection_sprite);
+		SdOpenSprite("ZYB_UI.BMP", &UI_sprite);
+	}
+	else if(state_id == ST_INS){
+		SdOpenSprite("INS_M.BMP", &background_sprite);
+		SdOpenSprite("SL_INS2.BMP", &aux_sprite1);
+		SdOpenSprite("SL_INS.BMP", &selection_sprite);
+//		SdOpenSprite("ZYB_UI.BMP", &UI_sprite);
+	}
+
+}
+
+/*Avanza al siguiente estado del juego */
+void advance_state()
+{
+	if(peek(&state_stack) == ST_SETUP){
+		push(&state_stack, ST_BV);
+		LoadStateSprites(ST_BV);
+	}
+	else if(peek(&state_stack) == ST_BV){
+		push(&state_stack, ST_BV_MENU);
+		push(&Xselection_stack, select_x);
+		push(&Yselection_stack, select_y);
+		LoadStateSprites(ST_BV_MENU);
+	}
+	else if(peek(&state_stack) == ST_BV_MENU){
+		if(select_x == 0){
+			push(&state_stack, ST_AT_MENU);
+			push(&Xselection_stack, select_x);
+			push(&Yselection_stack, select_y);
+			LoadStateSprites(ST_AT_MENU);
+		}
+		else if(select_x == 1){
+			push(&state_stack, ST_ZYB_MENU);
+			push(&Xselection_stack, select_x);
+			push(&Yselection_stack, select_y);
+			LoadStateSprites(ST_ZYB_MENU);
+		}
+
+	}
+	else if(peek(&state_stack) == ST_AT_MENU){
+		int selection = select_x + select_y *2;
+
+		//Verificar que le quedan usos al ataque seleccionado
+		if(trainer1.zybomons[0].attacks[selection].uses > 0){
+			player_choice.action = ATTACK_ACTION;
+			player_choice.target = selection;
+			push(&state_stack, ST_END_TURN);
+			push(&Xselection_stack, select_x);
+			push(&Yselection_stack, select_y);
+			LoadStateSprites(ST_BV);
+		}
+
+	}
+	else if(peek(&state_stack) == ST_ZYB_MENU){
+		push(&state_stack, ST_ZYB_SUB);
+		push(&Xselection_stack, select_x);
+		push(&Yselection_stack, select_y);
+		LoadStateSprites(ST_ZYB_SUB);
+	}
+	else if(peek(&state_stack) == ST_ZYB_SUB){
+		//Verificar que el zybomon a cambiar tenga vida restante y que no sea el que ya esta activo
+		if(select_x == 0 && trainer1.zybomons[peek(&Yselection_stack)].lp > 0 && peek(&Yselection_stack) != 0){
+			player_choice.action = SWAP_ACTION;
+			player_choice.target = peek(&Yselection_stack);
+			push(&state_stack, ST_END_TURN);
+			push(&Xselection_stack, select_x);
+			push(&Yselection_stack, select_y);
+			LoadStateSprites(ST_BV);
+		}
+		if(select_x == 1){
+			push(&state_stack, ST_INS);
+			push(&Xselection_stack, select_x);
+			select_x = peek(&Yselection_stack);
+			push(&Yselection_stack, select_y);
+			select_y = 0;
+			LoadStateSprites(ST_INS);
+		}
+	}
+	else if(peek(&state_stack) == ST_END_TURN){
+		init_stack(&action_stack);
+
+		push(&Xselection_stack, select_x);
+		push(&Yselection_stack, select_y);
+
+		//Se determina las acciones del cpu
+		cpu_choice = auto_trainer_battle(&trainer2, &trainer1);
+
+		//Se cargan los estados que ocurriran segun las acciones elegidas por cpu y jugador
+		load_turn_action(&action_stack, &trainer1, &trainer2, player_choice, cpu_choice);
+
+		push(&state_stack, pop(&action_stack));
+		LoadStateSprites(ST_BV);
+	}
+	else if(peek(&state_stack) == ST_T1_SWAP){
+		AudioFile = "OUT.wav";
+		AudioSize = SdSoundEffect(AudioFile, &Rfp, &CurrentByte, &AudioPlayerState);
+		push(&state_stack, pop(&action_stack));
+		LoadStateSprites(ST_BV);
+	}
+	else if(peek(&state_stack) == ST_T2_SWAP){
+		push(&state_stack, pop(&action_stack));
+		LoadStateSprites(ST_BV);
+	}
+	else if(peek(&state_stack) == ST_T1_ATTACK){
+		if(trainer2.zybomons[0].lp > 0){
+			push(&state_stack, pop(&action_stack));
+		}
+		else{
+			push(&state_stack, ST_T2_FAINT);
+		}
+		LoadStateSprites(ST_BV);
+	}
+	else if(peek(&state_stack) == ST_T2_ATTACK){
+		if(trainer1.zybomons[0].lp > 0){
+			push(&state_stack, pop(&action_stack));
+		}
+		else{
+			push(&state_stack, ST_T1_FAINT);
+		}
+		LoadStateSprites(ST_BV);
+	}
+	else if(peek(&state_stack) == ST_T1_FAINT){
+		int remaining = handle_faint(&trainer1);
+		if(remaining){
+			push(&state_stack, ST_NEW_TURN);
+		}
+		else{
+			push(&state_stack, ST_LOSE);
+			SdOpenSprite("LOSE.BMP", &background_sprite);
+			AudioFile = "LOSE.wav";
+			AudioSize = SdChangeSong(AudioFile, &Rfp, &CurrentByte, &AudioPlayerState);
+		}
+	}
+	else if(peek(&state_stack) == ST_T2_FAINT){
+		int remaining = handle_faint(&trainer2);
+		if(remaining){
+			push(&state_stack, ST_NEW_TURN);
+		}
+		else{
+			push(&state_stack, ST_WIN);
+			SdOpenSprite("WIN.BMP", &background_sprite);
+			AudioFile = "WIN.wav";
+			AudioSize = SdChangeSong(AudioFile, &Rfp, &CurrentByte, &AudioPlayerState);
+		}
+	}
+	else if(peek(&state_stack) == ST_NEW_TURN){
+		init_stack(&state_stack);
+		init_stack(&Yselection_stack);
+		init_stack(&Xselection_stack);
+		push(&state_stack, ST_BV);
+		LoadStateSprites(ST_BV);
+	}
+	xil_printf("%d\n",peek(&state_stack));
+}
+
+//retroceder estado
+void back_state()
+{
+	pop(&state_stack);
+	select_x = pop(&Xselection_stack);
+	select_y = pop(&Yselection_stack);
+	LoadStateSprites(peek(&state_stack));
+}
+
+//Loop ejecutado en cada estado
+void StateHandler()
+{
+	if(peek(&state_stack)== ST_SETUP){
+		advance_state();
+
+	}
+	else if(peek(&state_stack)== ST_BV){
+		ShowBattleView(&new_bitmap);
+		Xoptions = 1;
+		Yoptions = 1;
+	}
+	else if(peek(&state_stack) == ST_BV_MENU){
+		ShowBattleViewMenu(&new_bitmap);
+		Xoptions = 2;
+		Yoptions = 1;
+	}
+	else if(peek(&state_stack) == ST_AT_MENU){
+		ShowAttackMenu(&new_bitmap);
+		Xoptions = 2;
+		Yoptions = 2;
+		}
+	else if(peek(&state_stack) == ST_ZYB_MENU){
+		ShowZybomonMenu(&new_bitmap, select_y);
+		Xoptions = 1;
+		Yoptions = 4;
+		}
+	else if(peek(&state_stack) == ST_ZYB_SUB){
+		ShowZybomonSubMenu(&new_bitmap, select_x);
+		Xoptions = 2;
+		Yoptions = 1;
+		}
+	else if(peek(&state_stack) == ST_INS){
+		ShowInsMenu(&new_bitmap, select_x, select_y);
+		Xoptions = 4;
+		Yoptions = 5;
+	}
+	else if(peek(&state_stack) == ST_END_TURN){
+		ShowBattleView(&new_bitmap);
+		Xoptions = 1;
+		Yoptions = 1;
+
+		advance_state();
+	}
+	else if(peek(&state_stack) == ST_T1_SWAP){
+
+		ShowBattleView(&new_bitmap);
+		handle_swap(&trainer1, player_choice.target);
+		advance_state();
+	}
+	else if(peek(&state_stack) == ST_T2_SWAP){
+		ShowBattleView(&new_bitmap);
+		handle_swap(&trainer2, cpu_choice.target);
+		advance_state();
+	}
+	else if(peek(&state_stack) == ST_T1_ATTACK){
+		playAttackSound(&trainer1.zybomons[0].attacks[player_choice.target]);
+		ShowBattleView(&new_bitmap);
+		handle_attack(&trainer1, &trainer2, player_choice.target);
+		advance_state();
+	}
+	else if(peek(&state_stack) == ST_T2_ATTACK){
+		ShowBattleView(&new_bitmap);
+		handle_attack(&trainer2, &trainer1, cpu_choice.target);
+		advance_state();
+	}
+	else if(peek(&state_stack) == ST_T1_FAINT){
+		ShowBattleView(&new_bitmap);
+
+		advance_state();
+	}
+	else if(peek(&state_stack) == ST_T2_FAINT){
+		ShowBattleView(&new_bitmap);
+
+		advance_state();
+	}
+	else if(peek(&state_stack) == ST_NEW_TURN){
+		advance_state();
+	}
+	else if(peek(&state_stack) == ST_LOSE){
+
+		Paint_Sprite(0, 0, &new_bitmap, &background_sprite);
+	}
+	else if(peek(&state_stack) == ST_WIN){
+
+		Paint_Sprite(0, 0, &new_bitmap, &background_sprite);
+	}
+}
+
+//Manejo del accelerometro cambia la musica de batalla
+void AccHandler(int new_tilt)
+{
+	if(new_tilt >= 256 + 56 && tiltx < 256 + 56){
+		if(SongIndex < 1){
+			SongIndex += 1;
+			AudioFile = SongFile[SongIndex];
+			AudioSize = SdChangeSong(AudioFile, &Rfp, &CurrentByte, &AudioPlayerState);
+		}
+	}
+	else if(new_tilt <= 256 - 56 && tiltx > 256 - 56){
+		if(SongIndex > 0){
+			SongIndex -= 1;
+			AudioFile = SongFile[SongIndex];
+			AudioSize = SdChangeSong(AudioFile, &Rfp, &CurrentByte, &AudioPlayerState);
+		}
+	}
+
+}
+
+/*Manejo del joystick*/
+void JoyHandler(int joyx,int joyy)
+{
+	if(joyx > 340) {
+		movex = 1;
+	}
+	else if(joyx < 200) {
+		movex = -1;
+	}
+	else{
+		movex = 0;
+	}
+	if(joyy > 340) {
+		movey = -1;
+	}
+	else if(joyy < 172) {
+		movey = 1;
+	}
+	else{
+		movey = 0;
+	}
+
+	if(movex != movex_prev){
+		refractx = 0;
+		select_x = select_x + movex;
+	}
+	else{
+	if(refractx == ref_time){ //Si se mantiene una direccion despues de un ciclo el periodo refractario disminuye a la mitad
+		refractx = ref_time/2;
+		select_x = select_x + movex;
+	}
+	else{
+		refractx ++;
+	}
+}
+
+	if(movey != movey_prev){
+		refracty = 0;
+		select_y = select_y + movey;
+	}
+	else{
+		if(refracty == ref_time){ //Si se mantiene una direccion despues de un ciclo el periodo refractario disminuye a la mitad
+			refracty = ref_time/2;
+			select_y = select_y + movey;
+		}
+		else{
+			refracty ++;
+		}
+	}
+
+	movex_prev = movex;
+	movey_prev = movey;
+
+	if(select_x > Xoptions - 1){
+		select_x = Xoptions - 1;
+	}
+	else if(select_x < 0){
+		select_x = 0;
+	}
+
+	if(select_y > Yoptions - 1){
+		select_y = Yoptions - 1;
+	}
+	else if(select_y < 0){
+		select_y = 0;
+	}
+
+
+}
+
+int main()
+{
+//	CORE_FLAG = 0;
+	int Status;
+
+    //Initialize the UART
+    init_platform();
+	/* Initialize the GPIO 0 driver */
+	Status = XGpio_Initialize(&gpio0, XPAR_AXI_GPIO_0_DEVICE_ID);
+	if (Status != XST_SUCCESS) {
+		xil_printf("Gpio 0 Initialization Failed\r\n");
+		return XST_FAILURE;
+	}
+	/* Initialize the GPIO 1 driver */
+	Status = XGpio_Initialize(&gpioLight, XPAR_AXI_GPIO_1_DEVICE_ID);
+	if (Status != XST_SUCCESS) {
+		xil_printf("Gpio 1 Initialization Failed\r\n");
+		return XST_FAILURE;
+	}
+
+	Status = XGpio_Initialize(&gpioBtn, XPAR_AXI_GPIO_2_DEVICE_ID);
+		if (Status != XST_SUCCESS) {
+			xil_printf("Gpio 2 Initialization Failed\r\n");
+			return XST_FAILURE;
+		}
+
+	// Set up the AXI SPI Controller 0 (Screen)
+	Status = XSpi_Init(&SpiInstance,SPI_DEVICE_ID);
+	if (Status != XST_SUCCESS) {
+		xil_printf("SPI Mode Failed\r\n");
+		return XST_FAILURE;
+	}
+	// Set up the AXI SPI Controller 0 (Joystick(x,y), accelerometer, potentiometer, mic)
+	Status = init_adc(&SpiInstance1, SPI_DEVICE_ID_1);
+	if (Status != XST_SUCCESS) {
+		xil_printf("SPI-ADC Mode Failed\r\n");
+		return XST_FAILURE;
+	}
+	// Set up the AXI IIC Controller 0 (temperature sensor, light sensor)
+	Status = init_IIC();
+	if (Status != XST_SUCCESS) {
+		xil_printf("IIC Mode Failed\r\n");
+		return XST_FAILURE;
+	}
+	//Write through UART to PC
+	xil_printf("TFT initialized \r\n");
+	xil_printf("**********Init LCD**********\r\n");
+	// Init screen
+	LCD_SCAN_DIR LCD_ScanDir = SCAN_DIR_DFT;//SCAN_DIR_DFT = D2U_L2R
+	LCD_Init(LCD_ScanDir );
+	LCD_SetGramScanWay(LCD_ScanDir);
+	LCD_Clear(GUI_BACKGROUND);
+
+    //Axi Buzzer se inicia detenido
+	Xil_Out32(XPAR_AXI_BUZZER_0_S00_AXI_BASEADDR, 0);
+
+    //Se inicializa el BITMAP de la pantalla
+	Paint_Bitmap(GUI_BACKGROUND, &new_bitmap);
+	Paint_Bitmap(GUI_BACKGROUND, &prev_bitmap);
+	//Se monta la tarjeta SD
+	SdReaderSetup();
+
+
+
+
+
+
+
+
+	//Semilla para funciones aleatorias definidas por el potenciometro derecho
+	srand(read_POT2());
+	init_trainer(&trainer1);
+	init_trainer(&trainer2);
+
+	//Inicializacion de timers
+	XTmrCtr_Initialize(&InputTimerInst, INPUT_TMRCTR_DEVICE_ID);
+	XTmrCtr_Initialize(&AudioTimerInst, AUDIO_TMRCTR_DEVICE_ID);
+
+	//Set up de las interrupciones
+	InterruptSetUp(&InputTimerInst, &AudioTimerInst, &gpioLight, &gpioBtn);
+
+
+	SdOpenSprite("TYPES.BMP", &type_sprite);
+
+	//Inizializacion de stacks de estados y de seleccion
+	init_stack(&state_stack);
+	init_stack(&Xselection_stack);
+	init_stack(&Yselection_stack);
+
+	//Se carga el estado de vista de battalla y empieza el combate
+
+    startGame();
+	xil_printf("iniciado");
+
+	config_opt();
+
+
+
+
+    return 0;
+}
+/*Configuracion de interrupciones*/
+int InterruptSetUp(XTmrCtr *InputTmrInstancePtr, XTmrCtr *AudioTmrInstancePtr, XGpio *LightGpioInstancePtr, XGpio *BtnGpioInstancePtr)
+{
+	XScuGic_Config *IntcConfig;
+
+	IntcConfig = XScuGic_LookupConfig(INTC_DEVICE_ID);
+
+	s32 status;
+
+	status =  XScuGic_CfgInitialize(&IntcInstance, IntcConfig,
+			IntcConfig -> CpuBaseAddress);
+
+	if(status != XST_SUCCESS){
+		return -1;
+	}
+
+	XGpio_InterruptEnable(&gpioLight, LIGHT_INT_CH);
+	XGpio_InterruptGlobalEnable(&gpioLight);
+
+	XGpio_InterruptEnable(&gpioBtn, BTN_INT_CH);
+	XGpio_InterruptGlobalEnable(&gpioBtn);
+
+	Xil_ExceptionInit();
+
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,(Xil_ExceptionHandler)XScuGic_InterruptHandler, &IntcInstance);
+	Xil_ExceptionEnable();
+
+
+	XTmrCtr_SetHandler(&InputTimerInst, (XTmrCtr_Handler)readInputs, &InputTimerInst);
+	XTmrCtr_SetResetValue(&InputTimerInst, TIMER_CNTR_INPUT, INPUT_RESET_VALUE);
+	XTmrCtr_SetOptions(&InputTimerInst, TIMER_CNTR_INPUT, XTC_INT_MODE_OPTION | XTC_AUTO_RELOAD_OPTION);
+
+	XTmrCtr_SetHandler(&AudioTimerInst, (XTmrCtr_Handler)AudioTimerHandler, &AudioTimerInst);
+	XTmrCtr_SetResetValue(&AudioTimerInst, TIMER_CNTR_AUDIO, AUDIO_RESET_VALUE);
+	XTmrCtr_SetOptions(&AudioTimerInst, TIMER_CNTR_AUDIO, XTC_INT_MODE_OPTION | XTC_AUTO_RELOAD_OPTION);
+
+
+	//Orden de prioridades
+
+	XScuGic_SetPriorityTriggerType(&IntcInstance, GPIO_BTN_INTERRUPT_ID,
+				 0x18, 0x03);
+	XScuGic_SetPriorityTriggerType(&IntcInstance, GPIO_LIGHT_INTERRUPT_ID,
+				 0x20, 0x03);
+	XScuGic_SetPriorityTriggerType(&IntcInstance, AUDIO_TMRCTR_INTERRUPT_ID,
+				 0x28, 0x01);
+	XScuGic_SetPriorityTriggerType(&IntcInstance, INPUT_TMRCTR_INTERRUPT_ID,
+				 0x30, 0x01); //Timer de inputs y pantalla con menor prioridad
+
+
+	status = XScuGic_Connect(&IntcInstance, INPUT_TMRCTR_INTERRUPT_ID,
+				(Xil_ExceptionHandler)readInputs, (void *) InputTmrInstancePtr);
+
+	if(status != XST_SUCCESS){
+			return -1;
+		}
+
+	status = XScuGic_Connect(&IntcInstance, GPIO_LIGHT_INTERRUPT_ID,
+				(Xil_ExceptionHandler)lightHandler, (void *) LightGpioInstancePtr);
+
+	if(status != XST_SUCCESS){
+			return -1;
+		}
+
+	status = XScuGic_Connect(&IntcInstance, GPIO_BTN_INTERRUPT_ID,
+				(Xil_ExceptionHandler)btnHandler, (void *) BtnGpioInstancePtr);
+
+	if(status != XST_SUCCESS){
+			return -1;
+		}
+
+	status = XScuGic_Connect(&IntcInstance, AUDIO_TMRCTR_INTERRUPT_ID,
+				(Xil_ExceptionHandler)AudioTimerHandler, (void *) AudioTmrInstancePtr);
+
+
+	if(status != XST_SUCCESS){
+			return -1;
+		}
+
+
+	return 0;
+}
+
+void disableInterrupts()
+{
+	XScuGic_Disable(&IntcInstance, INPUT_TMRCTR_INTERRUPT_ID);
+	XScuGic_Disable(&IntcInstance, AUDIO_TMRCTR_INTERRUPT_ID);
+	XScuGic_Disable(&IntcInstance, GPIO_LIGHT_INTERRUPT_ID);
+	XScuGic_Disable(&IntcInstance, GPIO_BTN_INTERRUPT_ID);
+	XTmrCtr_Stop(&InputTimerInst, TIMER_CNTR_INPUT);
+	XTmrCtr_Stop(&AudioTimerInst, TIMER_CNTR_AUDIO);
+}
+
+void enableInterrupts()
+{
+	XScuGic_Enable(&IntcInstance, INPUT_TMRCTR_INTERRUPT_ID);
+	XScuGic_Enable(&IntcInstance, AUDIO_TMRCTR_INTERRUPT_ID);
+	XScuGic_Enable(&IntcInstance, GPIO_LIGHT_INTERRUPT_ID);
+	XScuGic_Enable(&IntcInstance, GPIO_BTN_INTERRUPT_ID);
+	XTmrCtr_Reset(&InputTimerInst, TIMER_CNTR_INPUT);
+	XTmrCtr_Reset(&AudioTimerInst, TIMER_CNTR_AUDIO);
+	XTmrCtr_Start(&InputTimerInst, TIMER_CNTR_INPUT);
+	XTmrCtr_Start(&AudioTimerInst, TIMER_CNTR_AUDIO);
+}
+
+/*Manejo de interrupcion de inputs y pantalla */
+void readInputs(void *CallBackRef)
+{
+	//Se corrobora que el timer termino
+	if (XTmrCtr_IsExpired(&InputTimerInst, TIMER_CNTR_INPUT)){
+	XTmrCtr_Stop(&InputTimerInst, TIMER_CNTR_INPUT);
+
+	read_opt();
+
+	//Manejo del codigo en loop del estado actual
+	StateHandler();
+
+	//Manejo de la lectura del joystick
+	JoyHandler(read_joyx(), read_joyy());
+
+	//Manejo de la lectura del acelerometro
+	if(peek(&state_stack) < ST_WIN){
+		int new_tilt = read_acx();
+
+		AccHandler(new_tilt);
+		tiltx = new_tilt;
+	}
+
+
+	//Manejo del microfono
+	int mic_amp = read_MIC();
+	if(AudioPlayerState != 2 && peek(&state_stack) < ST_WIN){
+		mic_amp -= 256;
+		if(abs(mic_amp) > 70){
+			AudioFile = "PIKA.wav";
+			AudioSize = SdSoundEffect(AudioFile, &Rfp, &CurrentByte, &AudioPlayerState);
+		}
+	}
+
+	//Ajuste de volumen
+	volume = read_POT1()*2/ (float) 256;
+	//xil_printf("Volumen :%.2f\n", volume);
+
+	//Sincronizacion y comunicacion con el otro nucleo del procesador
+//	if(CORE_FLAG == 0){
+//		Send_Bitmap(&new_bitmap);
+//		CORE_FLAG = 1;
+//	}
+
+	GUI_Update_Bitmap(&prev_bitmap, &new_bitmap);
+	prev_bitmap = new_bitmap;
+
+	XTmrCtr_Reset(&InputTimerInst, TIMER_CNTR_INPUT);
+	XTmrCtr_Start(&InputTimerInst, TIMER_CNTR_INPUT);
+	}
+}
+
+//Manejo del audio
+void AudioTimerHandler(void *CallBackRef)
+{
+
+	if (XTmrCtr_IsExpired(&AudioTimerInst, TIMER_CNTR_AUDIO)){
+	    XTmrCtr_Stop(&AudioTimerInst, TIMER_CNTR_AUDIO);
+
+
+	    if(AudioPlayerState == STOP){
+	    	Xil_Out32(XPAR_AXI_BUZZER_0_S00_AXI_BASEADDR, 0);
+	    }
+	    //La musica de batalla se reproduce en bucle
+	    else if(AudioPlayerState == MUSIC){
+	    	if(CurrentByte + 4 >= AudioSize + 44){
+				CurrentByte = 44; //Byte donde inician las muestras de audio
+	    		}
+	    	//Se leen muestras de audio y se envian al AXI BUZZER
+			PlaySong(&Rfp, &CurrentByte, volume);
+			SongCurrentByte = CurrentByte;
+
+	    }
+	    //Una vez termina un efecto de sonido se resume la musica de batalla
+	    else if(AudioPlayerState == SOUND_EFFECT){
+	    	if(CurrentByte + 4 >= AudioSize + 44){
+	    		AudioFile = SongFile[SongIndex];
+	    		AudioSize = SdResumeSong(AudioFile, &Rfp, &CurrentByte, &AudioPlayerState);
+				CurrentByte = SongCurrentByte;
+				}
+	    	else{
+	    		PlaySong(&Rfp, &CurrentByte, volume);
+	    	}
+	    }
+
+
+		XTmrCtr_Reset(&AudioTimerInst, TIMER_CNTR_AUDIO);
+		XTmrCtr_Start(&AudioTimerInst, TIMER_CNTR_AUDIO);
+	}
+
+}
+
+/*Manejo de interrupcion del sensor de luz*/
+void lightHandler(void *CallBackRef)
+{
+	XGpio_InterruptDisable(&gpioLight, LIGHT_INT_CH);
+	float light;
+	light = read_opt();
+
+	//Si la luz es menor a 50 se activa el modo oscuro
+	if(light < 50){
+		text_color = WHITE;
+		light_mode = 1;
+	}
+	//De lo contrario se activa el modo claro
+	else{
+		text_color = BLACK;
+		light_mode = 0;
+	}
+	//Se recargan los sprites
+	LoadStateSprites(peek(&state_stack));
+	XGpio_InterruptClear(&gpioLight, LIGHT_INT_CH);
+	XGpio_InterruptEnable(&gpioLight, LIGHT_INT_CH);
+
+}
+/*Manejo de interrupciones de los botones */
+void btnHandler(void *CallBackRef)
+{
+	XGpio_InterruptDisable(&gpioBtn, BTN_INT_CH);
+	u8 btns;
+
+	//Se leen los 3 botones concatenados
+	btns = XGpio_DiscreteRead(&gpioBtn, BTN_INT_CH);
+
+	//Boton del joystick
+	if(btns >= 4){
+		//no hace nada
+	}
+	//Boton inferior
+	else if(btns >= 2){
+		if(peek(&state_stack) > ST_BV && peek(&state_stack) <= ST_INS){
+			//Retrocede de estado
+			back_state();
+		}
+
+	}
+	//Boton superior
+	else if(btns >= 1){
+		//Avanza de estado
+		advance_state();
+	}
+	(void)XGpio_InterruptClear(&gpioBtn, BTN_INT_CH);
+	XGpio_InterruptEnable(&gpioBtn, BTN_INT_CH);
+}
+
+/*Funcion que monta la tarjeta SD*/
+int SdReaderSetup()
+{
+	FRESULT rc;
+	rc = f_mount (&fs, path, 0);
+	if(rc != FR_OK)
+	    {
+	        xil_printf("ERROR : f_mount returned %d\r\n",rc);
+	        return XST_FAILURE;
+	    }
+	return 0;
+}
+
+/*Funcion que abre los sprites*/
+void SdOpenSprite(TCHAR *filename, BITMAP *SpritePtr){
+
+	//Detiene el timer y la interrupcion de audio
+	//Ya que necesita usar la tarjeta SD
+	XTmrCtr_Stop(&AudioTimerInst, TIMER_CNTR_AUDIO);
+	XScuGic_Disable(&IntcInstance, AUDIO_TMRCTR_INTERRUPT_ID);
+
+	FRESULT rc;
+
+	//Cierra el archivo de audio si hay reproduccion
+	if(AudioPlayerState != STOP){
+		rc = f_close(&Rfp);
+
+		if(rc != FR_OK)
+		{
+			xil_printf("ERROR 1: f_close returned %d\r\n",rc);
+//			return XST_FAILURE;
+		}
+	}
+	//Abre el sprite y lo guarda en el BITMAP
+	Open_Sprite((TCHAR *)filename, (BITMAP *)SpritePtr);
+
+	//Vuelve a abrir el archivo de audio
+	rc = f_open(&Rfp, AudioFile, FA_READ);
+
+	if(rc != FR_OK)
+			{
+				xil_printf("ERROR 1: f_open returned %d\r\n",rc);
+	//			return XST_FAILURE;
+			}
+
+	//restablece el timer y la interrupcion de audio
+	XScuGic_Enable(&IntcInstance, AUDIO_TMRCTR_INTERRUPT_ID);
+	XTmrCtr_Reset(&AudioTimerInst, TIMER_CNTR_AUDIO);
+	XTmrCtr_Start(&AudioTimerInst, TIMER_CNTR_AUDIO);
+
+}
+/*Dibuja la vista de batalla en un bitmap*/
+void ShowBattleView(BITMAP *BitMapPtr){
+
+	Paint_Sprite(0, 0, (BITMAP *)BitMapPtr, &background_sprite);
+	Paint_Sprite(73, 12, (BITMAP *)BitMapPtr, &mon_sprite2);
+	Paint_Sprite(8, 54, (BITMAP *)BitMapPtr, &mon_sprite1);
+	Paint_Type(trainer2.zybomons[0].e_type, 14, 38, (BITMAP *)BitMapPtr, &type_sprite);
+	Paint_Type(trainer1.zybomons[0].e_type, 72, 110, (BITMAP *)BitMapPtr, &type_sprite);
+
+	BitM_DisString_EN(14, 12, trainer2.zybomons[0].name,&Font8,GUI_BACKGROUND, text_color , (BITMAP *)BitMapPtr);
+
+	Paint_Sprite(14, 22, (BITMAP *)BitMapPtr, &aux_sprite1);
+
+	char health_str1[16] = {};
+
+	int max_health1 = trainer2.zybomons[0].max_lp;
+	int health1 = trainer2.zybomons[0].lp;
+
+	sprintf(health_str1, "%d/%d", health1, max_health1);
+
+	BitM_DisString_EN(14, 30,health_str1,&Font8,GUI_BACKGROUND, text_color , (BITMAP *)BitMapPtr);
+
+	DrawHealth(16, 24, (BITMAP *)BitMapPtr, (health1*100)/max_health1);
+//	xil_printf("vida: %d/n",(health1*100)/max_health1);
+
+	BitM_DisString_EN(72, 84,trainer1.zybomons[0].name,&Font8,GUI_BACKGROUND, text_color , (BITMAP *)BitMapPtr);
+
+	Paint_Sprite(72, 94, (BITMAP *)BitMapPtr, &aux_sprite1);
+
+	char health_str2[16] = {};
+
+	int max_health2 = trainer1.zybomons[0].max_lp;
+	int health2 = trainer1.zybomons[0].lp;
+
+	sprintf(health_str2, "%d/%d", health2, max_health2);
+
+	BitM_DisString_EN(72, 102,health_str2,&Font8,GUI_BACKGROUND, text_color , (BITMAP *)BitMapPtr);
+
+	DrawHealth(74, 96, (BITMAP *)BitMapPtr, (health2*100)/max_health2);
+}
+
+/*Dibuja el menu de la vista de batalla en un bitmap*/
+void ShowBattleViewMenu(BITMAP *BitMapPtr){
+
+	ShowBattleView((BITMAP *)BitMapPtr);
+
+	Paint_Sprite(0, 104, (BITMAP *)BitMapPtr, &UI_sprite);
+
+	int x, y;
+
+	x = 2 + 64*select_x;
+
+	y = 106;
+
+	Paint_Sprite((POINT)x, (POINT)y, (BITMAP *)BitMapPtr, &selection_sprite);
+
+
+}
+
+/*Dibuja el menu de ataque en un bitmap*/
+void ShowAttackMenu(BITMAP * BitMapPtr){
+	Paint_Sprite(0, 0, (BITMAP *)BitMapPtr, &background_sprite);
+
+	BitM_DisString_EN(8, 86, trainer1.zybomons[0].attacks[0].name,&Font12,GUI_BACKGROUND, BLACK , (BITMAP *)BitMapPtr);
+	BitM_DisString_EN(72, 86, trainer1.zybomons[0].attacks[1].name,&Font12,GUI_BACKGROUND, BLACK , (BITMAP *)BitMapPtr);
+	BitM_DisString_EN(8, 110, trainer1.zybomons[0].attacks[2].name,&Font12,GUI_BACKGROUND, BLACK , (BITMAP *)BitMapPtr);
+	BitM_DisString_EN(72, 110, trainer1.zybomons[0].attacks[3].name,&Font12,GUI_BACKGROUND, BLACK , (BITMAP *)BitMapPtr);
+
+	int selected = select_x + select_y *2;
+
+	Paint_Type(trainer1.zybomons[0].attacks[selected].e_type, 60, 8, (BITMAP *)BitMapPtr, &type_sprite);
+
+
+	char power_str[11] = {};
+
+	sprintf(power_str, "PODER %d", trainer1.zybomons[0].attacks[selected].power);
+	BitM_DisString_EN(24, 28, power_str,&Font12,GUI_BACKGROUND, BLACK , (BITMAP *)BitMapPtr);
+
+	char uses_str[11] = {};
+
+	sprintf(uses_str, "USOS %d/%d", trainer1.zybomons[0].attacks[selected].uses, trainer1.zybomons[0].attacks[selected].max_uses);
+	BitM_DisString_EN(24, 56, uses_str,&Font12,GUI_BACKGROUND, BLACK , (BITMAP *)BitMapPtr);
+
+	int x, y;
+
+	x = 2 + 64*select_x;
+
+	y = 82 + 24*select_y;
+
+	Paint_Sprite((POINT)x, (POINT)y, (BITMAP *)BitMapPtr, &selection_sprite);
+
+}
+
+/*Dibuja el menu de zybomon en un bitmap*/
+void ShowZybomonMenu(BITMAP * BitMapPtr, int selected){
+	Paint_Sprite(0, 0, (BITMAP *)BitMapPtr, &background_sprite);
+
+	int i;
+	int delta_y = 20;
+
+	for(i = 0; i < 4; i++){
+
+
+		Paint_Type(trainer1.zybomons[i].e_type, 4, 17 + i*delta_y, (BITMAP *)BitMapPtr, &type_sprite);
+
+		char health_str[16] = {};
+
+		int max_health = trainer1.zybomons[i].max_lp;
+		int health = trainer1.zybomons[i].lp;
+
+		sprintf(health_str, "%d/%d", health, max_health);
+		BitM_DisString_EN(27, 20 + i*delta_y,health_str,&Font8,GUI_BACKGROUND, BLACK , (BITMAP *)BitMapPtr);
+
+		Paint_Sprite(70, 21 + i*delta_y, (BITMAP *)BitMapPtr, &aux_sprite1);
+		DrawHealth(72, 23 + i*delta_y, (BITMAP *)BitMapPtr, (health*100)/max_health);
+	}
+
+
+	BitM_DisString_EN(16, 110, trainer1.zybomons[selected].name,&Font12,GUI_BACKGROUND, BLACK , (BITMAP *)BitMapPtr);
+
+	Paint_Sprite(0, 15 + selected*delta_y, (BITMAP *)BitMapPtr, &selection_sprite);
+
+}
+
+/*Dibuja el submenu de zybomon en un bitmap*/
+void ShowZybomonSubMenu(BITMAP * BitMapPtr, int selected){
+	Paint_Sprite(0, 0, (BITMAP *)BitMapPtr, &background_sprite);
+
+	int i;
+	int delta_y = 20;
+
+	for(i = 0; i < 4; i++){
+
+		if(i == peek(&Yselection_stack)){
+			Paint_Sprite(24, 17 + i*delta_y, (BITMAP *)BitMapPtr, &UI_sprite);
+			Paint_Sprite(23 + selected*49, 16 + i*delta_y, (BITMAP *)BitMapPtr, &selection_sprite);
+
+		}
+
+		else{
+
+			Paint_Type(trainer1.zybomons[i].e_type, 4, 17 + i*delta_y, (BITMAP *)BitMapPtr, &type_sprite);
+
+			char health_str[16] = {};
+
+			int max_health = trainer1.zybomons[i].max_lp;
+			int health = trainer1.zybomons[i].lp;
+
+			sprintf(health_str, "%d/%d", health, max_health);
+			BitM_DisString_EN(27, 20 + i*delta_y,health_str,&Font8,GUI_BACKGROUND, BLACK , (BITMAP *)BitMapPtr);
+
+			Paint_Sprite(70, 21 + i*delta_y, (BITMAP *)BitMapPtr, &aux_sprite1);
+			DrawHealth(72, 23 + i*delta_y, (BITMAP *)BitMapPtr, (health*100)/max_health);
+		}
+	}
+
+
+	BitM_DisString_EN(16, 110, trainer1.zybomons[peek(&Yselection_stack)].name,&Font12,GUI_BACKGROUND, BLACK , (BITMAP *)BitMapPtr);
+
+}
+
+/*Dibuja el menu de inspeccion en un bitmap*/
+void ShowInsMenu(BITMAP * BitMapPtr, int selected_x, int selected_y){
+	Paint_Sprite(0, 0, (BITMAP *)BitMapPtr, &background_sprite);
+
+	int y_pos = 0;
+
+
+
+	if(selected_y == 0){
+		BitM_DisString_EN(48, 24, trainer1.zybomons[selected_x].name,&Font8,GUI_BACKGROUND, BLACK , (BITMAP *)BitMapPtr);
+
+		Paint_Type(trainer1.zybomons[selected_x].e_type, 48, 37, (BITMAP *)BitMapPtr, &type_sprite);
+		y_pos = 17;
+
+		char info_str[16] = {};
+		sprintf(info_str, "ViMAX: %d", trainer1.zybomons[selected_x].max_lp);
+		BitM_DisString_EN(48, 56, info_str,&Font8,GUI_BACKGROUND, BLACK , (BITMAP *)BitMapPtr);
+
+		sprintf(info_str, "ATK: %d", trainer1.zybomons[selected_x].atk);
+		BitM_DisString_EN(48, 66, info_str,&Font8,GUI_BACKGROUND, BLACK , (BITMAP *)BitMapPtr);
+
+		sprintf(info_str, "DEF: %d", trainer1.zybomons[selected_x].def);
+		BitM_DisString_EN(48, 76, info_str,&Font8,GUI_BACKGROUND, BLACK , (BITMAP *)BitMapPtr);
+
+		sprintf(info_str, "VEL: %d", trainer1.zybomons[selected_x].spd);
+		BitM_DisString_EN(48, 86, info_str,&Font8,GUI_BACKGROUND, BLACK , (BITMAP *)BitMapPtr);
+
+		char health_str[16] = {};
+
+		int max_health = trainer1.zybomons[selected_x].max_lp;
+		int health = trainer1.zybomons[selected_x].lp;
+
+		sprintf(health_str, "%d/%d", health, max_health);
+		BitM_DisString_EN(48, 97,"VIDA",&Font8,GUI_BACKGROUND, BLACK , (BITMAP *)BitMapPtr);
+		BitM_DisString_EN(48, 107,health_str,&Font8,GUI_BACKGROUND, BLACK , (BITMAP *)BitMapPtr);
+
+	}
+	else{
+		y_pos = 38 + 18*(selected_y-1);
+		BitM_DisString_EN(48, 24, trainer1.zybomons[selected_x].attacks[selected_y-1].name,&Font12,GUI_BACKGROUND, BLACK , (BITMAP *)BitMapPtr);
+		Paint_Type(trainer1.zybomons[selected_x].attacks[selected_y-1].e_type, 48, 37, (BITMAP *)BitMapPtr, &type_sprite);
+
+		char power_str[11] = {};
+
+		sprintf(power_str, "PODER %d", trainer1.zybomons[selected_x].attacks[selected_y-1].power);
+		BitM_DisString_EN(48, 77, power_str,&Font8,GUI_BACKGROUND, BLACK , (BITMAP *)BitMapPtr);
+
+		char uses_str[11] = {};
+
+		sprintf(uses_str, "USOS %d/%d", trainer1.zybomons[selected_x].attacks[selected_y-1].uses, trainer1.zybomons[selected_x].attacks[selected_y-1].max_uses);
+
+		BitM_DisString_EN(48, 86, uses_str,&Font8,GUI_BACKGROUND, BLACK , (BITMAP *)BitMapPtr);
+
+	}
+
+	Paint_Sprite(0, y_pos, (BITMAP *)BitMapPtr, &selection_sprite);
+	Paint_Sprite(45+ 18*selected_x, 7 , (BITMAP *)BitMapPtr, &aux_sprite1);
+}
+
+void playAttackSound(ATTACK * attack)
+{
+	if(attack->e_type == FIRE){
+		AudioFile = "FLAMA.wav";
+		AudioSize = SdSoundEffect(AudioFile, &Rfp, &CurrentByte, &AudioPlayerState);
+	}
+	else if(attack->e_type == WATER){
+		AudioFile = "CHORRO.wav";
+		AudioSize = SdSoundEffect(AudioFile, &Rfp, &CurrentByte, &AudioPlayerState);
+	}
+	else if(attack->e_type == PLANT){
+		AudioFile = "HOJA.wav";
+		AudioSize = SdSoundEffect(AudioFile, &Rfp, &CurrentByte, &AudioPlayerState);
+	}
+	else if(attack->e_type == NORMAL){
+		AudioFile = "GARRA.wav";
+		AudioSize = SdSoundEffect(AudioFile, &Rfp, &CurrentByte, &AudioPlayerState);
+	}
+}

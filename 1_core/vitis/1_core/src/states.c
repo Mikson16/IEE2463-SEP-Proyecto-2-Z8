@@ -3,49 +3,122 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include "states.h"
+#include "xil_printf.h"
 
-State *init_state(State * prev_state, STATE_ID state_id, int Xoptions, int Yoptions)
-{
-	State *new_state = (State *)malloc(sizeof(State));;
-	new_state->prev = prev_state;
-	new_state->state_id = state_id;
-	new_state->Xoptions = Xoptions;
-	new_state->Yoptions = Yoptions;
-	new_state->Xselected = 0;
-	new_state->Yselected = 0;
-	return new_state;
-}
-
-void init_stack(Stack * stack)
+//Implementacion de stack basada en https://www.geeksforgeeks.org/c/implement-stack-in-c/
+void init_stack(Stack *stack)
 {
 	stack->top = -1;
 }
 
-void push(Stack * stack, int value)
+void push(Stack *stack, int value)
 {
 	stack->arr[++stack->top] = value;
 }
 
 int pop(Stack *stack)
 {
-    // Check for stack underflow
-    if (stack->top == -1) {
-        return -1;
-    }
-    // Return the top element
-    int popped = stack->arr[stack->top];
-    // decrement top pointer
-    stack->top--;
-    printf("Popped %d from the stack\n", popped);
-    // return the popped element
-    return popped;
+	// Check for stack underflow
+	if (stack->top == -1)
+	{
+		return -1;
+	}
+	// Return the top element
+	int popped = stack->arr[stack->top];
+	// decrement top pointer
+	stack->top--;
+	printf("Popped %d from the stack\n", popped);
+	// return the popped element
+	return popped;
 }
 int peek(Stack *stack)
 {
 	// Check if the stack is empty
-	if (stack->top == -1) {
+	if (stack->top == -1)
+	{
 		return -1;
 	}
 	// Return the top element without removing it
 	return stack->arr[stack->top];
+}
+
+/*Funcion de cambio en caso que se quiera cambiar o fue derrotado*/
+int handle_faint(TRAINER *trainer)
+{
+	int i;
+	int remaining = 0;
+	for(i=1; i < 4; i++){
+		if(trainer->zybomons[i].lp > 0){
+			remaining = 1;
+			handle_swap((TRAINER *) trainer, i);
+
+			break;
+		}
+	}
+	return remaining;
+}
+
+/*Funcion que maneja el ataque y llama a handle defeat en caso de ser necesario*/
+int handle_attack(TRAINER *attacker, TRAINER *defender, int attack_index)
+{
+
+	xil_printf("[ACCION]: %s ataca con %s\n", attacker->zybomons[0].name, attacker->zybomons[0].attacks[attack_index].name);
+	attacker->zybomons[0].attacks[attack_index].uses -= 1;
+	int damage = get_damage(attack_index, attacker->zybomons[0], defender->zybomons[0]);
+	int new_hp = defender->zybomons[0].lp - damage;
+	if(new_hp <= 0){
+		xil_printf("[ACCION]: Zybomon %s de %s ha sido derrotado\n", defender->zybomons[0].name, defender->name);
+		defender->zybomons[0].lp = 0;
+		return 1;
+	}
+	else{
+		defender->zybomons[0].lp  = new_hp;
+		return 0;
+	}
+}
+
+/*Funcion de cambio de zybomon activo*/
+void handle_swap(TRAINER *trainer, int target)
+{
+	xil_printf("[ACCION]: %s cambia de Zybomon a %s \n", trainer->name, trainer->zybomons[0].name);
+	ZYBOMON temp = trainer->zybomons[0];
+	trainer->zybomons[0] = trainer->zybomons[target];
+	trainer->zybomons[target] = temp;
+}
+
+/*Funcion que carga los estados para desarrollar el fin de turno*/
+void load_turn_action(Stack *action_stack, TRAINER *trainer1, TRAINER *trainer2, TURN_CHOICE turn_player1, TURN_CHOICE turn_player2)
+{
+    push(action_stack, ST_NEW_TURN);
+	if(turn_player1.action == ATTACK_ACTION && turn_player2.action != ATTACK_ACTION){
+		push(action_stack, ST_T1_ATTACK);
+	}
+	else if(turn_player2.action == ATTACK_ACTION && turn_player1.action != ATTACK_ACTION){
+		push(action_stack, ST_T2_ATTACK);
+	}
+
+	/*Calcula quien actua primero en base a la velocidad*/
+	else if(turn_player1.action == ATTACK_ACTION && turn_player2.action == ATTACK_ACTION){
+		if(trainer1->zybomons[0].spd > trainer2->zybomons[0].spd){
+			push(action_stack, ST_T2_ATTACK);
+			push(action_stack, ST_T1_ATTACK);
+		}
+		else if(trainer2->zybomons[0].spd > trainer1->zybomons[0].spd){
+			push(action_stack, ST_T1_ATTACK);
+			push(action_stack, ST_T2_ATTACK);
+		}
+		/*Si ambos tienen la misma velocidad se determina al azar*/
+		else if(trainer2->zybomons[0].spd == trainer1->zybomons[0].spd){
+			int first = rand() % 2;
+			push(action_stack, ST_T1_ATTACK + first);
+			push(action_stack, ST_T1_ATTACK + 1 - first);
+		}
+	}
+
+	if(turn_player2.action == SWAP_ACTION){
+		push(action_stack, ST_T2_SWAP);
+	}
+	if(turn_player1.action == SWAP_ACTION){
+		push(action_stack, ST_T1_SWAP);
+	}
 }

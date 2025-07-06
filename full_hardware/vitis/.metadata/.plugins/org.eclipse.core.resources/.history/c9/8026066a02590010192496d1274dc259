@@ -1,0 +1,327 @@
+#include "zybomon.h"
+#include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
+#include <math.h>
+#include <stdint.h>
+#include "xil_printf.h"
+#include "ADC.h"
+
+/*Generacion aleatoria de zybomones*/
+ZYBOMON generate_zybomon()
+{
+	ZYBOMON zybomon;
+
+	// Generar valores aleatorios para cada atributo
+	zybomon.max_lp = MAX_HEALTH; // Parametro predefinido
+
+	zybomon.lp = rand() % (MAX_HEALTH - MIN_HEALTH + 1) + MIN_HEALTH; // MIN_HEALTH-MAX_HEALTH
+
+	zybomon.e_type = rand() % ZYBOMON_TYPES; // 0-(ZYBOMON_TYPES-1)
+
+	zybomon.atk = rand() % (MAX_ATTACK + 1);  // 0-MAX_ATTACK
+	zybomon.def = rand() % (MAX_DEFENSE + 1); // 0-MAX_DEFENSE
+	zybomon.spd = rand() % (MAX_SPEED + 1);	  // 0-MAX_SPEED
+
+	if(zybomon.e_type == FIRE){
+		zybomon.front_sprite = "Z1.BMP";
+		zybomon.back_sprite = "Z1_B.BMP";
+	}
+	else if(zybomon.e_type == WATER){
+		zybomon.front_sprite = "Z2.BMP";
+		zybomon.back_sprite = "Z2_B.BMP";
+	}
+	else if(zybomon.e_type == PLANT){
+		zybomon.front_sprite = "Z3.BMP";
+		zybomon.back_sprite = "Z3_B.BMP";
+	}
+	else if(zybomon.e_type == NORMAL){
+		zybomon.front_sprite = "Z4.BMP";
+		zybomon.back_sprite = "Z4_B.BMP";
+	}
+	else{
+		zybomon.front_sprite = "PIKA.BMP";
+		zybomon.back_sprite = "PIKA_B.BMP";
+	}
+
+	strcpy(zybomon.name, "placeholder");
+
+
+	int i;
+
+	for (i = 0; i < 4; i++)
+	{
+		ATTACK attack;
+		attack.e_type = rand() % ATTACK_TYPES;
+		int power = rand() % MAX_A_POWER; // 0-MAX_A_POWER
+		int str_end = 0;
+		if (attack.e_type == FIRE)
+		{
+			strcpy(attack.name, "Flama");
+			str_end = 5;
+		}
+		else if (attack.e_type == WATER)
+		{
+			strcpy(attack.name, "Chorro");
+			str_end = 6;
+		}
+		else if (attack.e_type == PLANT)
+		{
+			strcpy(attack.name, "Hoja");
+			str_end = 4;
+		}
+		else if (attack.e_type == NORMAL)
+		{
+			strcpy(attack.name, "Garra");
+			str_end = 5;
+		}
+		if (power == 0)
+		{
+			attack.power = 60;
+			attack.uses = 30;
+			attack.max_uses = 30;
+			attack.name[str_end] = '-';
+			attack.name[str_end + 1] = '\0';
+		}
+		else if (power == 1)
+		{
+			attack.power = 80;
+			attack.uses = 15;
+			attack.max_uses = 15;
+		}
+		else if (power == 2)
+		{
+			attack.power = 100;
+			attack.uses = 5;
+			attack.max_uses = 5;
+			attack.name[str_end] = '+';
+			attack.name[str_end + 1] = '\0';
+		}
+
+		zybomon.attacks[i] = attack;
+	}
+
+	// Retornar el zybomon generado
+	return zybomon;
+};
+//void random_names(TRAINER *trainerPtr)
+//{
+//	char *names[19] = {"Gerbacio","Juan","Ben","Willy","Jhon","Filipo","Pepe","Rigoberto"."Riguberta","Juana","Jenny","Fredo"};
+//	int i;
+//	int random;
+//	for(i = 0; i < 4; i++){
+//		random = rand() % 12;
+//		strcpy(trainerPtr->zybomons[i].name, names[random]);
+//	}
+//
+//}
+/*Solicitud de nombres de jugador y zybomones por UART */
+void init_trainer(TRAINER *trainer)
+{
+	strcpy(trainer->name, "placeholder");
+	for(i = 0; i < 4; i++){
+		trainerPtr->zybomons[i] = generate_zybomon();
+	}
+}
+//void init_names(TRAINER *trainer1, TRAINER *trainer2)
+//{
+//	xil_printf("Initializing trainer...\n");
+//	xil_printf("Ingrese un nombre para el entrenador: \n");
+//	char trainer_name[20];
+//	scanf("%19s", trainer_name);			// Limitar input para evitar overflow
+//	strcpy(trainer1->name, trainer_name); // Copiar el input al nombre del trainer
+//	int i = 0;
+//	trainerPtr->zybomons[i] = generate_zybomon(1);
+//	char first_name[20];
+//	xil_printf("Ingrese un nombre para el primer zybomon: \n");
+//	scanf("%19s", first_name);						  // Limitar input para evitar overflow
+//	strcpy(trainerPtr->zybomons[i].name, first_name); // Copiar el input al nombre del primer zybomon
+//	for (i = 1; i < 4; i++)
+//	{
+//		trainerPtr->zybomons[i] = generate_zybomon(0);
+//		// Agregar nombre zybomones inactivos
+//		char zybomon_name[20];
+//		xil_printf("Ingrese un nombre para el zybomon %d: \n", i + 1);
+//		scanf("%19s", zybomon_name);						// Limitar input para evitar overflow
+//		strcpy(trainerPtr->zybomons[i].name, zybomon_name); // Copiar el input al nombre del zybomon
+//	}
+//}
+
+/* look up table de modificador por tipo elemental al ataque*/
+float type_modifier(E_TYPE attacker, E_TYPE defender)
+{
+	// se define cada interaccion en paricular para cada tipo de atacante y defensor
+	if (attacker == FIRE && defender == FIRE)
+	{
+		return 0.5;
+	}
+	else if (attacker == FIRE && defender == WATER)
+	{
+		return 0.5;
+	}
+	else if (attacker == FIRE && defender == PLANT)
+	{
+		return 2;
+	}
+	else if (attacker == FIRE && defender == NORMAL)
+	{
+		return 1;
+	}
+	else if (attacker == WATER && defender == FIRE)
+	{
+		return 2;
+	}
+	else if (attacker == WATER && defender == WATER)
+	{
+		return 0.5;
+	}
+	else if (attacker == WATER && defender == PLANT)
+	{
+		return 0.5;
+	}
+	else if (attacker == WATER && defender == NORMAL)
+	{
+		return 1;
+	}
+	else if (attacker == PLANT && defender == FIRE)
+	{
+		return 0.5;
+	}
+	else if (attacker == PLANT && defender == WATER)
+	{
+		return 2;
+	}
+	else if (attacker == PLANT && defender == PLANT)
+	{
+		return 0.5;
+	}
+	else if (attacker == PLANT && defender == NORMAL)
+	{
+		return 1;
+	}
+	else if (attacker == NORMAL)
+	{
+		return 1;
+	}
+	return 0;
+}
+
+/*calculo de da�o*/
+int get_damage(int attack_index, ZYBOMON attacker, ZYBOMON defender)
+{
+	int damage;
+	float type_mod = type_modifier(attacker.attacks[attack_index].e_type, defender.e_type);
+	// ecuacion de calculo de da�o
+	damage = floor(type_mod * attacker.attacks[attack_index].power * attacker.atk / defender.def);
+	return damage;
+}
+
+/*Generador de decisiones del CPU*/
+TURN_CHOICE auto_trainer_battle(TRAINER *trainerPtr_2, TRAINER *trainerPtr_1)
+{
+	TURN_CHOICE oponent_choice;
+	/*El primer argumento correspondera al segundo jugador, el cual debera ser la computadora*/
+	xil_printf("Pensando...\n");
+	xil_printf("Analizando al oponente...\n");
+	/*Obtener el activo del oponente*/
+	ZYBOMON oponent_active = trainerPtr_1->zybomons[0];
+	/*Obtener el activo propio*/
+	xil_printf("Analizando mis opciones...\n");
+	ZYBOMON my_active;
+	my_active = trainerPtr_2->zybomons[0];
+
+	/*Decidir el mejor ataque*/
+	int best_attack_index = -1;
+	int best_damage = -1;
+	for (int i = 0; i < 4; i++)
+	{
+
+		if (my_active.attacks[i].uses > 0) // Solo considerar ataques que tengan usos disponibles
+		{
+			// Simular da�o de cada ataque y quedarse con el mas alto
+			int damage = get_damage(i, my_active, oponent_active);
+			if (best_damage < damage)
+			{
+				best_damage = damage;
+				best_attack_index = i;
+			}
+		}
+	}
+
+	// retornar el ataque elegido por el oponente
+	if (best_attack_index != -1)
+	{
+		oponent_choice.action = ATTACK_ACTION;
+		oponent_choice.target = best_attack_index;
+		return oponent_choice;
+	}
+	// Si no le quedan ataques con usos cambia al zybomon con mejor defensa contra el jugador
+	else
+	{
+		int best_zybomon_index = -1;
+		int best_type_mod = -1;
+		for (int i = 1; i < 4; i++)
+		{
+			// Verificar que el zybomon tenga vida restante
+			if (trainerPtr_2->zybomons[i].lp > 0)
+			{
+				int type_mod = type_modifier(oponent_active.e_type, my_active.e_type);
+				// Mientras menor sea el modificador por tipo menos da�o recibe
+				if (best_type_mod > type_mod)
+				{
+					best_type_mod = type_mod;
+					best_zybomon_index = i;
+				}
+			}
+		}
+		// retorna el zybomon que recibiria menos da�o
+		if (best_zybomon_index != -1)
+		{
+			oponent_choice.action = SWAP_ACTION;
+			oponent_choice.target = best_zybomon_index;
+			return oponent_choice;
+			// si no le quedan mas zybomones entra en panico (no hace nada)
+		}
+		else
+		{
+			oponent_choice.action = PANICK_ACTION;
+			oponent_choice.target = 0;
+			return oponent_choice;
+		}
+	}
+	return oponent_choice;
+}
+
+/*Funcion de batalla*/
+//void battle(TRAINER *trainerPtr_1, TRAINER *trainerPtr_2, ATTACK atk)
+//{
+//	/*Recibe como primer argumento el entrenador que esta atacando y de segundo el entrenador que esta defendiendo, por ultimo recibe el ataque del atacante, la funcion ejecuta el calculo de daño*/
+//	xil_printf("Batalla iniciada entre\n");
+//	/*Obtener el zybomon activo del trainer atacante*/
+//	ZYBOMON attacker_active;
+//	for (int i = 0; i < 4; i++)
+//	{
+//		if (trainerPtr_1->zybomons[i].active)
+//		{
+//			attacker_active = trainerPtr_1->zybomons[i];
+//			break;
+//		}
+//	}
+//	/*Como ya tenemos el ataque no es necesario buscarlo, en caso de ser el turno de la computadora este siempre elige el mejor ataque disponible, solo debemos realizar el calculo de daño, en caso de que el turno sea del jugador, este elige su ataque de manera manual*/
+//
+//	/*Obtener zybomon defensor*/
+//	ZYBOMON defender_active;
+//	for (int i = 0; i < 4; i++)
+//	{
+//		if (trainerPtr_2->zybomons[i].active)
+//		{
+//			defender_active = trainerPtr_2->zybomons[i];
+//
+//			break;
+//		}
+//	}
+//	/*Calcular el daño*/
+//	int damage = BATTLE_FUNCTION(atk.power, attacker_active.atk, defender_active.def);
+//	/*Restar el daño a los puntos de vida del zybomon defensor*/
+//	defender_active.lp -= damage;
+//}

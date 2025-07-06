@@ -3,6 +3,14 @@
 
 #include "ff.h"
 
+//Estados del reproductor de musica
+typedef enum
+{
+	STOP = 0,
+	MUSIC,
+	SOUND_EFFECT
+} PLAYER_STATUS;
+
 
 u32 SdStartSong(TCHAR *filename, FIL *RfPtr, u32 *CurrentBytePtr, u8 *AudioPlayerStatePtr);
 void PlaySong(FIL *RfPtr, u32 *CurrentBytePtr, float volume);

@@ -1,0 +1,26 @@
+#include <stdint.h>
+#include <stdio.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include "states.h"
+#include "xil_printf.h"
+#include "ff.h"
+
+typedef struct
+{
+	TCHAR *sprite;
+	int change_srpite;
+	int xpos;
+	int ypos;
+	TCHAR *sound;
+	int play_sound;
+	unsigned delay;
+} FRAME;
+
+typedef struct
+{
+	FRAME frames[10];
+	int total_frames;
+} ANIMATION;
+
+void init_swap_anim(ANIMATION * animation, TCHAR * zybomon_sprite);

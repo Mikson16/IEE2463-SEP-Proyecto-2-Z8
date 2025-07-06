@@ -42,7 +42,6 @@ typedef struct
 //Struct de datos de un zybomon
 typedef struct
 {
-	int active;
 	int lp;
 	int max_lp;
 	int atk;
@@ -60,24 +59,24 @@ typedef struct
 {
 	char name[20];
 	ZYBOMON zybomons[4];
-	int active;
 } TRAINER;
 
 /*Parametros*/
 #define NUM_ZYBOMONS 8
 #define MIN_HEALTH 100
-#define MAX_HEALTH 255
+#define MAX_HEALTH 31
 #define ZYBOMON_TYPES 4 // 4 tipos 0-3
 #define ATTACK_TYPES 4	// 4 tipos de ataque 0-3
-#define MAX_ATTACK 80
-#define MAX_DEFENSE 80
-#define MAX_SPEED 80 // Eventualmente estos parametros podemos configurarlos por uart
+#define BASE_STATS 60
+#define MAX_ATTACK 31
+#define MAX_DEFENSE 31
+#define MAX_SPEED 31 // Eventualmente estos parametros podemos configurarlos por uart
 #define MAX_A_POWER 3
-#define MAX_A_USES 15
 #define BATTLE_FUNCTION(power, atk, def) ((power) * (atk) / (def))
 
-ZYBOMON generate_zybomon(int active);
-void init_trainer(TRAINER *trainerPtr, int active);
+
+ZYBOMON generate_zybomon();
+void init_trainer(TRAINER *trainerPtr);
 float type_modifier(E_TYPE attacker, E_TYPE defender);
 int get_damage(int attack_index, ZYBOMON attacker, ZYBOMON defender);
 TURN_CHOICE auto_trainer_battle(TRAINER *trainerPtr_2, TRAINER *trainerPtr_1);

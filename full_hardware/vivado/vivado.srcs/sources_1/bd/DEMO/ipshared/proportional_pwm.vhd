@@ -37,14 +37,14 @@ entity proportional_pwm is
   Port (
     clk: in std_logic;
     dividend: in std_logic_vector(7 downto 0);
-    divisor: in std_logic_vector(7 downto 0);
+    divisor: in std_logic_vector(15 downto 0);
     frecuency: in std_logic_vector(7 downto 0);
     pwm: out std_logic
    );
 end proportional_pwm;
 
 architecture Behavioral of proportional_pwm is
-signal saw: std_logic_vector(7 downto 0);
+signal saw: std_logic_vector(15 downto 0);
 signal counter: std_logic_vector(7 downto 0) := "00000000";
 
 begin
@@ -58,7 +58,7 @@ begin
     elsif counter >= frecuency - 1 then
       counter <= std_logic_vector(to_unsigned(0, 8));
       if saw >= divisor - 1 then --
-        saw <= std_logic_vector(to_unsigned(0, 8));
+        saw <= std_logic_vector(to_unsigned(0, 16));
       else
         saw <= saw + 1;
       end if;

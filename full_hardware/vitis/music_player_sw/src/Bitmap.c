@@ -157,27 +157,6 @@ void Open_Sprite(TCHAR *filename, BITMAP *SpritePtr)
 			xil_printf("ERROR 1: f_open returned %d\r\n",rc);
 //			return XST_FAILURE;
 		}
-//	u8 SizeBuff[4];
-//
-//	u32 FileSize;
-//	rc = f_lseek (&Rfp, 0x02);
-//
-//	if(rc != FR_OK)
-//		{
-//			xil_printf("ERROR : f_lseek returned %d\r\n",rc);
-////			return XST_FAILURE;
-//		}
-//
-//	rc = f_read (&Rfp, &SizeBuff, (UINT)4, &br);
-//
-//	if(rc != FR_OK)
-//		{
-//			xil_printf("ERROR : f_read returned %d\r\n",rc);
-////			return XST_FAILURE;
-//		}
-//
-//	// El conjunto de bytes esta en little endian, por lo que se concatenan al reves
-//	FileSize = (SizeBuff[0]) | (SizeBuff[1] << 8) | (SizeBuff[2] << 16) | (SizeBuff[3] << 24);
 
     //El inicio de los datos del bitmap se guardan en el byte 0A del archivo
 	u32 DataStart;
@@ -236,12 +215,12 @@ void Open_Sprite(TCHAR *filename, BITMAP *SpritePtr)
 	Height = (SizeBuff[0]) | (SizeBuff[1] << 8) | (SizeBuff[2] << 16) | (SizeBuff[3] << 24);
 
 
-	//Actualizacion del struct de bitmap
+	//Actualizacion de dimensiones del struct de bitmap
 	SpritePtr->Width = Width;
 	SpritePtr->Height = Height;
 
 
-    //se comienzan a leer los pixeles
+    //se comienza a leer los pixeles
 	rc = f_lseek (&Rfp, DataStart);
 
 	if(rc != FR_OK)
@@ -256,40 +235,40 @@ void Open_Sprite(TCHAR *filename, BITMAP *SpritePtr)
 	//Se invierte el eje y
 	y = Height - 1;
 	int pixel;
-		while(y >= 0) {
-			x = 0;
-			while(x < Width) {
-				rc = f_read (&Rfp, &ReadBuff, (UINT)2, &br);
+	while(y >= 0) {
+		x = 0;
+		while(x < Width) {
+			rc = f_read (&Rfp, &ReadBuff, (UINT)2, &br);
 
-				if(rc != FR_OK)
-					{
-						xil_printf("ERROR : f_read returned %d\r\n",rc);
+			if(rc != FR_OK)
+				{
+					xil_printf("ERROR : f_read returned %d\r\n",rc);
 //						return XST_FAILURE;
-				}
-                pixel = (ReadBuff[0]) | (ReadBuff[1] << 8);
-
-                //correccion de formato RGB a BGR
-                COLOR rchannel = 0xF800 & pixel;
-                COLOR gchannel = 0x07E0 & pixel;
-                COLOR bchannel = 0x001F & pixel;
-
-                pixel = bchannel << 11 | gchannel | rchannel >> 11;
-				SpritePtr->map[x][y] = pixel;
-				x += 1;
 			}
-			y = y - 1;
-			//Si el ancho es impar el archivo tiene un padding que se elimina
-			if(Width%2 != 0){
-				rc = f_read (&Rfp, &ReadBuff, (UINT)2, &br);
-			}
+			pixel = (ReadBuff[0]) | (ReadBuff[1] << 8);
+
+			//correccion de formato RGB a BGR
+			COLOR rchannel = 0xF800 & pixel;
+			COLOR gchannel = 0x07E0 & pixel;
+			COLOR bchannel = 0x001F & pixel;
+
+			pixel = bchannel << 11 | gchannel | rchannel >> 11;
+			SpritePtr->map[x][y] = pixel;
+			x += 1;
 		}
+		y = y - 1;
+		//Si el ancho es impar el archivo tiene un padding que se elimina
+		if(Width%2 != 0){
+			rc = f_read (&Rfp, &ReadBuff, (UINT)2, &br);
+		}
+	}
 	rc = f_close(&Rfp);
 
-		if(rc != FR_OK)
-			{
-				xil_printf("ERROR : f_close returned %d\r\n",rc);
+	if(rc != FR_OK)
+		{
+			xil_printf("ERROR : f_close returned %d\r\n",rc);
 //				return XST_FAILURE;
-			}
+		}
 }
 void Send_Bitmap(BITMAP *BitMapPtr)
 {
@@ -301,9 +280,8 @@ void Send_Bitmap(BITMAP *BitMapPtr)
 			 pixel = BitMapPtr->map[x][y];
 			 Xil_Out32(SHARED_MEMORY_BASE + address_sum*4, pixel);
 			 address_sum ++;
-
-			}
 		}
+	}
 }
 void Retrieve_Bitmap(BITMAP *BitMapPtr)
 {
@@ -315,9 +293,8 @@ void Retrieve_Bitmap(BITMAP *BitMapPtr)
 			 pixel = Xil_In32(SHARED_MEMORY_BASE + address_sum*4);
 			 BitMapPtr->map[x][y] = pixel;
 			 address_sum ++;
-
-			}
 		}
+	}
 }
 //dummy de LCD_SetGramScanWay que configura los registros para que funcionen las funciones de escritura de strings
 void LCD_SetGramScanWay2(LCD_SCAN_DIR Scan_dir)
@@ -383,13 +360,14 @@ void LCD_SetGramScanWay2(LCD_SCAN_DIR Scan_dir)
 //#endif
 
 }
+
 //Dibuja una barra de vida con un porcentaje particular
 void DrawHealth(POINT Xpoint, POINT Ypoint, BITMAP *BitMapPtr, int health_ptg){
 	POINT x, y;
 	int health_pixels;
 	COLOR color;
 
-	xil_printf("vida: %d\n", health_ptg);
+//	xil_printf("vida: %d\n", health_ptg);
 
 
     //Valores muy pequeños donde la division entera entrega 0 pero la vida no es 0 se representan con un solo pixel de vida
@@ -438,15 +416,15 @@ void Paint_Type(E_TYPE e_type, POINT Xpoint, POINT Ypoint, BITMAP *BitMapPtr, BI
 		y_type = 8;
 	}
 	for(y = 0; y < 13; y ++ ) {
-	        for(x = 0; x < 18; x ++ ) {
-	        	if (x < SpritePtr->Width && y < SpritePtr->Height){
-	        		sprite_pixel = SpritePtr->map[x + x_type][y + y_type];
-	        		if(sprite_pixel != BLUE){ //Los pixeles rojo puro los transparenta
-	        			BitMapPtr->map[x + Xpoint][y + Ypoint] = sprite_pixel;
-	        		}
+		for(x = 0; x < 18; x ++ ) {
+			if (x < SpritePtr->Width && y < SpritePtr->Height){
+				sprite_pixel = SpritePtr->map[x + x_type][y + y_type];
+				if(sprite_pixel != BLUE){ //Los pixeles rojo puro los transparenta
+					BitMapPtr->map[x + Xpoint][y + Ypoint] = sprite_pixel;
+				}
 
-	        	}
+			}
 
-	        }
+		}
 	}
 }

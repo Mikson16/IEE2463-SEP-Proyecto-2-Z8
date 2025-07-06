@@ -5,6 +5,7 @@
 #include "LCD_GUI.h"
 #include "zybomon.h"
 
+//Struct de bitmap
 typedef struct {
     int map[128][128];
     int Height;

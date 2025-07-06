@@ -3,5 +3,6 @@ the_ROM_image:
 {
 	[bootloader]D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\full_hardware\vitis\full_hardware_plt\export\full_hardware_plt\sw\full_hardware_plt\boot\fsbl.elf
 	D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\full_hardware\vitis\full_hardware_plt\bitstream\DEMO_wrapper.bit
+	D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\full_hardware\vitis\full_hardware_sw\Debug\full_hardware_sw.elf
 	D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\full_hardware\vitis\music_player_sw\Debug\music_player_sw.elf
 }

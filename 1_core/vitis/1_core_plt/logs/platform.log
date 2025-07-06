@@ -2994,3 +2994,976 @@ TRACE::2025-06-25.15:47:44::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE246
 D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_0||
 
 TRACE::2025-06-25.15:47:44::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-07-05.18:14:55::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:55::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:55::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:55::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw
+TRACE::2025-07-05.18:14:55::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:55::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.18:14:55::SCWPlatform::Do not have an existing db opened. 
+TRACE::2025-07-05.18:14:57::SCWPlatform::Opened new HwDB with name DEMO_wrapper_0
+TRACE::2025-07-05.18:14:57::SCWReader::Active system found as  1_core_plt
+TRACE::2025-07-05.18:14:57::SCWReader::Handling sysconfig 1_core_plt
+TRACE::2025-07-05.18:14:57::SCWDomain::checking for install qemu data   : 
+TRACE::2025-07-05.18:14:57::SCWDomain:: Using the QEMU Data from install at  : D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/
+TRACE::2025-07-05.18:14:57::SCWDomain:: Using the QEMU args  from install at  : D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2025-07-05.18:14:57::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw
+TRACE::2025-07-05.18:14:57::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.18:14:57::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper_0
+TRACE::2025-07-05.18:14:57::SCWPlatform::Opened existing hwdb DEMO_wrapper_0
+TRACE::2025-07-05.18:14:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-05.18:14:57::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw
+TRACE::2025-07-05.18:14:57::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.18:14:57::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper_0
+TRACE::2025-07-05.18:14:57::SCWPlatform::Opened existing hwdb DEMO_wrapper_0
+TRACE::2025-07-05.18:14:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-05.18:14:57::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw
+TRACE::2025-07-05.18:14:57::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.18:14:57::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper_0
+TRACE::2025-07-05.18:14:57::SCWPlatform::Opened existing hwdb DEMO_wrapper_0
+TRACE::2025-07-05.18:14:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-05.18:14:57::SCWReader::Boot application domain added for zynq_fsbl
+TRACE::2025-07-05.18:14:57::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw
+TRACE::2025-07-05.18:14:57::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.18:14:57::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper_0
+TRACE::2025-07-05.18:14:57::SCWPlatform::Opened existing hwdb DEMO_wrapper_0
+TRACE::2025-07-05.18:14:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-05.18:14:57::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-05.18:14:57::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2025-07-05.18:14:57::SCWMssOS::No sw design opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-05.18:14:57::SCWMssOS::mss exists loading the mss file  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-05.18:14:57::SCWMssOS::Opened the sw design from mss  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-05.18:14:57::SCWMssOS::Adding the swdes entry D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2025-07-05.18:14:57::SCWMssOS::updating the scw layer about changes
+TRACE::2025-07-05.18:14:57::SCWMssOS::Opened the sw design.  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-05.18:14:57::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw
+TRACE::2025-07-05.18:14:57::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.18:14:57::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper_0
+TRACE::2025-07-05.18:14:57::SCWPlatform::Opened existing hwdb DEMO_wrapper_0
+TRACE::2025-07-05.18:14:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-05.18:14:57::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-05.18:14:57::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-07-05.18:14:57::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-05.18:14:57::SCWMssOS:: library already available in sw design:  xilffs:4.3
+TRACE::2025-07-05.18:14:57::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw
+TRACE::2025-07-05.18:14:57::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.18:14:57::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper_0
+TRACE::2025-07-05.18:14:57::SCWPlatform::Opened existing hwdb DEMO_wrapper_0
+TRACE::2025-07-05.18:14:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-05.18:14:57::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-05.18:14:57::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-07-05.18:14:57::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-05.18:14:57::SCWMssOS:: library already available in sw design:  xilrsa:1.6
+TRACE::2025-07-05.18:14:57::SCWMssOS::Saving the mss changes D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-05.18:14:57::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-07-05.18:14:57::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-07-05.18:14:57::SCWMssOS::Commit changes completed.
+TRACE::2025-07-05.18:14:57::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2025-07-05.18:14:57::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2025-07-05.18:14:57::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw
+TRACE::2025-07-05.18:14:57::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.18:14:57::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper_0
+TRACE::2025-07-05.18:14:57::SCWPlatform::Opened existing hwdb DEMO_wrapper_0
+TRACE::2025-07-05.18:14:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-05.18:14:57::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-05.18:14:57::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-07-05.18:14:57::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-05.18:14:57::SCWReader::No isolation master present  
+TRACE::2025-07-05.18:14:57::SCWDomain::checking for install qemu data   : 
+TRACE::2025-07-05.18:14:57::SCWDomain:: Using the QEMU Data from install at  : D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/
+TRACE::2025-07-05.18:14:57::SCWDomain:: Using the QEMU args  from install at  : D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2025-07-05.18:14:57::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw
+TRACE::2025-07-05.18:14:57::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.18:14:57::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper_0
+TRACE::2025-07-05.18:14:57::SCWPlatform::Opened existing hwdb DEMO_wrapper_0
+TRACE::2025-07-05.18:14:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-05.18:14:57::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw
+TRACE::2025-07-05.18:14:57::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.18:14:57::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper_0
+TRACE::2025-07-05.18:14:57::SCWPlatform::Opened existing hwdb DEMO_wrapper_0
+TRACE::2025-07-05.18:14:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-05.18:14:57::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw
+TRACE::2025-07-05.18:14:57::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.18:14:57::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper_0
+TRACE::2025-07-05.18:14:57::SCWPlatform::Opened existing hwdb DEMO_wrapper_0
+TRACE::2025-07-05.18:14:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-05.18:14:57::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-07-05.18:14:57::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-07-05.18:14:57::SCWMssOS::No sw design opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-07-05.18:14:57::SCWMssOS::mss exists loading the mss file  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-07-05.18:14:57::SCWMssOS::Opened the sw design from mss  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-07-05.18:14:57::SCWMssOS::Adding the swdes entry D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_0
+TRACE::2025-07-05.18:14:57::SCWMssOS::updating the scw layer about changes
+TRACE::2025-07-05.18:14:57::SCWMssOS::Opened the sw design.  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-07-05.18:14:57::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw
+TRACE::2025-07-05.18:14:57::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.18:14:57::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper_0
+TRACE::2025-07-05.18:14:57::SCWPlatform::Opened existing hwdb DEMO_wrapper_0
+TRACE::2025-07-05.18:14:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-05.18:14:57::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-07-05.18:14:57::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-07-05.18:14:57::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-07-05.18:14:57::SCWMssOS:: library already available in sw design:  xilffs:4.3
+TRACE::2025-07-05.18:14:57::SCWMssOS::Saving the mss changes D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-07-05.18:14:57::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-07-05.18:14:57::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-07-05.18:14:57::SCWMssOS::Commit changes completed.
+TRACE::2025-07-05.18:14:57::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2025-07-05.18:14:57::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2025-07-05.18:14:57::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw
+TRACE::2025-07-05.18:14:57::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:14:57::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.18:14:57::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper_0
+TRACE::2025-07-05.18:14:57::SCWPlatform::Opened existing hwdb DEMO_wrapper_0
+TRACE::2025-07-05.18:14:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-05.18:14:57::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-07-05.18:14:57::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-07-05.18:14:57::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-07-05.18:14:57::SCWReader::No isolation master present  
+TRACE::2025-07-05.18:15:07::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:07::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:07::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:07::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw
+TRACE::2025-07-05.18:15:07::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:07::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.18:15:07::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper_0
+TRACE::2025-07-05.18:15:07::SCWPlatform::Opened existing hwdb DEMO_wrapper_0
+TRACE::2025-07-05.18:15:07::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-05.18:15:07::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/tempdsa/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:07::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/tempdsa/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:07::SCWPlatform:: Platform location is D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/tempdsa
+TRACE::2025-07-05.18:15:07::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/tempdsa/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:07::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.18:15:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-05.18:15:09::SCWMssOS::Doing hw sync for the mss in domain: zynq_fsbl
+TRACE::2025-07-05.18:15:09::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:09::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:09::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:09::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw
+TRACE::2025-07-05.18:15:09::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:09::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.18:15:09::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper_0
+TRACE::2025-07-05.18:15:09::SCWPlatform::Opened existing hwdb DEMO_wrapper_0
+TRACE::2025-07-05.18:15:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-05.18:15:09::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:09::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:09::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:09::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw
+TRACE::2025-07-05.18:15:09::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:09::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.18:15:09::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper_0
+TRACE::2025-07-05.18:15:09::SCWPlatform::Opened existing hwdb DEMO_wrapper_0
+TRACE::2025-07-05.18:15:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-05.18:15:09::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-05.18:15:09::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-07-05.18:15:09::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-05.18:15:09::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/tempdsa/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:09::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/tempdsa/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:09::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/tempdsa/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:09::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/tempdsa
+TRACE::2025-07-05.18:15:09::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/tempdsa/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:09::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.18:15:09::SCWPlatform::update - Opened existing hwdb DEMO_wrapper_1
+TRACE::2025-07-05.18:15:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-05.18:15:09::SCWMssOS::Doing hw sync for the mss in domain: standalone_domain
+TRACE::2025-07-05.18:15:09::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:09::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:09::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:09::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw
+TRACE::2025-07-05.18:15:09::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:09::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.18:15:09::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper_0
+TRACE::2025-07-05.18:15:09::SCWPlatform::Opened existing hwdb DEMO_wrapper_0
+TRACE::2025-07-05.18:15:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-05.18:15:09::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:09::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:09::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:09::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw
+TRACE::2025-07-05.18:15:09::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:09::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.18:15:09::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper_0
+TRACE::2025-07-05.18:15:09::SCWPlatform::Opened existing hwdb DEMO_wrapper_0
+TRACE::2025-07-05.18:15:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-05.18:15:09::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-07-05.18:15:09::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-07-05.18:15:09::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-07-05.18:15:09::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/tempdsa/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:09::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/tempdsa/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:09::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/tempdsa/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:09::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/tempdsa
+TRACE::2025-07-05.18:15:09::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/tempdsa/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:09::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.18:15:09::SCWPlatform::update - Opened existing hwdb DEMO_wrapper_1
+TRACE::2025-07-05.18:15:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-05.18:15:09::SCWMssOS::Saving the mss changes D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-05.18:15:09::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-07-05.18:15:09::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-07-05.18:15:09::SCWMssOS::Commit changes completed.
+TRACE::2025-07-05.18:15:09::SCWMssOS::Completed hw sync for the mss in domain: zynq_fsbl
+TRACE::2025-07-05.18:15:09::SCWMssOS::Removing the swdes entry for  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-05.18:15:09::SCWMssOS::Saving the mss changes D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-07-05.18:15:09::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-07-05.18:15:09::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-07-05.18:15:09::SCWMssOS::Commit changes completed.
+TRACE::2025-07-05.18:15:09::SCWMssOS::Completed hw sync for the mss in domain: standalone_domain
+TRACE::2025-07-05.18:15:09::SCWMssOS::Removing the swdes entry for  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-07-05.18:15:09::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:09::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:09::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:09::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw
+TRACE::2025-07-05.18:15:09::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:09::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.18:15:09::SCWPlatform::Do not have an existing db opened. 
+TRACE::2025-07-05.18:15:12::SCWPlatform::Opened new HwDB with name DEMO_wrapper_2
+TRACE::2025-07-05.18:15:12::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:12::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:12::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:12::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw
+TRACE::2025-07-05.18:15:12::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:12::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.18:15:12::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper_2
+TRACE::2025-07-05.18:15:12::SCWPlatform::Opened existing hwdb DEMO_wrapper_2
+TRACE::2025-07-05.18:15:12::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-05.18:15:12::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-05.18:15:12::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2025-07-05.18:15:12::SCWMssOS::No sw design opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-05.18:15:12::SCWMssOS::mss exists loading the mss file  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-05.18:15:12::SCWMssOS::Opened the sw design from mss  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-05.18:15:12::SCWMssOS::Adding the swdes entry D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2025-07-05.18:15:12::SCWMssOS::updating the scw layer about changes
+TRACE::2025-07-05.18:15:12::SCWMssOS::Opened the sw design.  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-05.18:15:12::SCWMssOS::Saving the mss changes D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-05.18:15:12::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-07-05.18:15:12::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-07-05.18:15:12::SCWMssOS::Commit changes completed.
+TRACE::2025-07-05.18:15:12::SCWMssOS::Saving the mss changes D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-07-05.18:15:12::SCWMssOS::Adding the swdes entry, mss present, able to open swdb D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_0
+TRACE::2025-07-05.18:15:12::SCWMssOS::Writing the mss file completed D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-07-05.18:15:12::SCWMssOS::Commit changes completed.
+TRACE::2025-07-05.18:15:12::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:12::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:12::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:12::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw
+TRACE::2025-07-05.18:15:12::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:12::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.18:15:12::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper_2
+TRACE::2025-07-05.18:15:12::SCWPlatform::Opened existing hwdb DEMO_wrapper_2
+TRACE::2025-07-05.18:15:12::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-05.18:15:12::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-05.18:15:12::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-07-05.18:15:12::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-05.18:15:12::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:12::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:12::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:12::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw
+TRACE::2025-07-05.18:15:12::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:12::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.18:15:12::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper_2
+TRACE::2025-07-05.18:15:12::SCWPlatform::Opened existing hwdb DEMO_wrapper_2
+TRACE::2025-07-05.18:15:12::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-05.18:15:12::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-07-05.18:15:12::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-07-05.18:15:12::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-07-05.18:15:12::SCWWriter::formatted JSON is {
+	"platformName":	"1_core_plt",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"1_core_plt",
+	"platHandOff":	"D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/Zybomon2_hw/DEMO_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/DEMO_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"1_core_plt",
+	"systems":	[{
+			"systemName":	"1_core_plt",
+			"systemDesc":	"1_core_plt",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"1_core_plt",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"22a6aa47fd12e4eea21ee9dba4d7fcad",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on ps7_cortexa9_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"b1137bc453858b5f6e22cb6fc1a9c462",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+LOG::2025-07-05.18:15:42::SCWPlatform::Started generating the artifacts platform 1_core_plt
+TRACE::2025-07-05.18:15:42::SCWPlatform::Sanity checking of platform is completed
+LOG::2025-07-05.18:15:42::SCWPlatform::Started generating the artifacts for system configuration 1_core_plt
+LOG::2025-07-05.18:15:42::SCWSystem::Checking the domain zynq_fsbl
+LOG::2025-07-05.18:15:42::SCWSystem::Doing application build for :  zynq_fsbl
+TRACE::2025-07-05.18:15:42::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2025-07-05.18:15:42::SCWDomain::Skipping the build for domain :  zynq_fsbl
+LOG::2025-07-05.18:15:42::SCWSystem::Checking the domain standalone_domain
+LOG::2025-07-05.18:15:42::SCWSystem::Not a boot domain 
+LOG::2025-07-05.18:15:42::SCWSystem::Started Processing the domain standalone_domain
+TRACE::2025-07-05.18:15:42::SCWDomain::Generating domain artifcats
+TRACE::2025-07-05.18:15:42::SCWMssOS::Generating standalone artifcats
+TRACE::2025-07-05.18:15:42::SCWMssOS::Copying the qemu file from  D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt To D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/export/1_core_plt/sw/1_core_plt/qemu/
+TRACE::2025-07-05.18:15:42::SCWMssOS::Copying the qemu file from  D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt To D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/export/1_core_plt/sw/1_core_plt/standalone_domain/qemu/
+TRACE::2025-07-05.18:15:42::SCWMssOS:: Copying the user libraries. 
+TRACE::2025-07-05.18:15:42::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:42::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:42::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:42::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw
+TRACE::2025-07-05.18:15:42::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:42::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.18:15:42::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper_2
+TRACE::2025-07-05.18:15:42::SCWPlatform::Opened existing hwdb DEMO_wrapper_2
+TRACE::2025-07-05.18:15:42::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-05.18:15:42::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-07-05.18:15:42::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-07-05.18:15:42::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-07-05.18:15:42::SCWMssOS::Completed writing the mss file at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp
+TRACE::2025-07-05.18:15:42::SCWMssOS::Mss edits present, copying mssfile into export location D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-07-05.18:15:42::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2025-07-05.18:15:42::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2025-07-05.18:15:42::SCWDomain::Skipping the build for domain :  standalone_domain
+TRACE::2025-07-05.18:15:42::SCWMssOS::skipping the bsp build ... 
+TRACE::2025-07-05.18:15:42::SCWMssOS::Copying to export directory.
+TRACE::2025-07-05.18:15:42::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2025-07-05.18:15:42::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+LOG::2025-07-05.18:15:42::SCWSystem::Completed Processing the domain standalone_domain
+LOG::2025-07-05.18:15:42::SCWSystem::Completed Processing the sysconfig 1_core_plt
+LOG::2025-07-05.18:15:42::SCWPlatform::Completed generating the artifacts for system configuration 1_core_plt
+TRACE::2025-07-05.18:15:42::SCWPlatform::Started preparing the platform 
+TRACE::2025-07-05.18:15:42::SCWSystem::Writing the bif file for system config 1_core_plt
+TRACE::2025-07-05.18:15:42::SCWSystem::dir created 
+TRACE::2025-07-05.18:15:42::SCWSystem::Writing the bif 
+TRACE::2025-07-05.18:15:42::SCWPlatform::Started writing the spfm file 
+TRACE::2025-07-05.18:15:42::SCWPlatform::Started writing the xpfm file 
+TRACE::2025-07-05.18:15:42::SCWPlatform::Completed generating the platform
+TRACE::2025-07-05.18:15:42::SCWMssOS::Saving the mss changes D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-05.18:15:42::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-07-05.18:15:42::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-07-05.18:15:42::SCWMssOS::Commit changes completed.
+TRACE::2025-07-05.18:15:42::SCWMssOS::Saving the mss changes D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-07-05.18:15:42::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-07-05.18:15:42::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-07-05.18:15:42::SCWMssOS::Commit changes completed.
+TRACE::2025-07-05.18:15:42::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:42::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:42::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:42::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw
+TRACE::2025-07-05.18:15:42::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:42::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.18:15:42::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper_2
+TRACE::2025-07-05.18:15:42::SCWPlatform::Opened existing hwdb DEMO_wrapper_2
+TRACE::2025-07-05.18:15:42::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-05.18:15:42::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-05.18:15:42::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-07-05.18:15:42::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-05.18:15:42::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:42::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:42::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:42::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw
+TRACE::2025-07-05.18:15:42::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:42::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.18:15:42::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper_2
+TRACE::2025-07-05.18:15:42::SCWPlatform::Opened existing hwdb DEMO_wrapper_2
+TRACE::2025-07-05.18:15:42::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-05.18:15:42::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-07-05.18:15:42::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-07-05.18:15:42::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-07-05.18:15:42::SCWWriter::formatted JSON is {
+	"platformName":	"1_core_plt",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"1_core_plt",
+	"platHandOff":	"D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/Zybomon2_hw/DEMO_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/DEMO_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"1_core_plt",
+	"systems":	[{
+			"systemName":	"1_core_plt",
+			"systemDesc":	"1_core_plt",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"1_core_plt",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"22a6aa47fd12e4eea21ee9dba4d7fcad",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on ps7_cortexa9_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"b1137bc453858b5f6e22cb6fc1a9c462",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2025-07-05.18:15:42::SCWPlatform::updated the xpfm file.
+TRACE::2025-07-05.18:15:42::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:42::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:42::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:42::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw
+TRACE::2025-07-05.18:15:42::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.18:15:42::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.18:15:42::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper_2
+TRACE::2025-07-05.18:15:42::SCWPlatform::Opened existing hwdb DEMO_wrapper_2
+TRACE::2025-07-05.18:15:42::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-05.18:15:42::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-07-05.18:15:42::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-07-05.18:15:42::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-07-05.22:31:19::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:19::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:19::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:21::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw
+TRACE::2025-07-05.22:31:21::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:21::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.22:31:21::SCWPlatform::Do not have an existing db opened. 
+TRACE::2025-07-05.22:31:23::SCWPlatform::Opened new HwDB with name DEMO_wrapper
+TRACE::2025-07-05.22:31:23::SCWReader::Active system found as  1_core_plt
+TRACE::2025-07-05.22:31:23::SCWReader::Handling sysconfig 1_core_plt
+TRACE::2025-07-05.22:31:23::SCWDomain::checking for install qemu data   : 
+TRACE::2025-07-05.22:31:23::SCWDomain:: Using the QEMU Data from install at  : D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/
+TRACE::2025-07-05.22:31:23::SCWDomain:: Using the QEMU args  from install at  : D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2025-07-05.22:31:23::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw
+TRACE::2025-07-05.22:31:23::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.22:31:23::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper
+TRACE::2025-07-05.22:31:23::SCWPlatform::Opened existing hwdb DEMO_wrapper
+TRACE::2025-07-05.22:31:23::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-05.22:31:23::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw
+TRACE::2025-07-05.22:31:23::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.22:31:23::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper
+TRACE::2025-07-05.22:31:23::SCWPlatform::Opened existing hwdb DEMO_wrapper
+TRACE::2025-07-05.22:31:23::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-05.22:31:23::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw
+TRACE::2025-07-05.22:31:23::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.22:31:23::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper
+TRACE::2025-07-05.22:31:23::SCWPlatform::Opened existing hwdb DEMO_wrapper
+TRACE::2025-07-05.22:31:23::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-05.22:31:23::SCWReader::Boot application domain added for zynq_fsbl
+TRACE::2025-07-05.22:31:23::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw
+TRACE::2025-07-05.22:31:23::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.22:31:23::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper
+TRACE::2025-07-05.22:31:23::SCWPlatform::Opened existing hwdb DEMO_wrapper
+TRACE::2025-07-05.22:31:23::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-05.22:31:23::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-05.22:31:23::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2025-07-05.22:31:23::SCWMssOS::No sw design opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-05.22:31:23::SCWMssOS::mss exists loading the mss file  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-05.22:31:23::SCWMssOS::Opened the sw design from mss  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-05.22:31:23::SCWMssOS::Adding the swdes entry D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2025-07-05.22:31:23::SCWMssOS::updating the scw layer about changes
+TRACE::2025-07-05.22:31:23::SCWMssOS::Opened the sw design.  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-05.22:31:23::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw
+TRACE::2025-07-05.22:31:23::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.22:31:23::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper
+TRACE::2025-07-05.22:31:23::SCWPlatform::Opened existing hwdb DEMO_wrapper
+TRACE::2025-07-05.22:31:23::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-05.22:31:23::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-05.22:31:23::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-07-05.22:31:23::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-05.22:31:23::SCWMssOS:: library already available in sw design:  xilffs:4.3
+TRACE::2025-07-05.22:31:23::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw
+TRACE::2025-07-05.22:31:23::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.22:31:23::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper
+TRACE::2025-07-05.22:31:23::SCWPlatform::Opened existing hwdb DEMO_wrapper
+TRACE::2025-07-05.22:31:23::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-05.22:31:23::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-05.22:31:23::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-07-05.22:31:23::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-05.22:31:23::SCWMssOS:: library already available in sw design:  xilrsa:1.6
+TRACE::2025-07-05.22:31:23::SCWMssOS::Saving the mss changes D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-05.22:31:23::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-07-05.22:31:23::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-07-05.22:31:23::SCWMssOS::Commit changes completed.
+TRACE::2025-07-05.22:31:23::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2025-07-05.22:31:23::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2025-07-05.22:31:23::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw
+TRACE::2025-07-05.22:31:23::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.22:31:23::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper
+TRACE::2025-07-05.22:31:23::SCWPlatform::Opened existing hwdb DEMO_wrapper
+TRACE::2025-07-05.22:31:23::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-05.22:31:23::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-05.22:31:23::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-07-05.22:31:23::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-05.22:31:23::SCWReader::No isolation master present  
+TRACE::2025-07-05.22:31:23::SCWDomain::checking for install qemu data   : 
+TRACE::2025-07-05.22:31:23::SCWDomain:: Using the QEMU Data from install at  : D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/
+TRACE::2025-07-05.22:31:23::SCWDomain:: Using the QEMU args  from install at  : D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2025-07-05.22:31:23::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw
+TRACE::2025-07-05.22:31:23::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.22:31:23::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper
+TRACE::2025-07-05.22:31:23::SCWPlatform::Opened existing hwdb DEMO_wrapper
+TRACE::2025-07-05.22:31:23::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-05.22:31:23::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw
+TRACE::2025-07-05.22:31:23::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.22:31:23::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper
+TRACE::2025-07-05.22:31:23::SCWPlatform::Opened existing hwdb DEMO_wrapper
+TRACE::2025-07-05.22:31:23::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-05.22:31:23::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw
+TRACE::2025-07-05.22:31:23::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.22:31:23::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper
+TRACE::2025-07-05.22:31:23::SCWPlatform::Opened existing hwdb DEMO_wrapper
+TRACE::2025-07-05.22:31:23::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-05.22:31:23::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-07-05.22:31:23::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-07-05.22:31:23::SCWMssOS::No sw design opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-07-05.22:31:23::SCWMssOS::mss exists loading the mss file  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-07-05.22:31:23::SCWMssOS::Opened the sw design from mss  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-07-05.22:31:23::SCWMssOS::Adding the swdes entry D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_0
+TRACE::2025-07-05.22:31:23::SCWMssOS::updating the scw layer about changes
+TRACE::2025-07-05.22:31:23::SCWMssOS::Opened the sw design.  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-07-05.22:31:23::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw
+TRACE::2025-07-05.22:31:23::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.22:31:23::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper
+TRACE::2025-07-05.22:31:23::SCWPlatform::Opened existing hwdb DEMO_wrapper
+TRACE::2025-07-05.22:31:23::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-05.22:31:23::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-07-05.22:31:23::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-07-05.22:31:23::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-07-05.22:31:23::SCWMssOS:: library already available in sw design:  xilffs:4.3
+TRACE::2025-07-05.22:31:23::SCWMssOS::Saving the mss changes D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-07-05.22:31:23::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-07-05.22:31:23::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-07-05.22:31:23::SCWMssOS::Commit changes completed.
+TRACE::2025-07-05.22:31:23::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2025-07-05.22:31:23::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2025-07-05.22:31:23::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw
+TRACE::2025-07-05.22:31:23::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:31:23::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.22:31:23::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper
+TRACE::2025-07-05.22:31:23::SCWPlatform::Opened existing hwdb DEMO_wrapper
+TRACE::2025-07-05.22:31:23::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-05.22:31:23::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-07-05.22:31:23::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-07-05.22:31:23::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-07-05.22:31:23::SCWReader::No isolation master present  
+LOG::2025-07-05.22:48:02::SCWPlatform::Started generating the artifacts platform 1_core_plt
+TRACE::2025-07-05.22:48:02::SCWPlatform::Sanity checking of platform is completed
+LOG::2025-07-05.22:48:02::SCWPlatform::Started generating the artifacts for system configuration 1_core_plt
+LOG::2025-07-05.22:48:02::SCWSystem::Checking the domain zynq_fsbl
+LOG::2025-07-05.22:48:02::SCWSystem::Doing application build for :  zynq_fsbl
+TRACE::2025-07-05.22:48:02::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2025-07-05.22:48:02::SCWDomain::Skipping the build for domain :  zynq_fsbl
+LOG::2025-07-05.22:48:02::SCWSystem::Checking the domain standalone_domain
+LOG::2025-07-05.22:48:02::SCWSystem::Not a boot domain 
+LOG::2025-07-05.22:48:02::SCWSystem::Started Processing the domain standalone_domain
+TRACE::2025-07-05.22:48:02::SCWDomain::Generating domain artifcats
+TRACE::2025-07-05.22:48:02::SCWMssOS::Generating standalone artifcats
+TRACE::2025-07-05.22:48:02::SCWMssOS::Copying the qemu file from  D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt To D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/export/1_core_plt/sw/1_core_plt/qemu/
+TRACE::2025-07-05.22:48:02::SCWMssOS::Copying the qemu file from  D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt To D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/export/1_core_plt/sw/1_core_plt/standalone_domain/qemu/
+TRACE::2025-07-05.22:48:02::SCWMssOS:: Copying the user libraries. 
+TRACE::2025-07-05.22:48:02::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:48:02::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:48:02::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:48:02::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw
+TRACE::2025-07-05.22:48:02::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:48:02::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.22:48:02::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper
+TRACE::2025-07-05.22:48:02::SCWPlatform::Opened existing hwdb DEMO_wrapper
+TRACE::2025-07-05.22:48:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-05.22:48:02::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-07-05.22:48:02::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-07-05.22:48:02::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-07-05.22:48:02::SCWMssOS::Completed writing the mss file at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp
+TRACE::2025-07-05.22:48:02::SCWMssOS::Mss edits present, copying mssfile into export location D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-07-05.22:48:02::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2025-07-05.22:48:02::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2025-07-05.22:48:02::SCWDomain::Skipping the build for domain :  standalone_domain
+TRACE::2025-07-05.22:48:02::SCWMssOS::skipping the bsp build ... 
+TRACE::2025-07-05.22:48:02::SCWMssOS::Copying to export directory.
+TRACE::2025-07-05.22:48:02::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2025-07-05.22:48:02::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+LOG::2025-07-05.22:48:02::SCWSystem::Completed Processing the domain standalone_domain
+LOG::2025-07-05.22:48:02::SCWSystem::Completed Processing the sysconfig 1_core_plt
+LOG::2025-07-05.22:48:02::SCWPlatform::Completed generating the artifacts for system configuration 1_core_plt
+TRACE::2025-07-05.22:48:02::SCWPlatform::Started preparing the platform 
+TRACE::2025-07-05.22:48:02::SCWSystem::Writing the bif file for system config 1_core_plt
+TRACE::2025-07-05.22:48:02::SCWSystem::dir created 
+TRACE::2025-07-05.22:48:02::SCWSystem::Writing the bif 
+TRACE::2025-07-05.22:48:02::SCWPlatform::Started writing the spfm file 
+TRACE::2025-07-05.22:48:02::SCWPlatform::Started writing the xpfm file 
+TRACE::2025-07-05.22:48:02::SCWPlatform::Completed generating the platform
+TRACE::2025-07-05.22:48:02::SCWMssOS::Saving the mss changes D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-05.22:48:02::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-07-05.22:48:02::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-07-05.22:48:02::SCWMssOS::Commit changes completed.
+TRACE::2025-07-05.22:48:02::SCWMssOS::Saving the mss changes D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-07-05.22:48:02::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-07-05.22:48:02::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-07-05.22:48:02::SCWMssOS::Commit changes completed.
+TRACE::2025-07-05.22:48:02::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:48:02::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:48:02::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:48:02::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw
+TRACE::2025-07-05.22:48:02::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:48:02::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.22:48:02::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper
+TRACE::2025-07-05.22:48:02::SCWPlatform::Opened existing hwdb DEMO_wrapper
+TRACE::2025-07-05.22:48:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-05.22:48:02::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-05.22:48:02::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-07-05.22:48:02::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-07-05.22:48:02::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:48:02::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:48:02::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:48:02::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw
+TRACE::2025-07-05.22:48:02::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:48:02::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.22:48:02::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper
+TRACE::2025-07-05.22:48:02::SCWPlatform::Opened existing hwdb DEMO_wrapper
+TRACE::2025-07-05.22:48:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-05.22:48:02::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-07-05.22:48:02::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-07-05.22:48:02::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-07-05.22:48:02::SCWWriter::formatted JSON is {
+	"platformName":	"1_core_plt",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"1_core_plt",
+	"platHandOff":	"D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/Zybomon2_hw/DEMO_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/DEMO_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"1_core_plt",
+	"systems":	[{
+			"systemName":	"1_core_plt",
+			"systemDesc":	"1_core_plt",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"1_core_plt",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"22a6aa47fd12e4eea21ee9dba4d7fcad",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on ps7_cortexa9_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"b1137bc453858b5f6e22cb6fc1a9c462",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2025-07-05.22:48:02::SCWPlatform::updated the xpfm file.
+TRACE::2025-07-05.22:48:02::SCWPlatform::Trying to open the hw design at D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:48:02::SCWPlatform::DSA given D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:48:02::SCWPlatform::DSA absoulate path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:48:02::SCWPlatform::DSA directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw
+TRACE::2025-07-05.22:48:02::SCWPlatform:: Platform Path D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/hw/DEMO_wrapper.xsa
+TRACE::2025-07-05.22:48:02::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-07-05.22:48:02::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper
+TRACE::2025-07-05.22:48:02::SCWPlatform::Opened existing hwdb DEMO_wrapper
+TRACE::2025-07-05.22:48:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-07-05.22:48:02::SCWMssOS::Checking the sw design at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-07-05.22:48:02::SCWMssOS::DEBUG:  swdes dump  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-07-05.22:48:02::SCWMssOS::Sw design exists and opened at  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/ps7_cortexa9_0/standalone_domain/bsp/system.mss

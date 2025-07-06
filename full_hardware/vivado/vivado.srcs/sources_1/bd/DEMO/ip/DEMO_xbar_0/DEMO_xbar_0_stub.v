@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Wed Jun 18 00:19:19 2025
+// Date        : Wed Jun 18 00:19:18 2025
 // Host        : Ro running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/ip/DEMO_xbar_0/DEMO_xbar_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top DEMO_xbar_0 -prefix
+//               DEMO_xbar_0_ DEMO_xbar_0_stub.v
 // Design      : DEMO_xbar_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z010clg400-1

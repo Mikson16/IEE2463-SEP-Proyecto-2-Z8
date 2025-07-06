@@ -1,20 +1,25 @@
-16:06:05 **** Incremental Build of configuration Debug for project 1_core ****
+23:19:22 **** Incremental Build of configuration Debug for project 1_core ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -ID:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/export/1_core_plt/sw/1_core_plt/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
 'Building target: 1_core.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LD:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/export/1_core_plt/sw/1_core_plt/standalone_domain/bsplib/lib -o "1_core.elf"  ./src/ADC.o ./src/Bitmap.o ./src/Delay.o ./src/I2C.o ./src/LCD_Driver.o ./src/LCD_GUI.o ./src/LCD_SPI.o ./src/audio.o ./src/font12.o ./src/font16.o ./src/font20.o ./src/font24.o ./src/font8.o ./src/gameUI.o ./src/main.o ./src/platform.o ./src/states.o ./src/zybomon.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LD:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/1_core/vitis/1_core_plt/export/1_core_plt/sw/1_core_plt/standalone_domain/bsplib/lib -o "1_core.elf"  ./src/ADC.o ./src/Bitmap.o ./src/Delay.o ./src/I2C.o ./src/LCD_Driver.o ./src/LCD_GUI.o ./src/LCD_SPI.o ./src/audio.o ./src/font12.o ./src/font16.o ./src/font20.o ./src/font24.o ./src/font8.o ./src/main.o ./src/platform.o ./src/states.o ./src/zybomon.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
 'Finished building target: 1_core.elf'
 ' '
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size 1_core.elf  |tee "1_core.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 409356	   3572	 683696	1096624	 10bbb0	1_core.elf
+ 364844	   3576	 683648	1052068	 100da4	1_core.elf
 'Finished building: 1_core.elf.size'
 ' '
 
-16:06:06 Build Finished (took 672ms)
+23:19:23 Build Finished (took 961ms)
 

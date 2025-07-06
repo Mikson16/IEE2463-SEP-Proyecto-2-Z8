@@ -1,0 +1,316 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Fri Jul  4 10:41:41 2025
+# Process ID: 7832
+# Current directory: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2980 D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\full_hardware\vivado\vivado.xpr
+# Log file: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.log
+# Journal file: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/ipcore'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2020.1/data/ip'.
+open_project: Time (s): cpu = 00:00:37 ; elapsed = 00:00:56 . Memory (MB): peak = 1022.496 ; gain = 84.234
+update_compile_order -fileset sources_1
+INFO: [Vivado 12-8231] Launching Vitis
+INFO: [Vivado 12-417] Running vitis
+INFO: [Vivado 12-8232] Vitis launch initiated. Please check console for any further messages.
+INFO: [Vivado 12-8231] Launching Vitis
+INFO: [Vivado 12-417] Running vitis
+INFO: [Vivado 12-8232] Vitis launch initiated. Please check console for any further messages.
+open_bd_design {D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/DEMO.bd}
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding component instance block -- xilinx.com:ip:axi_iic:2.0 - axi_iic_0
+Adding component instance block -- xilinx.com:ip:axi_quad_spi:3.2 - axi_quad_spi_0
+Adding component instance block -- xilinx.com:ip:axi_quad_spi:3.2 - axi_quad_spi_1
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_1
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding component instance block -- xilinx.com:ip:axi_timer:2.0 - axi_timer_0
+Adding component instance block -- xilinx.com:ip:axi_timer:2.0 - axi_timer_1
+Adding component instance block -- xilinx.com:ip:ila:6.2 - ila_0
+INFO: [xilinx.com:ip:ila:6.2-6] /ila_0: Xilinx recommends using the System ILA IP in IP Integrator. The System ILA IP is functionally equivalent to an ILA and offers additional benefits in debugging interfaces both within IP Integrator and the Hardware Manager. Consult the Programming and Debug User Guide UG908 for further details.
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_1
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_2
+Adding component instance block -- xilinx.com:module_ref:debouncer:1.0 - debouncer_0
+Adding component instance block -- xilinx.com:module_ref:debouncer:1.0 - debouncer_1
+Adding component instance block -- xilinx.com:module_ref:debouncer:1.0 - debouncer_2
+Adding component instance block -- xilinx.com:user:axi_buzzer:1.0 - axi_buzzer_0
+WARNING: [BD 41-1731] Type mismatch between connected pins: /axi_gpio_2/ip2intc_irpt(intr) and /ila_0/probe1(undef)
+Successfully read diagram <DEMO> from BD file <D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/DEMO.bd>
+open_bd_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 1591.496 ; gain = 0.000
+ipx::edit_ip_in_project -upgrade true -name axi_buzzer_v1_0_project -directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.tmp/axi_buzzer_v1_0_project d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/ipcore/axi_buzzer_1.0/component.xml
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'd:/proyectosep2/iee2463-sep-proyecto-2-z8/full_hardware/vivado/vivado.tmp/axi_buzzer_v1_0_project'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2020.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/ipcore'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1591.496 ; gain = 0.000
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'd:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/ipcore/axi_buzzer_1.0/component.xml' ignored by IP packager.
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'd:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/ipcore/axi_buzzer_1.0/component.xml' ignored by IP packager.
+INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'.
+set_property core_revision 3 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+current_project vivado
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/ipcore'.
+report_ip_status -name ip_status
+current_project axi_buzzer_v1_0_project
+current_project vivado
+upgrade_ip -vlnv xilinx.com:user:axi_buzzer:1.0 [get_ips  DEMO_axi_buzzer_0_0] -log ip_upgrade.log
+Upgrading 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/DEMO.bd'
+INFO: [IP_Flow 19-3422] Upgraded DEMO_axi_buzzer_0_0 (axi_buzzer_v1.0 1.0) from revision 2 to revision 3
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'vio'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'DEMO_axi_buzzer_0_0'. These changes may impact your design.
+CRITICAL WARNING: [Coretcl 2-1279] The upgrade of 'DEMO_axi_buzzer_0_0' has identified issues that may require user intervention. Please review the upgrade log 'd:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/ip_upgrade.log', and verify that the upgraded IP is correctly configured.
+Wrote  : <D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\full_hardware\vivado\vivado.srcs\sources_1\bd\DEMO\DEMO.bd> 
+Wrote  : <D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/ui/bd_58220e03.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips DEMO_axi_buzzer_0_0] -no_script -sync -force -quiet
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:vio:3.0 vio_0
+endgroup
+set_property location {5 1612 -7} [get_bd_cells vio_0]
+set_property -dict [list CONFIG.C_PROBE_OUT0_INIT_VAL {0xFF} CONFIG.C_PROBE_OUT0_WIDTH {16}] [get_bd_cells vio_0]
+connect_bd_net [get_bd_pins vio_0/probe_out0] [get_bd_pins axi_buzzer_0/vio]
+connect_bd_net [get_bd_pins vio_0/clk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+report_ip_status -name ip_status 
+set_property location {5 1713 795} [get_bd_cells ila_0]
+disconnect_bd_net /axi_gpio_2_ip2intc_irpt [get_bd_pins ila_0/probe1]
+disconnect_bd_net /BTN0_0_1 [get_bd_pins ila_0/probe2]
+disconnect_bd_net /debouncer_0_press [get_bd_pins ila_0/probe3]
+startgroup
+connect_bd_net [get_bd_pins ila_0/probe1] [get_bd_pins axi_timer_0/interrupt]
+WARNING: [BD 41-1731] Type mismatch between connected pins: /axi_timer_0/interrupt(intr) and /ila_0/probe1(undef)
+connect_bd_net [get_bd_pins axi_timer_0/interrupt] [get_bd_pins ila_0/probe3]
+WARNING: [BD 41-1731] Type mismatch between connected pins: /axi_timer_0/interrupt(intr) and /ila_0/probe3(undef)
+endgroup
+disconnect_bd_net /axi_timer_0_interrupt [get_bd_pins ila_0/probe3]
+connect_bd_net [get_bd_pins ila_0/probe2] [get_bd_pins axi_timer_1/interrupt]
+WARNING: [BD 41-1731] Type mismatch between connected pins: /axi_timer_1/interrupt(intr) and /ila_0/probe2(undef)
+connect_bd_net [get_bd_pins ila_0/probe3] [get_bd_pins axi_gpio_1/ip2intc_irpt]
+WARNING: [BD 41-1731] Type mismatch between connected pins: /axi_gpio_1/ip2intc_irpt(intr) and /ila_0/probe3(undef)
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+startgroup
+set_property -dict [list CONFIG.C_NUM_OF_PROBES {5}] [get_bd_cells ila_0]
+endgroup
+connect_bd_net [get_bd_pins ila_0/probe4] [get_bd_pins axi_gpio_2/ip2intc_irpt]
+WARNING: [BD 41-1731] Type mismatch between connected pins: /axi_gpio_2/ip2intc_irpt(intr) and /ila_0/probe4(undef)
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_1
+INFO: [xilinx.com:ip:ila:6.2-6] /ila_1: Xilinx recommends using the System ILA IP in IP Integrator. The System ILA IP is functionally equivalent to an ILA and offers additional benefits in debugging interfaces both within IP Integrator and the Hardware Manager. Consult the Programming and Debug User Guide UG908 for further details.
+endgroup
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+set_property location {6 1789 -153} [get_bd_cells ila_1]
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+set_property -dict [list CONFIG.C_NUM_OF_PROBES {19} CONFIG.C_SLOT_0_AXI_PROTOCOL {AXI4LITE}] [get_bd_cells ila_1]
+connect_bd_net [get_bd_pins ila_1/clk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+set_property location {5 1838 -158} [get_bd_cells ila_1]
+connect_bd_intf_net [get_bd_intf_pins ila_1/SLOT_0_AXI] [get_bd_intf_pins axi_buzzer_0/S00_AXI]
+save_bd_design
+Wrote  : <D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\full_hardware\vivado\vivado.srcs\sources_1\bd\DEMO\DEMO.bd> 
+Wrote  : <D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/ui/bd_58220e03.ui> 
+report_ip_status -name ip_status 
+regenerate_bd_layout
+startgroup
+set_property -dict [list CONFIG.C_EN_PROBE_IN_ACTIVITY {0} CONFIG.C_NUM_PROBE_IN {0}] [get_bd_cells vio_0]
+endgroup
+startgroup
+endgroup
+save_bd_design
+Wrote  : <D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\full_hardware\vivado\vivado.srcs\sources_1\bd\DEMO\DEMO.bd> 
+Wrote  : <D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/ui/bd_58220e03.ui> 
+reset_run synth_1
+reset_run DEMO_xbar_0_synth_1
+reset_run DEMO_processing_system7_0_0_synth_1
+reset_run DEMO_ila_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+INFO: [xilinx.com:ip:axi_quad_spi:3.2-1] /axi_quad_spi_1 
+                   #######################################################################################
+                   INFO: AXI Quad SPI core's AXI Lite Clock and EXT SPI CLK are synchronous to each other.
+                   ########################################################################################
+INFO: [xilinx.com:ip:axi_quad_spi:3.2-1] /axi_quad_spi_1 
+                   #######################################################################################
+                   INFO: AXI Quad SPI core's AXI Lite Clock and EXT SPI CLK are synchronous to each other.
+                   ########################################################################################
+INFO: [xilinx.com:ip:axi_quad_spi:3.2-1] /axi_quad_spi_0 
+                   #######################################################################################
+                   INFO: AXI Quad SPI core's AXI Lite Clock and EXT SPI CLK are synchronous to each other.
+                   ########################################################################################
+INFO: [xilinx.com:ip:axi_quad_spi:3.2-1] /axi_quad_spi_0 
+                   #######################################################################################
+                   INFO: AXI Quad SPI core's AXI Lite Clock and EXT SPI CLK are synchronous to each other.
+                   ########################################################################################
+Wrote  : <D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\full_hardware\vivado\vivado.srcs\sources_1\bd\DEMO\DEMO.bd> 
+VHDL Output written to : D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/synth/DEMO.vhd
+VHDL Output written to : D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/sim/DEMO.vhd
+VHDL Output written to : D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/hdl/DEMO_wrapper.vhd
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_GP0'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'd:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/ip/DEMO_ila_0_0/DEMO_ila_0_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ila_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_buzzer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block vio_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'd:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/ip/DEMO_ila_1_0/DEMO_ila_1_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ila_1 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'd:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/ip/DEMO_auto_pc_0/DEMO_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/hw_handoff/DEMO.hwh
+Generated Block Design Tcl file D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/hw_handoff/DEMO_bd.tcl
+Generated Hardware Definition File D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/synth/DEMO.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP DEMO_auto_pc_0, cache-ID = f0066fce20473567; cache size = 21.586 MB.
+[Fri Jul  4 18:36:50 2025] Launched DEMO_xbar_0_synth_1, DEMO_processing_system7_0_0_synth_1, DEMO_ila_0_0_synth_1, DEMO_vio_0_0_synth_1, DEMO_ila_1_0_synth_1, DEMO_axi_buzzer_0_0_synth_1, synth_1...
+Run output will be captured here:
+DEMO_xbar_0_synth_1: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.runs/DEMO_xbar_0_synth_1/runme.log
+DEMO_processing_system7_0_0_synth_1: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.runs/DEMO_processing_system7_0_0_synth_1/runme.log
+DEMO_ila_0_0_synth_1: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.runs/DEMO_ila_0_0_synth_1/runme.log
+DEMO_vio_0_0_synth_1: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.runs/DEMO_vio_0_0_synth_1/runme.log
+DEMO_ila_1_0_synth_1: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.runs/DEMO_ila_1_0_synth_1/runme.log
+DEMO_axi_buzzer_0_0_synth_1: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.runs/DEMO_axi_buzzer_0_0_synth_1/runme.log
+synth_1: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.runs/synth_1/runme.log
+[Fri Jul  4 18:36:50 2025] Launched impl_1...
+Run output will be captured here: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:01:31 ; elapsed = 00:01:52 . Memory (MB): peak = 2321.633 ; gain = 195.980
+report_ip_status -name ip_status 
+current_project axi_buzzer_v1_0_project
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'd:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/ipcore/axi_buzzer_1.0/component.xml' ignored by IP packager.
+set_property core_revision 4 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/ipcore
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'd:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/ipcore'
+open_bd_design {D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/DEMO.bd}
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:axi_buzzer:1.0 [get_ips  DEMO_axi_buzzer_0_0] -log ip_upgrade.log
+Upgrading 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/DEMO.bd'
+INFO: [IP_Flow 19-3422] Upgraded DEMO_axi_buzzer_0_0 (axi_buzzer_v1.0 1.0) from revision 3 to revision 4
+Wrote  : <D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\full_hardware\vivado\vivado.srcs\sources_1\bd\DEMO\DEMO.bd> 
+Wrote  : <D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/ui/bd_58220e03.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips DEMO_axi_buzzer_0_0] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+INFO: [xilinx.com:ip:axi_quad_spi:3.2-1] /axi_quad_spi_1 
+                   #######################################################################################
+                   INFO: AXI Quad SPI core's AXI Lite Clock and EXT SPI CLK are synchronous to each other.
+                   ########################################################################################
+INFO: [xilinx.com:ip:axi_quad_spi:3.2-1] /axi_quad_spi_1 
+                   #######################################################################################
+                   INFO: AXI Quad SPI core's AXI Lite Clock and EXT SPI CLK are synchronous to each other.
+                   ########################################################################################
+INFO: [xilinx.com:ip:axi_quad_spi:3.2-1] /axi_quad_spi_0 
+                   #######################################################################################
+                   INFO: AXI Quad SPI core's AXI Lite Clock and EXT SPI CLK are synchronous to each other.
+                   ########################################################################################
+INFO: [xilinx.com:ip:axi_quad_spi:3.2-1] /axi_quad_spi_0 
+                   #######################################################################################
+                   INFO: AXI Quad SPI core's AXI Lite Clock and EXT SPI CLK are synchronous to each other.
+                   ########################################################################################
+Wrote  : <D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\full_hardware\vivado\vivado.srcs\sources_1\bd\DEMO\DEMO.bd> 
+VHDL Output written to : D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/synth/DEMO.vhd
+VHDL Output written to : D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/sim/DEMO.vhd
+VHDL Output written to : D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/hdl/DEMO_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_buzzer_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'd:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/ip/DEMO_auto_pc_0/DEMO_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/hw_handoff/DEMO.hwh
+Generated Block Design Tcl file D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/hw_handoff/DEMO_bd.tcl
+Generated Hardware Definition File D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/synth/DEMO.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP DEMO_auto_pc_0, cache-ID = f0066fce20473567; cache size = 38.072 MB.
+[Fri Jul  4 18:45:59 2025] Launched DEMO_axi_buzzer_0_0_synth_1, synth_1...
+Run output will be captured here:
+DEMO_axi_buzzer_0_0_synth_1: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.runs/DEMO_axi_buzzer_0_0_synth_1/runme.log
+synth_1: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.runs/synth_1/runme.log
+[Fri Jul  4 18:45:59 2025] Launched impl_1...
+Run output will be captured here: D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 3164.688 ; gain = 0.000
+open_bd_design {D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/DEMO.bd}
+ipx::edit_ip_in_project -upgrade true -name axi_buzzer_v1_0_project -directory D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.tmp/axi_buzzer_v1_0_project d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/ipcore/axi_buzzer_1.0/component.xml
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'd:/proyectosep2/iee2463-sep-proyecto-2-z8/full_hardware/vivado/vivado.tmp/axi_buzzer_v1_0_project'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2020.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/ipcore'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'd:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/ipcore/axi_buzzer_1.0/component.xml' ignored by IP packager.
+set_property core_revision 5 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+current_project vivado
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/ipcore'.
+report_ip_status -name ip_status
+current_project axi_buzzer_v1_0_project
+current_project vivado
+upgrade_ip -vlnv xilinx.com:user:axi_buzzer:1.0 [get_ips  DEMO_axi_buzzer_0_0] -log ip_upgrade.log
+Upgrading 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/DEMO.bd'
+INFO: [IP_Flow 19-3422] Upgraded DEMO_axi_buzzer_0_0 (axi_buzzer_v1.0 1.0) from revision 4 to revision 5
+Wrote  : <D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\full_hardware\vivado\vivado.srcs\sources_1\bd\DEMO\DEMO.bd> 
+Wrote  : <D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/ui/bd_58220e03.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips DEMO_axi_buzzer_0_0] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+export_ip_user_files -of_objects  [get_files D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/hdl/DEMO_wrapper.vhd] -no_script -reset -force -quiet
+remove_files  D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/hdl/DEMO_wrapper.vhd
+export_ip_user_files -of_objects  [get_files D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/DEMO.bd] -no_script -reset -force -quiet
+remove_files  {D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/DEMO.bd D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/hdl/DEMO_wrapper.vhd}
+WARNING: [Vivado 12-818] No files matched 'D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/hdl/DEMO_wrapper.vhd'
+remove_files: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 3164.688 ; gain = 0.000
+open_bd_design {D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/DEMO.bd}
+ERROR: [BD 41-1333] Can not open block design file D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/DEMO.bd, as it is not part of this project. Please use 'add_files' to add this BD-file to current project, before opening.
+ERROR: [Common 17-39] 'open_bd_design' failed due to earlier errors.
+close_project
+open_project D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/ipcore'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2020.1/data/ip'.
+update_compile_order -fileset sources_1
+create_bd_design "design_1"
+Wrote  : <D:\proyectosep2\IEE2463-SEP-Proyecto-2-Z8\full_hardware\vivado\vivado.srcs\sources_1\bd\design_1\design_1.bd> 
+open_bd_design {D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/design_1/design_1.bd}
+open_bd_design {D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/design_1/design_1.bd}
+update_compile_order -fileset sources_1
+close_project
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Jul  4 19:18:26 2025...

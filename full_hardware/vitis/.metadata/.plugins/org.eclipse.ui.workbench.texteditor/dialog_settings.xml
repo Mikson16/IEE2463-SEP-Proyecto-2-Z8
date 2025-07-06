@@ -2,27 +2,27 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="SizeBuff" key="selection"/>
+		<item value="SdSoundEffect" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="SdSoundEffect"/>
+			<item value="XPAR_AXI_BUZZER_0_S00_AXI_BASEADDR"/>
+			<item value="ref_time"/>
+			<item value="oponent_type"/>
+			<item value="handle_faint"/>
+			<item value="handle_swap"/>
+			<item value="vida:"/>
+			<item value="xil_printf"/>
+			<item value="Luz"/>
 			<item value="SizeBuff"/>
 			<item value="selected"/>
 			<item value="pok_sprite"/>
 			<item value="text_color"/>
 			<item value="plays"/>
 			<item value="play"/>
-			<item value="floor"/>
-			<item value="xil_printf"/>
-			<item value="PlaySong"/>
-			<item value="open"/>
-			<item value="object"/>
-			<item value="XST_DEVICE_BLOCK_NOT_FOUND"/>
-			<item value="f_open"/>
-			<item value="PS7_SCUGIC_1"/>
-			<item value="LIGHT_INT"/>
 		</list>
 		<list key="replacehistory">
 			<item value="LIGHT_INT_CH"/>
@@ -39,7 +39,7 @@
 		<item value="284" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="391" key="DIALOG_HEIGHT"/>
-		<item value="808" key="DIALOG_X_ORIGIN"/>
-		<item value="236" key="DIALOG_Y_ORIGIN"/>
+		<item value="1097" key="DIALOG_X_ORIGIN"/>
+		<item value="205" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

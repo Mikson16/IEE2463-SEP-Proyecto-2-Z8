@@ -123,6 +123,12 @@ set_property used_in_implementation false [get_files -all d:/proyectosep2/IEE246
 set_property used_in_implementation false [get_files -all d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/ip/DEMO_axi_gpio_2_0/DEMO_axi_gpio_2_0_board.xdc]
 set_property used_in_implementation false [get_files -all d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/ip/DEMO_axi_gpio_2_0/DEMO_axi_gpio_2_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/ip/DEMO_axi_gpio_2_0/DEMO_axi_gpio_2_0.xdc]
+set_property used_in_implementation false [get_files -all d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/ip/DEMO_vio_0_0/DEMO_vio_0_0.xdc]
+set_property used_in_implementation false [get_files -all d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/ip/DEMO_vio_0_0/DEMO_vio_0_0_ooc.xdc]
+set_property used_in_synthesis false [get_files -all d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/ip/DEMO_ila_1_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/ip/DEMO_ila_1_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/ip/DEMO_ila_1_0/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/ip/DEMO_ila_1_0/DEMO_ila_1_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/ip/DEMO_auto_pc_0/DEMO_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all D:/proyectosep2/IEE2463-SEP-Proyecto-2-Z8/full_hardware/vivado/vivado.srcs/sources_1/bd/DEMO/DEMO_ooc.xdc]
 
